@@ -6,5 +6,6 @@ importFrom(urltools, url_encode)
 export(
   listOrganisms,
   listPathways,
-  getPathway
+  getPathway,
+  getPathwayInfo
 )
