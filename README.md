@@ -4,7 +4,7 @@ R Client library for the WikiPathways API (http://webservice.wikipathways.org/) 
 
 WikiPathays is described in the NAR paper by [Kutmon et al.](http://dx.doi.org/10.1093/nar/gkv1024).
 
-# install
+# How to install
 
     > install.packages(c("curl", "plyr", "jsonlite")) # dependencies
     > install.packages("testthat") # if you want to test the package
@@ -12,7 +12,7 @@ WikiPathays is described in the NAR paper by [Kutmon et al.](http://dx.doi.org/1
     > library(devtools)
     > install_github("egonw/rwikipathways", subdir="rWikiPathways")
 
-# examples
+# Examples
 
     > organisms = listOrganisms()
     > pathways = listPathways()
@@ -21,3 +21,5 @@ WikiPathays is described in the NAR paper by [Kutmon et al.](http://dx.doi.org/1
     > gpml = getPathway(pathway="WP4", revision=83654)
     > info = getPathwayInfo(pathway="WP4")
     > xrefs = getXrefList(pathway="WP2338", systemCode="S")
+    > pathways = findPathwaysByXref("HMDB00001", "Ch")
+    > pathways = findPathwaysByXref(identifier="HMDB00001", systemCode="Ch")
