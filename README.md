@@ -15,3 +15,5 @@ WikiPathays is described in the NAR paper by [Kutmon et al.](http://dx.doi.org/1
 # examples
 
     > organisms = listOrganisms()
+    > pathways = listPathways()
+    > humanPathways = listPathways(organism="Homo sapiens")
