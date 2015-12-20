@@ -1,7 +1,9 @@
 importFrom(jsonlite, fromJSON)
 importFrom(curl, curl, new_handle, handle_setheaders)
 importFrom(plyr, laply)
+importFrom(urltools, url_encode)
 
 export(
-  listOrganisms
+  listOrganisms,
+  listPathways
 )
