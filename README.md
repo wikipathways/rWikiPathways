@@ -17,3 +17,6 @@ WikiPathays is described in the NAR paper by [Kutmon et al.](http://dx.doi.org/1
     > organisms = listOrganisms()
     > pathways = listPathways()
     > humanPathways = listPathways(organism="Homo sapiens")
+    > gpml = getPathway("WP4")
+    > gpml = getPathway(pathway="WP4")
+    > gpml = getPathway(pathway="WP4", revision=83654)
