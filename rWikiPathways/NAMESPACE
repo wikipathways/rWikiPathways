@@ -7,5 +7,6 @@ export(
   listOrganisms,
   listPathways,
   getPathway,
-  getPathwayInfo
+  getPathwayInfo,
+  getXrefList
 )
