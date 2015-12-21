@@ -8,8 +8,8 @@ findPathwaysByXref <- function(identifier=NA, systemCode=NA) {
 
   url = paste(
     "http://webservice.wikipathways.org/findPathwaysByXref?",
-    "ids=", identifier, "&",
-    "codes=", systemCode, "&",
+    paste("ids=",identifier,"&",collapse="",sep=""),
+    paste("codes=",systemCode,"&",collapse="",sep=""),
     "format=json", sep=""
   )
   conn <- curl::curl(url, handle, open="r")

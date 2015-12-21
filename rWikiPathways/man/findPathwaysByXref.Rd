@@ -10,8 +10,8 @@ Get pathways for the given Xref
 findPathwaysByXref(identifier,systemCode)
 }
 \arguments{
- \item{identifier}{required string indicating the identifier for which to download pathways}
- \item{systemCode}{required string indicating the system code to return the Xrefs in}
+ \item{identifier}{required string or vector indicating the identifier for which to download pathways}
+ \item{systemCode}{required string or vector indicating the system code to return the Xrefs in}
 }
 \value{
  \item{pathways}{pathways that contains entities with the given identifier}

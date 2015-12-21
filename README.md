@@ -29,3 +29,7 @@ you may also like these R packages:
     > xrefs = getXrefList(pathway="WP2338", systemCode="S")
     > pathways = findPathwaysByXref("HMDB00001", "Ch")
     > pathways = findPathwaysByXref(identifier="HMDB00001", systemCode="Ch")
+    > pathways = findPathwaysByXref(
+    >   identifier=c("HMDB00001", "HMDB00002"),
+    >   systemCode=c("Ch", "Ch")
+    > )
