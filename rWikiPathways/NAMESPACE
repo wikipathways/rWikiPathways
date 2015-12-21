@@ -1,5 +1,6 @@
 importFrom(jsonlite, fromJSON)
 importFrom(curl, curl, new_handle, handle_setheaders)
+importFrom(RCurl, base64Decode)
 importFrom(plyr, laply)
 importFrom(urltools, url_encode)
 
@@ -9,5 +10,6 @@ export(
   getPathway,
   getPathwayInfo,
   getXrefList,
-  findPathwaysByXref
+  findPathwaysByXref,
+  getColoredPathway
 )

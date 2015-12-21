@@ -33,3 +33,9 @@ you may also like these R packages:
     >   identifier=c("HMDB00001", "HMDB00002"),
     >   systemCode=c("Ch", "Ch")
     > )
+    > svg = getColoredPathway(pathway="WP1842", graphId=c("dd68a","a2c17"));
+    > svg = getColoredPathway(pathway="WP1842", graphId=c("dd68a","a2c17"),
+    >   color="00FF00");
+    > svg = getColoredPathway(pathway="WP1842", graphId=c("dd68a","a2c17"),
+    >   color=c("FF0000", "00FF00"));
+    > writeLines(svg, "pathway.svg")

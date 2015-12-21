@@ -5,7 +5,7 @@ Version: 0.0.1
 Date: 2015-12-20
 Author: Egon Willighagen <egon.willighagen@maastrichtuniversity.nl>
 Maintainer: Egon Willighagen <egon.willighagen@maastrichtuniversity.nl>
-Depends: jsonlite, curl, plyr, urltools
+Depends: jsonlite, curl, RCurl, plyr, urltools
 Suggests: testthat
 Description: Use this package to interface with the WikiPathways API.
 License: MIT + file LICENSE
