@@ -15,6 +15,16 @@ findPathwaysByXref <- function(identifier=NA, systemCode=NA) {
   conn <- curl::curl(url, handle, open="r")
   txt <- readLines(conn, warn=FALSE)
   close(conn)
-  fields = c("id","url","name","species","revision")
-  data = fromJSON(txt)$result[,fields]
+  result = fromJSON(txt)$result
+  fields = fromJSON(txt)$result$fields
+  fields = cbind(fields$graphId$value, fields$id.database$values)
+  data = cbind(
+    fields,
+    result[,c("id","name","species","revision")]
+  )
+  colNames = colnames(data)
+  colNames[1] = "graphid"
+  colNames[2] = "xref"
+  colnames(data) = colNames
+  return(data)
 }
