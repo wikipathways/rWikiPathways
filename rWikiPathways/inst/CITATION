@@ -1,0 +1,55 @@
+citHeader("There is no specific citation for that package yet. For now, please cite the WikiPathways NAR publications:")
+citEntry(entry = "Article",
+  author = personList(
+    person(
+      given="M",family="Kutmon"
+    ),
+    person(
+      given="A",family="Riutta"
+    ),
+    person(
+      given="N",family="Nunes"
+    ),
+    person(
+      given="K",family="Hanspers"
+    ),
+    person(
+      given="E",family="Willighagen"
+    ),
+    person(
+      given="A",family="Bohler"
+    ),
+    person(
+      given="J",family="Mélius"
+    ),
+    person(
+      given="A",family="Waagmeester"
+    ),
+    person(
+      given="S",family="Sinha"
+    ),
+    person(
+      given="R",family="Miller"
+    ),
+    person(
+      given="S",family="Coort"
+    ),
+    person(
+      given="E",family="Cirillo"
+    ),
+    person(
+      given="B",family="Smeets"
+    ),
+    person(
+      given="E",family="Evelo"
+    ),
+    person(
+      given="A",family="Pico"
+    )
+  ),
+  journal = "Nucleic Acids Research",
+  title = "{WikiPathways}: capturing the full diversity of pathway knowledge",
+  year = 2015,
+  textVersion = "Kutmon, M., Riutta, A., Nunes, N., Hanspers, K., Willighagen, E. L., Bohler, A., MÃ©lius, J., Waagmeester, A., Sinha, S. R., Miller, R., Coort, S. L., Cirillo, E., Smeets, B., Evelo, C. T., Pico, A. R., Oct. 2015. WikiPathways: capturing the full diversity of pathway knowledge. Nucleic Acids Research. http://dx.doi.org/10.1093/nar/gkv1024",
+  note = "http://dx.doi.org/10.1093/nar/gkv1024"
+)

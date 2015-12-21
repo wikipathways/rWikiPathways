@@ -9,3 +9,4 @@ Depends: jsonlite, curl, RCurl, plyr, urltools
 Suggests: testthat
 Description: Use this package to interface with the WikiPathways API.
 License: MIT + file LICENSE
+Encoding: UTF-8
