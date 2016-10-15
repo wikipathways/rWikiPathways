@@ -1,2 +1,4 @@
 language: r
 sudo: required
+before_install:
+  - cd rWikiPathways
