@@ -13,31 +13,48 @@ you may also like these R packages:
 * [PathVisioRPC](http://projects.bigcat.unimaas.nl/pathvisiorpc/)
 
 # How to install
+```
+install.packages(c("curl", "plyr", "jsonlite")) # dependencies
+install.packages("testthat") # if you want to test the package
+install.packages("devtools") # to install from GitHub
+library(devtools)
+install_github("egonw/rwikipathways", subdir="rWikiPathways")
+```
+## For RStudio installation
+```
+library("curl")
+library("plyr")
+library("jsonlite")
+install.packages("devtools")
+library("devtools")
 
-    > install.packages(c("curl", "plyr", "jsonlite")) # dependencies
-    > install.packages("testthat") # if you want to test the package
-    > install.packages("devtools") # to install from GitHub
-    > library(devtools)
-    > install_github("egonw/rwikipathways", subdir="rWikiPathways")
+library("RCurl")
+library("bitops")
+library("urltools")
+
+install_github("egonw/rwikipathways", subdir="rWikiPathways")
+library("rWikiPathways")
+```
 
 # Examples
-
-    > organisms = listOrganisms()
-    > pathways = listPathways()
-    > humanPathways = listPathways(organism="Homo sapiens")
-    > gpml = getPathway(pathway="WP4")
-    > gpml = getPathway(pathway="WP4", revision=83654)
-    > info = getPathwayInfo(pathway="WP4")
-    > xrefs = getXrefList(pathway="WP2338", systemCode="S")
-    > pathways = findPathwaysByXref("HMDB00001", "Ch")
-    > pathways = findPathwaysByXref(identifier="HMDB00001", systemCode="Ch")
-    > pathways = findPathwaysByXref(
-    >   identifier=c("HMDB00001", "HMDB00002"),
-    >   systemCode=c("Ch", "Ch")
-    > )
-    > svg = getColoredPathway(pathway="WP1842", graphId=c("dd68a","a2c17"));
-    > svg = getColoredPathway(pathway="WP1842", graphId=c("dd68a","a2c17"),
-    >   color="00FF00");
-    > svg = getColoredPathway(pathway="WP1842", graphId=c("dd68a","a2c17"),
-    >   color=c("FF0000", "00FF00"));
-    > writeLines(svg, "pathway.svg")
+```
+organisms = listOrganisms()
+pathways = listPathways()
+humanPathways = listPathways(organism="Homo sapiens")
+gpml = getPathway(pathway="WP4")
+gpml = getPathway(pathway="WP4", revision=83654)
+info = getPathwayInfo(pathway="WP4")
+xrefs = getXrefList(pathway="WP2338", systemCode="S")
+pathways = findPathwaysByXref("HMDB00001", "Ch")
+pathways = findPathwaysByXref(identifier="HMDB00001", systemCode="Ch")
+pathways = findPathwaysByXref(
+    identifier=c("HMDB00001", "HMDB00002"),
+    systemCode=c("Ch", "Ch")
+)
+svg = getColoredPathway(pathway="WP1842", graphId=c("dd68a","a2c17"));
+svg = getColoredPathway(pathway="WP1842", graphId=c("dd68a","a2c17"),
+    color="00FF00");
+svg = getColoredPathway(pathway="WP1842", graphId=c("dd68a","a2c17"),
+    color=c("FF0000", "00FF00"));
+writeLines(svg, "pathway.svg")
+````
