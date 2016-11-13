@@ -16,7 +16,7 @@ getColoredPathway <- function(pathway=NA, revision=0,
   handle_setheaders(handle, "Accept" = "application/json")
 
   url = paste(
-    "http://webservice.wikipathways.org/getColoredPathway?",
+    "https://webservice.wikipathways.org/getColoredPathway?",
     paste("pwId=",pathway,"&",sep=""),
     paste("revision=",revision,"&",sep=""),
     paste("graphId=",graphId,"&",collapse="",sep=""),

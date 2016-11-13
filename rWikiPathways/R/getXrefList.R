@@ -7,7 +7,7 @@ getXrefList <- function(pathway=NA, systemCode=NA) {
   handle_setheaders(handle, "Accept" = "application/json")
 
   url = paste(
-    "http://webservice.wikipathways.org/getXrefList?",
+    "https://webservice.wikipathways.org/getXrefList?",
     "pwId=", pathway, "&",
     "code=", systemCode, "&",
     "format=json", sep=""

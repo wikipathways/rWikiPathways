@@ -2,7 +2,7 @@
 
 # R Client Package for WikiPathways
 
-R Client library for the WikiPathways API (http://webservice.wikipathways.org/) (license: MIT).
+R Client library for the WikiPathways API (https://webservice.wikipathways.org/) (license: MIT).
 
 WikiPathays is described in the NAR paper by [Kutmon et al.](http://dx.doi.org/10.1093/nar/gkv1024)
 
