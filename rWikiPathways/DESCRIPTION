@@ -1,9 +1,9 @@
 Package: rWikiPathways
 Type: Package
 Title: rWikiPathways - R client library for the WikiPathways API
-Version: 0.0.1
-Date: 2015-12-20
-Author: Egon Willighagen <egon.willighagen@maastrichtuniversity.nl>
+Version: 0.0.2
+Date: 2016-11-13
+Author: Egon Willighagen <egon.willighagen@maastrichtuniversity.nl>, Alex Pico <alex.pico@gladstone.ucsf.edu>
 Maintainer: Egon Willighagen <egon.willighagen@maastrichtuniversity.nl>
 Depends: jsonlite, curl, RCurl, plyr, urltools
 Suggests: testthat
