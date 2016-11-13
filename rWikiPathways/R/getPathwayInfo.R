@@ -6,7 +6,7 @@ getPathwayInfo <- function(pathway=NA) {
   handle_setheaders(handle, "Accept" = "application/json")
 
   url = paste(
-    "http://webservice.wikipathways.org/getPathwayInfo?",
+    "https://webservice.wikipathways.org/getPathwayInfo?",
     "pwId=", pathway, "&",
     "format=json", sep=""
   )

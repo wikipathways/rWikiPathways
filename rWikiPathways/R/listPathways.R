@@ -4,10 +4,10 @@ listPathways <- function(organism=NA) {
   handle_setheaders(handle, "Accept" = "application/json")
 
   if (missing(organism)) {
-    url = paste("http://webservice.wikipathways.org/listPathways?format=json", sep="")
+    url = paste("https://webservice.wikipathways.org/listPathways?format=json", sep="")
   } else {
     url = paste(
-      "http://webservice.wikipathways.org/listPathways?",
+      "https://webservice.wikipathways.org/listPathways?",
       "organism=", url_encode(organism),
       "&format=json", sep=""
     )

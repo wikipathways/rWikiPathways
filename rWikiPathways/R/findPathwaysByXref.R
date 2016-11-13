@@ -7,7 +7,7 @@ findPathwaysByXref <- function(identifier=NA, systemCode=NA) {
   handle_setheaders(handle, "Accept" = "application/json")
 
   url = paste(
-    "http://webservice.wikipathways.org/findPathwaysByXref?",
+    "https://webservice.wikipathways.org/findPathwaysByXref?",
     paste("ids=",identifier,"&",collapse="",sep=""),
     paste("codes=",systemCode,"&",collapse="",sep=""),
     "format=json", sep=""
