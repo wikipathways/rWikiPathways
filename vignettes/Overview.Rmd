@@ -27,16 +27,19 @@ make additional queries.
 All you need is this **rWikiPathways** package! If you're viewing this vignette, then you've probably 
 already installed and loaded **rWikiPathways**, e.g., by means of:
 
+```
 source("https://bioconductor.org/biocLite.R")
 biocLite("rWikiPathways")
+```
 
 or for developers:
 
+```
 install.packages("devtools")
 library(devtools)
 install_github('wikipathways/rWikiPathways', build_vignettes=TRUE)
 library(rWikiPathways)
-
+```
 
 ### Getting started
 
@@ -159,7 +162,9 @@ for example:
 
 You can save the svg to file with the function:
 
+```
 writeLines(svg, 'rWikiPathways_example.svg')
+```
 
 And, as you may have suspected from the function name, you can also add color to 
 the pathway to highlight specific elements. You will need to know the *graphIds* 
