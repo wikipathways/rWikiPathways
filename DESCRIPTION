@@ -13,7 +13,7 @@ License: MIT + file LICENSE
 URL: https://github.com/wikipathways/rwikipathways
 BugReports: https://github.com/wikipathways/rwikipathways/issues
 LazyLoad: yes
-biocViews: Visualization, GraphAndNetwork, ThirdPartyClient, Network
+biocViews: Visualization, GraphAndNetwork, ThirdPartyClient, Network, Metabolomics
 NeedsCompilation: no
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
