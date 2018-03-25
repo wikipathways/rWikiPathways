@@ -10,50 +10,21 @@ you may also like these R packages:
 
 * [BridgeDbR](https://github.com/BiGCAT-UM/bridgedb-r)
 * [PathVisioRPC](http://projects.bigcat.unimaas.nl/pathvisiorpc/)
+* [RCy3](https://github.com/cytoscape/RCy3)
 
-# How to install
+## How to install
+**_Official bioconductor releases_ (recommended)**
 ```
-install.packages(c("curl", "plyr", "jsonlite")) # dependencies
-install.packages("testthat") # if you want to test the package
-install.packages("devtools") # to install from GitHub
-library(devtools)
-install_github("egonw/rwikipathways", subdir="rWikiPathways")
+source("https://bioconductor.org/biocLite.R")
+biocLite("rWikiPathways")
 ```
-## For RStudio installation
+_Unstable development code from this repo_ (at your own risk)
 ```
-library("curl")
-library("plyr")
-library("jsonlite")
 install.packages("devtools")
-library("devtools")
-
-library("RCurl")
-library("bitops")
-library("urltools")
-
-install_github("egonw/rwikipathways", subdir="rWikiPathways")
-library("rWikiPathways")
+library(devtools)
+install_github('wikipathways/rWikiPathways', build_vignettes=TRUE)
+library(rWikiPathways)
 ```
 
-# Examples
-```
-organisms = listOrganisms()
-pathways = listPathways()
-humanPathways = listPathways(organism="Homo sapiens")
-gpml = getPathway(pathway="WP4")
-gpml = getPathway(pathway="WP4", revision=83654)
-info = getPathwayInfo(pathway="WP4")
-xrefs = getXrefList(pathway="WP2338", systemCode="S")
-pathways = findPathwaysByXref("HMDB00001", "Ch")
-pathways = findPathwaysByXref(identifier="HMDB00001", systemCode="Ch")
-pathways = findPathwaysByXref(
-    identifier=c("HMDB00001", "HMDB00002"),
-    systemCode=c("Ch", "Ch")
-)
-svg = getColoredPathway(pathway="WP1842", graphId=c("dd68a","a2c17"));
-svg = getColoredPathway(pathway="WP1842", graphId=c("dd68a","a2c17"),
-    color="00FF00");
-svg = getColoredPathway(pathway="WP1842", graphId=c("dd68a","a2c17"),
-    color=c("FF0000", "00FF00"));
-writeLines(svg, "pathway.svg")
-````
+## Examples
+* [Overview vigenette](vignettes/Overview.Rmd)
