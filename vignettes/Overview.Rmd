@@ -18,24 +18,24 @@ knitr::opts_chunk$set(
 *WikiPathways* is a well-known repository for biological pathways that provides unique
 tools to the research community for content creation, editing and utilization.
 **R** is a powerful programming language and environment for statistical and exploratory data analysis.
-*rwikipathways* leverages the WikiPathways API to communicate between **R** and WikiPathways, allowing any pathway to be queried, interrogated and downloaded in both data and image formats. Queries
+*rWikiPathways* leverages the WikiPathways API to communicate between **R** and WikiPathways, allowing any pathway to be queried, interrogated and downloaded in both data and image formats. Queries
 are typically performed based on "Xrefs", standardized identifiers for genes, proteins and metabolites. Once you can identified a pathway, you can use the WPID (WikiPathways identifier) to
 make additional queries.
 
 ### Prerequisites
 
-All you need is this **rwikipathways** package! If you're viewing this vignette, then you've probably 
-already installed and loaded **rwikipathways**, e.g., by means of:
+All you need is this **rWikiPathways** package! If you're viewing this vignette, then you've probably 
+already installed and loaded **rWikiPathways**, e.g., by means of:
 
 source("https://bioconductor.org/biocLite.R")
-biocLite("rwikipathways")
+biocLite("rWikiPathways")
 
 or for developers:
 
 install.packages("devtools")
 library(devtools)
-install_github('wikipathways/rwikipathways', build_vignettes=TRUE)
-library(rwikipathways)
+install_github('wikipathways/rWikiPathways', build_vignettes=TRUE)
+library(rWikiPathways)
 
 
 ### Getting started
@@ -81,7 +81,7 @@ standardized identifier form an official source. WikiPathways relies on BridgeDb
 provide dozens of Xref sources for genes, proteins and metabolites. See the full list at
 https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt
 
-With **rwikipathways**, the approach is simple. Take a supported identifier for a 
+With **rWikiPathways**, the approach is simple. Take a supported identifier for a 
 molecule of interest, e.g., an official gene symbol from HGNC, "TNF" and check the 
 *system code* for the datasource, e.g., HGNC = H (this comes from the second column
 in the datasources.txt table linked to above), and then form your query:
@@ -159,7 +159,7 @@ for example:
 
 You can save the svg to file with the function:
 
-writeLines(svg, 'rwikipathways_example.svg')
+writeLines(svg, 'rWikiPathways_example.svg')
 
 And, as you may have suspected from the function name, you can also add color to 
 the pathway to highlight specific elements. You will need to know the *graphIds* 
@@ -174,7 +174,7 @@ This will produce an svg image of the pathway with the ACE gene highlighted by c
 
 ### Wrapping up
 
-That's an overview of the **rwikipathways** package. Check out other vignettes and
+That's an overview of the **rWikiPathways** package. Check out other vignettes and
 the complete list of package functions:
 
 ```{r}
