@@ -29,4 +29,4 @@ library(rWikiPathways)
 ```
 
 ## Examples
-* [Overview vigenette](vignettes/Overview.Rmd)
+* [Overview vignette](vignettes/Overview.Rmd)
