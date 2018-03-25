@@ -7,6 +7,14 @@ vignette: >
   %\VignetteIndexEntry{1. Overview}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+bibliography: tutorial.bib
+csl: biomed-central.csl
+references:
+- id: dummy
+  title: no title
+  author:
+  - family: noname
+    given: noname
 ---
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
@@ -16,7 +24,7 @@ knitr::opts_chunk$set(
 ```
 
 *WikiPathways* is a well-known repository for biological pathways that provides unique
-tools to the research community for content creation, editing and utilization.
+tools to the research community for content creation, editing and utilization [@Pico2008].
 **R** is a powerful programming language and environment for statistical and exploratory data analysis.
 *rWikiPathways* leverages the WikiPathways API to communicate between **R** and WikiPathways, allowing any pathway to be queried, interrogated and downloaded in both data and image formats. Queries
 are typically performed based on "Xrefs", standardized identifiers for genes, proteins and metabolites. Once you can identified a pathway, you can use the WPID (WikiPathways identifier) to
@@ -80,7 +88,7 @@ These return simple lists containing just a particular piece of information for 
 pathway result.
 
 Finally, there's another way to find pathways of interest: by Xref. An Xref is simply a
-standardized identifier form an official source. WikiPathways relies on BridgeDb to 
+standardized identifier form an official source. WikiPathways relies on BridgeDb [@VanIersel2010] to 
 provide dozens of Xref sources for genes, proteins and metabolites. See the full list at
 https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt
 
@@ -186,3 +194,5 @@ the complete list of package functions:
     browseVignettes('rWikiPathways')
     help(package='rWikiPathways')
 ```
+
+# References
