@@ -1,3 +1,7 @@
 New in rWikiPathways 1.0.0
 
-    ...
+    * Updated all functions to use REST calls instead of Curl
+    * Simplified function development by abstracting as dedicated wikipathwaysGET function
+    * Added derivative functions for both listPathways and getPathwaysByXref to allow 
+    specifying the return of simple lists of WPIDs, URLs or names.
+    * Added vignettes

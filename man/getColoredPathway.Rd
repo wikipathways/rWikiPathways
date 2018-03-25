@@ -4,7 +4,7 @@
 \alias{getColoredPathway}
 \title{Get Colored Pathway}
 \usage{
-getColoredPathway(pathway, revision = 0, graphId, color = NULL,
+getColoredPathway(pathway, revision = 0, graphId = NULL, color = NULL,
   fileType = "svg")
 }
 \arguments{
@@ -18,7 +18,7 @@ getColoredPathway(pathway, revision = 0, graphId, color = NULL,
 Default is red. You can provide a single color for mutiple nodes; otherwise
 color list and graphId must be the same length.}
 
-\item{fileType}{(optional) Image file format (only 'svg' supported at this time)}
+\item{fileType}{(optional) Image file format}
 }
 \value{
 Image file

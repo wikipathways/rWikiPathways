@@ -6,7 +6,7 @@ Date: 2017-10-18
 Author: Egon Willighagen <egon.willighagen@maastrichtuniversity.nl>, Alexander Pico <alex.pico@gladstone.ucsf.edu>
 Maintainer: Egon Willighagen <egon.willighagen@maastrichtuniversity.nl>, Alexander Pico <alex.pico@gladstone.ucsf.edu>
 Depends: R (>= 3.3)
-Imports: bitops, RCurl, httr, RJSONIO, utils
+Imports: caTools, httr, RJSONIO, utils
 Suggests: testthat, knitr
 Description: Use this package to interface with the WikiPathways API.
 License: MIT + file LICENSE
