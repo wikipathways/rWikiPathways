@@ -1,18 +1,16 @@
-getPathway <- function(pathway=NA, revision=0) {
-  if (missing(pathway)) stop("You must specify the pathway to retrieve.");
-
-  handle = new_handle()
-  handle_setheaders(handle, "User-Agent" = "r/renm")
-  handle_setheaders(handle, "Accept" = "application/json")
-
-  url = paste(
-    "https://webservice.wikipathways.org/getPathway?",
-    "pwId=", pathway, "&",
-    "revision=", revision, "&",
-    "format=json", sep=""
-  )
-  conn <- curl::curl(url, handle, open="r")
-  txt <- readLines(conn, warn=FALSE)
-  close(conn)
-  data = fromJSON(txt)$pathway$gpml
+# ------------------------------------------------------------------------------
+#' @title Get Pathway
+#'
+#' @description Retrieve a specific pathway in the GPML format
+#' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
+#' @param revision (optional) Number to indicate a specific revision to download
+#' @return GPML
+#' @examples \donttest{
+#' getPathway('WP554')
+#' }
+#' @export
+getPathway <- function(pathway, revision=0) {
+    res <- wikipathwaysGET('getPathway',list(pwId=pathway,
+                                      revision=revision))
+    return(unname(res$pathway['gpml']))
 }

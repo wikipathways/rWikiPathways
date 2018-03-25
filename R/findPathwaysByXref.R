@@ -1,30 +1,81 @@
-findPathwaysByXref <- function(identifier=NA, systemCode=NA) {
-  if (missing(identifier)) stop("You must specify the Xref identifier.");
-  if (missing(systemCode)) stop("You must specify the system code for the Xref.");
+# ------------------------------------------------------------------------------
+#' @title Find Pathways By Xref
+#'
+#' @description Retrieve a list of pathways containing the query Xref by identifier
+#'  and system code.
+#' @details Note: there will be multiple listings of the same pathway if the Xref
+#' is present mutiple times.
+#' @param identifier The official ID specified by a data source or system
+#' @param systemCode The BridgeDb code associated with the data source or system, 
+#' e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
+#' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.
+#' @return List of lists
+#' @examples \donttest{
+#' findPathwaysByXref('ENSG00000232810','En')
+#' }
+#' @export
+findPathwaysByXref <- function(identifier, systemCode) {
+    res <- wikipathwaysGET('findPathwaysByXref', list(ids=identifier,codes=systemCode))
+    return(res$result)
 
-  handle = new_handle()
-  handle_setheaders(handle, "User-Agent" = "r/renm")
-  handle_setheaders(handle, "Accept" = "application/json")
+}
 
-  url = paste(
-    "https://webservice.wikipathways.org/findPathwaysByXref?",
-    paste("ids=",identifier,"&",collapse="",sep=""),
-    paste("codes=",systemCode,"&",collapse="",sep=""),
-    "format=json", sep=""
-  )
-  conn <- curl::curl(url, handle, open="r")
-  txt <- readLines(conn, warn=FALSE)
-  close(conn)
-  result = fromJSON(txt)$result
-  fields = fromJSON(txt)$result$fields
-  fields = cbind(fields$graphId$value, fields$id.database$values)
-  data = cbind(
-    fields,
-    result[,c("id","name","species","revision")]
-  )
-  colNames = colnames(data)
-  colNames[1] = "graphid"
-  colNames[2] = "xref"
-  colnames(data) = colNames
-  return(data)
+# ------------------------------------------------------------------------------
+#' @title Find Pathway WPIDs By Xref 
+#'
+#' @description Retrieve list of pathway WPIDs containing the query Xref by identifier
+#'  and system code.
+#' @details Note: there will be multiple listings of the same pathway if the Xref
+#' is present mutiple times.
+#' @param identifier The official ID specified by a data source or system
+#' @param systemCode The BridgeDb code associated with the data source or system, 
+#' e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
+#' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.
+#' @return List of WPIDs
+#' @examples \donttest{
+#' findPathwayIdsByXref('ENSG00000232810','En')
+#' }
+#' @export 
+findPathwayIdsByXref <- function(identifier, systemCode) {
+    unlist(lapply(findPathwaysByXref(identifier, systemCode), function(x) {unname(x['id'])}))
+}
+
+# ------------------------------------------------------------------------------
+#' @title Find Pathway Names By Xref 
+#'
+#' @description Retrieve list of pathway names containing the query Xref by identifier
+#'  and system code.
+#' @details Note: there will be multiple listings of the same pathway if the Xref
+#' is present mutiple times.
+#' @param identifier The official ID specified by a data source or system
+#' @param systemCode The BridgeDb code associated with the data source or system, 
+#' e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
+#' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.
+#' @return List of lists
+#' @examples \donttest{
+#' findPathwayNamesByXref('ENSG00000232810','En')
+#' }
+#' @export 
+findPathwayNamesByXref <- function(identifier, systemCode) {
+    unlist(lapply(findPathwaysByXref(identifier, systemCode), function(x) {unname(x['name'])}))
+}
+
+# ------------------------------------------------------------------------------
+#' @title Find Pathway URLs By Xref 
+#'
+#' @description Retrieve list of pathway URLs containing the query Xref by identifier
+#'  and system code.
+#' @details Note: there will be multiple listings of the same pathway if the Xref
+#' is present mutiple times.
+#' @param identifier The official ID specified by a data source or system
+#' @param systemCode The BridgeDb code associated with the data source or system, 
+#' e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
+#' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.
+#' @return List of lists
+#' @examples \donttest{
+#' findPathwayUrlsByXref('ENSG00000232810','En')
+#' }
+#' @export 
+findPathwayUrlsByXref <- function(identifier, systemCode) {
+    unlist(lapply(findPathwaysByXref(identifier, systemCode), function(x) {unname(x['url'])}))
 }

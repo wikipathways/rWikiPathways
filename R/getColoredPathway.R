@@ -1,33 +1,46 @@
-getColoredPathway <- function(pathway=NA, revision=0,
-  graphId=NA, color=NA,
-  fileType="svg")
-{
-  if (missing(pathway)) stop("You must specify the pathway to retrieve.");
-  if (missing(graphId)) stop("You must specify the graphId(s).");
+# ------------------------------------------------------------------------------
+#' @title Get Colored Pathway
+#'
+#' @description Retrieve a pathway image file with specified nodes colored by specified colors
+#' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
+#' @param revision (optional) Number to indicate a specific revision to download
+#' @param graphId String or vector indicating the nodes to color (only single values are supported at this time)
+#' @param color (optional) String or vector indicating the highlighting color, e.g., #FF8855.
+#' Default is red. You can provide a single color for mutiple nodes; otherwise
+#' color list and graphId must be the same length.
+#' @param fileType (optional) Image file format (only 'svg' supported at this time)
+#' @return Image file
+#' @examples \donttest{
+#'   svg = getColoredPathway(pathway="WP554", graphId="ef1f3");
+#'   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"));
+#'   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"),
+#'                           color="00FF00");
+#'   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"),
+#'                           color=c("FF0000", "0000FF"));
+#'   writeLines(svg, "pathway.svg")
+#' }
+#' @import bitops
+#' @importFrom RCurl base64Decode
+#' @export
+getColoredPathway <- function(pathway, revision=0,
+                              graphId, color=NULL,
+                              fileType="svg") {
+    if (is.null(color)) {
+        color = rep("FF0000", length(graphId))
+    } else if (length(color) == 1) {
+        color = rep(color, length(graphId))
+    }
+    
+    if(length(graphId) != length(color))
+        stop("Error: Must provide same number of graphIds and colors.")
 
-  if (missing(color)) {
-    color = rep("FF0000", length(graphId))
-  } else if (length(color) == 1) {
-    color = rep(color, length(graphId))
-  }
+    res <- wikipathwaysGET('getColoredPathway',
+                           list(pwId=pathway,
+                                revision=revision,
+                                graphId=graphId,
+                                color=color,
+                                fileType=fileType)) 
 
-  handle = new_handle()
-  handle_setheaders(handle, "User-Agent" = "r/renm")
-  handle_setheaders(handle, "Accept" = "application/json")
-
-  url = paste(
-    "https://webservice.wikipathways.org/getColoredPathway?",
-    paste("pwId=",pathway,"&",sep=""),
-    paste("revision=",revision,"&",sep=""),
-    paste("graphId=",graphId,"&",collapse="",sep=""),
-    paste("color=",color,"&",collapse="",sep=""),
-    paste("fileType=",fileType,"&",sep=""),
-    "format=json", sep=""
-  )
-  conn <- curl::curl(url, handle, open="r")
-  txt <- readLines(conn, warn=FALSE)
-  close(conn)
-  result = fromJSON(txt)$data
-  data = RCurl::base64Decode(result)
-  return(data)
+  img = RCurl::base64Decode(res['data'])
+  return(img)
 }

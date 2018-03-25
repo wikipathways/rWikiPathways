@@ -1,18 +1,19 @@
 Package: rWikiPathways
 Type: Package
 Title: rWikiPathways - R client library for the WikiPathways API
-Version: 0.0.3
+Version: 0.99.0
 Date: 2017-10-18
-Author: Egon Willighagen <egon.willighagen@maastrichtuniversity.nl>, Alex Pico <alex.pico@gladstone.ucsf.edu>
-Authors@R: c(person("Egon", "Willighagen", role = c("aut","cre"),
-                     email = "egon.willighagen@gmail.com",
-                     comment = c(ORCID = "0000-0001-7542-0286")),
-             person("Alex", "Pico", role = "aut",
-                     email = "alex.pico@gladstone.ucsf.edu")
-           )
-Maintainer: Egon Willighagen <egon.willighagen@maastrichtuniversity.nl>
-Depends: jsonlite, curl, RCurl, plyr, urltools
-Suggests: testthat
+Author: Egon Willighagen <egon.willighagen@maastrichtuniversity.nl>, Alexander Pico <alex.pico@gladstone.ucsf.edu>
+Maintainer: Egon Willighagen <egon.willighagen@maastrichtuniversity.nl>, Alexander Pico <alex.pico@gladstone.ucsf.edu>
+Depends: R (>= 3.3)
+Imports: bitops, RCurl, httr, RJSONIO, utils
+Suggests: testthat, knitr
 Description: Use this package to interface with the WikiPathways API.
 License: MIT + file LICENSE
-Encoding: UTF-8
+URL: https://github.com/wikipathways/rwikipathways
+BugReports: https://github.com/wikipathways/rwikipathways/issues
+LazyLoad: yes
+biocViews: Visualization, GraphAndNetwork, ThirdPartyClient, Network
+NeedsCompilation: no
+VignetteBuilder: knitr
+RoxygenNote: 6.0.1

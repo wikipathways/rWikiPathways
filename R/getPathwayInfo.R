@@ -1,17 +1,14 @@
-getPathwayInfo <- function(pathway=NA) {
-  if (missing(pathway)) stop("You must specify the pathway to retrieve.");
-
-  handle = new_handle()
-  handle_setheaders(handle, "User-Agent" = "r/renm")
-  handle_setheaders(handle, "Accept" = "application/json")
-
-  url = paste(
-    "https://webservice.wikipathways.org/getPathwayInfo?",
-    "pwId=", pathway, "&",
-    "format=json", sep=""
-  )
-  conn <- curl::curl(url, handle, open="r")
-  txt <- readLines(conn, warn=FALSE)
-  close(conn)
-  data = fromJSON(txt)$pathwayInfo
+# ------------------------------------------------------------------------------
+#' @title Get Pathway Info
+#'
+#' @description Retrieve information for a specific pathway
+#' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
+#' @return List of pathway WPID, URL, name, species and latest revision
+#' @examples \donttest{
+#' getPathwayInfo('WP554')
+#' }
+#' @export
+getPathwayInfo <- function(pathway) {
+    res <- wikipathwaysGET('getPathwayInfo',list(pwId=pathway))
+    return(unname(res$pathwayInfo))
 }
