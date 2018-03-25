@@ -111,7 +111,7 @@ will be listed multiple times if the Xref is present mutiple times.
 ### My favorite pathways
 
 At this point, we should have one or more pathways identified from the queries above.
-Let's assume we identified 'WP554', the Ace Inhibitor Pathway (https://www.wikipathways.org/index.php/Pathway:WP554). We will use its WPID (WP554)
+Let's assume we identified 'WP554', the Ace Inhibitor Pathway (https://wikipathways.org/instance/WP554). We will use its WPID (WP554)
 in subsequent queries.
 
 First off, we can get information about the pathway (if we didn't already collect it above):
