@@ -7,9 +7,7 @@
 findPathwayNamesByText(query)
 }
 \arguments{
-\item{query}{The string to search for, e.g., "cancer"
-e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
-See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.}
+\item{query}{The string to search for, e.g., "cancer"}
 }
 \value{
 List of lists
