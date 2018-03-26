@@ -8,7 +8,7 @@ Authors@R: c(person("Egon", "Willighagen", role = c("aut","cre"),
                      comment = c(ORCID = "0000-0001-7542-0286")),
              person("Alex", "Pico", role = "aut",
                      email = "alex.pico@gladstone.ucsf.edu",
-                     comment = c(ORCID, "0000-0001-5706-2163"))
+                     comment = c(ORCID = "0000-0001-5706-2163"))
            )
 Maintainer: Egon Willighagen <egon.willighagen@maastrichtuniversity.nl>, Alexander Pico <alex.pico@gladstone.ucsf.edu>
 Depends: R (>= 3.3)
