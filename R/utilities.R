@@ -19,7 +19,7 @@
 #' @param base.url (optional) Ignore unless you need to specify a custom domain.
 #' @return query result content
 #' @examples {
-#' .wikipathwaysGET('listOrganisms')
+#' wikipathwaysGET('listOrganisms')
 #' }
 #' @importFrom RJSONIO fromJSON
 #' @importFrom httr GET

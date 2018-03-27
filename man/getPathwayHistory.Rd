@@ -21,6 +21,6 @@ Retrieve the revision history of a pathway.
 }
 \examples{
 {
-getPathwayHistory('WP554','20180201')
+getPathwayHistory('WP554',20180201)
 }
 }

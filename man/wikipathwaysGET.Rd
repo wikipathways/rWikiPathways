@@ -24,6 +24,6 @@ Constructs the query, makes GET call and processes the result
 }
 \examples{
 {
-.wikipathwaysGET('listOrganisms')
+wikipathwaysGET('listOrganisms')
 }
 }
