@@ -1,5 +1,5 @@
 # R Client Package for WikiPathways
-[![Travis-CI Build Status](https://travis-ci.org/wikipathways/rwikipathways.svg?branch=master)](https://travis-ci.org/wikipathways/rwikipathways)
+[![Travis-CI Build Status](https://travis-ci.org/wikipathways/rWikiPathways.svg?branch=master)](https://travis-ci.org/wikipathways/rWikiPathways)
 
 R Client library for the WikiPathways API (https://webservice.wikipathways.org/) (license: MIT).
 
