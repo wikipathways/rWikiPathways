@@ -10,14 +10,14 @@
 #' color list and graphId must be the same length.
 #' @param fileType (optional) Image file format
 #' @return Image file
-#' @examples \donttest{
+#' @examples {
 #'   svg = getColoredPathway(pathway="WP554", graphId="ef1f3");
 #'   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"));
 #'   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"),
 #'                           color="00FF00");
 #'   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"),
 #'                           color=c("FF0000", "0000FF"));
-#'   writeLines(svg, "pathway.svg")
+#'   # writeLines(svg, "pathway.svg")
 #' }
 #' @importFrom caTools base64decode
 #' @export

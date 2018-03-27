@@ -16,7 +16,7 @@ List of pathway WPIDs
 Retrieve pathway WPIDs for every pathway with a given curation tag.
 }
 \examples{
-\donttest{
+{
 getPathwayIdsByCurationTag('Curation:FeaturedPathway')
 }
 }

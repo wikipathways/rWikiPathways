@@ -4,7 +4,7 @@
 #' @description Retrieve information for a specific pathway
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
 #' @return List of pathway WPID, URL, name, species and latest revision
-#' @examples \donttest{
+#' @examples {
 #' getPathwayInfo('WP554')
 #' }
 #' @export

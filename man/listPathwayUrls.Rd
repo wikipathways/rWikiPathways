@@ -20,7 +20,7 @@ Retrieve list of pathway URLs per species.
 Basically returns a subset of \link{listPathways} result
 }
 \examples{
-\donttest{
+{
 listPathwayUrls('Mus musculus')
 }
 }

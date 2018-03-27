@@ -17,7 +17,7 @@ List of WPIDs
 Retrieve WPIDs of recently changed pathways at WikiPathways.
 }
 \examples{
-\donttest{
+{
 getRecentChangesIds('20180201000000')
 }
 }

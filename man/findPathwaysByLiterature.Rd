@@ -16,7 +16,7 @@ List of lists
 Retrieve a list of pathways containing the query citation.
 }
 \examples{
-\donttest{
+{
 findPathwaysByLiterature('19649250')
 findPathwaysByLiterature('smith')
 findPathwaysByLiterature('cancer')

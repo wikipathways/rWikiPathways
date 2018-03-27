@@ -13,7 +13,7 @@ list of organisms
 Retrieve the list of organisms supported by WikiPathways
 }
 \examples{
-\donttest{
+{
 listOrganisms()
 }
 }

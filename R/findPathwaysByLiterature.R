@@ -4,7 +4,7 @@
 #' @description Retrieve a list of pathways containing the query citation.
 #' @param query The string to search for, e.g., a PMID, title keyword or author name.
 #' @return List of lists
-#' @examples \donttest{
+#' @examples {
 #' findPathwaysByLiterature('19649250')
 #' findPathwaysByLiterature('smith')
 #' findPathwaysByLiterature('cancer')
@@ -22,7 +22,7 @@ findPathwaysByLiterature <- function(query) {
 #' @description Retrieve list of pathway WPIDs containing the query citation.
 #' @param query The string to search for, e.g., a PMID, title keyword or author name.
 #' @return List of WPIDs
-#' @examples \donttest{
+#' @examples {
 #' findPathwayIdsByLiterature('19649250')
 #' findPathwayIdsByLiterature('smith')
 #' findPathwayIdsByLiterature('cancer')
@@ -40,7 +40,7 @@ findPathwayIdsByLiterature <- function(query) {
 #' copies exist for multiple species.
 #' @param query The string to search for, e.g., a PMID, title keyword or author name.
 #' @return List of lists
-#' @examples \donttest{
+#' @examples {
 #' findPathwayNamesByLiterature('19649250')
 #' findPathwayNamesByLiterature('smith')
 #' findPathwayNamesByLiterature('cancer')
@@ -56,7 +56,7 @@ findPathwayNamesByLiterature <- function(query) {
 #' @description Retrieve list of pathway URLs containing the query citation.
 #' @param query The string to search for, e.g., a PMID, title keyword or author name.
 #' @return List of lists
-#' @examples \donttest{
+#' @examples {
 #' findPathwayUrlsByLiterature('19649250')
 #' findPathwayUrlsByLiterature('smith')
 #' findPathwayUrlsByLiterature('cancer')

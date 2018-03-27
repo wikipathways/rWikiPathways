@@ -23,7 +23,7 @@ query result content
 Constructs the query, makes GET call and processes the result
 }
 \examples{
-\donttest{
+{
 .wikipathwaysGET('listOrganisms')
 }
 }

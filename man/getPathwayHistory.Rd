@@ -20,7 +20,7 @@ List of revisions, including user and comment
 Retrieve the revision history of a pathway.
 }
 \examples{
-\donttest{
+{
 getPathwayHistory('WP554')
 }
 }

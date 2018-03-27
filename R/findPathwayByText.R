@@ -4,7 +4,7 @@
 #' @description Retrieve a list of pathways containing the query text.
 #' @param query The string to search for, e.g., "cancer"
 #' @return List of lists
-#' @examples \donttest{
+#' @examples {
 #' findPathwaysByText('cancer')
 #' }
 #' @export
@@ -20,7 +20,7 @@ findPathwaysByText <- function(query) {
 #' @description Retrieve list of pathway WPIDs containing the query text.
 #' @param query The string to search for, e.g., "cancer"
 #' @return List of WPIDs
-#' @examples \donttest{
+#' @examples {
 #' findPathwayIdsByText('cancer')
 #' }
 #' @export 
@@ -36,7 +36,7 @@ findPathwayIdsByText <- function(query) {
 #' copies exist for multiple species.
 #' @param query The string to search for, e.g., "cancer"
 #' @return List of lists
-#' @examples \donttest{
+#' @examples {
 #' findPathwayNamesByText('cancer')
 #' }
 #' @export 
@@ -50,7 +50,7 @@ findPathwayNamesByText <- function(query) {
 #' @description Retrieve list of pathway URLs containing the query text.
 #' @param query The string to search for, e.g., "cancer"
 #' @return List of lists
-#' @examples \donttest{
+#' @examples {
 #' findPathwayUrlsByText('cancer')
 #' }
 #' @export 

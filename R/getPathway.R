@@ -5,7 +5,7 @@
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
 #' @param revision (optional) Number to indicate a specific revision to download
 #' @return GPML
-#' @examples \donttest{
+#' @examples {
 #' getPathway('WP554')
 #' }
 #' @export

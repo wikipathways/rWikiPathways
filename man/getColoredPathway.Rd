@@ -27,13 +27,13 @@ Image file
 Retrieve a pathway image file with specified nodes colored by specified colors
 }
 \examples{
-\donttest{
+{
   svg = getColoredPathway(pathway="WP554", graphId="ef1f3");
   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"));
   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"),
                           color="00FF00");
   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"),
                           color=c("FF0000", "0000FF"));
-  writeLines(svg, "pathway.svg")
+  # writeLines(svg, "pathway.svg")
 }
 }

@@ -4,7 +4,7 @@
 #' @description Retrieve information about ontology terms for a specific pathway.
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
 #' @return List of tag name, display name, revision, text, timestampe and user
-#' @examples \donttest{
+#' @examples {
 #' getOntologyTerms('WP554')
 #' }
 #' @export
@@ -19,7 +19,7 @@ getOntologyTerms <- function(pathway) {
 #' @description Retrieve names of ontology terms for a specific pathway.
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
 #' @return List of term names
-#' @examples \donttest{
+#' @examples {
 #' getOntologyTermNames('WP554')
 #' }
 #' @export
@@ -33,7 +33,7 @@ getOntologyTermNames <- function(pathway) {
 #' @description Retrieve identifiers of ontology terms for a specific pathway.
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
 #' @return List of term identifiers
-#' @examples \donttest{
+#' @examples {
 #' getOntologyTermIds('WP554')
 #' }
 #' @export
@@ -48,7 +48,7 @@ getOntologyTermIds <- function(pathway) {
 #' @description Retrieve pathway information for every pathway with a given ontology term.
 #' @param term Official name of ontology term, e.g., "PW:0000045"
 #' @return List of pathway information, including WPID, url, name, species and revision
-#' @examples \donttest{
+#' @examples {
 #' getPathwaysByOntologyTerm('PW:0000045')
 #' }
 #' @export
@@ -63,7 +63,7 @@ getPathwaysByOntologyTerm <- function(term) {
 #' @description Retrieve pathway WPIDs for every pathway with a given ontology term.
 #' @param term Official name of ontology term, e.g., "PW:0000045"
 #' @return List of pathway WPIDs
-#' @examples \donttest{
+#' @examples {
 #' getPathwayIdsByOntologyTerm('PW:0000045')
 #' }
 #' @export
@@ -77,7 +77,7 @@ getPathwayIdsByOntologyTerm <- function(term) {
 #' @description Retrieve pathway information for every pathway with a child term of given ontology term.
 #' @param term Official name of ontology term, e.g., "PW:0000045"
 #' @return List of pathway information, including WPID, url, name, species and revision
-#' @examples \donttest{
+#' @examples {
 #' getPathwaysByParentOntologyTerm('PW:0000045')
 #' }
 #' @export
@@ -92,7 +92,7 @@ getPathwaysByParentOntologyTerm <- function(term) {
 #' @description Retrieve pathway WPIDs for every pathway with a child term of given ontology term
 #' @param term Official name of ontology term, e.g., "PW:0000045"
 #' @return List of pathway WPIDs
-#' @examples \donttest{
+#' @examples {
 #' getPathwayIdsByParentOntologyTerm('PW:0000045')
 #' }
 #' @export

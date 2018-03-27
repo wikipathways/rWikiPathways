@@ -6,7 +6,7 @@
 #' @param organism (optional) A particular species. See \link{listOrganisms}. 
 #' Default is all species.
 #' @return list of lists
-#' @examples \donttest{
+#' @examples {
 #' listPathways('Mus musculus')
 #' }
 #' @export
@@ -23,7 +23,7 @@ listPathways <- function(organism="") {
 #' @param organism (optional) A particular species. See \link{listOrganisms}. 
 #' Default is all species.
 #' @return list of WPIDs
-#' @examples \donttest{
+#' @examples {
 #' listPathwayIds('Mus musculus')
 #' }
 #' @export 
@@ -39,7 +39,7 @@ listPathwayIds <- function(organism="") {
 #' @param organism (optional) A particular species. See \link{listOrganisms}. 
 #' Default is all species.
 #' @return list of names
-#' @examples \donttest{
+#' @examples {
 #' listPathwayNames('Mus musculus')
 #' }
 #' @export 
@@ -55,7 +55,7 @@ listPathwayNames <- function(organism="") {
 #' @param organism (optional) A particular species. See \link{listOrganisms}. 
 #' Default is all species.
 #' @return list of URLs
-#' @examples \donttest{
+#' @examples {
 #' listPathwayUrls('Mus musculus')
 #' }
 #' @export 

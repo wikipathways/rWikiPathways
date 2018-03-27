@@ -16,7 +16,7 @@ List of WPIDs
 Retrieve list of pathway WPIDs containing the query text.
 }
 \examples{
-\donttest{
+{
 findPathwayIdsByText('cancer')
 }
 }

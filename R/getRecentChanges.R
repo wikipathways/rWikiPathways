@@ -5,7 +5,7 @@
 #' @param timestamp (14 digits, YYYYMMDDhhmmss) Limit by time, only history items 
 #' after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.
 #' @return List of changes, including pathway WPID, name, url, species and revision
-#' @examples \donttest{
+#' @examples {
 #' getRecentChanges('20180201000000')
 #' }
 #' @export
@@ -21,7 +21,7 @@ getRecentChanges <- function(timestamp) {
 #' @param timestamp (14 digits, YYYYMMDDhhmmss) Limit by time, only history items 
 #' after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.
 #' @return List of WPIDs
-#' @examples \donttest{
+#' @examples {
 #' getRecentChangesIds('20180201000000')
 #' }
 #' @export 
@@ -36,7 +36,7 @@ getRecentChangesIds <- function(timestamp) {
 #' @param timestamp (14 digits, YYYYMMDDhhmmss) Limit by time, only history items 
 #' after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.
 #' @return List of pathway names. Note: pathway deletions will be listed as blank names.
-#' @examples \donttest{
+#' @examples {
 #' getRecentChangesNames('20180201000000')
 #' }
 #' @export 

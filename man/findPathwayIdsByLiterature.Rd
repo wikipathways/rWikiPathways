@@ -16,7 +16,7 @@ List of WPIDs
 Retrieve list of pathway WPIDs containing the query citation.
 }
 \examples{
-\donttest{
+{
 findPathwayIdsByLiterature('19649250')
 findPathwayIdsByLiterature('smith')
 findPathwayIdsByLiterature('cancer')

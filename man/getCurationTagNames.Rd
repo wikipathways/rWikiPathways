@@ -16,7 +16,7 @@ List of tag names
 Retrieve names of curation tags for a specific pathway.
 }
 \examples{
-\donttest{
+{
 getCurationTagNames('WP554')
 }
 }

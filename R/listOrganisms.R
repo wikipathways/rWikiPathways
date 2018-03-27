@@ -3,7 +3,7 @@
 #'
 #' @description Retrieve the list of organisms supported by WikiPathways
 #' @return list of organisms
-#' @examples \donttest{
+#' @examples {
 #' listOrganisms()
 #' }
 #' @export

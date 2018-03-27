@@ -7,7 +7,7 @@
 #' e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
 #' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.
 #' @return List of Xrefs identifiers
-#' @examples \donttest{
+#' @examples {
 #' xrefs = getXrefList("WP2338", "L")
 #' }
 #' @export

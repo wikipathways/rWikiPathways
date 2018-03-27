@@ -16,7 +16,7 @@ List of tag name, display name, revision, text, timestampe and user
 Retrieve information about ontology terms for a specific pathway.
 }
 \examples{
-\donttest{
+{
 getOntologyTerms('WP554')
 }
 }

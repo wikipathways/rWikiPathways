@@ -16,7 +16,7 @@ List of pathway WPIDs
 Retrieve pathway WPIDs for every pathway with a child term of given ontology term
 }
 \examples{
-\donttest{
+{
 getPathwayIdsByParentOntologyTerm('PW:0000045')
 }
 }

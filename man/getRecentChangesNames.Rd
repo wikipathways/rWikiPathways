@@ -17,7 +17,7 @@ List of pathway names. Note: pathway deletions will be listed as blank names.
 Retrieve names of recently changed pathways at WikiPathways.
 }
 \examples{
-\donttest{
+{
 getRecentChangesNames('20180201000000')
 }
 }

@@ -25,7 +25,7 @@ Note: there will be multiple listings of the same pathway if the Xref
 is present mutiple times.
 }
 \examples{
-\donttest{
+{
 findPathwayUrlsByXref('ENSG00000232810','En')
 }
 }

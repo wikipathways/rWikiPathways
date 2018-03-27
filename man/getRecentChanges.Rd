@@ -17,7 +17,7 @@ List of changes, including pathway WPID, name, url, species and revision
 Retrieve recent changes to pathways at WikiPathways.
 }
 \examples{
-\donttest{
+{
 getRecentChanges('20180201000000')
 }
 }

@@ -20,7 +20,7 @@ List of Xrefs identifiers
 Retrieve the Xref identifiers for a specific pathway in a particular system code
 }
 \examples{
-\donttest{
+{
 xrefs = getXrefList("WP2338", "L")
 }
 }

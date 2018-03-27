@@ -16,7 +16,7 @@ List of pathway information, including WPID, url, name, species and revision
 Retrieve pathway information for every pathway with a child term of given ontology term.
 }
 \examples{
-\donttest{
+{
 getPathwaysByParentOntologyTerm('PW:0000045')
 }
 }

@@ -16,7 +16,7 @@ List of lists
 Retrieve a list of pathways containing the query text.
 }
 \examples{
-\donttest{
+{
 findPathwaysByText('cancer')
 }
 }

@@ -7,7 +7,7 @@
 #' e.g., 20180201 for revisions since Feb 1st, 2018. Any length of timestamp is 
 #' accepted, upto 14 digits, e.g., 2018, 201802, 20180201063011, etc.
 #' @return List of revisions, including user and comment
-#' @examples \donttest{
+#' @examples {
 #' getPathwayHistory('WP554')
 #' }
 #' @export

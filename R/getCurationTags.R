@@ -4,7 +4,7 @@
 #' @description Retrieve information about curation tags for a specific pathway.
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
 #' @return List of tag name, display name, revision, text, timestampe and user
-#' @examples \donttest{
+#' @examples {
 #' getCurationTags('WP554')
 #' }
 #' @export
@@ -19,7 +19,7 @@ getCurationTags <- function(pathway) {
 #' @description Retrieve names of curation tags for a specific pathway.
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
 #' @return List of tag names
-#' @examples \donttest{
+#' @examples {
 #' getCurationTagNames('WP554')
 #' }
 #' @export
@@ -33,7 +33,7 @@ getCurationTagNames <- function(pathway) {
 #' @description Retrieve information about every instance of a given curation tag.
 #' @param tag Official name of curation tag, e.g., "Curation:FeaturedPathway"
 #' @return List of tag name, display name, revision, text, timestampe and user
-#' @examples \donttest{
+#' @examples {
 #' getEveryCurationTag('Curation:FeaturedPathway')
 #' }
 #' @export
@@ -48,7 +48,7 @@ getEveryCurationTag <- function(tag) {
 #' @description Retrieve pathway information for every pathway with a given curation tag.
 #' @param tag Official name of curation tag, e.g., "Curation:FeaturedPathway"
 #' @return List of pathway information, including WPID, url, name, species and revision
-#' @examples \donttest{
+#' @examples {
 #' getPathwaysByCurationTag('Curation:FeaturedPathway')
 #' }
 #' @export
@@ -63,7 +63,7 @@ getPathwaysByCurationTag <- function(tag) {
 #' @description Retrieve pathway WPIDs for every pathway with a given curation tag.
 #' @param tag Official name of curation tag, e.g., "Curation:FeaturedPathway"
 #' @return List of pathway WPIDs
-#' @examples \donttest{
+#' @examples {
 #' getPathwayIdsByCurationTag('Curation:FeaturedPathway')
 #' }
 #' @export

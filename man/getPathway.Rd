@@ -18,7 +18,7 @@ GPML
 Retrieve a specific pathway in the GPML format
 }
 \examples{
-\donttest{
+{
 getPathway('WP554')
 }
 }

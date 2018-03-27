@@ -16,7 +16,7 @@ List of term identifiers
 Retrieve identifiers of ontology terms for a specific pathway.
 }
 \examples{
-\donttest{
+{
 getOntologyTermIds('WP554')
 }
 }

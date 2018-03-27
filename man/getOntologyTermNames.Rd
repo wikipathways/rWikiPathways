@@ -16,7 +16,7 @@ List of term names
 Retrieve names of ontology terms for a specific pathway.
 }
 \examples{
-\donttest{
+{
 getOntologyTermNames('WP554')
 }
 }

@@ -20,7 +20,7 @@ Note: there will be multiple listings of the same pathway name if
 copies exist for multiple species.
 }
 \examples{
-\donttest{
+{
 findPathwayNamesByLiterature('19649250')
 findPathwayNamesByLiterature('smith')
 findPathwayNamesByLiterature('cancer')

@@ -16,7 +16,7 @@ List of lists
 Retrieve list of pathway URLs containing the query citation.
 }
 \examples{
-\donttest{
+{
 findPathwayUrlsByLiterature('19649250')
 findPathwayUrlsByLiterature('smith')
 findPathwayUrlsByLiterature('cancer')

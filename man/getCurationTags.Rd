@@ -16,7 +16,7 @@ List of tag name, display name, revision, text, timestampe and user
 Retrieve information about curation tags for a specific pathway.
 }
 \examples{
-\donttest{
+{
 getCurationTags('WP554')
 }
 }

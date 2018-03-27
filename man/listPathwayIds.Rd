@@ -20,7 +20,7 @@ Retrieve list of pathway WPIDs per species.
 Basically returns a subset of \link{listPathways} result
 }
 \examples{
-\donttest{
+{
 listPathwayIds('Mus musculus')
 }
 }

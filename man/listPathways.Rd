@@ -18,7 +18,7 @@ Retrieve list of pathways per species, including WPID, name, species,
 URL and latest revision number.
 }
 \examples{
-\donttest{
+{
 listPathways('Mus musculus')
 }
 }

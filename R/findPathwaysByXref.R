@@ -10,7 +10,7 @@
 #' e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
 #' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.
 #' @return List of lists
-#' @examples \donttest{
+#' @examples {
 #' findPathwaysByXref('ENSG00000232810','En')
 #' }
 #' @export
@@ -32,7 +32,7 @@ findPathwaysByXref <- function(identifier, systemCode) {
 #' e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
 #' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.
 #' @return List of WPIDs
-#' @examples \donttest{
+#' @examples {
 #' findPathwayIdsByXref('ENSG00000232810','En')
 #' }
 #' @export 
@@ -52,7 +52,7 @@ findPathwayIdsByXref <- function(identifier, systemCode) {
 #' e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
 #' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.
 #' @return List of lists
-#' @examples \donttest{
+#' @examples {
 #' findPathwayNamesByXref('ENSG00000232810','En')
 #' }
 #' @export 
@@ -72,7 +72,7 @@ findPathwayNamesByXref <- function(identifier, systemCode) {
 #' e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
 #' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.
 #' @return List of lists
-#' @examples \donttest{
+#' @examples {
 #' findPathwayUrlsByXref('ENSG00000232810','En')
 #' }
 #' @export 

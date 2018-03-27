@@ -16,7 +16,7 @@ List of pathway WPID, URL, name, species and latest revision
 Retrieve information for a specific pathway
 }
 \examples{
-\donttest{
+{
 getPathwayInfo('WP554')
 }
 }

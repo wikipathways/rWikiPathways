@@ -18,7 +18,7 @@
 #' @param format The format of the return, e.g., json (default), xml, html, jpg, pdf, dump
 #' @param base.url (optional) Ignore unless you need to specify a custom domain.
 #' @return query result content
-#' @examples \donttest{
+#' @examples {
 #' .wikipathwaysGET('listOrganisms')
 #' }
 #' @importFrom RJSONIO fromJSON

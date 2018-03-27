@@ -16,7 +16,7 @@ List of tag name, display name, revision, text, timestampe and user
 Retrieve information about every instance of a given curation tag.
 }
 \examples{
-\donttest{
+{
 getEveryCurationTag('Curation:FeaturedPathway')
 }
 }
