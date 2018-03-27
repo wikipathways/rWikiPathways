@@ -8,7 +8,7 @@
 #' accepted, upto 14 digits, e.g., 2018, 201802, 20180201063011, etc.
 #' @return List of revisions, including user and comment
 #' @examples {
-#' getPathwayHistory('WP554')
+#' getPathwayHistory('WP554',20180201)
 #' }
 #' @export
 getPathwayHistory <- function(pathway,timestamp) {
