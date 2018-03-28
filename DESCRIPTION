@@ -11,7 +11,7 @@ Authors@R: c(person("Egon", "Willighagen", role = c("aut","cre"),
                      comment = c(ORCID = "0000-0001-5706-2163"))
            )
 Maintainer: Egon Willighagen <egon.willighagen@gmail.com>, Alexander Pico <alex.pico@gladstone.ucsf.edu>
-Depends: R (>= 3.5)
+Depends: R (>= 3.4)
 Imports: caTools, httr, RJSONIO, utils
 Suggests: testthat, knitr
 Description: Use this package to interface with the WikiPathways API.
