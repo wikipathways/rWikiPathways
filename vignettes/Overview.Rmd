@@ -1,8 +1,11 @@
 ---
 title: "Overview"
 author: "by Alexander Pico"
+package: rWikiPathways
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
+output: 
+  BiocStyle::html_document:
+    toc_float: true
 vignette: >
   %\VignetteIndexEntry{1. Overview}
   %\VignetteEngine{knitr::rmarkdown}
@@ -18,7 +21,6 @@ references:
 ---
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
-#  highlight = FALSE,
   eval=FALSE
 )
 ```
@@ -30,7 +32,7 @@ tools to the research community for content creation, editing and utilization [@
 are typically performed based on "Xrefs", standardized identifiers for genes, proteins and metabolites. Once you can identified a pathway, you can use the WPID (WikiPathways identifier) to
 make additional queries.
 
-### Prerequisites
+# Prerequisites
 
 All you need is this **rWikiPathways** package! If you're viewing this vignette, then you've probably 
 already installed and loaded **rWikiPathways**, e.g., by means of:
@@ -49,7 +51,7 @@ install_github('wikipathways/rWikiPathways', build_vignettes=TRUE)
 library(rWikiPathways)
 ```
 
-### Getting started
+# Getting started
 
 Lets first get oriented with what WikiPathways contains. For example, here's how
 you check to see which species are currently supported by WikiPathways:
@@ -116,7 +118,7 @@ that will just return simple lists:
 *Be aware*: a simple *length* function may be misleading here since a given pathway 
 will be listed multiple times if the Xref is present mutiple times.
 
-### My favorite pathways
+# My favorite pathways
 
 At this point, we should have one or more pathways identified from the queries above.
 Let's assume we identified 'WP554', the Ace Inhibitor Pathway (https://wikipathways.org/instance/WP554). We will use its WPID (WP554)
@@ -152,7 +154,7 @@ Ch (HMBD), Ce (ChEBI) or Cs (Chemspider):
 
 It's that easy!
 
-### Give me more
+# Give me more
 
 We also provide methods for retrieving pathways as data files and as images. The
 native file format for WikiPathways is GPML, a custom XML specification. You can
@@ -185,7 +187,7 @@ features. Here's an example:
 
 This will produce an svg image of the pathway with the ACE gene highlighted by color.
 
-### Wrapping up
+# Wrapping up
 
 That's an overview of the **rWikiPathways** package. Check out other vignettes and
 the complete list of package functions:

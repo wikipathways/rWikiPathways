@@ -1,7 +1,11 @@
+---
 title: "rWikiPathways-and-BridgeDbR"
 author: "by Alexander Pico"
+package: rWikiPathways
 date: "`r Sys.Date()`"
-output: rmarkdown::html_vignette
+output: 
+  BiocStyle::html_document:
+    toc_float: true
 vignette: >
   %\VignetteIndexEntry{2. rWikiPathways and BridgeDbR}
   %\VignetteEngine{knitr::rmarkdown}
@@ -17,7 +21,6 @@ references:
 ---
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
-#  highlight = FALSE,
   eval=FALSE
 )
 ```
@@ -33,7 +36,7 @@ ID mapping and identifiers in general for gene, proteins and metabolites.
 Together, *BridgeDbR* provides convience to the typical *rWikPathways* user by supplying
 formal names and codes defined by BridgeDb and used by WikiPathways.
 
-### Prerequisites
+# Prerequisites
 
 In addition to this **rWikiPathways** package, you'll also need to install BridgeDbR:
 
@@ -43,7 +46,7 @@ biocLite("BridgeDbR")
 library(BridgeDbR)
 ```
 
-### Getting started
+# Getting started
 Lets first check some of the most basic functions from each package. For example, 
 here's how you check to see which species are currently supported by WikiPathways:
 
@@ -61,7 +64,7 @@ BridgeDbR's *getOrganismCode* function, we can get those:
     unlist(lapply(orgNames,BridgeDbR::getOrganismCode))
 ```
 
-### Identifier System Names and Codes
+# Identifier System Names and Codes
 Even more obscure are the various datasources providing official identifiers and
 how they are named and coded. Fortunately, BridgeDb defines these clearly and simply.
 And WikiPathways relies on these BridgeDb definitions. 
@@ -81,7 +84,7 @@ to guess these codes. Use this function from BridgeDb (above) to get the correct
 code. By the way, all the systems supported by BridgeDb are here:
 https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt
 
-### How to use BridgeDbR with rWikiPathways
+# How to use BridgeDbR with rWikiPathways
 Here are some specific combo functions that are useful. They let you skip worrying
 about system codes altogether!
 
@@ -102,7 +105,7 @@ about system codes altogether!
     getXrefList('WP554', getSystemCode('ChEBI'))
 ```
 
-### Other tips
+# Other tips
 
 And if you ever find yourself with a system code, e.g., from a rWikiPathways return
 result and you're not sure what it is, then you can use this function:
