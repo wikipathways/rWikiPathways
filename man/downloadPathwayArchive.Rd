@@ -4,24 +4,32 @@
 \alias{downloadPathwayArchive}
 \title{Download Pathway Archive}
 \usage{
-downloadPathwayArchive(date = "current", format = "gpml")
+downloadPathwayArchive(date = "current", organism = NULL, format = "gpml")
 }
 \arguments{
-\item{date}{The timestamp for a monthly release or "current" (default) for 
+\item{date}{(optional) The timestamp for a monthly release or "current" (default) for 
 latest release.}
 
-\item{format}{Either gpml (default), gmt, index, rdf or svg.}
+\item{organism}{(optional) A particular species. See \link{listOrganisms}.}
+
+\item{format}{(optional) Either gpml (default), gmt or svg.}
 }
 \value{
-Open tab in default browser
+Downloaded file or tab in default browser
 }
 \description{
 Access the monthly archives of pathway content from WikiPathways.
+}
+\details{
+If you specify an archive date, organism and format, then the archive file
+will be downloaded. Otherwise, the archive will be opened in a tab in your
+default browser.
 }
 \examples{
 \donttest{
 downloadPathwayArchive()
 downloadPathwayArchive(format="gmt")
-downloadPathwayArchive("20171010","svg")
+downloadPathwayArchive(date="20171010", format="svg")
+downloadPathwayArchive(date="20171010", organism="Mus musculus", format="svg")
 }
 }

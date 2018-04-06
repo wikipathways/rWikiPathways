@@ -13,10 +13,11 @@
 #' @examples \donttest{
 #' downloadPathwayArchive()
 #' downloadPathwayArchive(format="gmt")
-#' downloadPathwayArchive("20171010","svg")
+#' downloadPathwayArchive(date="20171010", format="svg")
+#' downloadPathwayArchive(date="20171010", organism="Mus musculus", format="svg")
 #' }
 #' @export
-#' @importFrom utils browseURL
+#' @importFrom utils browseURL download.file
 downloadPathwayArchive <- function(date='current',organism = NULL, format='gpml'){
     #validate format
     match.arg(format, c('gpml','gmt', 'svg'))
