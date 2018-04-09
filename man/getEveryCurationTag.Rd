@@ -7,10 +7,10 @@
 getEveryCurationTag(tag)
 }
 \arguments{
-\item{tag}{Official name of curation tag, e.g., "Curation:FeaturedPathway"}
+\item{tag}{(\code{character}) Official name of curation tag, e.g., "Curation:FeaturedPathway"}
 }
 \value{
-List of tag name, display name, revision, text, timestampe and user
+A \code{list} of tag name, display name, revision, text, timestampe and user
 }
 \description{
 Retrieve information about every instance of a given curation tag.

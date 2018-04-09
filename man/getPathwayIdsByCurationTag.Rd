@@ -7,10 +7,10 @@
 getPathwayIdsByCurationTag(tag)
 }
 \arguments{
-\item{tag}{Official name of curation tag, e.g., "Curation:FeaturedPathway"}
+\item{tag}{(\code{character}) Official name of curation tag, e.g., "Curation:FeaturedPathway"}
 }
 \value{
-List of pathway WPIDs
+A \code{list} of pathway WPIDs
 }
 \description{
 Retrieve pathway WPIDs for every pathway with a given curation tag.

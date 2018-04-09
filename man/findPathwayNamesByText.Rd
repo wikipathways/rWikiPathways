@@ -7,10 +7,10 @@
 findPathwayNamesByText(query)
 }
 \arguments{
-\item{query}{The string to search for, e.g., "cancer"}
+\item{query}{A \code{character} string to search for, e.g., "cancer"}
 }
 \value{
-List of lists
+A \code{list} of lists
 }
 \description{
 Retrieve list of pathway names containing the query text.

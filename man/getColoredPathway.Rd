@@ -5,20 +5,20 @@
 \title{Get Colored Pathway}
 \usage{
 getColoredPathway(pathway, revision = 0, graphId = NULL, color = NULL,
-  fileType = "svg")
+  fileType = c("svg", "png", "pdf"))
 }
 \arguments{
 \item{pathway}{WikiPathways identifier (WPID) for the pathway to download, e.g. WP4}
 
-\item{revision}{(optional) Number to indicate a specific revision to download}
+\item{revision}{(\code{integer}, optional) Number to indicate a specific revision to download}
 
-\item{graphId}{String or vector indicating the nodes to color (only single values are supported at this time)}
+\item{graphId}{A \code{character} string or \code{vector} indicating the nodes to color (only single values are supported at this time)}
 
 \item{color}{(optional) String or vector indicating the highlighting color, e.g., #FF8855.
 Default is red. You can provide a single color for mutiple nodes; otherwise
 color list and graphId must be the same length.}
 
-\item{fileType}{(optional) Image file format}
+\item{fileType}{(optional) Image file format, e.g., svg (default), png or pdf.}
 }
 \value{
 Image file
@@ -28,12 +28,12 @@ Retrieve a pathway image file with specified nodes colored by specified colors
 }
 \examples{
 {
-  svg = getColoredPathway(pathway="WP554", graphId="ef1f3");
-  svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"));
+  svg = getColoredPathway(pathway="WP554", graphId="ef1f3")
+  svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"))
   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"),
-                          color="00FF00");
+                          color="00FF00")
   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"),
-                          color=c("FF0000", "0000FF"));
+                          color=c("FF0000", "0000FF"))
   # writeLines(svg, "pathway.svg")
 }
 }

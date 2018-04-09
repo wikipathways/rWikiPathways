@@ -7,11 +7,11 @@
 listPathways(organism = "")
 }
 \arguments{
-\item{organism}{(optional) A particular species. See \link{listOrganisms}. 
+\item{organism}{(\code{character}, optional) A particular species. See \link{listOrganisms}. 
 Default is all species.}
 }
 \value{
-list of lists
+A \code{list} of lists
 }
 \description{
 Retrieve list of pathways per species, including WPID, name, species,

@@ -4,7 +4,7 @@
 #' @description Retrieve recent changes to pathways at WikiPathways.
 #' @param timestamp (14 digits, YYYYMMDDhhmmss) Limit by time, only history items 
 #' after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.
-#' @return List of changes, including pathway WPID, name, url, species and revision
+#' @return A \code{list} of changes, including pathway WPID, name, url, species and revision
 #' @examples {
 #' getRecentChanges('20180201000000')
 #' }
@@ -20,7 +20,7 @@ getRecentChanges <- function(timestamp) {
 #' @description Retrieve WPIDs of recently changed pathways at WikiPathways.
 #' @param timestamp (14 digits, YYYYMMDDhhmmss) Limit by time, only history items 
 #' after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.
-#' @return List of WPIDs
+#' @return A \code{list} of WPIDs
 #' @examples {
 #' getRecentChangesIds('20180201000000')
 #' }
@@ -35,7 +35,7 @@ getRecentChangesIds <- function(timestamp) {
 #' @description Retrieve names of recently changed pathways at WikiPathways.
 #' @param timestamp (14 digits, YYYYMMDDhhmmss) Limit by time, only history items 
 #' after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.
-#' @return List of pathway names. Note: pathway deletions will be listed as blank names.
+#' @return A \code{list} of pathway names. Note: pathway deletions will be listed as blank names.
 #' @examples {
 #' getRecentChangesNames('20180201000000')
 #' }

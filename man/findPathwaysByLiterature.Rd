@@ -7,10 +7,10 @@
 findPathwaysByLiterature(query)
 }
 \arguments{
-\item{query}{The string to search for, e.g., a PMID, title keyword or author name.}
+\item{query}{The \code{character} string to search for, e.g., a PMID, title keyword or author name.}
 }
 \value{
-List of lists
+A \code{list} of lists
 }
 \description{
 Retrieve a list of pathways containing the query citation.

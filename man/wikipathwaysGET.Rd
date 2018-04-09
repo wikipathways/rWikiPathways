@@ -4,15 +4,15 @@
 \alias{wikipathwaysGET}
 \title{WikiPathways GET}
 \usage{
-wikipathwaysGET(operation, parameters = NULL, format = "json",
-  base.url = .baseUrl)
+wikipathwaysGET(operation, parameters = NULL, format = c("json", "xml",
+  "html", "jpg", "pdf", "dump"), base.url = .baseUrl)
 }
 \arguments{
-\item{operation}{A string to be converted to the query namespace}
+\item{operation}{A \code{character} string to be converted to the query namespace}
 
-\item{parameters}{A named list of values to be converted to query parameters}
+\item{parameters}{A named \code{list} of values to be converted to query parameters}
 
-\item{format}{The format of the return, e.g., json (default), xml, html, jpg, pdf, dump}
+\item{format}{(\code{character}) The format of the return, e.g., json (default), xml, html, jpg, pdf, dump}
 
 \item{base.url}{(optional) Ignore unless you need to specify a custom domain.}
 }

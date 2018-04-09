@@ -2,7 +2,7 @@
 #' @title List Organisms
 #'
 #' @description Retrieve the list of organisms supported by WikiPathways
-#' @return list of organisms
+#' @return A \code{list} of organisms
 #' @examples {
 #' listOrganisms()
 #' }

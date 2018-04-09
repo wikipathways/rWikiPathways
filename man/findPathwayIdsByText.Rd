@@ -7,10 +7,10 @@
 findPathwayIdsByText(query)
 }
 \arguments{
-\item{query}{The string to search for, e.g., "cancer"}
+\item{query}{A \code{character} string to search for, e.g., "cancer"}
 }
 \value{
-List of WPIDs
+A \code{list} of WPIDs
 }
 \description{
 Retrieve list of pathway WPIDs containing the query text.

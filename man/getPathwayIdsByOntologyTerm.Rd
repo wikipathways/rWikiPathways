@@ -7,10 +7,10 @@
 getPathwayIdsByOntologyTerm(term)
 }
 \arguments{
-\item{term}{Official name of ontology term, e.g., "PW:0000045"}
+\item{term}{(\code{character}) Official name of ontology term, e.g., "PW:0000045"}
 }
 \value{
-List of pathway WPIDs
+A \code{list} of pathway WPIDs
 }
 \description{
 Retrieve pathway WPIDs for every pathway with a given ontology term.

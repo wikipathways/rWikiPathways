@@ -9,13 +9,29 @@
 
 .baseUrl <- 'https://webservice.wikipathways.org'
 
+
+# ------------------------------------------------------------------------------
+#' @title Open Swagger docs for WikiPathways API
+#'
+#' @description Opens swagger docs in default browser for available API calls.
+#' @param base.url (optional) Ignore unless you need to specify a custom domain.
+#' @return New tab in default browser
+#' @examples {
+#' wikipathwaysAPI()
+#' }
+#' @importFrom utils browseURL
+#' @export
+wikipathwaysAPI <- function(base.url=.baseUrl){
+    browseURL(paste(base.url,'/ui',sep=""))
+}
+
 # ------------------------------------------------------------------------------
 #' @title WikiPathways GET
 #'
 #' @description Constructs the query, makes GET call and processes the result
-#' @param operation A string to be converted to the query namespace
-#' @param parameters A named list of values to be converted to query parameters 
-#' @param format The format of the return, e.g., json (default), xml, html, jpg, pdf, dump
+#' @param operation A \code{character} string to be converted to the query namespace
+#' @param parameters A named \code{list} of values to be converted to query parameters 
+#' @param format (\code{character}) The format of the return, e.g., json (default), xml, html, jpg, pdf, dump
 #' @param base.url (optional) Ignore unless you need to specify a custom domain.
 #' @return query result content
 #' @examples {
@@ -25,8 +41,11 @@
 #' @importFrom httr GET
 #' @importFrom utils URLencode
 #' @export
-wikipathwaysGET <- function(operation, parameters=NULL, format='json', base.url=.baseUrl){
+wikipathwaysGET <- function(operation, parameters=NULL, format=c('json','xml','html','jpg','pdf','dump'), base.url=.baseUrl){
     q.url <- paste(base.url, operation, sep="/")
+    
+    format <- match.arg(format)
+    
     if(!is.null(parameters)){
         q.params <- .prepGetQueryArgs(parameters)
         q.url <- paste(q.url, q.params, sep="?")

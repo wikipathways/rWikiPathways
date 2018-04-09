@@ -7,7 +7,7 @@
 listOrganisms()
 }
 \value{
-list of organisms
+A \code{list} of organisms
 }
 \description{
 Retrieve the list of organisms supported by WikiPathways

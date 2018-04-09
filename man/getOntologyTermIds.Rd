@@ -10,7 +10,7 @@ getOntologyTermIds(pathway)
 \item{pathway}{WikiPathways identifier (WPID) for the pathway to download, e.g. WP4}
 }
 \value{
-List of term identifiers
+A \code{list} of term identifiers
 }
 \description{
 Retrieve identifiers of ontology terms for a specific pathway.

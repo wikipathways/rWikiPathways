@@ -11,7 +11,7 @@ getRecentChangesIds(timestamp)
 after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.}
 }
 \value{
-List of WPIDs
+A \code{list} of WPIDs
 }
 \description{
 Retrieve WPIDs of recently changed pathways at WikiPathways.

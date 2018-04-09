@@ -7,14 +7,14 @@
 findPathwayIdsByXref(identifier, systemCode)
 }
 \arguments{
-\item{identifier}{The official ID specified by a data source or system}
+\item{identifier}{(\code{character}) The official ID specified by a data source or system}
 
-\item{systemCode}{The BridgeDb code associated with the data source or system, 
+\item{systemCode}{(\code{character}) The BridgeDb code associated with the data source or system, 
 e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
 See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.}
 }
 \value{
-List of WPIDs
+A \code{list} of WPIDs
 }
 \description{
 Retrieve list of pathway WPIDs containing the query Xref by identifier

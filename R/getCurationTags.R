@@ -3,7 +3,7 @@
 #'
 #' @description Retrieve information about curation tags for a specific pathway.
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
-#' @return List of tag name, display name, revision, text, timestampe and user
+#' @return A \code{list} of tag name, display name, revision, text, timestampe and user
 #' @examples {
 #' getCurationTags('WP554')
 #' }
@@ -18,7 +18,7 @@ getCurationTags <- function(pathway) {
 #'
 #' @description Retrieve names of curation tags for a specific pathway.
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
-#' @return List of tag names
+#' @return A \code{list} of tag names
 #' @examples {
 #' getCurationTagNames('WP554')
 #' }
@@ -31,8 +31,8 @@ getCurationTagNames <- function(pathway) {
 #' @title Get Every Instance of a Curation Tag
 #'
 #' @description Retrieve information about every instance of a given curation tag.
-#' @param tag Official name of curation tag, e.g., "Curation:FeaturedPathway"
-#' @return List of tag name, display name, revision, text, timestampe and user
+#' @param tag (\code{character}) Official name of curation tag, e.g., "Curation:FeaturedPathway"
+#' @return A \code{list} of tag name, display name, revision, text, timestampe and user
 #' @examples {
 #' getEveryCurationTag('Curation:FeaturedPathway')
 #' }
@@ -46,8 +46,8 @@ getEveryCurationTag <- function(tag) {
 #' @title Get Pathways by Curation Tag 
 #'
 #' @description Retrieve pathway information for every pathway with a given curation tag.
-#' @param tag Official name of curation tag, e.g., "Curation:FeaturedPathway"
-#' @return List of pathway information, including WPID, url, name, species and revision
+#' @param tag (\code{character}) Official name of curation tag, e.g., "Curation:FeaturedPathway"
+#' @return A \code{list} of pathway information, including WPID, url, name, species and revision
 #' @examples {
 #' getPathwaysByCurationTag('Curation:FeaturedPathway')
 #' }
@@ -61,8 +61,8 @@ getPathwaysByCurationTag <- function(tag) {
 #' @title Get Pathway WPIDs by Curation Tag 
 #'
 #' @description Retrieve pathway WPIDs for every pathway with a given curation tag.
-#' @param tag Official name of curation tag, e.g., "Curation:FeaturedPathway"
-#' @return List of pathway WPIDs
+#' @param tag (\code{character}) Official name of curation tag, e.g., "Curation:FeaturedPathway"
+#' @return A \code{list} of pathway WPIDs
 #' @examples {
 #' getPathwayIdsByCurationTag('Curation:FeaturedPathway')
 #' }

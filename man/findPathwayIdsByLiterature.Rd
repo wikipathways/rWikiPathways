@@ -7,10 +7,10 @@
 findPathwayIdsByLiterature(query)
 }
 \arguments{
-\item{query}{The string to search for, e.g., a PMID, title keyword or author name.}
+\item{query}{The \code{character} string to search for, e.g., a PMID, title keyword or author name.}
 }
 \value{
-List of WPIDs
+A \code{list} of WPIDs
 }
 \description{
 Retrieve list of pathway WPIDs containing the query citation.

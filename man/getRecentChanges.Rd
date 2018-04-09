@@ -11,7 +11,7 @@ getRecentChanges(timestamp)
 after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.}
 }
 \value{
-List of changes, including pathway WPID, name, url, species and revision
+A \code{list} of changes, including pathway WPID, name, url, species and revision
 }
 \description{
 Retrieve recent changes to pathways at WikiPathways.

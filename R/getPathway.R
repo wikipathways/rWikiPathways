@@ -3,7 +3,7 @@
 #'
 #' @description Retrieve a specific pathway in the GPML format
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
-#' @param revision (optional) Number to indicate a specific revision to download
+#' @param revision (\code{integer}, optional) Number to indicate a specific revision to download
 #' @return GPML
 #' @examples {
 #' getPathway('WP554')

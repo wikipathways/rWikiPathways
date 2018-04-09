@@ -3,9 +3,9 @@
 #'
 #' @description Retrieve list of pathways per species, including WPID, name, species,
 #' URL and latest revision number.
-#' @param organism (optional) A particular species. See \link{listOrganisms}. 
+#' @param organism (\code{character}, optional) A particular species. See \link{listOrganisms}. 
 #' Default is all species.
-#' @return list of lists
+#' @return A \code{list} of lists
 #' @examples {
 #' listPathways('Mus musculus')
 #' }
@@ -20,9 +20,9 @@ listPathways <- function(organism="") {
 #'
 #' @description Retrieve list of pathway WPIDs per species. 
 #' @details Basically returns a subset of \link{listPathways} result
-#' @param organism (optional) A particular species. See \link{listOrganisms}. 
+#' @param organism (\code{character}, optional) A particular species. See \link{listOrganisms}. 
 #' Default is all species.
-#' @return list of WPIDs
+#' @return A \code{list} of WPIDs
 #' @examples {
 #' listPathwayIds('Mus musculus')
 #' }
@@ -36,9 +36,9 @@ listPathwayIds <- function(organism="") {
 #'
 #' @description Retrieve list of pathway names per species. 
 #' @details Basically returns a subset of \link{listPathways} result
-#' @param organism (optional) A particular species. See \link{listOrganisms}. 
+#' @param organism (\code{character}, optional) A particular species. See \link{listOrganisms}. 
 #' Default is all species.
-#' @return list of names
+#' @return A \code{list} of names
 #' @examples {
 #' listPathwayNames('Mus musculus')
 #' }
@@ -52,9 +52,9 @@ listPathwayNames <- function(organism="") {
 #'
 #' @description Retrieve list of pathway URLs per species. 
 #' @details Basically returns a subset of \link{listPathways} result
-#' @param organism (optional) A particular species. See \link{listOrganisms}. 
+#' @param organism (\code{character}, optional) A particular species. See \link{listOrganisms}. 
 #' Default is all species.
-#' @return list of URLs
+#' @return A \code{list} of URLs
 #' @examples {
 #' listPathwayUrls('Mus musculus')
 #' }

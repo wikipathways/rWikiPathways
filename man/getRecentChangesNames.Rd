@@ -11,7 +11,7 @@ getRecentChangesNames(timestamp)
 after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.}
 }
 \value{
-List of pathway names. Note: pathway deletions will be listed as blank names.
+A \code{list} of pathway names. Note: pathway deletions will be listed as blank names.
 }
 \description{
 Retrieve names of recently changed pathways at WikiPathways.

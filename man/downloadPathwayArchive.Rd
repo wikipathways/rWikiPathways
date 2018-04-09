@@ -4,11 +4,12 @@
 \alias{downloadPathwayArchive}
 \title{Download Pathway Archive}
 \usage{
-downloadPathwayArchive(date = "current", organism = NULL, format = "gpml")
+downloadPathwayArchive(date = "current", organism = NULL,
+  format = c("gpml", "gmt", "svg"))
 }
 \arguments{
-\item{date}{(optional) The timestamp for a monthly release or "current" (default) for 
-latest release.}
+\item{date}{(optional) The timestamp for a monthly release (e.g., 20171010) 
+or "current" (default) for latest release.}
 
 \item{organism}{(optional) A particular species. See \link{listOrganisms}.}
 

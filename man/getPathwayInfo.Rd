@@ -10,7 +10,7 @@ getPathwayInfo(pathway)
 \item{pathway}{WikiPathways identifier (WPID) for the pathway to download, e.g. WP4}
 }
 \value{
-List of pathway WPID, URL, name, species and latest revision
+A \code{list} of pathway WPID, URL, name, species and latest revision
 }
 \description{
 Retrieve information for a specific pathway

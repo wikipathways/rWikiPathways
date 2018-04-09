@@ -5,8 +5,8 @@
 #' @details If you specify an archive date, organism and format, then the archive file
 #' will be downloaded. Otherwise, the archive will be opened in a tab in your
 #' default browser.
-#' @param date (optional) The timestamp for a monthly release or "current" (default) for 
-#' latest release.
+#' @param date (optional) The timestamp for a monthly release (e.g., 20171010) 
+#' or "current" (default) for latest release.
 #' @param organism (optional) A particular species. See \link{listOrganisms}. 
 #' @param format (optional) Either gpml (default), gmt or svg.
 #' @return Downloaded file or tab in default browser
@@ -18,9 +18,9 @@
 #' }
 #' @export
 #' @importFrom utils browseURL download.file
-downloadPathwayArchive <- function(date='current',organism = NULL, format='gpml'){
-    #validate format
-    match.arg(format, c('gpml','gmt', 'svg'))
+downloadPathwayArchive <- function(date='current',organism = NULL, format=c('gpml', 'gmt', 'svg')){
+    #get validated format
+    format <- match.arg(format)
     
     #validate date
     if (date != 'current')

@@ -10,7 +10,7 @@ getCurationTagNames(pathway)
 \item{pathway}{WikiPathways identifier (WPID) for the pathway to download, e.g. WP4}
 }
 \value{
-List of tag names
+A \code{list} of tag names
 }
 \description{
 Retrieve names of curation tags for a specific pathway.
