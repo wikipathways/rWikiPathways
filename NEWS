@@ -1,19 +1,22 @@
 CHANGES IN VERSION 1.0.0
 ------------------------
 
-SIGNIFICANT USER-VISIBLE CHANGES
-
-    o Updated all functions to use REST calls instead of Curl
-    o Simplified function development by abstracting as dedicated wikipathwaysGET function
-
 NEW FEATURES
 
     o Added derivative functions for both listPathways and getPathwaysByXref to allow 
     specifying the return of simple lists of WPIDs, URLs or names.
     o Added support for PNG from getColoredPathway
-    o Added Overview vignette
+    o Added functions for all remaining web service API methods
+    o Added a download function for archived pathway sets in various formats
+    o Added Overview and BridgeDbR vignettes
+
+SIGNIFICANT CHANGES UNDER THE HOOD
+
+    o Updated all functions to use REST calls instead of Curl
+    o Simplified function development by abstracting as dedicated wikipathwaysGET function
+    o Added tests for all new functions
+    o Added enumerated parameters in a number of places for better input validation
 
 BUG FIXES
 
-    o No changes classified as 'bug fixes' (package under active
-    development)
+    o First official release. No bugs... yet!
