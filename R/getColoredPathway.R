@@ -4,7 +4,7 @@
 #' @description Retrieve a pathway image file with specified nodes colored by specified colors
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
 #' @param revision (\code{integer}, optional) Number to indicate a specific revision to download
-#' @param graphId A \code{character} string or \code{vector} indicating the nodes to color (only single values are supported at this time)
+#' @param graphId A \code{character} string or \code{vector} indicating the nodes to color 
 #' @param color (optional) String or vector indicating the highlighting color, e.g., #FF8855.
 #' Default is red. You can provide a single color for mutiple nodes; otherwise
 #' color list and graphId must be the same length.
@@ -40,13 +40,18 @@ getColoredPathway <- function(pathway, revision=0,
             graphId="NULL"
     if(is.null(color))
             color="NULL"
+    
+    # finally, prepare parameters as named list,
+    # handling multiple named items for graphId and color
+    params <- list(pwId=pathway,
+                   revision=revision,
+                   fileType=fileType)
+    for (gi in graphId)
+        params <- c(params, graphId=gi)
+    for (co in color)
+        params <- c(params, color=co)
 
-    res <- wikipathwaysGET('getColoredPathway',
-                           list(pwId=pathway,
-                                revision=revision,
-                                graphId=graphId,
-                                color=color,
-                                fileType=fileType)) 
+    res <- wikipathwaysGET('getColoredPathway', params) 
 
     img = caTools::base64decode(res['data'],what='character')
 

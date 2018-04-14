@@ -12,7 +12,7 @@ getColoredPathway(pathway, revision = 0, graphId = NULL, color = NULL,
 
 \item{revision}{(\code{integer}, optional) Number to indicate a specific revision to download}
 
-\item{graphId}{A \code{character} string or \code{vector} indicating the nodes to color (only single values are supported at this time)}
+\item{graphId}{A \code{character} string or \code{vector} indicating the nodes to color}
 
 \item{color}{(optional) String or vector indicating the highlighting color, e.g., #FF8855.
 Default is red. You can provide a single color for mutiple nodes; otherwise
