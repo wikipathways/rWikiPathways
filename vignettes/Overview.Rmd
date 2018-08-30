@@ -37,8 +37,9 @@ All you need is this **rWikiPathways** package! If you're viewing this vignette,
 
 ```{r}
 if(!"rWikiPathways" %in% installed.packages()){
-    source("https://bioconductor.org/biocLite.R")
-    biocLite("rWikiPathways")
+    if (!requireNamespace("BiocManager", quietly=TRUE))
+        install.packages("BiocManager")
+    BiocManager::install("rWikiPathways")
 }
 library(rWikiPathways)
 ```
