@@ -6,6 +6,8 @@ date: "`r Sys.Date()`"
 output: 
   BiocStyle::html_document:
     toc_float: true
+#  pdf_document:
+#    toc: true 
 vignette: >
   %\VignetteIndexEntry{1. Overview}
   %\VignetteEngine{knitr::rmarkdown}
@@ -153,6 +155,24 @@ And, as you may have suspected from the function name, you can also add color to
 ```
 
 This will produce an svg image of the pathway with the ACE gene highlighted by color.
+
+WikiPathways also provides a monthly data release archived at http://data.wikipathways.org. The archive includes GPML, GMT and SVG collections by organism and timestamped. There's an R function for grabbing files from the archive...
+
+```{r}
+    downloadPathwayArchive()
+```
+
+This will simply open the archive in your default browser so you can look around (in case you don't know what you are looking for). By default, it opens to the latest collection of GPML files.  However, if you provide an organism, then it will download that file to your current working directory or specified **destpath**. For example, here's how you'd get the latest GMT file for mouse:
+
+```{r}
+    downloadPathwayArchive(organism="Mus musculus", format="gmt")
+```
+
+And if you might want to specify an archive date so that you can easily share and reproduce your script at any time in the future and get the same result. Remember, new pathways are being added to WikiPathways every month and existing pathways are improved continuously!
+
+```{r}
+    downloadPathwayArchive(date="20171010", organism="Mus musculus", format="gmt")
+```
 
 # Wrapping up
 

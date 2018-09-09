@@ -5,7 +5,7 @@
 \title{Download Pathway Archive}
 \usage{
 downloadPathwayArchive(date = "current", organism = NULL,
-  format = c("gpml", "gmt", "svg"))
+  format = c("gpml", "gmt", "svg"), destpath = "./")
 }
 \arguments{
 \item{date}{(optional) The timestamp for a monthly release (e.g., 20171010) 
@@ -14,23 +14,27 @@ or "current" (default) for latest release.}
 \item{organism}{(optional) A particular species. See \link{listOrganisms}.}
 
 \item{format}{(optional) Either gpml (default), gmt or svg.}
+
+\item{destpath}{(optional) Destination path for file to be downloaded to.
+Default is current workding directory.}
 }
 \value{
-Downloaded file or tab in default browser
+Filename of downloaded file or an opened tab in default browser
 }
 \description{
 Access the monthly archives of pathway content from WikiPathways.
 }
 \details{
-If you specify an archive date, organism and format, then the archive file
-will be downloaded. Otherwise, the archive will be opened in a tab in your
+If you do not specify an organism, then an archive file
+will not be downloaded. Rather, the archive will be opened in a tab in your
 default browser.
 }
 \examples{
 \donttest{
-downloadPathwayArchive()
-downloadPathwayArchive(format="gmt")
-downloadPathwayArchive(date="20171010", format="svg")
-downloadPathwayArchive(date="20171010", organism="Mus musculus", format="svg")
+downloadPathwayArchive()  ## open in browser
+downloadPathwayArchive(format="gmt")  ## open in browser
+downloadPathwayArchive(date="20171010", format="svg")  ## open in browser
+downloadPathwayArchive(date="20171010", organism="Mus musculus", format="svg")  ## download file
+downloadPathwayArchive(organism="Mus musculus")  ## download file
 }
 }

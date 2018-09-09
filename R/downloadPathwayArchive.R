@@ -2,23 +2,26 @@
 #' @title Download Pathway Archive
 #'
 #' @description Access the monthly archives of pathway content from WikiPathways.
-#' @details If you specify an archive date, organism and format, then the archive file
-#' will be downloaded. Otherwise, the archive will be opened in a tab in your
+#' @details If you do not specify an organism, then an archive file
+#' will not be downloaded. Rather, the archive will be opened in a tab in your
 #' default browser.
 #' @param date (optional) The timestamp for a monthly release (e.g., 20171010) 
 #' or "current" (default) for latest release.
 #' @param organism (optional) A particular species. See \link{listOrganisms}. 
 #' @param format (optional) Either gpml (default), gmt or svg.
-#' @return Downloaded file or tab in default browser
+#' @param destpath (optional) Destination path for file to be downloaded to.
+#' Default is current workding directory.
+#' @return Filename of downloaded file or an opened tab in default browser
 #' @examples \donttest{
-#' downloadPathwayArchive()
-#' downloadPathwayArchive(format="gmt")
-#' downloadPathwayArchive(date="20171010", format="svg")
-#' downloadPathwayArchive(date="20171010", organism="Mus musculus", format="svg")
+#' downloadPathwayArchive()  ## open in browser
+#' downloadPathwayArchive(format="gmt")  ## open in browser
+#' downloadPathwayArchive(date="20171010", format="svg")  ## open in browser
+#' downloadPathwayArchive(date="20171010", organism="Mus musculus", format="svg")  ## download file
+#' downloadPathwayArchive(organism="Mus musculus")  ## download file
 #' }
 #' @export
 #' @importFrom utils browseURL download.file
-downloadPathwayArchive <- function(date='current',organism = NULL, format=c('gpml', 'gmt', 'svg')){
+downloadPathwayArchive <- function(date='current',organism=NULL, format=c('gpml', 'gmt', 'svg'), destpath='./'){
     #get validated format
     format <- match.arg(format)
     
@@ -34,14 +37,21 @@ downloadPathwayArchive <- function(date='current',organism = NULL, format=c('gpm
             stop('The organism must match the list of supported organisms, see listOrganisms()')
     
     #download specific file, or...
-    if (!is.null(organism) && date != 'current'){
-        ext <- ".zip"
-        if (format == 'gmt')
-            ext <- ".gmt"
-        filename <- paste0(paste('wikipathways',date,format,sub("\\s","_",organism),sep="-"), ext)
+    if (!is.null(organism)){
+        if (date == 'current'){ #determine filename
+            curr.files <- readHTMLTable(paste0('http://data.wikipathways.org/current/',format))[[1]]$Filename
+            filename <- grep(sub("\\s","_",organism), curr.files, value=TRUE)
+            if (length(filename) == 0)
+                stop ('Could not find a file matching your specifications. Try browsing http://data.wikipathways.org.')
+        } else { #construct filename
+            ext <- ".zip"
+            if (format == 'gmt')
+                ext <- ".gmt"
+            filename <- paste0(paste('wikipathways',date,format,sub("\\s","_",organism),sep="-"), ext)
+        }
         url <- paste('http://data.wikipathways.org',date, format, filename, sep="/")
-        download.file(url, filename, 'wget')
-        
+        download.file(url, paste(destpath,filename,sep='/'), 'auto')
+        return(filename)
     } else { #...just open browser
         browseURL(paste('http://data.wikipathways.org',date, format ,sep="/"))
     }    

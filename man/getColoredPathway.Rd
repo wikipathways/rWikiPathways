@@ -4,8 +4,8 @@
 \alias{getColoredPathway}
 \title{Get Colored Pathway}
 \usage{
-getColoredPathway(pathway, revision = 0, graphId = NULL, color = NULL,
-  fileType = c("svg", "png", "pdf"))
+getColoredPathway(pathway, revision = 0, graphId = NULL,
+  color = NULL, fileType = c("svg", "png", "pdf"))
 }
 \arguments{
 \item{pathway}{WikiPathways identifier (WPID) for the pathway to download, e.g. WP4}
