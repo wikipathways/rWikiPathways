@@ -6,18 +6,12 @@ date: "`r Sys.Date()`"
 output: 
   BiocStyle::html_document:
     toc_float: true
+#  pdf_document:
+#    toc: true 
 vignette: >
   %\VignetteIndexEntry{3. rWikiPathways and RCy3}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
-bibliography: tutorial.bib
-csl: biomed-central.csl
-references:
-- id: dummy
-  title: no title
-  author:
-  - family: noname
-    given: noname
 ---
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
