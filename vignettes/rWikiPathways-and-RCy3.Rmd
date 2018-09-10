@@ -54,14 +54,12 @@ The whole point of RCy3 is to connect with Cytoscape. You will need to install a
 cytoscapePing()
 ```
 
-For this vignette, you'll also need the WikiPathways app to access the WikiPathways database from within Cytoscape:
+For this vignette, you'll also need the WikiPathways app to access the WikiPathways database from within Cytoscape. Install the WikiPathways app from http://apps.cytoscape.org/apps/wikipathways
 
-```{r}
+If you are running Cytoscape 3.7.0 or above, you can simply run this command:
+```
 installApp('WikiPathways')  #only available in Cytoscape 3.7.0 and above
 ```
-
-If running an older version of Cytoscape, install the WikiPathways app from http://apps.cytoscape.org/apps/wikipathways
-
 
 # Working together
 Ok, with all of these components loaded and launched, you can now perform some nifty sequences. For example, search for a pathway based on a keyword search and then load it into Cytoscape.
