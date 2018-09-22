@@ -330,16 +330,15 @@ cytargetlinker
 Import at network...
 ```{r}
 commandsRun('wikipathways import-as-network id=WP179')
-loadTableData(lung.expr, data.key.column = "GeneID", table.key.column = "XrefId") #change to "Ensembl" after app update
+loadTableData(lung.expr, data.key.column = "GeneID", table.key.column = "XrefId") #TODO change to "Ensembl" after app update
 setNodeColorMapping("log2FC", data.values, node.colors, default.color = "#FFFFFF", style.name = "WikiPathways-As-Network") 
 ```
 
-Load Linksets LinkSets can be downloaded from the CyTargetLinker website https://projects.bigcat.unimaas.nl/cytargetlinker/linksets/ and preprocessed as R objects.
+Load Linksets LinkSets can be downloaded from the [CyTargetLinker website](https://projects.bigcat.unimaas.nl/cytargetlinker/linksets/) and preprocessed as R objects, e.g., [DrugBank Link Sets](https://projects.bigcat.unimaas.nl/cytargetlinker/linksets/drugbank-regins/)
 
 ```{r}
-#drugbank <- file.path(getwd(), "inst/extdata", "drugbank-5.1.0.xgmml")
-drugbank <- system.file("extdata","drugbank-5.1.0.xgmml", package="rWikiPathways")
-ctl.extend.cmd = paste0('cytargetlinker extend idAttribute="XrefId" linkSetFiles="', drugbank, '"') #change to "Ensembl" after app update
+drugbank <- file.path(getwd(), "drugbank-5.1.0.xgmml")
+ctl.extend.cmd = paste0('cytargetlinker extend idAttribute="XrefId" linkSetFiles="', drugbank, '"') #TODO change to "Ensembl" after app update
 commandsRun(ctl.extend.cmd)
 commandsRun('cytargetlinker applyLayout network="current"')
 ```
