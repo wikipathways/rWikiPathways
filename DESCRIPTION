@@ -1,8 +1,8 @@
 Package: rWikiPathways
 Type: Package
 Title: rWikiPathways - R client library for the WikiPathways API
-Version: 1.1.1
-Date: 2018-09-09
+Version: 1.1.2
+Date: 2018-09-26
 Authors@R: c(person("Egon", "Willighagen", role = c("aut","cre"),
                      email = "egon.willighagen@gmail.com",
                      comment = c(ORCID = "0000-0001-7542-0286")),
@@ -11,7 +11,7 @@ Authors@R: c(person("Egon", "Willighagen", role = c("aut","cre"),
                      comment = c(ORCID = "0000-0001-5706-2163"))
            )
 Maintainer: Egon Willighagen <egon.willighagen@gmail.com>, Alexander Pico <alex.pico@gladstone.ucsf.edu>
-Depends: R (>= 3.4)
+Depends: R (>= 3.5)
 Imports: caTools, httr, RJSONIO, utils
 Suggests: testthat, BiocStyle, knitr, rmarkdown
 Description: Use this package to interface with the WikiPathways API.
