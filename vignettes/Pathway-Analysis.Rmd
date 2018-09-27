@@ -19,11 +19,12 @@ knitr::opts_chunk$set(
 )
 ```
 
-This vignette will cover a wide range of analytical and visualization techniques involved in a typical pathway analysis. The **Overview** section will go into more detail on the particulars, but note that this vignette is designed to be modular and carefully considered. Please do not simply run the entire script and expect to get any meaningful from the final output. This is an instructional device, ideal for guided workshops.
+This vignette will cover a wide range of analytical and visualization techniques involved in a typical pathway analysis. The **Overview** section will go into more detail on the particulars, but note that this vignette is designed to be modular and carefully considered. Please do not simply run the entire script and expect to get anything meaningful from the final output. This is an instructional device, ideal for guided workshops.
 
 As you migth expect, a broad tour of pathway anlaysis will require a variety of **R** packages. Please make sure you have the latest **R** installed (3.5 or later) and review the output from running the next code chunck. The final printed line will state whether it was successful or not. Good luck!
 
 # Installation
+First, make sure you have *rWikiPathways* installed...
 ```{r}
 if(!"rWikiPathways" %in% installed.packages()){
     if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -86,41 +87,48 @@ installApp('CyTargetLinker')
 ```
 
 # Overview 
+In this vignette, we will be performing functional enrichment analysis on a differential gene expression dataset. The dataset compares the expression of transcripts in lung cancer biopses versus normal tissue. Differential expression analysis has already been performed, generating log2foldchange and P-values for each gene. The enrichment analysis will be performed against Gene Ontology, as an introduction to the most common type of enrichment, sometimes referred to as *GO Analysis*. We will review this common approach, including some basic plotting. This will serve as the foundation for more advanced enrichment analysis against a pathway database, which is called *Pathway Analysis*.
 
+Working with pathways opens up more analysis and visualization options. We will query WikiPathways for relevant content and import pathway models into Cytoscape. In Cytoscape, we will perform data overlays, add drug interactions and generate high-quality images for publication.
 
 # Dataset
+The format of this lung cancer dataset should look familiar to anyone who has worked with differential gene expression results. It contains columns of gene identifiers (Ensembl IDs), gene symbols, log2foldchange values, P-Values and adjusted P-Values.
 ```{r}
 lung.expr <- read.csv(system.file("extdata","data-lung-cancer.csv", package="rWikiPathways"),stringsAsFactors = F)
 nrow(lung.expr)
 head(lung.expr)
+```
 
-up.genes <- lung.expr[lung.expr$log2FC > 1 & lung.expr$adj.P.Value < 0.05, 1]
+Now let's prepare up- and down-regulated gene lists using some conventional criteria.
+```{r}
+up.genes <- lung.expr[lung.expr$log2FC > 1 & lung.expr$adj.P.Value < 0.05, 1] 
 dn.genes <- lung.expr[lung.expr$log2FC < 1 & lung.expr$adj.P.Value < 0.05, 1]
 bkgd.genes <- lung.expr[,1]
 ```
 
 # Enrichment
+With our gene sets in hand, we are ready to perform enrichment analysis... well, almost. Typical of any bioinformatics analysis, we need to be aware of which gene identifiers we are dealing with. We have Ensembl IDs, but the package we are going to use wants Entrez IDs. Fortunately, the package provides its own converter called *bitr*. This is the first function in the *clusterProfiler* package that we'll be using:
 ```{r}
 up.genes.entrez <- clusterProfiler::bitr(up.genes,fromType = "ENSEMBL",toType = "ENTREZID",OrgDb = org.Hs.eg.db)
 cat("\n\nWhich column contains my new Entrez IDs?\n")
-head(up.genes.entrez[[1]])
-head(up.genes.entrez[[2]])
+head(up.genes.entrez)
 ```
 
+Note that conversions are rarely 100% complete (e.g., due to one-to-many mappings), so this tool reports what it failed to convert. And now we have a dataframe with a new column of Entrez IDs paired with our original list of Ensembl IDs.
+
+Here's the complete list of identifiers that this particular tool can convert across. You have to spell these precisely and in all caps for the *bitr* function to work:
 ```{r}
-# supported sources of identifiers (and precise spelling)...
 keytypes(org.Hs.eg.db)
 ```
 
+Let's convert our other lists to Entrez IDs:
 ```{r}
 dn.genes.entrez <- bitr(dn.genes,fromType = "ENSEMBL",toType = "ENTREZID",OrgDb = org.Hs.eg.db)
 bkgd.genes.entrez <- bitr(bkgd.genes,fromType = "ENSEMBL",toType = "ENTREZID",OrgDb = org.Hs.eg.db)
 ```
 
 ## Gene Ontology
-
-This can take up to a miunte to run...
-
+Ok. *Now* we are ready to perform enrichment analysis. Let's start with Gene Ontology. *Note: This can take up to a miunte to run... because there are so many GO terms!*
 ```{r}
 egobp <- clusterProfiler::enrichGO(
         gene     = up.genes.entrez[[2]],
@@ -133,8 +141,11 @@ egobp <- clusterProfiler::enrichGO(
 
 head(egobp,10)
 ```
+While it's running, you can examine the parameters and their meaning...
 
-A variety of plots are provided by **clusterProfilier**...
+It's done! Does the format and results make sense? Do you understand the two *Ratio* columns? Does the biology of the top results make sense?
+
+Tables are fine, but we're in R to see plots. Conveniently, **clusterProfilier** provides a variety of plots with default settings:
 ```{r}
 barplot(egobp, showCategory = 20)
 dotplot(egobp, showCategory = 20)
@@ -183,7 +194,7 @@ ewp.up <- clusterProfiler::enricher(
         up.genes.entrez[[2]],
         universe = bkgd.genes.entrez[[2]],
         pAdjustMethod = "fdr",
-        pvalueCutoff = 0.1, #p.adjust cutoff
+        pvalueCutoff = 0.5, #p.adjust cutoff
         TERM2GENE = wpid2gene,
         TERM2NAME = wpid2name)
 
@@ -330,15 +341,16 @@ cytargetlinker
 Import at network...
 ```{r}
 commandsRun('wikipathways import-as-network id=WP179')
-loadTableData(lung.expr, data.key.column = "GeneID", table.key.column = "XrefId") #TODO change to "Ensembl" after app update
+loadTableData(lung.expr, data.key.column = "GeneID", table.key.column = "Ensembl") 
 setNodeColorMapping("log2FC", data.values, node.colors, default.color = "#FFFFFF", style.name = "WikiPathways-As-Network") 
 ```
 
 Load Linksets LinkSets can be downloaded from the [CyTargetLinker website](https://projects.bigcat.unimaas.nl/cytargetlinker/linksets/) and preprocessed as R objects, e.g., [DrugBank Link Sets](https://projects.bigcat.unimaas.nl/cytargetlinker/linksets/drugbank-regins/)
 
 ```{r}
+unzip(system.file("extdata","drugbank-5.1.0.xgmml.zip", package="rWikiPathways"), exdir = getwd())
 drugbank <- file.path(getwd(), "drugbank-5.1.0.xgmml")
-ctl.extend.cmd = paste0('cytargetlinker extend idAttribute="XrefId" linkSetFiles="', drugbank, '"') #TODO change to "Ensembl" after app update
+ctl.extend.cmd = paste0('cytargetlinker extend idAttribute="Ensembl" linkSetFiles="', drugbank, '"') 
 commandsRun(ctl.extend.cmd)
 commandsRun('cytargetlinker applyLayout network="current"')
 ```
