@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 
 This vignette will cover a wide range of analytical and visualization techniques involved in a typical pathway analysis. The **Overview** section will go into more detail on the particulars, but note that this vignette is designed to be modular and carefully considered. Please do not simply run the entire script and expect to get anything meaningful from the final output. This is an instructional device, ideal for guided workshops.
 
-As you migth expect, a broad tour of pathway anlaysis will require a variety of **R** packages. Please make sure you have the latest **R** installed (3.5 or later) and review the output from running the next code chunck. The final printed line will state whether it was successful or not. Good luck!
+As you migth expect, a broad tour of pathway anlaysis will require a variety of **R** packages. Please make sure you have the latest **R** installed (3.5.1 or later) and review the output from running the next code chunck. The final printed line will state whether it was successful or not. Good luck!
 
 # Installation
 First, make sure you have *rWikiPathways* installed...
@@ -65,7 +65,7 @@ if(all(status)){
 }
 ```
 
-The RCy3 package is used to connect with Cytoscape. So you will also need to install and launch Cytoscape:
+The **RCy3** package is used to connect with **Cytoscape**. So you will also need to install and launch Cytoscape:
 
 * Download the latest Cytoscape from http://www.cytoscape.org/download.php
 * Complete installation wizard
@@ -75,7 +75,7 @@ The RCy3 package is used to connect with Cytoscape. So you will also need to ins
 cytoscapePing()  #this will tell you if you're able to successfully connect to Cytoscape or not
 ```
 
-For this vignette, you'll also need a couple apps for Cytoscape. With Cytoscape running, you can install each of these from the Cytoscape App Store with a single click:
+For this vignette, you'll also need a couple *apps* for Cytoscape. With Cytoscape running, you can install each of these from the Cytoscape App Store with a single click:
 
 * http://apps.cytoscape.org/apps/wikipathways
 * http://apps.cytoscape.org/apps/cytargetlinker 
@@ -87,9 +87,9 @@ installApp('CyTargetLinker')
 ```
 
 # Overview 
-In this vignette, we will be performing functional enrichment analysis on a differential gene expression dataset. The dataset compares the expression of transcripts in lung cancer biopses versus normal tissue. Differential expression analysis has already been performed, generating log2foldchange and P-values for each gene. The enrichment analysis will be performed against Gene Ontology, as an introduction to the most common type of enrichment, sometimes referred to as *GO Analysis*. We will review this common approach, including some basic plotting. This will serve as the foundation for more advanced enrichment analysis against a pathway database, which is called *Pathway Analysis*.
+In this vignette, we will be performing functional enrichment analysis on a differential gene expression dataset. The dataset compares the expression of transcripts in lung cancer biopses versus normal tissue. Differential expression analysis has already been performed, generating log2foldchange and P-values for each gene. The enrichment analysis will be performed against Gene Ontology, as an introduction to the most common type of enrichment, commonly referred to as *GO Analysis*. This will serve as the foundation for more advanced enrichment analysis against a pathway database, which is called *Pathway Analysis*.
 
-Working with pathways opens up more analysis and visualization options. We will query WikiPathways for relevant content and import pathway models into Cytoscape. In Cytoscape, we will perform data overlays, add drug interactions and generate high-quality images for publication.
+Working with pathways opens up unique analysis and visualization options. We will query WikiPathways for relevant content and import pathway models into Cytoscape. In Cytoscape, we will perform data overlays, add drug interactions and generate high-quality images for publication.
 
 # Dataset
 The format of this lung cancer dataset should look familiar to anyone who has worked with differential gene expression results. It contains columns of gene identifiers (Ensembl IDs), gene symbols, log2foldchange values, P-Values and adjusted P-Values.
@@ -107,7 +107,7 @@ bkgd.genes <- lung.expr[,1]
 ```
 
 # Enrichment
-With our gene sets in hand, we are ready to perform enrichment analysis... well, almost. Typical of any bioinformatics analysis, we need to be aware of which gene identifiers we are dealing with. We have Ensembl IDs, but the package we are going to use wants Entrez IDs. Fortunately, the package provides its own converter called *bitr*. This is the first function in the *clusterProfiler* package that we'll be using:
+With our gene sets in hand, we are ready to perform enrichment analysis... well, almost. Typical of any bioinformatics analysis, we need to be aware of which gene identifiers we are dealing with. We have Ensembl IDs, but the package we are going to use wants Entrez IDs. Fortunately, the package provides its own converter called *bitr*. This is the first function in the **clusterProfiler** package that we'll be using:
 ```{r}
 up.genes.entrez <- clusterProfiler::bitr(up.genes,fromType = "ENSEMBL",toType = "ENTREZID",OrgDb = org.Hs.eg.db)
 cat("\n\nWhich column contains my new Entrez IDs?\n")
@@ -167,7 +167,7 @@ ggplot(egobp[1:20], aes(x=reorder(Description, -pvalue), y=Count, fill=-p.adjust
 Use *str(egobp)* to explore the data structure in more detail to see what you can use in plotting.
  
 ## WikiPathways
-That's all well and fine, but we are here for pathway analysis!  Everything up to this point is basic GO analysis. Building on top of this foundation, let's see what WikiPathways can add. The **clusterProfiler** package doesn't include built-in support for WikiPathways (yet), but it does support the GMT standard file format and so does WikiPathways! It just takes a few commands to prepare WikiPathways data for clusterProfiler's *enricher* function, which is the generic analog of *enrichGO*.
+That's all well and fine, but we are here for *Pathway Analysis!*  Everything up to this point is basic GO analysis. Building on top of this foundation, let's see what WikiPathways can add. The **clusterProfiler** package doesn't include built-in support for WikiPathways (yet), but it does support the GMT standard file format and so does WikiPathways! It just takes a few commands to prepare WikiPathways data for clusterProfiler's *enricher* function, which is the generic analog of *enrichGO*.
 
 The first step is to retreive the latest GMT file listing all the genes in each of the human pathways. WikiPathways releases a GMT file per species every month and archives them for reproducible research. Here, we'll use the first function from the **rWikiPathways** package, aptly named *downloadPathwayArchive*...
 
@@ -228,9 +228,9 @@ ewp.dn <- enricher(
  head(ewp.dn)
  dotplot(ewp.dn, showCategory = 20)
 ```
-Interesting... Almost twice as many down-regulated genes (634 vs 366), but fewer significant pathway hits. Pathway analysis is a more focused approach than GO analysis. It requires sets of genes that are **functionally** related in the context of known pathways mechanisms.  So, gene set size doesn't always correlate with result size.
+Interesting... Almost twice as many down-regulated genes (634 vs 366), but fewer significant pathway hits. Pathway analysis is a more focused approach than GO analysis. It requires sets of genes that are *functionally* related in the context of known pathways mechanisms.  So, gene set size doesn't always correlate with result size.
 
-Ok. These built-in plots are good for displaying the basic results, but one of the advantages of pathway analysis is that you have **pathway models** already built and ready for data overlays. We will get to that soon in the in **Visualize** section, but first, let's see what else we can learn about the pathways hits from WikiPathways.
+Ok. These built-in plots are good for displaying the basic results, but one of the advantages of pathway analysis is that you have *pathway models* already built and ready for data overlays. We will get to that soon in the in **Visualize** section, but first, let's see what else we can learn about the pathways hits from WikiPathways.
 
 # Explore
 Turning again to the **rWikiPathways** package, let's explore the content and some of our pathway hits so far. Since we are studying Lung Cancer here, let's start with a search for relevant pathways...
@@ -325,37 +325,49 @@ You can similarly map P-values to border color, etc. There are dozens and dozens
 
 The power of scripting is in doing something multiple times though... So, let's now apply this same data and visual style to all the pathways we are interested in. In just two lines of code...
 ```{r}
-lapply(ewp.up.wpids, function (x) commandsRun(paste0('wikipathways import-as-pathway id=',x)))
-lapply(getNetworkList(), function (x) loadTableData(lung.expr, data.key.column = "GeneID", table.key.column = "Ensembl", network=x))
+lapply(ewp.up.wpids, function (x) {
+    commandsRun(paste0('wikipathways import-as-pathway id=',x))
+    loadTableData(lung.expr, data.key.column = "GeneID", table.key.column = "Ensembl")
+    })
 ```
 
 *BONUS: What about those lung cancer pathways we found?  Let's take a look at the data overlay on those as well.*
 ```
-lapply(lc.wpids, function (x) commandsRun(paste0('wikipathways import-as-pathway id=',x)))
-lapply(getNetworkList(), function (x) loadTableData(lung.expr, data.key.column = "GeneID", table.key.column = "Ensembl", network=x))
+lapply(lc.wpids, function (x){
+    commandsRun(paste0('wikipathways import-as-pathway id=',x))
+    loadTableData(lung.expr, data.key.column = "GeneID", table.key.column = "Ensembl")
+    })
 ```
 
 # Extend
-cytargetlinker
+Now that our pathways are loaded into Cytoscape, this opens up a ton of potential analysis and visualizations options! Check out the [Cytoscape manual](http://manual.cytoscape.org) and [App Store](http://apps.cytoscape.org/), for starters. You might also browse the [Cytoscape tutorials](http://tutorials.cytoscape.org/) and [RCy3 vignettes](https://bioconductor.org/packages/release/bioc/vignettes/RCy3/inst/doc/Overview-of-RCy3.html) if you want hands-on examples.
 
-Import at network...
+In this vignette, we will use the *CyTargetLinker* app for Cytoscape to extend a network representation of our pathway with drug-target interactions.
+
+First, let's reimport our pathway *as a network* using this slightly modified command:
 ```{r}
 commandsRun('wikipathways import-as-network id=WP179')
 loadTableData(lung.expr, data.key.column = "GeneID", table.key.column = "Ensembl") 
 setNodeColorMapping("log2FC", data.values, node.colors, default.color = "#FFFFFF", style.name = "WikiPathways-As-Network") 
 ```
 
-Load Linksets LinkSets can be downloaded from the [CyTargetLinker website](https://projects.bigcat.unimaas.nl/cytargetlinker/linksets/) and preprocessed as R objects, e.g., [DrugBank Link Sets](https://projects.bigcat.unimaas.nl/cytargetlinker/linksets/drugbank-regins/)
+See the difference?  Same data, same pathway source, but different representation. The network view of pathways is useful when you want to add more nodes, traverse paths, perform automatic layouts, etc.
+
+Next, we need to load the latest drug-target database. The databases supported by **CyTargetLinker** are called *linksets* and can be downloaded from the [CyTargetLinker website](https://projects.bigcat.unimaas.nl/cytargetlinker/linksets/). We have provided an example **drugbank** linkset for this vignette, so you don't have to download anything.
 
 ```{r}
 unzip(system.file("extdata","drugbank-5.1.0.xgmml.zip", package="rWikiPathways"), exdir = getwd())
 drugbank <- file.path(getwd(), "drugbank-5.1.0.xgmml")
-ctl.extend.cmd = paste0('cytargetlinker extend idAttribute="Ensembl" linkSetFiles="', drugbank, '"') 
-commandsRun(ctl.extend.cmd)
-commandsRun('cytargetlinker applyLayout network="current"')
 ```
 
+Now that we have our *drugbank* linkset  loaded, we can run CyTargetLinker as a command:
+```{r}
+commandsRun(paste0('cytargetlinker extend idAttribute="Ensembl" linkSetFiles="', drugbank, '"') )
+commandsRun('cytargetlinker applyLayout network="current"')
+```
+This returns information about what was added. And in Cytoscape, you now have a copy of your original network, but now with additional nodes and edges. Check it out...
 
+...Hmm, they are kind of plain and hard to see. Let's use Cytoscape visualization styles to fix that!
 ```{r}
 my.drugs <- selectNodes("drug", by.col = "CTL.Type", preserve = FALSE)$nodes #easy way to collect node SUIDs by column value
 clearSelection()
@@ -367,27 +379,29 @@ drug.labels <- na.omit(drug.labels)
 mapply(function(x,y) setNodeLabelBypass(x,y), drug.labels$SUID, drug.labels$CTL.label)
 ```
 
+Now we have drugs labeled as purple hexagons interacting with the network view of our WikiPathways hit from our functional enrichment analysis on a lung cancer dataset. Cool!  Hopefully, you can imagine now, extending this (or other pathawys) in other ways, e.g., TF and miRNA interactions. Or applying numerous other Cytoscape apps to the analysis and visualization of this result.
 
 # Save
+Last, but not least, be sure to save your work along the way.  Here is how you might save your up and down regulated subsets from the lung cancer dataset as R objects that are easy to read back in and share:
 ```{r}
 save(ewp.up, file = "lung_cancer_ewp_up.Rdata")
 save(ewp.dn, file = "lung_cancer_ewp_down.Rdata")
 ```
 
-Session files save everything in Cytoscape. As with most project software, we recommend saving often!
+Session files save everything that is in Cytoscape, including the pathways, networks, data and styles. As with most project software, we recommend saving often!
 ```{r}
 full.path=paste(getwd(),'tutorial_session',sep='/')
 saveSession(filename=full.path) #.cys
 ```
-Note: If you don’t specify a complete path, the files will be save relative to your Cytoscape installation directory, e.g., /Applications/Cytoscape_v3.6.0/… or somewhere you don’t have write permissions.
+Note: If you don’t specify a complete path, the files will be save relative to your Cytoscape installation directory, e.g., /Applications/Cytoscape_v3.6.1/… or somewhere you migt not have write permissions.
 
 You can export extremely high resolution images, including vector graphic formats.
 ```{r}
 full.path=paste(getwd(),'tutorial_image2',sep='/')
-exportImage(filename=full.path, type = 'PDF') #.pdf
+exportImage(filename=full.path, type='PDF') #.pdf
+exportImage(filename=full.path, type='PNG', zoom=200) #.png; use zoom or width args to increase size/resolution
 ?exportImage
 ```
-
 
 And with so many libraries involved, it's a good idea to keep track of the version information when performing real analyses so that you (and others) can reliably reproduce your results:
 ```{r}
