@@ -36,13 +36,15 @@ In addition to this **rWikiPathways** package, you'll also need to install **Bri
 
 ```{r}
 if(!"rWikiPathways" %in% installed.packages()){
-    source("https://bioconductor.org/biocLite.R")
-    biocLite("rWikiPathways")
+    if (!requireNamespace("BiocManager", quietly=TRUE))
+        install.packages("BiocManager")
+    BiocManager::install("rWikiPathways")
 }
 library(rWikiPathways)
 if(!"BridgeDbR" %in% installed.packages()){
-    source("https://bioconductor.org/biocLite.R")
-    biocLite("BridgeDbR")
+    if (!requireNamespace("BiocManager", quietly=TRUE))
+        install.packages("BiocManager")
+    BiocManager::install("BridgeDbR")
 }
 library(BridgeDbR)
 ```

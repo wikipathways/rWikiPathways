@@ -20,8 +20,9 @@ you may also like these R packages:
 ## How to install
 **_Official bioconductor releases_ (recommended)**
 ```
-source("https://bioconductor.org/biocLite.R")
-biocLite("rWikiPathways")
+if (!requireNamespace("BiocManager", quietly=TRUE))
+    install.packages("BiocManager")
+BiocManager::install("rWikiPathways")
 ```
 _Unstable development code from this repo_ (at your own risk)
 ```
