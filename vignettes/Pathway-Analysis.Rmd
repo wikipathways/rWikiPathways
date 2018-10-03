@@ -102,7 +102,7 @@ head(lung.expr)
 Now let's prepare up- and down-regulated gene lists using some conventional criteria.
 ```{r}
 up.genes <- lung.expr[lung.expr$log2FC > 1 & lung.expr$adj.P.Value < 0.05, 1] 
-dn.genes <- lung.expr[lung.expr$log2FC < 1 & lung.expr$adj.P.Value < 0.05, 1]
+dn.genes <- lung.expr[lung.expr$log2FC < -1 & lung.expr$adj.P.Value < 0.05, 1]
 bkgd.genes <- lung.expr[,1]
 ```
 
