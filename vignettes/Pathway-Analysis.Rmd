@@ -145,7 +145,7 @@ While it's running, you can examine the parameters and their meaning...
 
 It's done! Does the format and results make sense? Do you understand the two *Ratio* columns? Does the biology of the top results make sense?
 
-Tables are fine, but we're in R to see plots. Conveniently, **clusterProfilier** provides a variety of plots with default settings:
+Tables are fine, but we're in R to see plots. Conveniently, **clusterProfiler** provides a variety of plots with default settings:
 ```{r}
 barplot(egobp, showCategory = 20)
 dotplot(egobp, showCategory = 20)
@@ -155,7 +155,7 @@ goplot(egobp)
 
 Check out the [clusterProfiler vignette](https://bioconductor.org/packages/release/bioc/vignettes/clusterProfiler/inst/doc/clusterProfiler.html) for other supported functions and plots. 
 
-For more control and customization, here is an example using *ggplot* and the same *enrichGO object* output from **clusterProfilier**...
+For more control and customization, here is an example using *ggplot* and the same *enrichGO object* output from **clusterProfiler**...
 ```{r}
 ggplot(egobp[1:20], aes(x=reorder(Description, -pvalue), y=Count, fill=-p.adjust)) +
     geom_bar(stat = "identity") +
