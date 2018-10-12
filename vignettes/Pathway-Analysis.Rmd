@@ -67,7 +67,7 @@ if(all(status)){
 
 The **RCy3** package is used to connect with **Cytoscape**. So you will also need to install and launch Cytoscape:
 
-* Download the latest Cytoscape from http://www.cytoscape.org/download.php
+* Download the latest Cytoscape from https://cytoscape.org/download.html 
 * Complete installation wizard
 * Launch Cytoscape
 
@@ -313,7 +313,7 @@ cytoscapePing()
 
 If you've got everything loaded and running, then all you need to do is run this command to import a pathway into Cytoscape from WikiPathways:
 ```{r}
-commandsRun('wikipathways import-as-pathway id=WP179') 
+RCy3::commandsRun('wikipathways import-as-pathway id=WP179') 
 ```
 
 There it is! The latest approved version of the pathway, now in Cytoscape as a network model with annotated genes, proteins and metabolites. For performance reasons, Cytoscape sets a view threshold to hide details (like node labels) when zoomed out. If you want to override this, use...
