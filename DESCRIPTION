@@ -12,7 +12,7 @@ Authors@R: c(person("Egon", "Willighagen", role = c("aut","cre"),
            )
 Maintainer: Egon Willighagen <egon.willighagen@gmail.com>, Alexander Pico <alex.pico@gladstone.ucsf.edu>
 Depends: R (>= 3.5)
-Imports: caTools, httr, RJSONIO, utils
+Imports: caTools, httr, RJSONIO, utils, XML
 Suggests: testthat, BiocStyle, knitr, rmarkdown
 Description: Use this package to interface with the WikiPathways API.
 License: MIT + file LICENSE
@@ -22,4 +22,4 @@ LazyLoad: yes
 biocViews: Visualization, GraphAndNetwork, ThirdPartyClient, Network, Metabolomics
 NeedsCompilation: no
 VignetteBuilder: knitr
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
