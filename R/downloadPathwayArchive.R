@@ -21,6 +21,7 @@
 #' }
 #' @export
 #' @importFrom utils browseURL download.file
+#' @importFrom XML readHTMLTable
 downloadPathwayArchive <- function(date='current',organism=NULL, format=c('gpml', 'gmt', 'svg'), destpath='./'){
     #get validated format
     format <- match.arg(format)
