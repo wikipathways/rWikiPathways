@@ -12,6 +12,14 @@ vignette: >
   %\VignetteIndexEntry{2. rWikiPathways and BridgeDbR}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
+bibliography: tutorial.bib
+csl: biomed-central.csl
+references:
+- id: dummy
+  title: no title
+  author:
+  - family: noname
+    given: noname
 ---
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
@@ -107,3 +115,5 @@ And if you ever find yourself with a system code, e.g., from a rWikiPathways ret
 ```{r}
     BridgeDbR::getFullName('Ce')
 ```
+
+# References
