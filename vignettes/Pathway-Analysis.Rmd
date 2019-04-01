@@ -258,7 +258,7 @@ gwp.sig.lung.expr.df = data.frame(ID=gwp.sig.lung.expr$ID,
                                  leading_edge=gwp.sig.lung.expr$leading_edge
 )
 gwp.sig.lung.expr.df[which(gwp.sig.lung.expr.df$NES>1),] #pathways enriched for upregulated lung cancer genes
-gwp.sig.lung.expr.df[which(gwp.sig.lung.expr.df$NES<1),] #pathways enriched for downregulated lung cancer genes
+gwp.sig.lung.expr.df[which(gwp.sig.lung.expr.df$NES<-1),] #pathways enriched for downregulated lung cancer genes
 ```
 
 One of the advantages of pathway analysis is that you have *pathway models* already built and ready for data overlays. We will get to that soon in the in **Visualize** section, but first, let's see what else we can learn about the pathways hits from WikiPathways.
