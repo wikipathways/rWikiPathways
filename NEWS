@@ -5,6 +5,7 @@ Changes in version 1.4.0
     - Fixed sign in subsetting function in vignette -- user issue on bioc forum
     - Added XML to Imports
     - Added the missing References section to one of the vignettes
+    - Added BioSchemas annotation to the vignettes
 Changes in version 1.2.0
 + Bug fixes
     - Added method to retrieve GMT files -- #3 issue
