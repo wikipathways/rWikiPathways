@@ -6,6 +6,8 @@ date: "`r Sys.Date()`"
 output: 
   BiocStyle::html_document:
     toc_float: true
+    includes:
+      in_header: rWikiPathways-and-BridgeDbR.html
 #  pdf_document:
 #    toc: true 
 vignette: >
