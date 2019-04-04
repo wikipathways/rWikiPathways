@@ -7,7 +7,7 @@ output:
   BiocStyle::html_document:
     toc_float: true
     includes:
-      in_header: rWikiPathways-and-BridgeDbR.html
+      in_header: rWikiPathways-and-BridgeDbR-schema.html
 #  pdf_document:
 #    toc: true 
 vignette: >
