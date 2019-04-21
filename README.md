@@ -49,6 +49,7 @@ install.packages("roxygen2")
 library(devtools,roxygen2)
 devtools::install_github("AlexanderPico/docthis")
 library(docthis)
+setwd("/git/wikipathways/rWikiPathways") #customize to your setup
 devtools::document()
 devtools::check()
 BiocCheck::BiocCheck('./')

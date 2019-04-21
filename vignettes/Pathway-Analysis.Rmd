@@ -96,7 +96,7 @@ Working with pathways opens up unique analysis and visualization options. We wil
 # Dataset
 The format of this lung cancer dataset should look familiar to anyone who has worked with differential gene expression results. It contains columns of gene identifiers (Ensembl IDs), gene symbols, log2foldchange values, P-Values and adjusted P-Values.
 ```{r}
-lung.expr <- read.csv(system.file("extdata","data-lung-cancer.csv", package="rWikiPathways"),stringsAsFactors = F)
+lung.expr <- read.csv(system.file("extdata","data-lung-cancer.csv", package="rWikiPathways"),stringsAsFactors = FALSE)
 nrow(lung.expr)
 head(lung.expr)
 ```
