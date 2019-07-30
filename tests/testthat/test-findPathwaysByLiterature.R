@@ -7,7 +7,7 @@ test_that("find by keyword", {
 })
 
 test_that("find by pmid (again)", {
-    pathways = findPathwaysByLiterature(query="19649250")
+    pathways = findPathwaysByLiterature(query="10423528")
     expect_gt(length(pathways), 0)
 })
 

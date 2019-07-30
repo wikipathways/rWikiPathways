@@ -1,3 +1,6 @@
+Changes in version 1.4.1
++ Bug fixes
+    - Updated the findPathwaysByLiterature test case (fixing a false positive fail)
 Changes in version 1.4.0
 + Bug fixes
     - Fixed createSubnetwork -- #43 network suids i/o names
