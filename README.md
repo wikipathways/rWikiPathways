@@ -71,23 +71,25 @@ http://bioconductor.org/developers/how-to/git/push-to-github-bioc/
 Following each bioconductor release, a `RELEASE_#_#` branch is created here:
 
 ```
-git checkout -b RELEASE_3_7 upstream/RELEASE_3_7
+git checkout -b RELEASE_3_10 upstream/RELEASE_3_10
 ```
 
-Only bug fixes and documentation updates can be pushed to the official bioconductor release branch. After committing and pushing fixes to `master`, then:
+Only bug fixes and documentation updates can be pushed to the official bioconductor release branch. After committing fixes to `master`, then:
 
 ```
-git checkout RELEASE_3_7
+git checkout RELEASE_3_10
 git cherry-pick master #for latest commit
 # or git cherry-pick <commit number> #for specific commit
 # bump version in DESCRIPTION
 git add DESCRIPTION
 git commit -m 'version bump'
-git push origin RELEASE_3_7
+git push origin RELEASE_3_10
 # double check changes, and then...
-git push upstream RELEASE_3_7
+git push upstream RELEASE_3_10
 git checkout master
 ```
+
+And then finally, bump version and commit DESCRIPTION to `master` and push to origin and upstream.
 
 https://bioconductor.org/developers/how-to/git/bug-fix-in-release-and-devel/
 

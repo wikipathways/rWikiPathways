@@ -1,13 +1,14 @@
+Changes in version 1.6.0
++ None
 Changes in version 1.4.1
 + Bug fixes
     - Updated the findPathwaysByLiterature test case (fixing a false positive fail)
     - Removed tests for unavailable service: getColoredPathway
 Changes in version 1.4.0
 + Bug fixes
-    - Fixed createSubnetwork -- #43 network suids i/o names
+    - Added XML to Imports -- #4 missing import
 + Doc fixes
     - Fixed sign in subsetting function in vignette -- user issue on bioc forum
-    - Added XML to Imports
     - Added the missing References section to one of the vignettes
     - Added BioSchemas annotation to the vignettes
 Changes in version 1.2.0
