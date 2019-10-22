@@ -1,5 +1,5 @@
 Changes in version 1.6.0
-+ None
++ Minor updates to the Pathway Analysis vignette
 Changes in version 1.4.1
 + Bug fixes
     - Updated the findPathwaysByLiterature test case (fixing a false positive fail)

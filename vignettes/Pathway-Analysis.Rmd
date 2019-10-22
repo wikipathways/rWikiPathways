@@ -23,8 +23,6 @@ knitr::opts_chunk$set(
 
 This vignette will cover a wide range of analytical and visualization techniques involved in a typical pathway analysis. The **Overview** section will go into more detail on the particulars, but note that this vignette is designed to be modular and carefully considered. Please do not simply run the entire script and expect to get anything meaningful from the final output. This is an instructional device, ideal for guided workshops.
 
-As you migth expect, a broad tour of pathway anlaysis will require a variety of **R** packages. Please make sure you have the latest **R** installed (3.5.1 or later) and review the output from running the next code chunck. The final printed line will state whether it was successful or not. Good luck!
-
 # Installation
 First, make sure you have *rWikiPathways* installed...
 ```{r}
@@ -36,7 +34,7 @@ if(!"rWikiPathways" %in% installed.packages()){
 library(rWikiPathways)
 ```
 
-We will be using a diverse set of R packages in this vignette. This next chunk should handle the installation and loading of all the R packages we will need. Make sure you have **R** 3.5 or later. 
+We will be using a diverse set of R packages in this vignette. This next chunk should handle the installation and loading of all the R packages we will need.  The final printed line will state whether it was successful or not. Good luck!
 
 *As with most installations, you may be prompted for responses. For this vignette, you can reply '**a**' to update all old packages (if prompted) and '**no**' to skip compiling from source (if an option for your setup). Please verify the final "success"" message printed at the end before proceeding.*
 
@@ -83,9 +81,10 @@ For this vignette, you'll also need a couple *apps* for Cytoscape. With Cytoscap
 * http://apps.cytoscape.org/apps/cytargetlinker 
 
 If you are running Cytoscape 3.7.0 or above, you can simply run these commands:
-```
+```{r}
 installApp('WikiPathways') 
 installApp('CyTargetLinker') 
+installApp('stringApp') 
 ```
 
 # Overview 
@@ -234,9 +233,9 @@ Interesting... Almost twice as many down-regulated genes (634 vs 366), but fewer
 
 *BONUS: What we just did is also refered to as Over-representation Analysis (ORA). Another approach is Gene Set Enrichment Analysis (GSEA). One advantage of GSEA is that you don't have to pick an arbitrary log2FC cutoff to define gene sets. Instead you provide a pre-ordered list of significant gene-named log2FC values at let the GSEA do the work. Here are the steps, see if you can follow along:*
 
-```
+```{r}
 lung.expr$fcsign <- sign(lung.expr$log2FC)
-lung.expr$logfdr <- -log10(lung.expr$adj.P.Value)
+lung.expr$logfdr <- -log10(lung.expr$P.Value)
 lung.expr$sig <- lung.expr$logfdr/lung.expr$fcsign
 sig.lung.expr.entrez<-merge(lung.expr, bkgd.genes.entrez, by.x = "GeneID", by.y = "ENSEMBL")
 gsea.sig.lung.expr <- sig.lung.expr.entrez[,8]
@@ -259,8 +258,8 @@ gwp.sig.lung.expr.df = data.frame(ID=gwp.sig.lung.expr$ID,
                                  rank=gwp.sig.lung.expr$rank,
                                  leading_edge=gwp.sig.lung.expr$leading_edge
 )
-gwp.sig.lung.expr.df[which(gwp.sig.lung.expr.df$NES>1),] #pathways enriched for upregulated lung cancer genes
-gwp.sig.lung.expr.df[which(gwp.sig.lung.expr.df$NES<-1),] #pathways enriched for downregulated lung cancer genes
+gwp.sig.lung.expr.df[which(gwp.sig.lung.expr.df$NES > 1),] #pathways enriched for upregulated lung cancer genes
+gwp.sig.lung.expr.df[which(gwp.sig.lung.expr.df$NES < -1),] #pathways enriched for downregulated lung cancer genes
 ```
 
 One of the advantages of pathway analysis is that you have *pathway models* already built and ready for data overlays. We will get to that soon in the in **Visualize** section, but first, let's see what else we can learn about the pathways hits from WikiPathways.
@@ -366,7 +365,7 @@ lapply(ewp.up.wpids, function (x) {
 ```
 
 *BONUS: What about those lung cancer pathways we found?  Let's take a look at the data overlay on those as well.*
-```
+```{r}
 lapply(lc.wpids, function (x){
     commandsRun(paste0('wikipathways import-as-pathway id=',x))
     loadTableData(lung.expr, data.key.column = "GeneID", table.key.column = "Ensembl")
