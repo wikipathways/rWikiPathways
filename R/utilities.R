@@ -37,7 +37,7 @@ wikipathwaysAPI <- function(base.url=.baseUrl){
 #' @examples {
 #' wikipathwaysGET('listOrganisms')
 #' }
-#' @importFrom RJSONIO fromJSON
+#' @importFrom rjson fromJSON
 #' @importFrom httr GET
 #' @importFrom utils URLencode
 #' @export
