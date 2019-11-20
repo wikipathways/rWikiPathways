@@ -29,10 +29,11 @@ color list and graphId must be the same length.}
 Image file
 }
 \description{
-Retrieve a pathway image file with specified nodes colored by specified colors
+Retrieve a pathway image file with specified nodes colored by specified colors.
+             This service may not always be available.
 }
 \examples{
-{
+\dontrun{
   svg = getColoredPathway(pathway="WP554", graphId="ef1f3")
   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"))
   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"),
