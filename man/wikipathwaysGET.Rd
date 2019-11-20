@@ -4,8 +4,12 @@
 \alias{wikipathwaysGET}
 \title{WikiPathways GET}
 \usage{
-wikipathwaysGET(operation, parameters = NULL, format = c("json", "xml",
-  "html", "jpg", "pdf", "dump"), base.url = .baseUrl)
+wikipathwaysGET(
+  operation,
+  parameters = NULL,
+  format = c("json", "xml", "html", "jpg", "pdf", "dump"),
+  base.url = .baseUrl
+)
 }
 \arguments{
 \item{operation}{A \code{character} string to be converted to the query namespace}
