@@ -1,7 +1,8 @@
 # ------------------------------------------------------------------------------
 #' @title Get Colored Pathway
 #'
-#' @description Retrieve a pathway image file with specified nodes colored by specified colors
+#' @description Retrieve a pathway image file with specified nodes colored by specified colors.
+#'              This service may not always be available.
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
 #' @param revision (\code{integer}, optional) Number to indicate a specific revision to download
 #' @param graphId A \code{character} string or \code{vector} indicating the nodes to color 
@@ -10,7 +11,8 @@
 #' color list and graphId must be the same length.
 #' @param fileType (optional) Image file format, e.g., svg (default), png or pdf.
 #' @return Image file
-#' @examples {
+#' @examples
+#' \dontrun{
 #'   svg = getColoredPathway(pathway="WP554", graphId="ef1f3")
 #'   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"))
 #'   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"),
@@ -51,7 +53,9 @@ getColoredPathway <- function(pathway, revision=0,
     for (co in color)
         params <- c(params, color=co)
 
-    res <- wikipathwaysGET('getColoredPathway', params) 
+    res <- wikipathwaysGET('getColoredPathway', params)
+
+    if (regexpr("not available", res['data'])[1] > 0) stop(res$data)
 
     img = caTools::base64decode(res['data'],what='character')
 
