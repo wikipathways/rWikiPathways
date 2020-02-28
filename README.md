@@ -14,7 +14,8 @@ you may also like these R packages:
 * [PathVisioRPC](http://projects.bigcat.unimaas.nl/pathvisiorpc/)
 * [RCy3](https://github.com/cytoscape/RCy3)
 
-## Examples
+## Getting Started
+* [Documentation site](https://wikipathways.github.io/rWikiPathways/index.html)
 * [Overview vignette](vignettes/Overview.Rmd)
 
 ## How to install
@@ -57,6 +58,13 @@ BiocCheck::BiocCheck('./')
 
 ### Testing
 Unit tests are a crucial tool in software development. Be sure to [add tests](tests/testthat) for any new methods implemented. These will be run as part of the `devtools::check()`. 
+
+### Updating site
+We use [pkgdown](https://pkgdown.r-lib.org/) to generate the [main site for rWikiPathways](https://wikipathways.github.io/rWikiPathways/index.html) based on this README, metadata, man pages and vignettes. If you make changes to any of these, please take a moment to regenerate the site:
+```
+library(pkgdown)
+pkgdown::build_site()
+```
 
 ### Bioconductor
 While this is the primary development repository for the rWikiPathways project, we also make regular pushes to official bioconductor repository ([devel](http://bioconductor.org/packages/devel/bioc/html/rWikiPathways.html) & [release](http://bioconductor.org/packages/release/bioc/html/rWikiPathways.html)) from which the official releases are generated. This is the correct repo for all coding and bug reporting interests. The tagged releases here correspond to the bioconductor releases via a manual syncing process. The `master` branch here corresponds to the latest code in development and not yet released. 
