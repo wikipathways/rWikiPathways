@@ -1,0 +1,9 @@
+pandoc: 2.3.1
+pkgdown: 1.4.1
+pkgdown_sha: ~
+articles:
+  Overview: Overview.html
+  Pathway-Analysis: Pathway-Analysis.html
+  rWikiPathways-and-BridgeDbR: rWikiPathways-and-BridgeDbR.html
+  rWikiPathways-and-RCy3: rWikiPathways-and-RCy3.html
+
