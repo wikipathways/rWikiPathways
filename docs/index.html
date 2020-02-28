@@ -105,10 +105,11 @@
 <li><a href="http://projects.bigcat.unimaas.nl/pathvisiorpc/">PathVisioRPC</a></li>
 <li><a href="https://github.com/cytoscape/RCy3">RCy3</a></li>
 </ul>
-<div id="examples" class="section level2">
+<div id="getting-started" class="section level2">
 <h2 class="hasAnchor">
-<a href="#examples" class="anchor"></a>Examples</h2>
+<a href="#getting-started" class="anchor"></a>Getting Started</h2>
 <ul>
+<li><a href="https://wikipathways.github.io/rWikiPathways/index.html">Documentation site</a></li>
 <li><a href="vignettes/Overview.Rmd">Overview vignette</a></li>
 </ul>
 </div>
@@ -162,6 +163,13 @@ BiocCheck::BiocCheck('./')</a></code></pre>
 <h3 class="hasAnchor">
 <a href="#testing" class="anchor"></a>Testing</h3>
 <p>Unit tests are a crucial tool in software development. Be sure to <a href="tests/testthat">add tests</a> for any new methods implemented. These will be run as part of the <code>devtools::check()</code>.</p>
+</div>
+<div id="updating-site" class="section level3">
+<h3 class="hasAnchor">
+<a href="#updating-site" class="anchor"></a>Updating site</h3>
+<p>We use <a href="https://pkgdown.r-lib.org/">pkgdown</a> to generate the <a href="https://wikipathways.github.io/rWikiPathways/index.html">main site for rWikiPathways</a> based on this README, metadata, man pages and vignettes. If you make changes to any of these, please take a moment to regenerate the site:</p>
+<pre><code><a href="https://rdrr.io/r/base/library.html">library(pkgdown)
+pkgdown::build_site()</a></code></pre>
 </div>
 <div id="bioconductor" class="section level3">
 <h3 class="hasAnchor">
