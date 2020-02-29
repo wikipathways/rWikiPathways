@@ -1,8 +1,8 @@
 Package: rWikiPathways
 Type: Package
 Title: rWikiPathways - R client library for the WikiPathways API
-Version: 1.7.1
-Date: 2019-11-19
+Version: 1.7.2
+Date: 2020-02-29
 Authors@R: c(person("Egon", "Willighagen", role = c("aut","cre"),
                      email = "egon.willighagen@gmail.com",
                      comment = c(ORCID = "0000-0001-7542-0286")),
