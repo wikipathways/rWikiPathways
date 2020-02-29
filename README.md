@@ -16,7 +16,7 @@ you may also like these R packages:
 
 ## Getting Started
 * [Documentation site](https://wikipathways.github.io/rWikiPathways/index.html)
-* [Overview vignette](vignettes/Overview.Rmd)
+* [Overview vignette](articles/Overview.Rmd)
 
 ## How to install
 **_Official bioconductor releases_ (recommended)**
