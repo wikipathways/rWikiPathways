@@ -24,10 +24,10 @@ findPathwaysByXref <- function(identifier, systemCode) {
     }
     res.df <- suppressWarnings(data.table::rbindlist(res$result, fill = TRUE))
     res.df$fields <- NULL
-    res.df$revision <- sapply(res.df$revision, as.integer)    
-    res.df$score <- sapply(res.df$score, function(s){
+    res.df$revision <- vapply(res.df$revision, as.integer, integer(1))    
+    res.df$score <- vapply(res.df$score, function(s){
         as.numeric(unlist(s))
-    })
+    }, numeric(1))
     return(unique(res.df))
 
 }

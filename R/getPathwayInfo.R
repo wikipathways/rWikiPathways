@@ -14,7 +14,7 @@ getPathwayInfo <- function(pathway) {
         message("No results")
         return(data.frame())
     }
-    res.pathwayInfo <- sapply(res$pathwayInfo, as.list)
+    res.pathwayInfo <- vapply(res$pathwayInfo, as.list, list(1))
     res.df <- as.data.frame(res.pathwayInfo, stringsAsFactors = FALSE)
     return(res.df)
 }

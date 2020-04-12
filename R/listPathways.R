@@ -20,7 +20,7 @@ listPathways <- function(organism="") {
     #make into list of list (like other web service responses)
     res.pathways <- lapply(res$pathways, as.list)
     res.df <- suppressWarnings(data.table::rbindlist(res.pathways, fill = TRUE))
-    res.df$revision <- sapply(res.df$revision, as.integer) 
+    res.df$revision <- vapply(res.df$revision, as.integer, integer(1)) 
     return(res.df)
 }
 

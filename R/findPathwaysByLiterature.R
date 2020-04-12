@@ -28,16 +28,16 @@ findPathwaysByLiterature <- function(query) {
         return(data.frame())
     }
     res.df <- suppressWarnings(data.table::rbindlist(res$result, fill = TRUE))
-    res.df$revision <- sapply(res.df$revision, as.integer)
-    res.df$score <- sapply(res.df$score, function(s){
+    res.df$revision <- vapply(res.df$revision, as.integer, integer(1))
+    res.df$score <- vapply(res.df$score, function(s){
         as.numeric(unlist(s))
-    })
+    }, numeric(1))
     ## reshape literature field
     res.df.tall <- unnest(res.df, cols = c("fields")) 
     res.df.odd <- as.data.frame(res.df.tall)[c(TRUE,FALSE), ]
-    res.df.odd$fields <- sapply(res.df.odd$fields, unlist)
+    res.df.odd$fields <- vapply(res.df.odd$fields, unlist, character(1))
     res.df.even <- as.data.frame(res.df.tall)[c(FALSE,TRUE), ]
-    res.df.even$fields <- sapply(res.df.even$fields, unlist)
+    res.df.even$fields <- sapply(res.df.even$fields, unlist) #can't use vapply: variable returns
     row.names(res.df.odd) <- NULL
     row.names(res.df.even) <- NULL
     res.df.fields <- merge(res.df.even, res.df.odd[,2, drop = FALSE], by=0)
