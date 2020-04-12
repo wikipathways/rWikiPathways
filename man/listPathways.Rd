@@ -11,7 +11,7 @@ listPathways(organism = "")
 Default is all species.}
 }
 \value{
-A \code{list} of lists
+A \code{dataframe} of pathway information
 }
 \description{
 Retrieve list of pathways per species, including WPID, name, species,

@@ -3,12 +3,18 @@
 #'
 #' @description Retrieve information for a specific pathway
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
-#' @return A \code{list} of pathway WPID, URL, name, species and latest revision
+#' @return A \code{dataframe} of pathway WPID, URL, name, species and latest revision
 #' @examples {
 #' getPathwayInfo('WP554')
 #' }
 #' @export
 getPathwayInfo <- function(pathway) {
     res <- wikipathwaysGET('getPathwayInfo',list(pwId=pathway))
-    return(unname(res$pathwayInfo))
+    if(res$pathwayInfo['name'] == ""){
+        message("No results")
+        return(data.frame())
+    }
+    res.pathwayInfo <- sapply(res$pathwayInfo, as.list)
+    res.df <- as.data.frame(res.pathwayInfo, stringsAsFactors = FALSE)
+    return(res.df)
 }

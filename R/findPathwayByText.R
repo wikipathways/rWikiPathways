@@ -1,16 +1,28 @@
 # ------------------------------------------------------------------------------
 #' @title Find Pathways By Text
 #'
-#' @description Retrieve a list of pathways containing the query text.
+#' @description Retrieve pathways containing the query text.
 #' @param query A \code{character} string to search for, e.g., "cancer"
-#' @return A \code{list} of lists
+#' @return A \code{dataframe} of pathway attributes in addition to query result score
+#' @details The score is from a lucene index search engine, ranging from 0 to 
+#' 1 with higher scores for better matches. 
 #' @examples {
 #' findPathwaysByText('cancer')
 #' }
 #' @export
 findPathwaysByText <- function(query) {
     res <- wikipathwaysGET('findPathwaysByText', list(query=query))
-    return(res$result)
+    if(length(res$result) == 0){
+        message("No results")
+        return(data.frame())
+    }
+    res.df <- suppressWarnings(data.table::rbindlist(res$result, fill = TRUE))
+    res.df$fields <- NULL
+    res.df$revision <- sapply(res.df$revision, as.integer)
+    res.df$score <- sapply(res.df$score, function(s){
+        as.numeric(unlist(s))
+    })
+    return(res.df)
     
 }
 
@@ -23,9 +35,11 @@ findPathwaysByText <- function(query) {
 #' @examples {
 #' findPathwayIdsByText('cancer')
 #' }
+#' @seealso findPathwaysByText
 #' @export 
 findPathwayIdsByText <- function(query) {
-    unlist(lapply(findPathwaysByText(query), function(x) {unname(x['id'])}))
+    res <- findPathwaysByText(query)
+    return(res$id)
 }
 
 # ------------------------------------------------------------------------------
@@ -35,13 +49,15 @@ findPathwayIdsByText <- function(query) {
 #' @details Note: there will be multiple listings of the same pathway name if 
 #' copies exist for multiple species.
 #' @param query A \code{character} string to search for, e.g., "cancer"
-#' @return A \code{list} of lists
+#' @return A \code{list} of pathway names
 #' @examples {
 #' findPathwayNamesByText('cancer')
 #' }
+#' @seealso findPathwaysByText
 #' @export 
 findPathwayNamesByText <- function(query) {
-    unlist(lapply(findPathwaysByText(query), function(x) {unname(x['name'])}))
+    res <- findPathwaysByText(query)
+    return(res$name)
 }
 
 # ------------------------------------------------------------------------------
@@ -49,11 +65,13 @@ findPathwayNamesByText <- function(query) {
 #'
 #' @description Retrieve list of pathway URLs containing the query text.
 #' @param query A \code{character} string to search for, e.g., "cancer"
-#' @return A \code{list} of lists
+#' @return A \code{list} of urls
 #' @examples {
 #' findPathwayUrlsByText('cancer')
 #' }
+#' @seealso findPathwaysByText
 #' @export 
 findPathwayUrlsByText <- function(query) {
-    unlist(lapply(findPathwaysByText(query), function(x) {unname(x['url'])}))
+    res <- findPathwaysByText(query)
+    return(res$url)
 }

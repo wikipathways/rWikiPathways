@@ -274,15 +274,15 @@ Whoa, that's a lot... and there's a bunch of repeats!?  This general search incl
 
 ```{r}
 lc.pathways <- findPathwaysByText('"lung cancer"')  #quotes inside query to require both terms
-human.filter <- lapply(lc.pathways, function(x) x$species == "Homo sapiens")
-human.lc.pathways <- lc.pathways[unlist(human.filter)] # just the human lung cancer pathways
-sapply(human.lc.pathways, function(x) x$name) # display the pathway titles
+human.lc.pathways <- lc.pathways %>% 
+  dplyr::filter(species == "Homo sapiens") # just the human lung cancer pathways
+human.lc.pathways$name # display the pathway titles
 ```
 
-Ok, so there are 3 human pathways that explicitly mention "lung cancer" in their titles or descriptions. None of these were in our top hits for enrichment, but we might want to look at them anyways during our exploratory data visualization, right?  So, let hold on to their WPIDs for now...
+Ok, so there are just a few human pathways that explicitly mention "lung cancer" in their titles or descriptions. None of these were in our top hits for enrichment, but we might want to look at them anyways during our exploratory data visualization, right?  So, let hold on to their WPIDs for now...
 
 ```{r}
-lc.wpids <- sapply(human.lc.pathways, function(x) x$id)
+lc.wpids <- human.lc.pathways$id
 lc.wpids
 ```
 
@@ -295,7 +295,7 @@ ewp.up.wpids
 
 Let's take a look at these. We could open them in our browser for example...
 ```{r}
-url <- getPathwayInfo("WP179")[2]
+url <- getPathwayInfo("WP179")$url
 browseURL(url)
 ```
 

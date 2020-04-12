@@ -10,7 +10,7 @@ findPathwayNamesByText(query)
 \item{query}{A \code{character} string to search for, e.g., "cancer"}
 }
 \value{
-A \code{list} of lists
+A \code{list} of pathway names
 }
 \description{
 Retrieve list of pathway names containing the query text.
@@ -23,4 +23,7 @@ copies exist for multiple species.
 {
 findPathwayNamesByText('cancer')
 }
+}
+\seealso{
+findPathwaysByText
 }

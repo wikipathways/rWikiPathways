@@ -91,7 +91,7 @@ With **rWikiPathways**, the approach is simple. Take a supported identifier for 
     tnf.pathways
 ```
 
-Ack! That's a lot of information. We provide not only the pathway information, but also the search result strength in case you want to rank results, etc.  Again, if all you're interested in is WPIDs, names or URLs, then there are these handy alternatives that will just return simple lists:
+Ack! That's a lot of information. We provide not only the pathway information, but also the search result score in case you want to rank results, etc.  Again, if all you're interested in is WPIDs, names or URLs, then there are these handy alternatives that will just return simple lists:
 
 ```{r}
     ?findPathwayIdsByXref
@@ -139,25 +139,6 @@ We also provide methods for retrieving pathways as data files and as images. The
     gpml <- getPathway('WP554')
 ```
 
-Maybe you just want to get the image of the pathway to embed in your own website, for example:
-
-```{r}
-    svg <- getColoredPathway('WP554')
-```
-
-You can save the svg to file with the function:
-
-```
-writeLines(svg, 'rWikiPathways_example.svg')
-```
-
-And, as you may have suspected from the function name, you can also add color to the pathway to highlight specific elements. You will need to know the *graphIds* of the elements, however, which can be a bit tricky. Consider this an advanced features. Here's an example:
-
-```{r}
-    svg = getColoredPathway(pathway="WP554", graphId="ef1f3", color="DD88FF");
-```
-
-This will produce an svg image of the pathway with the ACE gene highlighted by color.
 
 WikiPathways also provides a monthly data release archived at http://data.wikipathways.org. The archive includes GPML, GMT and SVG collections by organism and timestamped. There's an R function for grabbing files from the archive...
 

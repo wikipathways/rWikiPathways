@@ -10,7 +10,7 @@ findPathwayUrlsByText(query)
 \item{query}{A \code{character} string to search for, e.g., "cancer"}
 }
 \value{
-A \code{list} of lists
+A \code{list} of urls
 }
 \description{
 Retrieve list of pathway URLs containing the query text.
@@ -19,4 +19,7 @@ Retrieve list of pathway URLs containing the query text.
 {
 findPathwayUrlsByText('cancer')
 }
+}
+\seealso{
+findPathwaysByText
 }

@@ -26,3 +26,6 @@ findPathwayNamesByLiterature('smith')
 findPathwayNamesByLiterature('cancer')
 }
 }
+\seealso{
+findPathwaysByLiterature
+}

@@ -1,7 +1,8 @@
 # ------------------------------------------------------------------------------
-#' @title Get Colored Pathway
+#' @title Deprecated: Get Colored Pathway
 #'
-#' @description Retrieve a pathway image file with specified nodes colored by specified colors
+#' @description This function is no longer working and has been deprecated in 
+#' this release and will be defunct at the next release. 
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
 #' @param revision (\code{integer}, optional) Number to indicate a specific revision to download
 #' @param graphId A \code{character} string or \code{vector} indicating the nodes to color 
@@ -19,41 +20,43 @@
 #'                           color=c("FF0000", "0000FF"))
 #'   # writeLines(svg, "pathway.svg")
 #' }
-#' @importFrom caTools base64decode
 #' @export
 getColoredPathway <- function(pathway, revision=0,
                               graphId=NULL, color=NULL,
                               fileType=c("svg","png","pdf")) {
-    fileType <- match.arg(fileType)
-    
-    if (is.null(color)&&!is.null(graphId)) {
-        color = rep("FF0000", length(graphId))
-    } else if (length(color) == 1) {
-        color = rep(color, length(graphId))
-    }
-    
-    if(length(graphId) != length(color))
-        stop("Error: Must provide same number of graphIds and colors.")
-    
-    # if these are still null, then swap for strings to avoid complications
-    if(is.null(graphId))
-            graphId="NULL"
-    if(is.null(color))
-            color="NULL"
-    
-    # finally, prepare parameters as named list,
-    # handling multiple named items for graphId and color
-    params <- list(pwId=pathway,
-                   revision=revision,
-                   fileType=fileType)
-    for (gi in graphId)
-        params <- c(params, graphId=gi)
-    for (co in color)
-        params <- c(params, color=co)
-
-    res <- wikipathwaysGET('getColoredPathway', params) 
-
-    img = caTools::base64decode(res['data'],what='character')
-
-  return(img)
+  
+  .Deprecated(NULL, msg="This function is no longer working. It has been deprecated in this release.")
+  
+  #   fileType <- match.arg(fileType)
+  #   
+  #   if (is.null(color)&&!is.null(graphId)) {
+  #       color = rep("FF0000", length(graphId))
+  #   } else if (length(color) == 1) {
+  #       color = rep(color, length(graphId))
+  #   }
+  #   
+  #   if(length(graphId) != length(color))
+  #       stop("Error: Must provide same number of graphIds and colors.")
+  #   
+  #   # if these are still null, then swap for strings to avoid complications
+  #   if(is.null(graphId))
+  #           graphId="NULL"
+  #   if(is.null(color))
+  #           color="NULL"
+  #   
+  #   # finally, prepare parameters as named list,
+  #   # handling multiple named items for graphId and color
+  #   params <- list(pwId=pathway,
+  #                  revision=revision,
+  #                  fileType=fileType)
+  #   for (gi in graphId)
+  #       params <- c(params, graphId=gi)
+  #   for (co in color)
+  #       params <- c(params, color=co)
+  # 
+  #   res <- wikipathwaysGET('getColoredPathway', params) 
+  # 
+  #   img = caTools::base64decode(res['data'],what='character')
+  # 
+  # return(img)
 }

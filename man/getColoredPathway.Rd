@@ -2,7 +2,7 @@
 % Please edit documentation in R/getColoredPathway.R
 \name{getColoredPathway}
 \alias{getColoredPathway}
-\title{Get Colored Pathway}
+\title{Deprecated: Get Colored Pathway}
 \usage{
 getColoredPathway(
   pathway,
@@ -29,11 +29,11 @@ color list and graphId must be the same length.}
 Image file
 }
 \description{
-Retrieve a pathway image file with specified nodes colored by specified colors.
-             This service may not always be available.
+This function is no longer working and has been deprecated in 
+this release and will be defunct at the next release.
 }
 \examples{
-\dontrun{
+{
   svg = getColoredPathway(pathway="WP554", graphId="ef1f3")
   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"))
   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"),

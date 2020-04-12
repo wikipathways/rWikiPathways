@@ -71,7 +71,7 @@ You should see 30 or more species listed. This list is useful for subsequent que
 
 However, some function want the organism code, rather than the full name. Using BridgeDbR's *getOrganismCode* function, we can get those:
 ```{r}
-    unlist(lapply(orgNames,BridgeDbR::getOrganismCode))
+    BridgeDbR::getOrganismCode(orgNames[1])
 ```
 
 # Identifier System Names and Codes

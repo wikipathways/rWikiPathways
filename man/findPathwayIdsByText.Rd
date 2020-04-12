@@ -20,3 +20,6 @@ Retrieve list of pathway WPIDs containing the query text.
 findPathwayIdsByText('cancer')
 }
 }
+\seealso{
+findPathwaysByText
+}

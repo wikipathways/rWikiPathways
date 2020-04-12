@@ -29,3 +29,6 @@ is present mutiple times.
 findPathwayNamesByXref('ENSG00000232810','En')
 }
 }
+\seealso{
+findPathwaysByXref
+}

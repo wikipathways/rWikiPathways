@@ -1,5 +1,12 @@
-Changes in version 1.7.1
-+ replaced RJSONIO with rjson
+Changes in version 1.8.0
++ Replaced RJSONIO with rjson
++ Replaced all sapply() with vapply()
++ Deprecated getColoredPathway
++ New features
+    - Upgraded findPathwaysByXXX, listPathways and getPathwayInfo functions to return dataframes
+    - Upgraded findPathwaysByLiterature to present literature fields
++ Doc fixes
+    - Updated tests and vignettes using dataframes
 Changes in version 1.6.0
 + Minor updates to the Pathway Analysis vignette
 Changes in version 1.4.1

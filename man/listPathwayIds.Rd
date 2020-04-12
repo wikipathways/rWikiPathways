@@ -24,3 +24,6 @@ Basically returns a subset of \link{listPathways} result
 listPathwayIds('Mus musculus')
 }
 }
+\seealso{
+listPathways
+}

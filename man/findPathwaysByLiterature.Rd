@@ -7,13 +7,23 @@
 findPathwaysByLiterature(query)
 }
 \arguments{
-\item{query}{The \code{character} string to search for, e.g., a PMID, title keyword or author name.}
+\item{query}{The \code{character} string to search for, e.g., a PMID, title 
+keyword or author name.}
 }
 \value{
-A \code{list} of lists
+A \code{dataframe} of pathway attributes in addition to query result 
+score and literature details
 }
 \description{
-Retrieve a list of pathways containing the query citation.
+Retrieve pathways containing the query citation.
+}
+\details{
+The score is from a lucene index search engine, ranging from 0 to 
+1 with higher scores for better matches. The two literature columns are
+lists of pubmed ids and titles for the citations matching the query per
+pathway. The graphId column lists the id for any objects in the
+GPML pathway model that have been spcifically annotated with the matching 
+citations.
 }
 \examples{
 {

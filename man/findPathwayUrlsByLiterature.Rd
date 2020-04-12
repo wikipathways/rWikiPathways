@@ -22,3 +22,6 @@ findPathwayUrlsByLiterature('smith')
 findPathwayUrlsByLiterature('cancer')
 }
 }
+\seealso{
+findPathwaysByLiterature
+}

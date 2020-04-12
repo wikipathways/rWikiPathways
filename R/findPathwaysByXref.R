@@ -1,7 +1,7 @@
 # ------------------------------------------------------------------------------
 #' @title Find Pathways By Xref
 #'
-#' @description Retrieve a list of pathways containing the query Xref by identifier
+#' @description Retrieve pathways containing the query Xref by identifier
 #'  and system code.
 #' @details Note: there will be multiple listings of the same pathway if the Xref
 #' is present mutiple times.
@@ -9,14 +9,26 @@
 #' @param systemCode (\code{character}) The BridgeDb code associated with the data source or system, 
 #' e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
 #' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.
-#' @return A \code{list} of lists
+#' @return A \code{dataframe} of pathway attributes in addition to query result score
+#' @details The score is from a lucene index search engine, ranging from 0 to 
+#' 1 with higher scores for better matches. 
 #' @examples {
 #' findPathwaysByXref('ENSG00000232810','En')
 #' }
 #' @export
 findPathwaysByXref <- function(identifier, systemCode) {
     res <- wikipathwaysGET('findPathwaysByXref', list(ids=identifier,codes=systemCode))
-    return(res$result)
+    if(length(res$result) == 0){
+        message("No results")
+        return(data.frame())
+    }
+    res.df <- suppressWarnings(data.table::rbindlist(res$result, fill = TRUE))
+    res.df$fields <- NULL
+    res.df$revision <- sapply(res.df$revision, as.integer)    
+    res.df$score <- sapply(res.df$score, function(s){
+        as.numeric(unlist(s))
+    })
+    return(unique(res.df))
 
 }
 
@@ -35,9 +47,11 @@ findPathwaysByXref <- function(identifier, systemCode) {
 #' @examples {
 #' findPathwayIdsByXref('ENSG00000232810','En')
 #' }
+#' @seealso findPathwaysByXref
 #' @export 
 findPathwayIdsByXref <- function(identifier, systemCode) {
-    unlist(lapply(findPathwaysByXref(identifier, systemCode), function(x) {unname(x['id'])}))
+    res <- findPathwaysByXref(identifier, systemCode)
+    return(res$id)
 }
 
 # ------------------------------------------------------------------------------
@@ -55,9 +69,11 @@ findPathwayIdsByXref <- function(identifier, systemCode) {
 #' @examples {
 #' findPathwayNamesByXref('ENSG00000232810','En')
 #' }
+#' @seealso findPathwaysByXref
 #' @export 
 findPathwayNamesByXref <- function(identifier, systemCode) {
-    unlist(lapply(findPathwaysByXref(identifier, systemCode), function(x) {unname(x['name'])}))
+    res <- findPathwaysByXref(identifier, systemCode)
+    return(res$name)
 }
 
 # ------------------------------------------------------------------------------
@@ -75,7 +91,9 @@ findPathwayNamesByXref <- function(identifier, systemCode) {
 #' @examples {
 #' findPathwayUrlsByXref('ENSG00000232810','En')
 #' }
+#' @seealso findPathwaysByXref
 #' @export 
 findPathwayUrlsByXref <- function(identifier, systemCode) {
-    unlist(lapply(findPathwaysByXref(identifier, systemCode), function(x) {unname(x['url'])}))
+    res <- findPathwaysByXref(identifier, systemCode)
+    return(res$url)
 }

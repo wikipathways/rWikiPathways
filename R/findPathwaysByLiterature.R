@@ -1,18 +1,48 @@
 # ------------------------------------------------------------------------------
 #' @title Find Pathways By Literature
 #'
-#' @description Retrieve a list of pathways containing the query citation.
-#' @param query The \code{character} string to search for, e.g., a PMID, title keyword or author name.
-#' @return A \code{list} of lists
+#' @description Retrieve pathways containing the query citation.
+#' @param query The \code{character} string to search for, e.g., a PMID, title 
+#' keyword or author name.
+#' @return A \code{dataframe} of pathway attributes in addition to query result 
+#' score and literature details
+#' @details The score is from a lucene index search engine, ranging from 0 to 
+#' 1 with higher scores for better matches. The two literature columns are
+#' lists of pubmed ids and titles for the citations matching the query per
+#' pathway. The graphId column lists the id for any objects in the
+#' GPML pathway model that have been spcifically annotated with the matching 
+#' citations.
 #' @examples {
 #' findPathwaysByLiterature('19649250')
 #' findPathwaysByLiterature('smith')
 #' findPathwaysByLiterature('cancer')
 #' }
 #' @export
+#' @importFrom tidyr unnest
+#' @importFrom data.table dcast
+#' @importFrom data.table setDT
 findPathwaysByLiterature <- function(query) {
     res <- wikipathwaysGET('findPathwaysByLiterature', list(query=query))
-    return(res$result)
+    if(length(res$result) == 0){
+        message("No results")
+        return(data.frame())
+    }
+    res.df <- suppressWarnings(data.table::rbindlist(res$result, fill = TRUE))
+    res.df$revision <- sapply(res.df$revision, as.integer)
+    res.df$score <- sapply(res.df$score, function(s){
+        as.numeric(unlist(s))
+    })
+    ## reshape literature field
+    res.df.tall <- unnest(res.df, cols = c("fields")) 
+    res.df.odd <- as.data.frame(res.df.tall)[c(TRUE,FALSE), ]
+    res.df.odd$fields <- sapply(res.df.odd$fields, unlist)
+    res.df.even <- as.data.frame(res.df.tall)[c(FALSE,TRUE), ]
+    res.df.even$fields <- sapply(res.df.even$fields, unlist)
+    row.names(res.df.odd) <- NULL
+    row.names(res.df.even) <- NULL
+    res.df.fields <- merge(res.df.even, res.df.odd[,2, drop = FALSE], by=0)
+    res.df.cast <- dcast(setDT(res.df.fields), score+id+name+url+species+revision~fields.y, value.var="fields.x")
+    return(res.df.cast)
     
 }
 
@@ -27,9 +57,11 @@ findPathwaysByLiterature <- function(query) {
 #' findPathwayIdsByLiterature('smith')
 #' findPathwayIdsByLiterature('cancer')
 #' }
+#' @seealso findPathwaysByLiterature
 #' @export 
 findPathwayIdsByLiterature <- function(query) {
-    unname(unlist(lapply(findPathwaysByLiterature(query), function(x) {unname(x['id'])})))
+    res <- findPathwaysByLiterature(query)
+    return(res$id)
 }
 
 # ------------------------------------------------------------------------------
@@ -45,9 +77,11 @@ findPathwayIdsByLiterature <- function(query) {
 #' findPathwayNamesByLiterature('smith')
 #' findPathwayNamesByLiterature('cancer')
 #' }
+#' @seealso findPathwaysByLiterature
 #' @export 
 findPathwayNamesByLiterature <- function(query) {
-    unname(unlist(lapply(findPathwaysByLiterature(query), function(x) {unname(x['name'])})))
+    res <- findPathwaysByLiterature(query)
+    return(res$name)
 }
 
 # ------------------------------------------------------------------------------
@@ -61,7 +95,9 @@ findPathwayNamesByLiterature <- function(query) {
 #' findPathwayUrlsByLiterature('smith')
 #' findPathwayUrlsByLiterature('cancer')
 #' }
+#' @seealso findPathwaysByLiterature
 #' @export 
 findPathwayUrlsByLiterature <- function(query) {
-    unname(unlist(lapply(findPathwaysByLiterature(query), function(x) {unname(x['url'])})))
+    res <- findPathwaysByLiterature(query)
+    return(res$url)
 }

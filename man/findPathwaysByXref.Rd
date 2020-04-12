@@ -14,15 +14,18 @@ e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
 See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.}
 }
 \value{
-A \code{list} of lists
+A \code{dataframe} of pathway attributes in addition to query result score
 }
 \description{
-Retrieve a list of pathways containing the query Xref by identifier
+Retrieve pathways containing the query Xref by identifier
  and system code.
 }
 \details{
 Note: there will be multiple listings of the same pathway if the Xref
 is present mutiple times.
+
+The score is from a lucene index search engine, ranging from 0 to 
+1 with higher scores for better matches.
 }
 \examples{
 {

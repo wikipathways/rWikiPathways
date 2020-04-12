@@ -70,13 +70,13 @@ Ok, with all of these components loaded and launched, you can now perform some n
 
 ```{r}
 gbm.pathways <- findPathwaysByText('Glioblastoma') # many pathways returned
-human.filter <- lapply(gbm.pathways, function(x) x$species == "Homo sapiens")
-human.gbm.pathways <- gbm.pathways[unlist(human.filter)] # just the human BRCA2 pathways
+human.gbm.pathways <- gbm.pathways %>% 
+  dplyr::filter(species == "Homo sapiens") # just the human gbm  pathways
 ```
 
 We have a list of human pathways that mention Glioblastoma The results include lots of information, so let's get a unique list of just the WPIDs.
 ```{r}
-human.gbm.wpids <- unique(unlist(lapply(human.gbm.pathways, function(x) x$id)))
+human.gbm.wpids <- human.gbm.pathways$id
 ```
 
 Let's import the first one of these into Cytoscape!

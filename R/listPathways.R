@@ -5,14 +5,23 @@
 #' URL and latest revision number.
 #' @param organism (\code{character}, optional) A particular species. See \link{listOrganisms}. 
 #' Default is all species.
-#' @return A \code{list} of lists
+#' @return A \code{dataframe} of pathway information
 #' @examples {
 #' listPathways('Mus musculus')
 #' }
 #' @export
+#' @importFrom data.table rbindlist
 listPathways <- function(organism="") {
     res <- wikipathwaysGET('listPathways', list(organism=organism))
-    res$pathways
+    if(length(res$pathways) == 0){
+        message("No results")
+        return(data.frame())
+    }
+    #make into list of list (like other web service responses)
+    res.pathways <- lapply(res$pathways, as.list)
+    res.df <- suppressWarnings(data.table::rbindlist(res.pathways, fill = TRUE))
+    res.df$revision <- sapply(res.df$revision, as.integer) 
+    return(res.df)
 }
 
 # ------------------------------------------------------------------------------
@@ -26,9 +35,11 @@ listPathways <- function(organism="") {
 #' @examples {
 #' listPathwayIds('Mus musculus')
 #' }
+#' @seealso listPathways
 #' @export 
 listPathwayIds <- function(organism="") {
-    unlist(lapply(listPathways(organism), function(x) {unname(x['id'])}))
+    res <- listPathways(organism)
+    return(res$id)
 }
 
 # ------------------------------------------------------------------------------
@@ -42,9 +53,11 @@ listPathwayIds <- function(organism="") {
 #' @examples {
 #' listPathwayNames('Mus musculus')
 #' }
+#' @seealso listPathways
 #' @export 
 listPathwayNames <- function(organism="") {
-    unlist(lapply(listPathways(organism), function(x) {unname(x['name'])}))
+    res <- listPathways(organism)
+    return(res$name)
 }
 
 # ------------------------------------------------------------------------------
@@ -58,9 +71,11 @@ listPathwayNames <- function(organism="") {
 #' @examples {
 #' listPathwayUrls('Mus musculus')
 #' }
+#' @seealso listPathways
 #' @export 
 listPathwayUrls <- function(organism="") {
-    unlist(lapply(listPathways(organism), function(x) {unname(x['url'])}))
+    res <- listPathways(organism)
+    return(res$url)
 }
 
 
