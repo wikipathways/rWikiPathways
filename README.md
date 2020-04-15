@@ -25,6 +25,8 @@ if (!requireNamespace("BiocManager", quietly=TRUE))
     install.packages("BiocManager")
 BiocManager::install("rWikiPathways")
 ```
+> Note that _R_ version 3.6.0 or greater is required. See https://www.bioconductor.org/install/ for more details.
+
 _Unstable development code from this repo_ (at your own risk)
 ```
 install.packages("devtools")
