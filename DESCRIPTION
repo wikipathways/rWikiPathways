@@ -10,7 +10,7 @@ Authors@R: c(person("Egon", "Willighagen", role = c("aut","cre"),
                      email = "alex.pico@gladstone.ucsf.edu",
                      comment = c(ORCID = "0000-0001-5706-2163"))
            )
-Imports: httr, utils, XML, RJSONIO, data.table, tidyr
+Imports: httr, utils, XML, rjson, data.table, tidyr
 Suggests: testthat, BiocStyle, knitr, rmarkdown
 Description: Use this package to interface with the WikiPathways API.
 License: MIT + file LICENSE

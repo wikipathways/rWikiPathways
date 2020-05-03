@@ -76,12 +76,14 @@ git push upstream master
 ```
 http://bioconductor.org/developers/how-to/git/push-to-github-bioc/
 
-Following each bioconductor release, a `RELEASE_#_#` branch is created here:
+Following each bioconductor release, a `RELEASE_#_#` branch is created. The new branch is fetched and master is updated:
 
 ```
 git fetch upstream
 git checkout -b RELEASE_3_11 upstream/RELEASE_3_11
 git push origin RELEASE_3_11
+git checkout master
+git pull upstream master
 ```
 
 Only bug fixes and documentation updates can be pushed to the official bioconductor release branch. After committing fixes to `master`, then:
