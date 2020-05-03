@@ -96,18 +96,18 @@ Here are some specific combo functions that are useful. They let you skip worryi
 1. Getting all the pathways containing the HGNC symbol "TNF":
 
 ```{r}
-    tnf.pathways <- findPathwayIdsByXref('TNF', getSystemCode('HGNC'))
+    tnf.pathways <- findPathwayIdsByXref('TNF', BridgeDbR::getSystemCode('HGNC'))
     tnf.pathways
 ```
 
 2. Getting all the genes from a pathway as Ensembl identifiers:
 ```{r}
-    getXrefList('WP554', getSystemCode('Ensembl'))
+    getXrefList('WP554', BridgeDbR::getSystemCode('Ensembl'))
 ```
 
 3. Getting all the metabolites from a pathway as ChEBI identifiers:
 ```{r}
-    getXrefList('WP554', getSystemCode('ChEBI'))
+    getXrefList('WP554', BridgeDbR::getSystemCode('ChEBI'))
 ```
 
 # Other tips
