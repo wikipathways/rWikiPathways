@@ -25,7 +25,9 @@ if (!requireNamespace("BiocManager", quietly=TRUE))
     install.packages("BiocManager")
 BiocManager::install("rWikiPathways")
 ```
-_Unstable development code from this repo_ (at your own risk)
+*Note: Be sure to use the [latest Bioconductor](https://www.bioconductor.org/install/) and recommended R version* 
+
+**_Unstable development code from this repo_ (at your own risk)**
 ```
 install.packages("devtools")
 library(devtools)

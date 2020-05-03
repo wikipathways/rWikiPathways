@@ -35,8 +35,7 @@ knitr::opts_chunk$set(
 
 *rWikiPathways* leverages the WikiPathways API to communicate between **R** and WikiPathways, allowing any pathway to be queried, interrogated and downloaded in both data and image formats. Queries are typically performed based on "Xrefs", standardized identifiers for genes, proteins and metabolites. Once you can identified a pathway, you can use the WPID (WikiPathways identifier) to make additional queries.
 
-*BridgeDbR* leverages the BridgeDb API to provide a number of functions related to 
-ID mapping and identifiers in general for gene, proteins and metabolites.
+*[BridgeDbR](https://doi.org/doi:10.18129/B9.bioc.BridgeDbR)* leverages the BridgeDb API [@VanIersel2010] to provide a number of functions related to ID mapping and identifiers in general for gene, proteins and metabolites.
 
 Together, *BridgeDbR* provides convience to the typical *rWikPathways* user by supplying formal names and codes defined by BridgeDb and used by WikiPathways.
 
@@ -96,18 +95,18 @@ Here are some specific combo functions that are useful. They let you skip worryi
 1. Getting all the pathways containing the HGNC symbol "TNF":
 
 ```{r}
-    tnf.pathways <- findPathwayIdsByXref('TNF', getSystemCode('HGNC'))
+    tnf.pathways <- findPathwayIdsByXref('TNF', BridgeDbR::getSystemCode('HGNC'))
     tnf.pathways
 ```
 
 2. Getting all the genes from a pathway as Ensembl identifiers:
 ```{r}
-    getXrefList('WP554', getSystemCode('Ensembl'))
+    getXrefList('WP554', BridgeDbR::getSystemCode('Ensembl'))
 ```
 
 3. Getting all the metabolites from a pathway as ChEBI identifiers:
 ```{r}
-    getXrefList('WP554', getSystemCode('ChEBI'))
+    getXrefList('WP554', BridgeDbR::getSystemCode('ChEBI'))
 ```
 
 # Other tips
