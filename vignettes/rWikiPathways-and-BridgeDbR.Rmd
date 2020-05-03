@@ -35,7 +35,7 @@ knitr::opts_chunk$set(
 
 *rWikiPathways* leverages the WikiPathways API to communicate between **R** and WikiPathways, allowing any pathway to be queried, interrogated and downloaded in both data and image formats. Queries are typically performed based on "Xrefs", standardized identifiers for genes, proteins and metabolites. Once you can identified a pathway, you can use the WPID (WikiPathways identifier) to make additional queries.
 
-*BridgeDbR* leverages the BridgeDb API to provide a number of functions related to 
+*[BridgeDbR](https://doi.org/doi:10.18129/B9.bioc.BridgeDbR)* leverages the BridgeDb API [@VanIersel2010] to provide a number of functions related to 
 ID mapping and identifiers in general for gene, proteins and metabolites.
 
 Together, *BridgeDbR* provides convience to the typical *rWikPathways* user by supplying formal names and codes defined by BridgeDb and used by WikiPathways.
