@@ -19,6 +19,7 @@
 #' downloadPathwayArchive(date="20171010", organism="Mus musculus", format="svg")  ## download file
 #' downloadPathwayArchive(organism="Mus musculus")  ## download file
 #' }
+#' @seealso readPathwayGMT
 #' @export
 #' @importFrom utils browseURL download.file
 #' @importFrom XML readHTMLTable

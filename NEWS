@@ -1,3 +1,8 @@
+Changes in version 1.8.3
++ Bug fix: GMT parsing #16
+Changes in version 1.8.2
++ Doc fix: vignette with BridgeDbR
++ Bug fix: fixed rjson replacement
 Changes in version 1.8.0
 + Replaced RJSONIO with rjson
 + Replaced all but one sapply() with vapply()
