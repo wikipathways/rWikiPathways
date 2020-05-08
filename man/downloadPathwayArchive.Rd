@@ -42,3 +42,6 @@ downloadPathwayArchive(date="20171010", organism="Mus musculus", format="svg")  
 downloadPathwayArchive(organism="Mus musculus")  ## download file
 }
 }
+\seealso{
+readPathwayGMT
+}
