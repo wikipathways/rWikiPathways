@@ -182,7 +182,7 @@ listOrganisms()
 Now that we've got the latest GMT file for human pathways, we can feed it into **clusterProfiler** and generate the two dataframes we need for *enricher*...
 ```{r}
 wp2gene <- clusterProfiler::read.gmt(wp.hs.gmt)
-wp2gene <- wp2gene %>% tidyr::separate(ont, c("name","version","wpid","org"), "%")
+wp2gene <- wp2gene %>% tidyr::separate(term, c("name","version","wpid","org"), "%")
 wpid2gene <- wp2gene %>% dplyr::select(wpid,gene) #TERM2GENE
 wpid2name <- wp2gene %>% dplyr::select(wpid,name) #TERM2NAME
 wpid2gene
