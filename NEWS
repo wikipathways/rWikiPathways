@@ -1,3 +1,5 @@
+Changes in version 1.8.4
++ Doc fix: fixed Pathway Analysis vignette 
 Changes in version 1.8.3
 + Bug fix: GMT parsing #16
 Changes in version 1.8.2
