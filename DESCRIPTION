@@ -1,8 +1,8 @@
 Package: rWikiPathways
 Type: Package
 Title: rWikiPathways - R client library for the WikiPathways API
-Version: 1.8.4
-Date: 2020-08-19
+Version: 1.8.5
+Date: 2020-09-09
 Authors@R: c(person("Egon", "Willighagen", role = c("aut","cre"),
                      email = "egon.willighagen@gmail.com",
                      comment = c(ORCID = "0000-0001-7542-0286")),
@@ -20,4 +20,4 @@ LazyLoad: yes
 biocViews: Visualization, GraphAndNetwork, ThirdPartyClient, Network, Metabolomics
 NeedsCompilation: no
 VignetteBuilder: knitr
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
