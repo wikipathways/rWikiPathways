@@ -28,6 +28,10 @@ The input file can be retrieved by using
 readPathwayGMT(gmt.file)
 }
 }
+\references{
+Adapted from the generic GMT reader provided by clusterProfiler,
+ \url{https://github.com/YuLab-SMU/clusterProfiler/blob/master/R/GMT.R}
+}
 \seealso{
 downloadPathwayArchive
 }
