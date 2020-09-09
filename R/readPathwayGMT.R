@@ -10,6 +10,8 @@
 #' and organism. The gene content is provided as NCBI Entrez Gene identifiers.
 #' The input file can be retrieved by using 
 #' \code{downloadPathwayArchive(organism="Homo sapiens",format="gmt")}.
+#' @references Adapted from the generic GMT reader provided by clusterProfiler,
+#'  \url{https://github.com/YuLab-SMU/clusterProfiler/blob/master/R/GMT.R}
 #' @examples \donttest{
 #' readPathwayGMT(gmt.file)
 #' }
