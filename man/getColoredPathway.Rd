@@ -2,7 +2,7 @@
 % Please edit documentation in R/getColoredPathway.R
 \name{getColoredPathway}
 \alias{getColoredPathway}
-\title{Deprecated: Get Colored Pathway}
+\title{Defunct: Get Colored Pathway}
 \usage{
 getColoredPathway(
   pathway,
@@ -29,8 +29,8 @@ color list and graphId must be the same length.}
 Image file
 }
 \description{
-This function is no longer working and has been deprecated in 
-this release and will be defunct at the next release.
+This service is no longer available and is defunct in 
+this release and will be removed in the next release.
 }
 \examples{
 {

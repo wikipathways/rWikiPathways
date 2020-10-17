@@ -1,8 +1,8 @@
 # ------------------------------------------------------------------------------
-#' @title Deprecated: Get Colored Pathway
+#' @title Defunct: Get Colored Pathway
 #'
-#' @description This function is no longer working and has been deprecated in 
-#' this release and will be defunct at the next release. 
+#' @description This service is no longer available and is defunct in 
+#' this release and will be removed in the next release. 
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
 #' @param revision (\code{integer}, optional) Number to indicate a specific revision to download
 #' @param graphId A \code{character} string or \code{vector} indicating the nodes to color 
@@ -25,7 +25,7 @@ getColoredPathway <- function(pathway, revision=0,
                               graphId=NULL, color=NULL,
                               fileType=c("svg","png","pdf")) {
   
-  .Deprecated(NULL, msg="This function is no longer working. It has been deprecated in this release.")
+  .Defunct(NULL, msg="This service is no longer available It is defunct in this release.")
   
   #   fileType <- match.arg(fileType)
   #   
