@@ -179,10 +179,9 @@ wp.hs.gmt <- rWikiPathways::downloadPathwayArchive(organism="Homo sapiens", form
 listOrganisms()
 ```
 
-Now that we've got the latest GMT file for human pathways, we can feed it into **clusterProfiler** and generate the two dataframes we need for *enricher*...
+Now that we've got the latest GMT file for human pathways, we can process it to generate the two dataframes we need for *enricher*...
 ```{r}
-wp2gene <- clusterProfiler::read.gmt(wp.hs.gmt)
-wp2gene <- wp2gene %>% tidyr::separate(term, c("name","version","wpid","org"), "%")
+wp2gene <- readPathwayGMT(wp.hs.gmt)
 wpid2gene <- wp2gene %>% dplyr::select(wpid,gene) #TERM2GENE
 wpid2name <- wp2gene %>% dplyr::select(wpid,name) #TERM2NAME
 wpid2gene
@@ -229,7 +228,7 @@ ewp.dn <- enricher(
  head(ewp.dn)
  dotplot(ewp.dn, showCategory = 20)
 ```
-Interesting... Almost twice as many down-regulated genes (634 vs 366), but fewer significant pathway hits. Pathway analysis is a more focused approach than GO analysis. It requires sets of genes that are *functionally* related in the context of known pathways mechanisms.  So, gene set size doesn't always correlate with result size.
+Interesting... Almost twice as many down-regulated genes (641 vs 383), but fewer significant pathway hits. Pathway analysis is a more focused approach than GO analysis. It requires sets of genes that are *functionally* related in the context of known pathways mechanisms.  So, gene set size doesn't always correlate with result size.
 
 *BONUS: What we just did is also refered to as Over-representation Analysis (ORA). Another approach is Gene Set Enrichment Analysis (GSEA). One advantage of GSEA is that you don't have to pick an arbitrary log2FC cutoff to define gene sets. Instead you provide a pre-ordered list of significant gene-named log2FC values at let the GSEA do the work. Here are the steps, see if you can follow along:*
 
