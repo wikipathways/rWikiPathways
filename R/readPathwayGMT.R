@@ -18,6 +18,7 @@
 #' @seealso downloadPathwayArchive
 #' @export
 #' @importFrom tidyr separate
+#' @importFrom utils stack
 readPathwayGMT <- function(file) {
   x <- readLines(file)
   res <- strsplit(x, "\t")
