@@ -11,15 +11,6 @@
 #' color list and graphId must be the same length.
 #' @param fileType (optional) Image file format, e.g., svg (default), png or pdf.
 #' @return Image file
-#' @examples {
-#'   svg = getColoredPathway(pathway="WP554", graphId="ef1f3")
-#'   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"))
-#'   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"),
-#'                           color="00FF00")
-#'   svg = getColoredPathway(pathway="WP554", graphId=c("ef1f3","e68e0"),
-#'                           color=c("FF0000", "0000FF"))
-#'   # writeLines(svg, "pathway.svg")
-#' }
 #' @export
 getColoredPathway <- function(pathway, revision=0,
                               graphId=NULL, color=NULL,

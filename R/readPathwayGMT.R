@@ -13,7 +13,7 @@
 #' @references Adapted from the generic GMT reader provided by clusterProfiler,
 #'  \url{https://github.com/YuLab-SMU/clusterProfiler/blob/master/R/GMT.R}
 #' @examples \donttest{
-#' readPathwayGMT(gmt.file)
+#' readPathwayGMT(system.file("extdata","wikipathways-20201010-gmt-Homo_sapiens.gmt", package="rWikiPathways"))
 #' }
 #' @seealso downloadPathwayArchive
 #' @export

@@ -54,7 +54,7 @@ devtools::install_github("AlexanderPico/docthis")
 library(docthis)
 setwd("/git/wikipathways/rWikiPathways") #customize to your setup
 devtools::document()
-devtools::check(args = "--no-examples", vignettes = F)
+devtools::check(vignettes = F)
 BiocCheck::BiocCheck('./')
 ```
 
