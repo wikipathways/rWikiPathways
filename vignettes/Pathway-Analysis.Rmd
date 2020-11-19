@@ -85,6 +85,7 @@ If you are running Cytoscape 3.7.0 or above, you can simply run these commands:
 installApp('WikiPathways') 
 installApp('CyTargetLinker') 
 installApp('stringApp') 
+installApp('enrichmentMap')
 ```
 
 # Overview 
@@ -166,7 +167,52 @@ ggplot(egobp[1:20], aes(x=reorder(Description, -pvalue), y=Count, fill=-p.adjust
     theme(axis.text=element_text(size=11))
 ```
 Use *str(egobp)* to explore the data structure in more detail to see what you can use in plotting.
- 
+
+### EnrichmentMap 
+We can create an enrichment map with the returned clusterProfiler results using the enrichmentMap app in Cytoscape. An enrichment map is a different kind of network. Instead of nodes representing genes, nodes represent pathways or functions. Edges between these pathways or functions represent shared genes or pathway crosstalk. An enrichment map is a way to visualize your enrichment results to help reduce redundancy and uncover main themes. 
+
+The data from clusterProfiler needs to be formatted for use with enrichmentMap. Note that this generates an EnrichmentMap input file in your working directory, which will default to the same directory you are running this Rmd from.
+```{r}
+## extract a dataframe with results from object of type enrichResult
+egobp.results.df <- egobp@result
+
+## create a new column for term size from BgRatio
+egobp.results.df$term.size <- gsub("/(\\d+)", "", egobp.results.df$BgRatio)
+
+## filter for term size to keep only term.size => 3, gene count >= 5 and subset
+egobp.results.df <- egobp.results.df[which(egobp.results.df[,'term.size'] >= 3 & egobp.results.df[,'Count'] >= 5),]
+egobp.results.df <- egobp.results.df[c("ID", "Description", "pvalue", "qvalue", "geneID")]
+
+## format gene list column
+egobp.results.df$geneID <- gsub("/", ",", egobp.results.df$geneID)
+
+## add column for phenotype
+egobp.results.df <- cbind(egobp.results.df, phenotype=1)
+egobp.results.df <- egobp.results.df[, c(1, 2, 3, 4, 6, 5)]
+
+## change column headers
+colnames(egobp.results.df) <- c("Name","Description", "pvalue","qvalue","phenotype", "genes")
+
+egobp.results.filename <-file.path(getwd(),paste("clusterprofiler_cluster_enr_results.txt",sep="_"))
+write.table(egobp.results.df,egobp.results.filename,col.name=TRUE,sep="\t",row.names=FALSE,quote=FALSE)
+```
+
+```{r eval=FALSE}
+em_command = paste('enrichmentmap build analysisType="generic" ', 
+                   'pvalue=',"0.05", 'qvalue=',"0.05",
+                   'similaritycutoff=',"0.25",
+                   'coeffecients=',"JACCARD",
+                   'enrichmentsDataset1=',egobp.results.filename ,
+                   sep=" ")
+
+  #enrichment map command will return the suid of newly created network.
+  em_network_suid <- commandsRun(em_command)
+  
+  renameNetwork("Cluster1_enrichmentmap_cp", network=as.numeric(em_network_suid))
+```
+
+Once the enrichmentmap network opens in Cytoscape, you can filter it and change the style using the controls in the **EnrichmentMap** panel in the **Control Panel**. 
+
 ## WikiPathways
 That's all well and fine, but we are here for *Pathway Analysis!*  Everything up to this point is basic GO analysis. Building on top of this foundation, let's see what WikiPathways can add. The **clusterProfiler** package doesn't include built-in support for WikiPathways (yet), but it does support the GMT standard file format and so does WikiPathways! It just takes a few commands to prepare WikiPathways data for clusterProfiler's *enricher* function, which is the generic analog of *enrichGO*.
 
