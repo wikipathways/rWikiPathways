@@ -22,7 +22,8 @@
 #' @importFrom utils browseURL
 #' @export
 wikipathwaysAPI <- function(base.url=.baseUrl){
-    browseURL(paste(base.url,'/ui',sep=""))
+    if (interactive())
+        browseURL(paste(base.url,'/ui',sep=""))
 }
 
 # ------------------------------------------------------------------------------
