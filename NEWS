@@ -1,3 +1,5 @@
+Changes in version 1.10.1
++ Doc fix: updated link to BridgeDb datasources file
 Changes in version 1.10.0
 + Defuncted getColoredPathway
 + Doc fix: examples fixed and sample gmt included
