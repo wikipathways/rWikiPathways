@@ -82,7 +82,7 @@ Ok. The help docs tell us that for each Human pathway we are getting a lot of in
 These return simple lists containing just a particular piece of information for each pathway result.
 
 Finally, there's another way to find pathways of interest: by Xref. An Xref is simply a standardized identifier form an official source. WikiPathways relies on BridgeDb [@VanIersel2010] to provide dozens of Xref sources for genes, proteins and metabolites. See the full list at
-https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv
+https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/src/main/resources/org/bridgedb/bio/datasources.tsv
 
 With **rWikiPathways**, the approach is simple. Take a supported identifier for a molecule of interest, e.g., an official gene symbol from HGNC, "TNF" and check the *system code* for the datasource, e.g., HGNC = H (this comes from the second column in the datasources.txt table linked to above), and then form your query:
 
