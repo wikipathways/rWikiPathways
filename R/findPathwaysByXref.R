@@ -8,7 +8,7 @@
 #' @param identifier (\code{character}) The official ID specified by a data source or system
 #' @param systemCode (\code{character}) The BridgeDb code associated with the data source or system, 
 #' e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
-#' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.
+#' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv.
 #' @return A \code{dataframe} of pathway attributes in addition to query result score
 #' @details The score is from a lucene index search engine, ranging from 0 to 
 #' 1 with higher scores for better matches. 
@@ -42,7 +42,7 @@ findPathwaysByXref <- function(identifier, systemCode) {
 #' @param identifier (\code{character}) The official ID specified by a data source or system
 #' @param systemCode (\code{character}) The BridgeDb code associated with the data source or system, 
 #' e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
-#' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.
+#' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv.
 #' @return A \code{list} of WPIDs
 #' @examples {
 #' findPathwayIdsByXref('ENSG00000232810','En')
@@ -64,7 +64,7 @@ findPathwayIdsByXref <- function(identifier, systemCode) {
 #' @param identifier (\code{character}) The official ID specified by a data source or system
 #' @param systemCode (\code{character}) The BridgeDb code associated with the data source or system, 
 #' e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
-#' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.
+#' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv.
 #' @return A \code{list} of lists
 #' @examples {
 #' findPathwayNamesByXref('ENSG00000232810','En')
@@ -86,7 +86,7 @@ findPathwayNamesByXref <- function(identifier, systemCode) {
 #' @param identifier (\code{character}) The official ID specified by a data source or system
 #' @param systemCode (\code{character}) The BridgeDb code associated with the data source or system, 
 #' e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
-#' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.txt.
+#' See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv.
 #' @return A \code{list} of lists
 #' @examples {
 #' findPathwayUrlsByXref('ENSG00000232810','En')
