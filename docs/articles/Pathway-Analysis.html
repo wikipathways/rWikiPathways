@@ -6,19 +6,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pathway Analysis • rWikiPathways</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="Pathway Analysis">
-<meta property="og:description" content="">
-<meta name="twitter:card" content="summary">
+<meta property="og:description" content="rWikiPathways">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body>
+<body data-spy="scroll" data-target="#toc">
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rWikiPathways</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.11.1</span>
       </span>
     </div>
 
@@ -39,7 +39,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -70,8 +70,8 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/wikipathways/rwikipathways">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/wikipathways/rwikipathways/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -85,13 +85,13 @@
 
       
 
-      </header><div class="row">
+      </header><script src="Pathway-Analysis_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1>Pathway Analysis</h1>
+      <h1 data-toc-skip>Pathway Analysis</h1>
                         <h4 class="author">by Alexander Pico</h4>
             
-            <h4 class="date">2020-02-27</h4>
+            <h4 class="date">2021-01-30</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/wikipathways/rwikipathways/blob/master/vignettes/Pathway-Analysis.Rmd"><code>vignettes/Pathway-Analysis.Rmd</code></a></small>
       <div class="hidden name"><code>Pathway-Analysis.Rmd</code></div>
@@ -105,38 +105,40 @@
 <h1 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h1>
 <p>First, make sure you have <em>rWikiPathways</em> installed…</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="cf">if</span>(<span class="op">!</span><span class="st">"rWikiPathways"</span> <span class="op">%in%</span><span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span>()){</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">    <span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span>(<span class="st">"BiocManager"</span>, <span class="dt">quietly =</span> <span class="ot">TRUE</span>))</a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">        <span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"BiocManager"</span>)</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4">    BiocManager<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/BiocManager/man/install.html">install</a></span>(<span class="st">"rWikiPathways"</span>, <span class="dt">update =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb1-5" data-line-number="5">}</a>
-<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(rWikiPathways)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="kw">if</span><span class="op">(</span><span class="op">!</span><span class="st">"rWikiPathways"</span> <span class="op">%in%</span> <span class="fu"><a href="https://rdrr.io/r/utils/installed.packages.html">installed.packages</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
+    <span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html">requireNamespace</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span>
+        <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span>
+    <span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/BiocManager/man/install.html">install</a></span><span class="op">(</span><span class="st">"rWikiPathways"</span>, update <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
+<span class="op">}</span>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/wikipathways/rwikipathways">rWikiPathways</a></span><span class="op">)</span></code></pre></div>
 <p>We will be using a diverse set of R packages in this vignette. This next chunk should handle the installation and loading of all the R packages we will need. The final printed line will state whether it was successful or not. Good luck!</p>
 <p><em>As with most installations, you may be prompted for responses. For this vignette, you can reply ‘<strong>a</strong>’ to update all old packages (if prompted) and ‘<strong>no</strong>’ to skip compiling from source (if an option for your setup). Please verify the final “success”" message printed at the end before proceeding.</em></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">load.libs &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2">  <span class="st">"DOSE"</span>,</a>
-<a class="sourceLine" id="cb2-3" data-line-number="3">  <span class="st">"GO.db"</span>,</a>
-<a class="sourceLine" id="cb2-4" data-line-number="4">  <span class="st">"GSEABase"</span>,</a>
-<a class="sourceLine" id="cb2-5" data-line-number="5">  <span class="st">"org.Hs.eg.db"</span>,</a>
-<a class="sourceLine" id="cb2-6" data-line-number="6">  <span class="st">"clusterProfiler"</span>,</a>
-<a class="sourceLine" id="cb2-7" data-line-number="7">  <span class="st">"dplyr"</span>,</a>
-<a class="sourceLine" id="cb2-8" data-line-number="8">  <span class="st">"tidyr"</span>,</a>
-<a class="sourceLine" id="cb2-9" data-line-number="9">  <span class="st">"ggplot2"</span>,</a>
-<a class="sourceLine" id="cb2-10" data-line-number="10">  <span class="st">"stringr"</span>,</a>
-<a class="sourceLine" id="cb2-11" data-line-number="11">  <span class="st">"RColorBrewer"</span>,</a>
-<a class="sourceLine" id="cb2-12" data-line-number="12">  <span class="st">"rWikiPathways"</span>,</a>
-<a class="sourceLine" id="cb2-13" data-line-number="13">  <span class="st">"RCy3"</span>)</a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(<span class="dt">install.packages.check.source =</span> <span class="st">"no"</span>)</a>
-<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="kw"><a href="https://rdrr.io/r/base/options.html">options</a></span>(<span class="dt">install.packages.compile.from.source =</span> <span class="st">"never"</span>)</a>
-<a class="sourceLine" id="cb2-16" data-line-number="16"><span class="cf">if</span> (<span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span>(<span class="st">"pacman"</span>)) <span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"pacman"</span>); <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(pacman)</a>
-<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="kw"><a href="https://rdrr.io/pkg/pacman/man/p_load.html">p_load</a></span>(load.libs, <span class="dt">update =</span> <span class="ot">TRUE</span>, <span class="dt">character.only =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb2-18" data-line-number="18">status &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span>(load.libs,require,<span class="dt">character.only =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="cf">if</span>(<span class="kw"><a href="https://rdrr.io/r/base/all.html">all</a></span>(status)){</a>
-<a class="sourceLine" id="cb2-20" data-line-number="20">    <span class="kw"><a href="https://rdrr.io/r/base/print.html">print</a></span>(<span class="st">"SUCCESS: You have successfully installed and loaded all required libraries."</span>)</a>
-<a class="sourceLine" id="cb2-21" data-line-number="21">} <span class="cf">else</span>{</a>
-<a class="sourceLine" id="cb2-22" data-line-number="22">    <span class="kw"><a href="https://rdrr.io/r/base/cat.html">cat</a></span>(<span class="st">"ERROR: One or more libraries failed to install correctly. Check the following list for FALSE cases and try again...</span><span class="ch">\n\n</span><span class="st">"</span>)</a>
-<a class="sourceLine" id="cb2-23" data-line-number="23">    status</a>
-<a class="sourceLine" id="cb2-24" data-line-number="24">}</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">load.libs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span>
+  <span class="st">"DOSE"</span>,
+  <span class="st">"GO.db"</span>,
+  <span class="st">"GSEABase"</span>,
+  <span class="st">"org.Hs.eg.db"</span>,
+  <span class="st">"clusterProfiler"</span>,
+  <span class="st">"dplyr"</span>,
+  <span class="st">"tidyr"</span>,
+  <span class="st">"ggplot2"</span>,
+  <span class="st">"stringr"</span>,
+  <span class="st">"RColorBrewer"</span>,
+  <span class="st">"rWikiPathways"</span>,
+  <span class="st">"RCy3"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>install.packages.check.source <span class="op">=</span> <span class="st">"no"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/options.html">options</a></span><span class="op">(</span>install.packages.compile.from.source <span class="op">=</span> <span class="st">"never"</span><span class="op">)</span>
+<span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="st"><a href="https://github.com/trinker/pacman">"pacman"</a></span><span class="op">)</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"pacman"</span><span class="op">)</span>; <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/trinker/pacman">pacman</a></span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/pkg/pacman/man/p_load.html">p_load</a></span><span class="op">(</span><span class="va">load.libs</span>, update <span class="op">=</span> <span class="cn">TRUE</span>, character.only <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
+<span class="va">status</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span><span class="op">(</span><span class="va">load.libs</span>,<span class="va">require</span>,character.only <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
+<span class="kw">if</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/all.html">all</a></span><span class="op">(</span><span class="va">status</span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
+    <span class="fu"><a href="https://rdrr.io/r/base/print.html">print</a></span><span class="op">(</span><span class="st">"SUCCESS: You have successfully installed and loaded all required libraries."</span><span class="op">)</span>
+<span class="op">}</span> <span class="kw">else</span><span class="op">{</span>
+    <span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="st">"ERROR: One or more libraries failed to install correctly. Check the following list for FALSE cases and try again...\n\n"</span><span class="op">)</span>
+    <span class="va">status</span>
+<span class="op">}</span></code></pre></div>
 <p>The <strong>RCy3</strong> package is used to connect with <strong>Cytoscape</strong>. So you will also need to install and launch Cytoscape:</p>
 <ul>
 <li>Download the latest Cytoscape from <a href="https://cytoscape.org/download.html" class="uri">https://cytoscape.org/download.html</a>
@@ -144,16 +146,19 @@
 <li>Complete installation wizard</li>
 <li>Launch Cytoscape</li>
 </ul>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw">cytoscapePing</span>()  <span class="co">#this will tell you if you're able to successfully connect to Cytoscape or not</span></a></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">cytoscapePing</span><span class="op">(</span><span class="op">)</span>  <span class="co">#this will tell you if you're able to successfully connect to Cytoscape or not</span></code></pre></div>
 <p>For this vignette, you’ll also need a couple <em>apps</em> for Cytoscape. With Cytoscape running, you can install each of these from the Cytoscape App Store with a single click:</p>
 <ul>
 <li><a href="http://apps.cytoscape.org/apps/wikipathways" class="uri">http://apps.cytoscape.org/apps/wikipathways</a></li>
 <li><a href="http://apps.cytoscape.org/apps/cytargetlinker" class="uri">http://apps.cytoscape.org/apps/cytargetlinker</a></li>
 </ul>
 <p>If you are running Cytoscape 3.7.0 or above, you can simply run these commands:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">installApp</span>(<span class="st">'WikiPathways'</span>) </a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw">installApp</span>(<span class="st">'CyTargetLinker'</span>) </a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="kw">installApp</span>(<span class="st">'stringApp'</span>) </a></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">installApp</span><span class="op">(</span><span class="st">'WikiPathways'</span><span class="op">)</span> 
+<span class="fu">installApp</span><span class="op">(</span><span class="st">'CyTargetLinker'</span><span class="op">)</span> 
+<span class="fu">installApp</span><span class="op">(</span><span class="st">'stringApp'</span><span class="op">)</span> 
+<span class="fu">installApp</span><span class="op">(</span><span class="st">'enrichmentMap'</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="overview" class="section level1">
 <h1 class="hasAnchor">
@@ -165,131 +170,187 @@
 <h1 class="hasAnchor">
 <a href="#dataset" class="anchor"></a>Dataset</h1>
 <p>The format of this lung cancer dataset should look familiar to anyone who has worked with differential gene expression results. It contains columns of gene identifiers (Ensembl IDs), gene symbols, log2foldchange values, P-Values and adjusted P-Values.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1">lung.expr &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"extdata"</span>,<span class="st">"data-lung-cancer.csv"</span>, <span class="dt">package=</span><span class="st">"rWikiPathways"</span>),<span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(lung.expr)</a>
-<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(lung.expr)</a></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">lung.expr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html">read.csv</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>,<span class="st">"data-lung-cancer.csv"</span>, package<span class="op">=</span><span class="st">"rWikiPathways"</span><span class="op">)</span>,stringsAsFactors <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">lung.expr</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">lung.expr</span><span class="op">)</span></code></pre></div>
 <p>Now let’s prepare up- and down-regulated gene lists using some conventional criteria.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">up.genes &lt;-<span class="st"> </span>lung.expr[lung.expr<span class="op">$</span>log2FC <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span> <span class="op">&amp;</span><span class="st"> </span>lung.expr<span class="op">$</span>adj.P.Value <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span>, <span class="dv">1</span>] </a>
-<a class="sourceLine" id="cb6-2" data-line-number="2">dn.genes &lt;-<span class="st"> </span>lung.expr[lung.expr<span class="op">$</span>log2FC <span class="op">&lt;</span><span class="st"> </span><span class="dv">-1</span> <span class="op">&amp;</span><span class="st"> </span>lung.expr<span class="op">$</span>adj.P.Value <span class="op">&lt;</span><span class="st"> </span><span class="fl">0.05</span>, <span class="dv">1</span>]</a>
-<a class="sourceLine" id="cb6-3" data-line-number="3">bkgd.genes &lt;-<span class="st"> </span>lung.expr[,<span class="dv">1</span>]</a></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">up.genes</span> <span class="op">&lt;-</span> <span class="va">lung.expr</span><span class="op">[</span><span class="va">lung.expr</span><span class="op">$</span><span class="va">log2FC</span> <span class="op">&gt;</span> <span class="fl">1</span> <span class="op">&amp;</span> <span class="va">lung.expr</span><span class="op">$</span><span class="va">adj.P.Value</span> <span class="op">&lt;</span> <span class="fl">0.05</span>, <span class="fl">1</span><span class="op">]</span> 
+<span class="va">dn.genes</span> <span class="op">&lt;-</span> <span class="va">lung.expr</span><span class="op">[</span><span class="va">lung.expr</span><span class="op">$</span><span class="va">log2FC</span> <span class="op">&lt;</span> <span class="op">-</span><span class="fl">1</span> <span class="op">&amp;</span> <span class="va">lung.expr</span><span class="op">$</span><span class="va">adj.P.Value</span> <span class="op">&lt;</span> <span class="fl">0.05</span>, <span class="fl">1</span><span class="op">]</span>
+<span class="va">bkgd.genes</span> <span class="op">&lt;-</span> <span class="va">lung.expr</span><span class="op">[</span>,<span class="fl">1</span><span class="op">]</span></code></pre></div>
 </div>
 <div id="enrichment" class="section level1">
 <h1 class="hasAnchor">
 <a href="#enrichment" class="anchor"></a>Enrichment</h1>
 <p>With our gene sets in hand, we are ready to perform enrichment analysis… well, almost. Typical of any bioinformatics analysis, we need to be aware of which gene identifiers we are dealing with. We have Ensembl IDs, but the package we are going to use wants Entrez IDs. Fortunately, the package provides its own converter called <em>bitr</em>. This is the first function in the <strong>clusterProfiler</strong> package that we’ll be using:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1">up.genes.entrez &lt;-<span class="st"> </span>clusterProfiler<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/clusterProfiler/man/bitr.html">bitr</a></span>(up.genes,<span class="dt">fromType =</span> <span class="st">"ENSEMBL"</span>,<span class="dt">toType =</span> <span class="st">"ENTREZID"</span>,<span class="dt">OrgDb =</span> org.Hs.eg.db)</a>
-<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/cat.html">cat</a></span>(<span class="st">"</span><span class="ch">\n\n</span><span class="st">Which column contains my new Entrez IDs?</span><span class="ch">\n</span><span class="st">"</span>)</a>
-<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(up.genes.entrez)</a></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">up.genes.entrez</span> <span class="op">&lt;-</span> <span class="fu">clusterProfiler</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/clusterProfiler/man/bitr.html">bitr</a></span><span class="op">(</span><span class="va">up.genes</span>,fromType <span class="op">=</span> <span class="st">"ENSEMBL"</span>,toType <span class="op">=</span> <span class="st">"ENTREZID"</span>,OrgDb <span class="op">=</span> <span class="va">org.Hs.eg.db</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="st">"\n\nWhich column contains my new Entrez IDs?\n"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">up.genes.entrez</span><span class="op">)</span></code></pre></div>
 <p>Note that conversions are rarely 100% complete (e.g., due to one-to-many mappings), so this tool reports what it failed to convert. And now we have a dataframe with a new column of Entrez IDs paired with our original list of Ensembl IDs.</p>
 <p>Here’s the complete list of identifiers that this particular tool can convert across. You have to spell these precisely and in all caps for the <em>bitr</em> function to work:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">keytypes</span>(org.Hs.eg.db)</a></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">keytypes</span><span class="op">(</span><span class="va">org.Hs.eg.db</span><span class="op">)</span></code></pre></div>
 <p>Let’s convert our other lists to Entrez IDs:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1">dn.genes.entrez &lt;-<span class="st"> </span><span class="kw">bitr</span>(dn.genes,<span class="dt">fromType =</span> <span class="st">"ENSEMBL"</span>,<span class="dt">toType =</span> <span class="st">"ENTREZID"</span>,<span class="dt">OrgDb =</span> org.Hs.eg.db)</a>
-<a class="sourceLine" id="cb9-2" data-line-number="2">bkgd.genes.entrez &lt;-<span class="st"> </span><span class="kw">bitr</span>(bkgd.genes,<span class="dt">fromType =</span> <span class="st">"ENSEMBL"</span>,<span class="dt">toType =</span> <span class="st">"ENTREZID"</span>,<span class="dt">OrgDb =</span> org.Hs.eg.db)</a></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">dn.genes.entrez</span> <span class="op">&lt;-</span> <span class="fu">bitr</span><span class="op">(</span><span class="va">dn.genes</span>,fromType <span class="op">=</span> <span class="st">"ENSEMBL"</span>,toType <span class="op">=</span> <span class="st">"ENTREZID"</span>,OrgDb <span class="op">=</span> <span class="va">org.Hs.eg.db</span><span class="op">)</span>
+<span class="va">bkgd.genes.entrez</span> <span class="op">&lt;-</span> <span class="fu">bitr</span><span class="op">(</span><span class="va">bkgd.genes</span>,fromType <span class="op">=</span> <span class="st">"ENSEMBL"</span>,toType <span class="op">=</span> <span class="st">"ENTREZID"</span>,OrgDb <span class="op">=</span> <span class="va">org.Hs.eg.db</span><span class="op">)</span></code></pre></div>
 <div id="gene-ontology" class="section level2">
 <h2 class="hasAnchor">
 <a href="#gene-ontology" class="anchor"></a>Gene Ontology</h2>
 <p>Ok. <em>Now</em> we are ready to perform enrichment analysis. Let’s start with Gene Ontology. <em>Note: This can take up to a miunte to run… because there are so many GO terms!</em></p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1">egobp &lt;-<span class="st"> </span>clusterProfiler<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/clusterProfiler/man/enrichGO.html">enrichGO</a></span>(</a>
-<a class="sourceLine" id="cb10-2" data-line-number="2">        <span class="dt">gene     =</span> up.genes.entrez[[<span class="dv">2</span>]],</a>
-<a class="sourceLine" id="cb10-3" data-line-number="3">        <span class="dt">universe =</span> bkgd.genes.entrez[[<span class="dv">2</span>]],</a>
-<a class="sourceLine" id="cb10-4" data-line-number="4">        <span class="dt">OrgDb    =</span> org.Hs.eg.db,</a>
-<a class="sourceLine" id="cb10-5" data-line-number="5">        <span class="dt">ont      =</span> <span class="st">"BP"</span>,</a>
-<a class="sourceLine" id="cb10-6" data-line-number="6">        <span class="dt">pAdjustMethod =</span> <span class="st">"fdr"</span>,</a>
-<a class="sourceLine" id="cb10-7" data-line-number="7">        <span class="dt">pvalueCutoff =</span> <span class="fl">0.05</span>, <span class="co">#p.adjust cutoff (https://github.com/GuangchuangYu/clusterProfiler/issues/104)</span></a>
-<a class="sourceLine" id="cb10-8" data-line-number="8">        <span class="dt">readable =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb10-9" data-line-number="9"></a>
-<a class="sourceLine" id="cb10-10" data-line-number="10"><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(egobp,<span class="dv">10</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">egobp</span> <span class="op">&lt;-</span> <span class="fu">clusterProfiler</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/clusterProfiler/man/enrichGO.html">enrichGO</a></span><span class="op">(</span>
+        gene     <span class="op">=</span> <span class="va">up.genes.entrez</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span>,
+        universe <span class="op">=</span> <span class="va">bkgd.genes.entrez</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span>,
+        OrgDb    <span class="op">=</span> <span class="va">org.Hs.eg.db</span>,
+        ont      <span class="op">=</span> <span class="st">"BP"</span>,
+        pAdjustMethod <span class="op">=</span> <span class="st">"fdr"</span>,
+        pvalueCutoff <span class="op">=</span> <span class="fl">0.05</span>, <span class="co">#p.adjust cutoff (https://github.com/GuangchuangYu/clusterProfiler/issues/104)</span>
+        readable <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
+
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">egobp</span>,<span class="fl">10</span><span class="op">)</span></code></pre></div>
 <p>While it’s running, you can examine the parameters and their meaning…</p>
 <p>It’s done! Does the format and results make sense? Do you understand the two <em>Ratio</em> columns? Does the biology of the top results make sense?</p>
 <p>Tables are fine, but we’re in R to see plots. Conveniently, <strong>clusterProfiler</strong> provides a variety of plots with default settings:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/graphics/barplot.html">barplot</a></span>(egobp, <span class="dt">showCategory =</span> <span class="dv">20</span>)</a>
-<a class="sourceLine" id="cb11-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/graphics/graphics-defunct.html">dotplot</a></span>(egobp, <span class="dt">showCategory =</span> <span class="dv">20</span>)</a>
-<a class="sourceLine" id="cb11-3" data-line-number="3"><span class="kw">emapplot</span>(egobp, <span class="dt">showCategory =</span> <span class="dv">20</span>)</a>
-<a class="sourceLine" id="cb11-4" data-line-number="4"><span class="kw">goplot</span>(egobp)</a></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/barplot.html">barplot</a></span><span class="op">(</span><span class="va">egobp</span>, showCategory <span class="op">=</span> <span class="fl">20</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/graphics/graphics-defunct.html">dotplot</a></span><span class="op">(</span><span class="va">egobp</span>, showCategory <span class="op">=</span> <span class="fl">20</span><span class="op">)</span>
+<span class="fu">emapplot</span><span class="op">(</span><span class="va">egobp</span>, showCategory <span class="op">=</span> <span class="fl">20</span><span class="op">)</span>
+<span class="fu">goplot</span><span class="op">(</span><span class="va">egobp</span><span class="op">)</span></code></pre></div>
 <p>Check out the <a href="https://bioconductor.org/packages/release/bioc/vignettes/clusterProfiler/inst/doc/clusterProfiler.html">clusterProfiler vignette</a> for other supported functions and plots.</p>
 <p>For more control and customization, here is an example using <em>ggplot</em> and the same <em>enrichGO object</em> output from <strong>clusterProfiler</strong>…</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">ggplot</span>(egobp[<span class="dv">1</span><span class="op">:</span><span class="dv">20</span>], <span class="kw">aes</span>(<span class="dt">x=</span><span class="kw"><a href="https://rdrr.io/r/stats/reorder.factor.html">reorder</a></span>(Description, <span class="op">-</span>pvalue), <span class="dt">y=</span>Count, <span class="dt">fill=</span><span class="op">-</span>p.adjust)) <span class="op">+</span></a>
-<a class="sourceLine" id="cb12-2" data-line-number="2"><span class="st">    </span><span class="kw">geom_bar</span>(<span class="dt">stat =</span> <span class="st">"identity"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb12-3" data-line-number="3"><span class="st">    </span><span class="kw">coord_flip</span>() <span class="op">+</span></a>
-<a class="sourceLine" id="cb12-4" data-line-number="4"><span class="st">    </span><span class="kw">scale_fill_continuous</span>(<span class="dt">low=</span><span class="st">"blue"</span>, <span class="dt">high=</span><span class="st">"red"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb12-5" data-line-number="5"><span class="st">    </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">""</span>, <span class="dt">y =</span> <span class="st">""</span>, <span class="dt">fill =</span> <span class="st">"p.adjust"</span>) <span class="op">+</span></a>
-<a class="sourceLine" id="cb12-6" data-line-number="6"><span class="st">    </span><span class="kw">theme</span>(<span class="dt">axis.text=</span><span class="kw">element_text</span>(<span class="dt">size=</span><span class="dv">11</span>))</a></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">egobp</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">20</span><span class="op">]</span>, <span class="fu">aes</span><span class="op">(</span>x<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/reorder.factor.html">reorder</a></span><span class="op">(</span><span class="va">Description</span>, <span class="op">-</span><span class="va">pvalue</span><span class="op">)</span>, y<span class="op">=</span><span class="va">Count</span>, fill<span class="op">=</span><span class="op">-</span><span class="va">p.adjust</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">geom_bar</span><span class="op">(</span>stat <span class="op">=</span> <span class="st">"identity"</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">coord_flip</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">scale_fill_continuous</span><span class="op">(</span>low<span class="op">=</span><span class="st">"blue"</span>, high<span class="op">=</span><span class="st">"red"</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">labs</span><span class="op">(</span>x <span class="op">=</span> <span class="st">""</span>, y <span class="op">=</span> <span class="st">""</span>, fill <span class="op">=</span> <span class="st">"p.adjust"</span><span class="op">)</span> <span class="op">+</span>
+    <span class="fu">theme</span><span class="op">(</span>axis.text<span class="op">=</span><span class="fu">element_text</span><span class="op">(</span>size<span class="op">=</span><span class="fl">11</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p>Use <em>str(egobp)</em> to explore the data structure in more detail to see what you can use in plotting.</p>
+<div id="enrichmentmap" class="section level3">
+<h3 class="hasAnchor">
+<a href="#enrichmentmap" class="anchor"></a>EnrichmentMap</h3>
+<p>We can create an enrichment map with the returned clusterProfiler results using the enrichmentMap app in Cytoscape. An enrichment map is a different kind of network. Instead of nodes representing genes, nodes represent pathways or functions. Edges between these pathways or functions represent shared genes or pathway crosstalk. An enrichment map is a way to visualize your enrichment results to help reduce redundancy and uncover main themes.</p>
+<p>The data from clusterProfiler needs to be formatted for use with enrichmentMap. Note that this generates an EnrichmentMap input file in your working directory, which will default to the same directory you are running this Rmd from.</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">## extract a dataframe with results from object of type enrichResult</span>
+<span class="va">egobp.results.df</span> <span class="op">&lt;-</span> <span class="va">egobp</span><span class="op">@</span><span class="va">result</span>
+
+<span class="co">## create a new column for term size from BgRatio</span>
+<span class="va">egobp.results.df</span><span class="op">$</span><span class="va">term.size</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/grep.html">gsub</a></span><span class="op">(</span><span class="st">"/(\\d+)"</span>, <span class="st">""</span>, <span class="va">egobp.results.df</span><span class="op">$</span><span class="va">BgRatio</span><span class="op">)</span>
+
+<span class="co">## filter for term size to keep only term.size =&gt; 3, gene count &gt;= 5 and subset</span>
+<span class="va">egobp.results.df</span> <span class="op">&lt;-</span> <span class="va">egobp.results.df</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">egobp.results.df</span><span class="op">[</span>,<span class="st">'term.size'</span><span class="op">]</span> <span class="op">&gt;=</span> <span class="fl">3</span> <span class="op">&amp;</span> <span class="va">egobp.results.df</span><span class="op">[</span>,<span class="st">'Count'</span><span class="op">]</span> <span class="op">&gt;=</span> <span class="fl">5</span><span class="op">)</span>,<span class="op">]</span>
+<span class="va">egobp.results.df</span> <span class="op">&lt;-</span> <span class="va">egobp.results.df</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"ID"</span>, <span class="st">"Description"</span>, <span class="st">"pvalue"</span>, <span class="st">"qvalue"</span>, <span class="st">"geneID"</span><span class="op">)</span><span class="op">]</span>
+
+<span class="co">## format gene list column</span>
+<span class="va">egobp.results.df</span><span class="op">$</span><span class="va">geneID</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/grep.html">gsub</a></span><span class="op">(</span><span class="st">"/"</span>, <span class="st">","</span>, <span class="va">egobp.results.df</span><span class="op">$</span><span class="va">geneID</span><span class="op">)</span>
+
+<span class="co">## add column for phenotype</span>
+<span class="va">egobp.results.df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">cbind</a></span><span class="op">(</span><span class="va">egobp.results.df</span>, phenotype<span class="op">=</span><span class="fl">1</span><span class="op">)</span>
+<span class="va">egobp.results.df</span> <span class="op">&lt;-</span> <span class="va">egobp.results.df</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span>, <span class="fl">4</span>, <span class="fl">6</span>, <span class="fl">5</span><span class="op">)</span><span class="op">]</span>
+
+<span class="co">## change column headers</span>
+<span class="fu"><a href="https://rdrr.io/r/base/colnames.html">colnames</a></span><span class="op">(</span><span class="va">egobp.results.df</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Name"</span>,<span class="st">"Description"</span>, <span class="st">"pvalue"</span>,<span class="st">"qvalue"</span>,<span class="st">"phenotype"</span>, <span class="st">"genes"</span><span class="op">)</span>
+
+<span class="va">egobp.results.filename</span> <span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/file.path.html">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span><span class="op">(</span><span class="op">)</span>,<span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">"clusterprofiler_cluster_enr_results.txt"</span>,sep<span class="op">=</span><span class="st">"_"</span><span class="op">)</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/write.table.html">write.table</a></span><span class="op">(</span><span class="va">egobp.results.df</span>,<span class="va">egobp.results.filename</span>,col.name<span class="op">=</span><span class="cn">TRUE</span>,sep<span class="op">=</span><span class="st">"\t"</span>,row.names<span class="op">=</span><span class="cn">FALSE</span>,quote<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">em_command</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste</a></span><span class="op">(</span><span class="st">'enrichmentmap build analysisType="generic" '</span>, 
+                   <span class="st">'pvalue='</span>,<span class="st">"0.05"</span>, <span class="st">'qvalue='</span>,<span class="st">"0.05"</span>,
+                   <span class="st">'similaritycutoff='</span>,<span class="st">"0.25"</span>,
+                   <span class="st">'coeffecients='</span>,<span class="st">"JACCARD"</span>,
+                   <span class="st">'enrichmentsDataset1='</span>,<span class="va">egobp.results.filename</span> ,
+                   sep<span class="op">=</span><span class="st">" "</span><span class="op">)</span>
+
+  <span class="co">#enrichment map command will return the suid of newly created network.</span>
+  <span class="va">em_network_suid</span> <span class="op">&lt;-</span> <span class="fu">commandsRun</span><span class="op">(</span><span class="va">em_command</span><span class="op">)</span>
+  
+  <span class="fu">renameNetwork</span><span class="op">(</span><span class="st">"Cluster1_enrichmentmap_cp"</span>, network<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">em_network_suid</span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<p>Once the enrichmentmap network opens in Cytoscape, you can filter it and change the style using the controls in the <strong>EnrichmentMap</strong> panel in the <strong>Control Panel</strong>.</p>
+</div>
 </div>
 <div id="wikipathways" class="section level2">
 <h2 class="hasAnchor">
 <a href="#wikipathways" class="anchor"></a>WikiPathways</h2>
 <p>That’s all well and fine, but we are here for <em>Pathway Analysis!</em> Everything up to this point is basic GO analysis. Building on top of this foundation, let’s see what WikiPathways can add. The <strong>clusterProfiler</strong> package doesn’t include built-in support for WikiPathways (yet), but it does support the GMT standard file format and so does WikiPathways! It just takes a few commands to prepare WikiPathways data for clusterProfiler’s <em>enricher</em> function, which is the generic analog of <em>enrichGO</em>.</p>
 <p>The first step is to retreive the latest GMT file listing all the genes in each of the human pathways. WikiPathways releases a GMT file per species every month and archives them for reproducible research. Here, we’ll use the first function from the <strong>rWikiPathways</strong> package, aptly named <em>downloadPathwayArchive</em>…</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">wp.hs.gmt &lt;-<span class="st"> </span>rWikiPathways<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/rWikiPathways/man/downloadPathwayArchive.html">downloadPathwayArchive</a></span>(<span class="dt">organism=</span><span class="st">"Homo sapiens"</span>, <span class="dt">format =</span> <span class="st">"gmt"</span>)</a>
-<a class="sourceLine" id="cb13-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb13-3" data-line-number="3"><span class="co"># supported organisms (and case-dependent spelling)...</span></a>
-<a class="sourceLine" id="cb13-4" data-line-number="4"><span class="kw"><a href="../reference/listOrganisms.html">listOrganisms</a></span>()</a></code></pre></div>
-<p>Now that we’ve got the latest GMT file for human pathways, we can feed it into <strong>clusterProfiler</strong> and generate the two dataframes we need for <em>enricher</em>…</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1">wp2gene &lt;-<span class="st"> </span>clusterProfiler<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/clusterProfiler/man/read.gmt.html">read.gmt</a></span>(wp.hs.gmt)</a>
-<a class="sourceLine" id="cb14-2" data-line-number="2">wp2gene &lt;-<span class="st"> </span>wp2gene <span class="op">%&gt;%</span><span class="st"> </span>tidyr<span class="op">::</span><span class="kw"><a href="https://tidyr.tidyverse.org/reference/separate.html">separate</a></span>(ont, <span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"name"</span>,<span class="st">"version"</span>,<span class="st">"wpid"</span>,<span class="st">"org"</span>), <span class="st">"%"</span>)</a>
-<a class="sourceLine" id="cb14-3" data-line-number="3">wpid2gene &lt;-<span class="st"> </span>wp2gene <span class="op">%&gt;%</span><span class="st"> </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(wpid,gene) <span class="co">#TERM2GENE</span></a>
-<a class="sourceLine" id="cb14-4" data-line-number="4">wpid2name &lt;-<span class="st"> </span>wp2gene <span class="op">%&gt;%</span><span class="st"> </span>dplyr<span class="op">::</span><span class="kw"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span>(wpid,name) <span class="co">#TERM2NAME</span></a>
-<a class="sourceLine" id="cb14-5" data-line-number="5">wpid2gene</a>
-<a class="sourceLine" id="cb14-6" data-line-number="6">wpid2name</a></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">wp.hs.gmt</span> <span class="op">&lt;-</span> <span class="fu">rWikiPathways</span><span class="fu">::</span><span class="fu"><a href="../reference/downloadPathwayArchive.html">downloadPathwayArchive</a></span><span class="op">(</span>organism<span class="op">=</span><span class="st">"Homo sapiens"</span>, format <span class="op">=</span> <span class="st">"gmt"</span><span class="op">)</span>
+
+<span class="co"># supported organisms (and case-dependent spelling)...</span>
+<span class="fu"><a href="../reference/listOrganisms.html">listOrganisms</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p>Now that we’ve got the latest GMT file for human pathways, we can process it to generate the two dataframes we need for <em>enricher</em>…</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">wp2gene</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/readPathwayGMT.html">readPathwayGMT</a></span><span class="op">(</span><span class="va">wp.hs.gmt</span><span class="op">)</span>
+<span class="va">wpid2gene</span> <span class="op">&lt;-</span> <span class="va">wp2gene</span> <span class="op">%&gt;%</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">wpid</span>,<span class="va">gene</span><span class="op">)</span> <span class="co">#TERM2GENE</span>
+<span class="va">wpid2name</span> <span class="op">&lt;-</span> <span class="va">wp2gene</span> <span class="op">%&gt;%</span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">wpid</span>,<span class="va">name</span><span class="op">)</span> <span class="co">#TERM2NAME</span>
+<span class="va">wpid2gene</span>
+<span class="va">wpid2name</span></code></pre></div>
 <p>That’s it! We are ready to perform pathway analysis…</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1">ewp.up &lt;-<span class="st"> </span>clusterProfiler<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/clusterProfiler/man/enricher.html">enricher</a></span>(</a>
-<a class="sourceLine" id="cb15-2" data-line-number="2">        up.genes.entrez[[<span class="dv">2</span>]],</a>
-<a class="sourceLine" id="cb15-3" data-line-number="3">        <span class="dt">universe =</span> bkgd.genes.entrez[[<span class="dv">2</span>]],</a>
-<a class="sourceLine" id="cb15-4" data-line-number="4">        <span class="dt">pAdjustMethod =</span> <span class="st">"fdr"</span>,</a>
-<a class="sourceLine" id="cb15-5" data-line-number="5">        <span class="dt">pvalueCutoff =</span> <span class="fl">0.1</span>, <span class="co">#p.adjust cutoff; relaxed for demo purposes</span></a>
-<a class="sourceLine" id="cb15-6" data-line-number="6">        <span class="dt">TERM2GENE =</span> wpid2gene,</a>
-<a class="sourceLine" id="cb15-7" data-line-number="7">        <span class="dt">TERM2NAME =</span> wpid2name)</a>
-<a class="sourceLine" id="cb15-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb15-9" data-line-number="9"><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(ewp.up)</a></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">ewp.up</span> <span class="op">&lt;-</span> <span class="fu">clusterProfiler</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/clusterProfiler/man/enricher.html">enricher</a></span><span class="op">(</span>
+        <span class="va">up.genes.entrez</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span>,
+        universe <span class="op">=</span> <span class="va">bkgd.genes.entrez</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span>,
+        pAdjustMethod <span class="op">=</span> <span class="st">"fdr"</span>,
+        pvalueCutoff <span class="op">=</span> <span class="fl">0.1</span>, <span class="co">#p.adjust cutoff; relaxed for demo purposes</span>
+        TERM2GENE <span class="op">=</span> <span class="va">wpid2gene</span>,
+        TERM2NAME <span class="op">=</span> <span class="va">wpid2name</span><span class="op">)</span>
+
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">ewp.up</span><span class="op">)</span></code></pre></div>
 <p>For some reason, <em>enricher</em> doesn’t automatically add gene symbols to the result object, but there is a handy function in <strong>DOSE</strong> that does…</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">ewp.up &lt;-<span class="st"> </span>DOSE<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/DOSE/man/setReadable.html">setReadable</a></span>(ewp.up, org.Hs.eg.db, <span class="dt">keytype =</span> <span class="st">"ENTREZID"</span>)</a>
-<a class="sourceLine" id="cb16-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(ewp.up)</a></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">ewp.up</span> <span class="op">&lt;-</span> <span class="fu">DOSE</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DOSE/man/setReadable.html">setReadable</a></span><span class="op">(</span><span class="va">ewp.up</span>, <span class="va">org.Hs.eg.db</span>, keyType <span class="op">=</span> <span class="st">"ENTREZID"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">ewp.up</span><span class="op">)</span></code></pre></div>
 <p>And, we have access to all the same plotting functions as before…</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/graphics/barplot.html">barplot</a></span>(ewp.up, <span class="dt">showCategory =</span> <span class="dv">20</span>)</a>
-<a class="sourceLine" id="cb17-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/graphics/graphics-defunct.html">dotplot</a></span>(ewp.up, <span class="dt">showCategory =</span> <span class="dv">20</span>)</a>
-<a class="sourceLine" id="cb17-3" data-line-number="3"><span class="kw">emapplot</span>(ewp.up, <span class="dt">showCategory =</span> <span class="dv">20</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/graphics/barplot.html">barplot</a></span><span class="op">(</span><span class="va">ewp.up</span>, showCategory <span class="op">=</span> <span class="fl">20</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/graphics/graphics-defunct.html">dotplot</a></span><span class="op">(</span><span class="va">ewp.up</span>, showCategory <span class="op">=</span> <span class="fl">20</span><span class="op">)</span>
+<span class="fu">emapplot</span><span class="op">(</span><span class="va">ewp.up</span>, showCategory <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></code></pre></div>
 <p>Before we forget, we can also do the same analysis for down-regulated genes…</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1">ewp.dn &lt;-<span class="st"> </span><span class="kw">enricher</span>(</a>
-<a class="sourceLine" id="cb18-2" data-line-number="2">  dn.genes.entrez[[<span class="dv">2</span>]],</a>
-<a class="sourceLine" id="cb18-3" data-line-number="3">  <span class="co">#universe = bkgd.genes[[2]],  #hint: comment out to get any results for demo</span></a>
-<a class="sourceLine" id="cb18-4" data-line-number="4">  <span class="dt">pAdjustMethod =</span> <span class="st">"fdr"</span>,</a>
-<a class="sourceLine" id="cb18-5" data-line-number="5">  <span class="dt">pvalueCutoff =</span> <span class="fl">0.1</span>, <span class="co">#p.adjust cutoff; relaxed for demo purposes</span></a>
-<a class="sourceLine" id="cb18-6" data-line-number="6">  <span class="dt">TERM2GENE =</span> wpid2gene,</a>
-<a class="sourceLine" id="cb18-7" data-line-number="7">  <span class="dt">TERM2NAME =</span> wpid2name)</a>
-<a class="sourceLine" id="cb18-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb18-9" data-line-number="9"> ewp.dn &lt;-<span class="st"> </span><span class="kw">setReadable</span>(ewp.dn, org.Hs.eg.db, <span class="dt">keytype =</span> <span class="st">"ENTREZID"</span>)</a>
-<a class="sourceLine" id="cb18-10" data-line-number="10"> <span class="kw"><a href="https://rdrr.io/r/utils/head.html">head</a></span>(ewp.dn)</a>
-<a class="sourceLine" id="cb18-11" data-line-number="11"> <span class="kw"><a href="https://rdrr.io/r/graphics/graphics-defunct.html">dotplot</a></span>(ewp.dn, <span class="dt">showCategory =</span> <span class="dv">20</span>)</a></code></pre></div>
-<p>Interesting… Almost twice as many down-regulated genes (634 vs 366), but fewer significant pathway hits. Pathway analysis is a more focused approach than GO analysis. It requires sets of genes that are <em>functionally</em> related in the context of known pathways mechanisms. So, gene set size doesn’t always correlate with result size.</p>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">ewp.dn</span> <span class="op">&lt;-</span> <span class="fu">enricher</span><span class="op">(</span>
+  <span class="va">dn.genes.entrez</span><span class="op">[[</span><span class="fl">2</span><span class="op">]</span><span class="op">]</span>,
+  <span class="co">#universe = bkgd.genes[[2]],  #hint: comment out to get any results for demo</span>
+  pAdjustMethod <span class="op">=</span> <span class="st">"fdr"</span>,
+  pvalueCutoff <span class="op">=</span> <span class="fl">0.1</span>, <span class="co">#p.adjust cutoff; relaxed for demo purposes</span>
+  TERM2GENE <span class="op">=</span> <span class="va">wpid2gene</span>,
+  TERM2NAME <span class="op">=</span> <span class="va">wpid2name</span><span class="op">)</span>
+
+ <span class="va">ewp.dn</span> <span class="op">&lt;-</span> <span class="fu">setReadable</span><span class="op">(</span><span class="va">ewp.dn</span>, <span class="va">org.Hs.eg.db</span>, keyType <span class="op">=</span> <span class="st">"ENTREZID"</span><span class="op">)</span>
+ <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">ewp.dn</span><span class="op">)</span>
+ <span class="fu"><a href="https://rdrr.io/r/graphics/graphics-defunct.html">dotplot</a></span><span class="op">(</span><span class="va">ewp.dn</span>, showCategory <span class="op">=</span> <span class="fl">20</span><span class="op">)</span></code></pre></div>
+<p>Interesting… Almost twice as many down-regulated genes (641 vs 383), but fewer significant pathway hits. Pathway analysis is a more focused approach than GO analysis. It requires sets of genes that are <em>functionally</em> related in the context of known pathways mechanisms. So, gene set size doesn’t always correlate with result size.</p>
 <p><em>BONUS: What we just did is also refered to as Over-representation Analysis (ORA). Another approach is Gene Set Enrichment Analysis (GSEA). One advantage of GSEA is that you don’t have to pick an arbitrary log2FC cutoff to define gene sets. Instead you provide a pre-ordered list of significant gene-named log2FC values at let the GSEA do the work. Here are the steps, see if you can follow along:</em></p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1">lung.expr<span class="op">$</span>fcsign &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/sign.html">sign</a></span>(lung.expr<span class="op">$</span>log2FC)</a>
-<a class="sourceLine" id="cb19-2" data-line-number="2">lung.expr<span class="op">$</span>logfdr &lt;-<span class="st"> </span><span class="op">-</span><span class="kw"><a href="https://rdrr.io/r/base/Log.html">log10</a></span>(lung.expr<span class="op">$</span>P.Value)</a>
-<a class="sourceLine" id="cb19-3" data-line-number="3">lung.expr<span class="op">$</span>sig &lt;-<span class="st"> </span>lung.expr<span class="op">$</span>logfdr<span class="op">/</span>lung.expr<span class="op">$</span>fcsign</a>
-<a class="sourceLine" id="cb19-4" data-line-number="4">sig.lung.expr.entrez&lt;-<span class="kw"><a href="https://rdrr.io/r/base/merge.html">merge</a></span>(lung.expr, bkgd.genes.entrez, <span class="dt">by.x =</span> <span class="st">"GeneID"</span>, <span class="dt">by.y =</span> <span class="st">"ENSEMBL"</span>)</a>
-<a class="sourceLine" id="cb19-5" data-line-number="5">gsea.sig.lung.expr &lt;-<span class="st"> </span>sig.lung.expr.entrez[,<span class="dv">8</span>]</a>
-<a class="sourceLine" id="cb19-6" data-line-number="6"><span class="kw"><a href="https://rdrr.io/r/base/names.html">names</a></span>(gsea.sig.lung.expr) &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/character.html">as.character</a></span>(sig.lung.expr.entrez[,<span class="dv">9</span>])</a>
-<a class="sourceLine" id="cb19-7" data-line-number="7">gsea.sig.lung.expr &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/sort.html">sort</a></span>(gsea.sig.lung.expr,<span class="dt">decreasing =</span> <span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb19-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb19-9" data-line-number="9">gwp.sig.lung.expr &lt;-<span class="st"> </span>clusterProfiler<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/clusterProfiler/man/GSEA.html">GSEA</a></span>(</a>
-<a class="sourceLine" id="cb19-10" data-line-number="10">  gsea.sig.lung.expr,</a>
-<a class="sourceLine" id="cb19-11" data-line-number="11">  <span class="dt">pAdjustMethod =</span> <span class="st">"fdr"</span>,</a>
-<a class="sourceLine" id="cb19-12" data-line-number="12">  <span class="dt">pvalueCutoff =</span> <span class="fl">0.05</span>, <span class="co">#p.adjust cutoff</span></a>
-<a class="sourceLine" id="cb19-13" data-line-number="13">  <span class="dt">TERM2GENE =</span> wpid2gene,</a>
-<a class="sourceLine" id="cb19-14" data-line-number="14">  <span class="dt">TERM2NAME =</span> wpid2name)</a>
-<a class="sourceLine" id="cb19-15" data-line-number="15"></a>
-<a class="sourceLine" id="cb19-16" data-line-number="16">gwp.sig.lung.expr.df =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span>(<span class="dt">ID=</span>gwp.sig.lung.expr<span class="op">$</span>ID,</a>
-<a class="sourceLine" id="cb19-17" data-line-number="17">                                 <span class="dt">Description=</span>gwp.sig.lung.expr<span class="op">$</span>Description,</a>
-<a class="sourceLine" id="cb19-18" data-line-number="18">                                 <span class="dt">enrichmentScore=</span>gwp.sig.lung.expr<span class="op">$</span>enrichmentScore,</a>
-<a class="sourceLine" id="cb19-19" data-line-number="19">                                 <span class="dt">NES=</span>gwp.sig.lung.expr<span class="op">$</span>NES,</a>
-<a class="sourceLine" id="cb19-20" data-line-number="20">                                 <span class="dt">pvalue=</span>gwp.sig.lung.expr<span class="op">$</span>pvalue,</a>
-<a class="sourceLine" id="cb19-21" data-line-number="21">                                 <span class="dt">p.adjust=</span>gwp.sig.lung.expr<span class="op">$</span>p.adjust,</a>
-<a class="sourceLine" id="cb19-22" data-line-number="22">                                 <span class="dt">rank=</span>gwp.sig.lung.expr<span class="op">$</span>rank,</a>
-<a class="sourceLine" id="cb19-23" data-line-number="23">                                 <span class="dt">leading_edge=</span>gwp.sig.lung.expr<span class="op">$</span>leading_edge</a>
-<a class="sourceLine" id="cb19-24" data-line-number="24">)</a>
-<a class="sourceLine" id="cb19-25" data-line-number="25">gwp.sig.lung.expr.df[<span class="kw"><a href="https://rdrr.io/r/base/which.html">which</a></span>(gwp.sig.lung.expr.df<span class="op">$</span>NES <span class="op">&gt;</span><span class="st"> </span><span class="dv">1</span>),] <span class="co">#pathways enriched for upregulated lung cancer genes</span></a>
-<a class="sourceLine" id="cb19-26" data-line-number="26">gwp.sig.lung.expr.df[<span class="kw"><a href="https://rdrr.io/r/base/which.html">which</a></span>(gwp.sig.lung.expr.df<span class="op">$</span>NES <span class="op">&lt;</span><span class="st"> </span><span class="dv">-1</span>),] <span class="co">#pathways enriched for downregulated lung cancer genes</span></a></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">lung.expr</span><span class="op">$</span><span class="va">fcsign</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sign.html">sign</a></span><span class="op">(</span><span class="va">lung.expr</span><span class="op">$</span><span class="va">log2FC</span><span class="op">)</span>
+<span class="va">lung.expr</span><span class="op">$</span><span class="va">logfdr</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="va">lung.expr</span><span class="op">$</span><span class="va">P.Value</span><span class="op">)</span>
+<span class="va">lung.expr</span><span class="op">$</span><span class="va">sig</span> <span class="op">&lt;-</span> <span class="va">lung.expr</span><span class="op">$</span><span class="va">logfdr</span><span class="op">/</span><span class="va">lung.expr</span><span class="op">$</span><span class="va">fcsign</span>
+<span class="va">sig.lung.expr.entrez</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/merge.html">merge</a></span><span class="op">(</span><span class="va">lung.expr</span>, <span class="va">bkgd.genes.entrez</span>, by.x <span class="op">=</span> <span class="st">"GeneID"</span>, by.y <span class="op">=</span> <span class="st">"ENSEMBL"</span><span class="op">)</span>
+<span class="va">gsea.sig.lung.expr</span> <span class="op">&lt;-</span> <span class="va">sig.lung.expr.entrez</span><span class="op">[</span>,<span class="fl">8</span><span class="op">]</span>
+<span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="va">gsea.sig.lung.expr</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">sig.lung.expr.entrez</span><span class="op">[</span>,<span class="fl">9</span><span class="op">]</span><span class="op">)</span>
+<span class="va">gsea.sig.lung.expr</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sort.html">sort</a></span><span class="op">(</span><span class="va">gsea.sig.lung.expr</span>,decreasing <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span>
+
+<span class="va">gwp.sig.lung.expr</span> <span class="op">&lt;-</span> <span class="fu">clusterProfiler</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/clusterProfiler/man/GSEA.html">GSEA</a></span><span class="op">(</span>
+  <span class="va">gsea.sig.lung.expr</span>,
+  pAdjustMethod <span class="op">=</span> <span class="st">"fdr"</span>,
+  pvalueCutoff <span class="op">=</span> <span class="fl">0.05</span>, <span class="co">#p.adjust cutoff</span>
+  TERM2GENE <span class="op">=</span> <span class="va">wpid2gene</span>,
+  TERM2NAME <span class="op">=</span> <span class="va">wpid2name</span><span class="op">)</span>
+
+<span class="va">gwp.sig.lung.expr.df</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>ID<span class="op">=</span><span class="va">gwp.sig.lung.expr</span><span class="op">$</span><span class="va">ID</span>,
+                                 Description<span class="op">=</span><span class="va">gwp.sig.lung.expr</span><span class="op">$</span><span class="va">Description</span>,
+                                 enrichmentScore<span class="op">=</span><span class="va">gwp.sig.lung.expr</span><span class="op">$</span><span class="va">enrichmentScore</span>,
+                                 NES<span class="op">=</span><span class="va">gwp.sig.lung.expr</span><span class="op">$</span><span class="va">NES</span>,
+                                 pvalue<span class="op">=</span><span class="va">gwp.sig.lung.expr</span><span class="op">$</span><span class="va">pvalue</span>,
+                                 p.adjust<span class="op">=</span><span class="va">gwp.sig.lung.expr</span><span class="op">$</span><span class="va">p.adjust</span>,
+                                 rank<span class="op">=</span><span class="va">gwp.sig.lung.expr</span><span class="op">$</span><span class="va">rank</span>,
+                                 leading_edge<span class="op">=</span><span class="va">gwp.sig.lung.expr</span><span class="op">$</span><span class="va">leading_edge</span>
+<span class="op">)</span>
+<span class="va">gwp.sig.lung.expr.df</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">gwp.sig.lung.expr.df</span><span class="op">$</span><span class="va">NES</span> <span class="op">&gt;</span> <span class="fl">1</span><span class="op">)</span>,<span class="op">]</span> <span class="co">#pathways enriched for upregulated lung cancer genes</span>
+<span class="va">gwp.sig.lung.expr.df</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/which.html">which</a></span><span class="op">(</span><span class="va">gwp.sig.lung.expr.df</span><span class="op">$</span><span class="va">NES</span> <span class="op">&lt;</span> <span class="op">-</span><span class="fl">1</span><span class="op">)</span>,<span class="op">]</span> <span class="co">#pathways enriched for downregulated lung cancer genes</span></code></pre></div>
 <p>One of the advantages of pathway analysis is that you have <em>pathway models</em> already built and ready for data overlays. We will get to that soon in the in <strong>Visualize</strong> section, but first, let’s see what else we can learn about the pathways hits from WikiPathways.</p>
 </div>
 </div>
@@ -297,21 +358,26 @@
 <h1 class="hasAnchor">
 <a href="#explore" class="anchor"></a>Explore</h1>
 <p>Turning again to the <strong>rWikiPathways</strong> package, let’s explore the content and some of our pathway hits so far. Since we are studying Lung Cancer here, let’s start with a search for relevant pathways…</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw"><a href="../reference/findPathwayNamesByText.html">findPathwayNamesByText</a></span>(<span class="st">"lung cancer"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="../reference/findPathwayNamesByText.html">findPathwayNamesByText</a></span><span class="op">(</span><span class="st">"lung cancer"</span><span class="op">)</span></code></pre></div>
 <p>Whoa, that’s a lot… and there’s a bunch of repeats!? This general search includes all matches to “lung” and/or “cancer”, sorted by best matches to both terms. And it also includes matches from all speceis, e.g., mouse and rat, in addition to human. Let’s be more specific…</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1">lc.pathways &lt;-<span class="st"> </span><span class="kw"><a href="../reference/findPathwaysByText.html">findPathwaysByText</a></span>(<span class="st">'"lung cancer"'</span>)  <span class="co">#quotes inside query to require both terms</span></a>
-<a class="sourceLine" id="cb21-2" data-line-number="2">human.filter &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span>(lc.pathways, <span class="cf">function</span>(x) x<span class="op">$</span>species <span class="op">==</span><span class="st"> "Homo sapiens"</span>)</a>
-<a class="sourceLine" id="cb21-3" data-line-number="3">human.lc.pathways &lt;-<span class="st"> </span>lc.pathways[<span class="kw"><a href="https://rdrr.io/r/base/unlist.html">unlist</a></span>(human.filter)] <span class="co"># just the human lung cancer pathways</span></a>
-<a class="sourceLine" id="cb21-4" data-line-number="4"><span class="kw"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span>(human.lc.pathways, <span class="cf">function</span>(x) x<span class="op">$</span>name) <span class="co"># display the pathway titles</span></a></code></pre></div>
-<p>Ok, so there are 3 human pathways that explicitly mention “lung cancer” in their titles or descriptions. None of these were in our top hits for enrichment, but we might want to look at them anyways during our exploratory data visualization, right? So, let hold on to their WPIDs for now…</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">lc.wpids &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/lapply.html">sapply</a></span>(human.lc.pathways, <span class="cf">function</span>(x) x<span class="op">$</span>id)</a>
-<a class="sourceLine" id="cb22-2" data-line-number="2">lc.wpids</a></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">lc.pathways</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/findPathwaysByText.html">findPathwaysByText</a></span><span class="op">(</span><span class="st">'"lung cancer"'</span><span class="op">)</span>  <span class="co">#quotes inside query to require both terms</span>
+<span class="va">human.lc.pathways</span> <span class="op">&lt;-</span> <span class="va">lc.pathways</span> <span class="op">%&gt;%</span> 
+  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">species</span> <span class="op">==</span> <span class="st">"Homo sapiens"</span><span class="op">)</span> <span class="co"># just the human lung cancer pathways</span>
+<span class="va">human.lc.pathways</span><span class="op">$</span><span class="va">name</span> <span class="co"># display the pathway titles</span></code></pre></div>
+<p>Ok, so there are just a few human pathways that explicitly mention “lung cancer” in their titles or descriptions. None of these were in our top hits for enrichment, but we might want to look at them anyways during our exploratory data visualization, right? So, let hold on to their WPIDs for now…</p>
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">lc.wpids</span> <span class="op">&lt;-</span> <span class="va">human.lc.pathways</span><span class="op">$</span><span class="va">id</span>
+<span class="va">lc.wpids</span></code></pre></div>
 <p>You can also search pathways by gene identifiers, pubmed references and ontology terms. But we already know the primary pathways we want to see based on our pathway enrichment analysis. Let’s identify their WPIDs…</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1">ewp.up.wpids &lt;-<span class="st"> </span>ewp.up<span class="op">$</span>ID</a>
-<a class="sourceLine" id="cb23-2" data-line-number="2">ewp.up.wpids</a></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">ewp.up.wpids</span> <span class="op">&lt;-</span> <span class="va">ewp.up</span><span class="op">$</span><span class="va">ID</span>
+<span class="va">ewp.up.wpids</span></code></pre></div>
 <p>Let’s take a look at these. We could open them in our browser for example…</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" data-line-number="1">url &lt;-<span class="st"> </span><span class="kw"><a href="../reference/getPathwayInfo.html">getPathwayInfo</a></span>(<span class="st">"WP179"</span>)[<span class="dv">2</span>]</a>
-<a class="sourceLine" id="cb24-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/utils/browseURL.html">browseURL</a></span>(url)</a></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">url</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/getPathwayInfo.html">getPathwayInfo</a></span><span class="op">(</span><span class="st">"WP179"</span><span class="op">)</span><span class="op">$</span><span class="va">url</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/browseURL.html">browseURL</a></span><span class="op">(</span><span class="va">url</span><span class="op">)</span></code></pre></div>
 <p>You can access all of the WikiPathways website information using <strong>rWikiPathways</strong>. You can even query the history of a particular pathway or recent changes across the entire site. It’s a wiki after all!</p>
 <p>But what we really want to do next is view our data on these pathways. For that, we are going to turn to <strong>Cytoscape</strong> and the <strong>RCy3</strong> package.</p>
 </div>
@@ -320,39 +386,49 @@
 <a href="#visualize" class="anchor"></a>Visualize</h1>
 <p><strong>Cytoscape</strong> is a popular network visualization and analysis tool with great community support for development and scripting. Since pathways are just a special type of network, it’s perfect for providing high quality visualization for pathway analysis results.</p>
 <p>We have the <strong>RCy3</strong> package loaded already, but we also have to have <strong>Cytoscape</strong> launched (see step 1. Installation, if you haven’t already). Once <strong>Cytoscape</strong> is running, try to <em>ping</em> it with this command:</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb25-1" data-line-number="1"><span class="kw">cytoscapePing</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">cytoscapePing</span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>If you’ve got everything loaded and running, then all you need to do is run this command to import a pathway into Cytoscape from WikiPathways:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" data-line-number="1">RCy3<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/RCy3/man/commandsRun.html">commandsRun</a></span>(<span class="st">'wikipathways import-as-pathway id=WP179'</span>) </a></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">RCy3</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/RCy3/man/commandsRun.html">commandsRun</a></span><span class="op">(</span><span class="st">'wikipathways import-as-pathway id=WP179'</span><span class="op">)</span> </code></pre></div>
 <p>There it is! The latest approved version of the pathway, now in Cytoscape as a network model with annotated genes, proteins and metabolites. For performance reasons, Cytoscape sets a view threshold to hide details (like node labels) when zoomed out. If you want to override this, use…</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb27-1" data-line-number="1"><span class="kw">toggleGraphicsDetails</span>()</a></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">toggleGraphicsDetails</span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>Let’s load the same data we used in the enrichment analysis that pointed us to this pathway in the first place. We’ll just need to tell Cytoscape which column in our data contains identifiers (in this case Ensembl IDs) and this column in the Cytoscape Node Table contains corresponding identifiers.</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" data-line-number="1"><span class="kw">loadTableData</span>(lung.expr, <span class="dt">data.key.column =</span> <span class="st">"GeneID"</span>, <span class="dt">table.key.column =</span> <span class="st">"Ensembl"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">loadTableData</span><span class="op">(</span><span class="va">lung.expr</span>, data.key.column <span class="op">=</span> <span class="st">"GeneID"</span>, table.key.column <span class="op">=</span> <span class="st">"Ensembl"</span><span class="op">)</span></code></pre></div>
 <p>Now we can define visual styles to visualize our data on this pathway. First, let’s set the node fill color to display the log2 fold change data. We will need to supply a range of data values and a matching range of colors. For the range of data values, let’s identify the largest min or max value in our dataset:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb29-1" data-line-number="1">min.lung.expr =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span>(lung.expr[<span class="st">"log2FC"</span>],<span class="dt">na.rm=</span><span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb29-2" data-line-number="2">max.lung.expr =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span>(lung.expr[<span class="st">"log2FC"</span>],<span class="dt">na.rm=</span><span class="ot">TRUE</span>)</a>
-<a class="sourceLine" id="cb29-3" data-line-number="3">abs.lung.expr =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/MathFun.html">abs</a></span>(min.lung.expr),max.lung.expr)</a>
-<a class="sourceLine" id="cb29-4" data-line-number="4">data.values =<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="op">-</span>abs.lung.expr,<span class="dv">0</span>,abs.lung.expr)</a></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">min.lung.expr</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">lung.expr</span><span class="op">[</span><span class="st">"log2FC"</span><span class="op">]</span>,na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span>
+<span class="va">max.lung.expr</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">lung.expr</span><span class="op">[</span><span class="st">"log2FC"</span><span class="op">]</span>,na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span>
+<span class="va">abs.lung.expr</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html">abs</a></span><span class="op">(</span><span class="va">min.lung.expr</span><span class="op">)</span>,<span class="va">max.lung.expr</span><span class="op">)</span>
+<span class="va">data.values</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="va">abs.lung.expr</span>,<span class="fl">0</span>,<span class="va">abs.lung.expr</span><span class="op">)</span></code></pre></div>
 <p>Next, we use the RColorBrewer package to help us pick good colors to pair with our data values.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" data-line-number="1"><span class="kw">display.brewer.all</span>(<span class="kw"><a href="https://rdrr.io/r/base/length.html">length</a></span>(data.values), <span class="dt">colorblindFriendly=</span><span class="ot">TRUE</span>, <span class="dt">type=</span><span class="st">"div"</span>) <span class="co"># div,qual,seq,all</span></a>
-<a class="sourceLine" id="cb30-2" data-line-number="2">node.colors &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/rev.html">rev</a></span>(<span class="kw">brewer.pal</span>(<span class="kw"><a href="https://rdrr.io/r/base/length.html">length</a></span>(data.values), <span class="st">"RdBu"</span>)))</a></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">display.brewer.all</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">data.values</span><span class="op">)</span>, colorblindFriendly<span class="op">=</span><span class="cn">TRUE</span>, type<span class="op">=</span><span class="st">"div"</span><span class="op">)</span> <span class="co"># div,qual,seq,all</span>
+<span class="va">node.colors</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rev.html">rev</a></span><span class="op">(</span><span class="fu">brewer.pal</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/length.html">length</a></span><span class="op">(</span><span class="va">data.values</span><span class="op">)</span>, <span class="st">"RdBu"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></code></pre></div>
 <p>Now we are ready to set the node fill color…</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb31-1" data-line-number="1"><span class="kw">setNodeColorMapping</span>(<span class="st">"log2FC"</span>, data.values, node.colors, <span class="dt">default.color =</span> <span class="st">"#FFFFFF"</span>, <span class="dt">style.name =</span> <span class="st">"WikiPathways"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">setNodeColorMapping</span><span class="op">(</span><span class="st">"log2FC"</span>, <span class="va">data.values</span>, <span class="va">node.colors</span>, default.color <span class="op">=</span> <span class="st">"#FFFFFF"</span>, style.name <span class="op">=</span> <span class="st">"WikiPathways"</span><span class="op">)</span></code></pre></div>
 <p>Alternatively, we could just take the max value actually mapped to our pathway:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1">data.values&lt;-<span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="op">-</span><span class="dv">5</span>,<span class="dv">0</span>,<span class="dv">5</span>)</a>
-<a class="sourceLine" id="cb32-2" data-line-number="2"><span class="kw">setNodeColorMapping</span>(<span class="st">"log2FC"</span>, data.values, node.colors, <span class="dt">default.color =</span> <span class="st">"#FFFFFF"</span>, <span class="dt">style.name =</span> <span class="st">"WikiPathways"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">data.values</span><span class="op">&lt;-</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="op">-</span><span class="fl">3</span>,<span class="fl">0</span>,<span class="fl">3</span><span class="op">)</span>
+<span class="fu">setNodeColorMapping</span><span class="op">(</span><span class="st">"log2FC"</span>, <span class="va">data.values</span>, <span class="va">node.colors</span>, default.color <span class="op">=</span> <span class="st">"#FFFFFF"</span>, style.name <span class="op">=</span> <span class="st">"WikiPathways"</span><span class="op">)</span></code></pre></div>
 <p>You can similarly map P-values to border color, etc. There are dozens and dozens of visual properties on nodes and edges availble for data visualization!</p>
 <p>The power of scripting is in doing something multiple times though… So, let’s now apply this same data and visual style to all the pathways we are interested in. In just two lines of code…</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span>(ewp.up.wpids, <span class="cf">function</span> (x) {</a>
-<a class="sourceLine" id="cb33-2" data-line-number="2">    <span class="kw">commandsRun</span>(<span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="st">'wikipathways import-as-pathway id='</span>,x))</a>
-<a class="sourceLine" id="cb33-3" data-line-number="3">    <span class="kw">loadTableData</span>(lung.expr, <span class="dt">data.key.column =</span> <span class="st">"GeneID"</span>, <span class="dt">table.key.column =</span> <span class="st">"Ensembl"</span>)</a>
-<a class="sourceLine" id="cb33-4" data-line-number="4">    <span class="kw">toggleGraphicsDetails</span>()</a>
-<a class="sourceLine" id="cb33-5" data-line-number="5">    })</a></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="va">ewp.up.wpids</span>, <span class="kw">function</span> <span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">{</span>
+    <span class="fu">commandsRun</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">'wikipathways import-as-pathway id='</span>,<span class="va">x</span><span class="op">)</span><span class="op">)</span>
+    <span class="fu">loadTableData</span><span class="op">(</span><span class="va">lung.expr</span>, data.key.column <span class="op">=</span> <span class="st">"GeneID"</span>, table.key.column <span class="op">=</span> <span class="st">"Ensembl"</span><span class="op">)</span>
+    <span class="fu">toggleGraphicsDetails</span><span class="op">(</span><span class="op">)</span>
+    <span class="op">}</span><span class="op">)</span></code></pre></div>
 <p><em>BONUS: What about those lung cancer pathways we found? Let’s take a look at the data overlay on those as well.</em></p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span>(lc.wpids, <span class="cf">function</span> (x){</a>
-<a class="sourceLine" id="cb34-2" data-line-number="2">    <span class="kw">commandsRun</span>(<span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="st">'wikipathways import-as-pathway id='</span>,x))</a>
-<a class="sourceLine" id="cb34-3" data-line-number="3">    <span class="kw">loadTableData</span>(lung.expr, <span class="dt">data.key.column =</span> <span class="st">"GeneID"</span>, <span class="dt">table.key.column =</span> <span class="st">"Ensembl"</span>)</a>
-<a class="sourceLine" id="cb34-4" data-line-number="4">    <span class="kw">toggleGraphicsDetails</span>()</a>
-<a class="sourceLine" id="cb34-5" data-line-number="5">    })</a></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/lapply.html">lapply</a></span><span class="op">(</span><span class="va">lc.wpids</span>, <span class="kw">function</span> <span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">{</span>
+    <span class="fu">commandsRun</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">'wikipathways import-as-pathway id='</span>,<span class="va">x</span><span class="op">)</span><span class="op">)</span>
+    <span class="fu">loadTableData</span><span class="op">(</span><span class="va">lung.expr</span>, data.key.column <span class="op">=</span> <span class="st">"GeneID"</span>, table.key.column <span class="op">=</span> <span class="st">"Ensembl"</span><span class="op">)</span>
+    <span class="fu">toggleGraphicsDetails</span><span class="op">(</span><span class="op">)</span>
+    <span class="op">}</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="extend" class="section level1">
 <h1 class="hasAnchor">
@@ -360,70 +436,59 @@
 <p>Now that our pathways are loaded into Cytoscape, this opens up a ton of potential analysis and visualizations options! Check out the <a href="http://manual.cytoscape.org">Cytoscape manual</a> and <a href="http://apps.cytoscape.org/">App Store</a>, for starters. You might also browse the <a href="http://tutorials.cytoscape.org/">Cytoscape tutorials</a> and <a href="https://bioconductor.org/packages/release/bioc/vignettes/RCy3/inst/doc/Overview-of-RCy3.html">RCy3 vignettes</a> if you want hands-on examples.</p>
 <p>In this vignette, we will use the <em>CyTargetLinker</em> app for Cytoscape to extend a network representation of our pathway with drug-target interactions.</p>
 <p>First, let’s reimport our pathway <em>as a network</em> using this slightly modified command:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="kw">commandsRun</span>(<span class="st">'wikipathways import-as-network id=WP179'</span>)</a>
-<a class="sourceLine" id="cb35-2" data-line-number="2"><span class="kw">loadTableData</span>(lung.expr, <span class="dt">data.key.column =</span> <span class="st">"GeneID"</span>, <span class="dt">table.key.column =</span> <span class="st">"Ensembl"</span>) </a>
-<a class="sourceLine" id="cb35-3" data-line-number="3"><span class="kw">setNodeColorMapping</span>(<span class="st">"log2FC"</span>, data.values, node.colors, <span class="dt">default.color =</span> <span class="st">"#FFFFFF"</span>, <span class="dt">style.name =</span> <span class="st">"WikiPathways-As-Network"</span>) </a></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">commandsRun</span><span class="op">(</span><span class="st">'wikipathways import-as-network id=WP179'</span><span class="op">)</span>
+<span class="fu">loadTableData</span><span class="op">(</span><span class="va">lung.expr</span>, data.key.column <span class="op">=</span> <span class="st">"GeneID"</span>, table.key.column <span class="op">=</span> <span class="st">"Ensembl"</span><span class="op">)</span> 
+<span class="fu">setNodeColorMapping</span><span class="op">(</span><span class="st">"log2FC"</span>, <span class="va">data.values</span>, <span class="va">node.colors</span>, default.color <span class="op">=</span> <span class="st">"#FFFFFF"</span>, style.name <span class="op">=</span> <span class="st">"WikiPathways-As-Network"</span><span class="op">)</span> </code></pre></div>
 <p>See the difference? Same data, same pathway source, but different representation. The network view of pathways is useful when you want to add more nodes, traverse paths, perform automatic layouts, etc.</p>
 <p>Next, we need to load the latest drug-target database. The databases supported by <strong>CyTargetLinker</strong> are called <em>linksets</em> and can be downloaded from the <a href="https://projects.bigcat.unimaas.nl/cytargetlinker/linksets/">CyTargetLinker website</a>. We have provided an example <strong>drugbank</strong> linkset for this vignette, so you don’t have to download anything.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/utils/unzip.html">unzip</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"extdata"</span>,<span class="st">"drugbank-5.1.0.xgmml.zip"</span>, <span class="dt">package=</span><span class="st">"rWikiPathways"</span>), <span class="dt">exdir =</span> <span class="kw"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span>())</a>
-<a class="sourceLine" id="cb36-2" data-line-number="2">drugbank &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/file.path.html">file.path</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span>(), <span class="st">"drugbank-5.1.0.xgmml"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/unzip.html">unzip</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>,<span class="st">"drugbank-5.1.0.xgmml.zip"</span>, package<span class="op">=</span><span class="st">"rWikiPathways"</span><span class="op">)</span>, exdir <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
+<span class="va">drugbank</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/file.path.html">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">"drugbank-5.1.0.xgmml"</span><span class="op">)</span></code></pre></div>
 <p>Now that we have our <em>drugbank</em> linkset loaded, we can run CyTargetLinker as a command:</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb37-1" data-line-number="1"><span class="kw">commandsRun</span>(<span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(<span class="st">'cytargetlinker extend idAttribute="Ensembl" linkSetFiles="'</span>, drugbank, <span class="st">'"'</span>) )</a>
-<a class="sourceLine" id="cb37-2" data-line-number="2"><span class="kw">commandsRun</span>(<span class="st">'cytargetlinker applyLayout network="current"'</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">commandsRun</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">'cytargetlinker extend idAttribute="Ensembl" linkSetFiles="'</span>, <span class="va">drugbank</span>, <span class="st">'"'</span><span class="op">)</span> <span class="op">)</span>
+<span class="fu">commandsRun</span><span class="op">(</span><span class="st">'cytargetlinker applyLayout network="current"'</span><span class="op">)</span></code></pre></div>
 <p>This returns information about what was added. And in Cytoscape, you now have a copy of your original network, but now with additional nodes and edges. Check it out…</p>
 <p>…Hmm, they are kind of plain and hard to see. Let’s use Cytoscape visualization styles to fix that!</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" data-line-number="1">my.drugs &lt;-<span class="st"> </span><span class="kw">selectNodes</span>(<span class="st">"drug"</span>, <span class="dt">by.col =</span> <span class="st">"CTL.Type"</span>, <span class="dt">preserve =</span> <span class="ot">FALSE</span>)<span class="op">$</span>nodes <span class="co">#easy way to collect node SUIDs by column value</span></a>
-<a class="sourceLine" id="cb38-2" data-line-number="2"><span class="kw">clearSelection</span>()</a>
-<a class="sourceLine" id="cb38-3" data-line-number="3"><span class="kw">setNodeColorBypass</span>(my.drugs, <span class="st">"#DD99FF"</span>)</a>
-<a class="sourceLine" id="cb38-4" data-line-number="4"><span class="kw">setNodeShapeBypass</span>(my.drugs, <span class="st">"hexagon"</span>)</a>
-<a class="sourceLine" id="cb38-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb38-6" data-line-number="6">drug.labels &lt;-<span class="st"> </span><span class="kw">getTableColumns</span>(<span class="dt">columns=</span><span class="kw"><a href="https://rdrr.io/r/base/c.html">c</a></span>(<span class="st">"SUID"</span>,<span class="st">"CTL.label"</span>))</a>
-<a class="sourceLine" id="cb38-7" data-line-number="7">drug.labels &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/stats/na.fail.html">na.omit</a></span>(drug.labels)</a>
-<a class="sourceLine" id="cb38-8" data-line-number="8"><span class="kw"><a href="https://rdrr.io/r/base/mapply.html">mapply</a></span>(<span class="cf">function</span>(x,y) <span class="kw">setNodeLabelBypass</span>(x,y), drug.labels<span class="op">$</span>SUID, drug.labels<span class="op">$</span>CTL.label)</a></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">my.drugs</span> <span class="op">&lt;-</span> <span class="fu">selectNodes</span><span class="op">(</span><span class="st">"drug"</span>, by.col <span class="op">=</span> <span class="st">"CTL.Type"</span>, preserve <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span><span class="op">$</span><span class="va">nodes</span> <span class="co">#easy way to collect node SUIDs by column value</span>
+<span class="fu">clearSelection</span><span class="op">(</span><span class="op">)</span>
+<span class="fu">setNodeColorBypass</span><span class="op">(</span><span class="va">my.drugs</span>, <span class="st">"#DD99FF"</span><span class="op">)</span>
+<span class="fu">setNodeShapeBypass</span><span class="op">(</span><span class="va">my.drugs</span>, <span class="st">"hexagon"</span><span class="op">)</span>
+
+<span class="va">drug.labels</span> <span class="op">&lt;-</span> <span class="fu">getTableColumns</span><span class="op">(</span>columns<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"SUID"</span>,<span class="st">"CTL.label"</span><span class="op">)</span><span class="op">)</span>
+<span class="va">drug.labels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html">na.omit</a></span><span class="op">(</span><span class="va">drug.labels</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/mapply.html">mapply</a></span><span class="op">(</span><span class="kw">function</span><span class="op">(</span><span class="va">x</span>,<span class="va">y</span><span class="op">)</span> <span class="fu">setNodeLabelBypass</span><span class="op">(</span><span class="va">x</span>,<span class="va">y</span><span class="op">)</span>, <span class="va">drug.labels</span><span class="op">$</span><span class="va">SUID</span>, <span class="va">drug.labels</span><span class="op">$</span><span class="va">CTL.label</span><span class="op">)</span></code></pre></div>
 <p>Now we have drugs labeled as purple hexagons interacting with the network view of our WikiPathways hit from our functional enrichment analysis on a lung cancer dataset. Cool! Hopefully, you can imagine now, extending this (or other pathawys) in other ways, e.g., TF and miRNA interactions. Or applying numerous other Cytoscape apps to the analysis and visualization of this result.</p>
 </div>
 <div id="save" class="section level1">
 <h1 class="hasAnchor">
 <a href="#save" class="anchor"></a>Save</h1>
 <p>Last, but not least, be sure to save your work along the way. Here is how you might save your up and down regulated subsets from the lung cancer dataset as R objects that are easy to read back in and share:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb39-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/base/save.html">save</a></span>(ewp.up, <span class="dt">file =</span> <span class="st">"lung_cancer_ewp_up.Rdata"</span>)</a>
-<a class="sourceLine" id="cb39-2" data-line-number="2"><span class="kw"><a href="https://rdrr.io/r/base/save.html">save</a></span>(ewp.dn, <span class="dt">file =</span> <span class="st">"lung_cancer_ewp_down.Rdata"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/base/save.html">save</a></span><span class="op">(</span><span class="va">ewp.up</span>, file <span class="op">=</span> <span class="st">"lung_cancer_ewp_up.Rdata"</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/save.html">save</a></span><span class="op">(</span><span class="va">ewp.dn</span>, file <span class="op">=</span> <span class="st">"lung_cancer_ewp_down.Rdata"</span><span class="op">)</span></code></pre></div>
 <p>Session files save everything that is in Cytoscape, including the pathways, networks, data and styles. As with most project software, we recommend saving often!</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" data-line-number="1">full.path=<span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span>(),<span class="st">'tutorial_session'</span>,<span class="dt">sep=</span><span class="st">'/'</span>)</a>
-<a class="sourceLine" id="cb40-2" data-line-number="2"><span class="kw">saveSession</span>(<span class="dt">filename=</span>full.path) <span class="co">#.cys</span></a></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">saveSession</span><span class="op">(</span><span class="st">'tutorial_session'</span><span class="op">)</span> <span class="co">#.cys</span></code></pre></div>
 <p>Note: If you don’t specify a complete path, the files will be save relative to your Cytoscape installation directory, e.g., /Applications/Cytoscape_v3.6.1/… or somewhere you migt not have write permissions.</p>
 <p>You can export extremely high resolution images, including vector graphic formats.</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb41-1" data-line-number="1">full.path=<span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/getwd.html">getwd</a></span>(),<span class="st">'tutorial_image2'</span>,<span class="dt">sep=</span><span class="st">'/'</span>)</a>
-<a class="sourceLine" id="cb41-2" data-line-number="2"><span class="kw">exportImage</span>(<span class="dt">filename=</span>full.path, <span class="dt">type=</span><span class="st">'PDF'</span>) <span class="co">#.pdf</span></a>
-<a class="sourceLine" id="cb41-3" data-line-number="3"><span class="kw">exportImage</span>(<span class="dt">filename=</span>full.path, <span class="dt">type=</span><span class="st">'PNG'</span>, <span class="dt">zoom=</span><span class="dv">200</span>) <span class="co">#.png; use zoom or width args to increase size/resolution</span></a>
-<a class="sourceLine" id="cb41-4" data-line-number="4">?exportImage</a></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">exportImage</span><span class="op">(</span><span class="st">'tutorial_image2'</span>, type<span class="op">=</span><span class="st">'PDF'</span><span class="op">)</span> <span class="co">#.pdf</span>
+<span class="fu">exportImage</span><span class="op">(</span><span class="st">'tutorial_image2'</span>, type<span class="op">=</span><span class="st">'PNG'</span>, zoom<span class="op">=</span><span class="fl">200</span><span class="op">)</span> <span class="co">#.png; use zoom or width args to increase size/resolution</span>
+<span class="op">?</span><span class="va">exportImage</span></code></pre></div>
 <p>And with so many libraries involved, it’s a good idea to keep track of the version information when performing real analyses so that you (and others) can reliably reproduce your results:</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" data-line-number="1"><span class="kw"><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo</a></span>()</a></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-        <div id="tocnav">
-      <h2 class="hasAnchor">
-<a href="#tocnav" class="anchor"></a>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-<li><a href="#installation">Installation</a></li>
-      <li><a href="#overview">Overview</a></li>
-      <li><a href="#dataset">Dataset</a></li>
-      <li>
-<a href="#enrichment">Enrichment</a><ul class="nav nav-pills nav-stacked">
-<li><a href="#gene-ontology">Gene Ontology</a></li>
-      <li><a href="#wikipathways">WikiPathways</a></li>
-      </ul>
-</li>
-      <li><a href="#explore">Explore</a></li>
-      <li><a href="#visualize">Visualize</a></li>
-      <li><a href="#extend">Extend</a></li>
-      <li><a href="#save">Save</a></li>
-      </ul>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
 </div>
-      </div>
 
 </div>
 
@@ -434,7 +499,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

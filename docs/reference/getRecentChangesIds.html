@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -37,7 +41,6 @@
 
 <meta property="og:title" content="Get WPIDs of Recent Changes — getRecentChangesIds" />
 <meta property="og:description" content="Retrieve WPIDs of recently changed pathways at WikiPathways." />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -55,7 +58,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -69,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rWikiPathways</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.11.1</span>
       </span>
     </div>
 
@@ -77,7 +80,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -108,8 +111,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/wikipathways/rwikipathways">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/wikipathways/rwikipathways/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -135,7 +138,7 @@
     <p>Retrieve WPIDs of recently changed pathways at WikiPathways.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>getRecentChangesIds</span>(<span class='no'>timestamp</span>)</pre>
+    <pre class="usage"><span class='fu'>getRecentChangesIds</span><span class='op'>(</span><span class='va'>timestamp</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -152,31 +155,93 @@ after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.</p><
     <p>A <code>list</code> of WPIDs</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>{
-<span class='fu'>getRecentChangesIds</span>(<span class='st'>'20180201000000'</span>)
-}</div><div class='output co'>#&gt;   [1] "WP4829" "WP4228" "WP4535" "WP4298" "WP4577" "WP2447" "WP4828" "WP4827"
-#&gt;   [9] "WP4826" "WP4798" "WP4781" "WP4782" "WP4791" "WP4783" "WP4800" "WP4807"
-#&gt;  [17] "WP4817" "WP4819" "WP4821" "WP4822" "WP4741" "WP4775" "WP4774" "WP4825"
-#&gt;  [25] "WP4824" "WP4823" "WP4820" "WP4818" "WP4816" "WP4815" "WP4814" "WP4813"
-#&gt;  [33] "WP4812" "WP4811" "WP4810" "WP4809" "WP4808" "WP4768" "WP4769" "WP4806"
-#&gt;  [41] "WP4318" "WP4805" "WP4804" "WP4803" "WP4779" "WP4778" "WP4780" "WP4777"
-#&gt;  [49] "WP4776" "WP4801" "WP4766" "WP4799" "WP4797" "WP4796" "WP3604" "WP4795"
-#&gt;  [57] "WP4794" "WP4793" "WP4747" "WP4792" "WP4189" "WP4790" "WP4789" "WP4674"
-#&gt;  [65] "WP4"    "WP4788" "WP4787" "WP4786" "WP4757" "WP1424" "WP2023" "WP1544"
-#&gt;  [73] "WP1984" "WP4142" "WP4785" "WP4784" "WP4259" "WP1946" "WP3594" "WP4773"
-#&gt;  [81] "WP4701" "WP422"  "WP673"  "WP4772" "WP4771" "WP4770" "WP4467" "WP4518"
-#&gt;  [89] "WP2029" "WP4746" "WP4761" "WP4762" "WP4754" "WP4767" "WP339"  "WP531" 
-#&gt;  [97] "WP4752" "WP4753" "WP4759" "WP4737" "WP4764" "WP4765" "WP3888" "WP4224"
-#&gt; [105] "WP4742" "WP4763"</div></pre>
+    <pre class="examples"><div class='input'><span class='op'>{</span>
+<span class='fu'>getRecentChangesIds</span><span class='op'>(</span><span class='st'>'20180201000000'</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div><div class='output co'>#&gt;   [1] "WP5051" "WP4754" "WP5050" "WP5049" "WP5048" "WP5047" "WP4414" "WP4038"
+#&gt;   [9] "WP4041" "WP4063" "WP5016" "WP1836" "WP1797" "WP1803" "WP3374" "WP2749"
+#&gt;  [17] "WP1889" "WP2725" "WP1978" "WP1877" "WP5015" "WP2777" "WP2718" "WP2720"
+#&gt;  [25] "WP2732" "WP4126" "WP2670" "WP4065" "WP1820" "WP3803" "WP5022" "WP3829"
+#&gt;  [33] "WP4039" "WP3486" "WP2672" "WP5014" "WP5013" "WP1926" "WP4131" "WP4082"
+#&gt;  [41] "WP3561" "WP4084" "WP1798" "WP4445" "WP4050" "WP2772" "WP4461" "WP2662"
+#&gt;  [49] "WP4444" "WP4066" "WP4460" "WP2664" "WP3811" "WP4452" "WP2666" "WP1785"
+#&gt;  [57] "WP3398" "WP3332" "WP4074" "WP2781" "WP3808" "WP5012" "WP4125" "WP4073"
+#&gt;  [65] "WP2797" "WP4055" "WP2685" "WP1873" "WP5011" "WP3357" "WP1925" "WP1813"
+#&gt;  [73] "WP3802" "WP5046" "WP1906" "WP2740" "WP3579" "WP1980" "WP2659" "WP1799"
+#&gt;  [81] "WP4046" "WP5010" "WP2698" "WP1781" "WP1852" "WP4043" "WP4052" "WP3555"
+#&gt;  [89] "WP2714" "WP4106" "WP4443" "WP4104" "WP4053" "WP2742" "WP2655" "WP4409"
+#&gt;  [97] "WP2760" "WP3552" "WP3549" "WP3354" "WP3799" "WP4428" "WP3306" "WP4117"
+#&gt; [105] "WP4093" "WP2710" "WP5009" "WP3817" "WP5008" "WP5007" "WP1878" "WP3327"
+#&gt; [113] "WP4086" "WP2763" "WP2678" "WP2657" "WP3569" "WP3820" "WP1927" "WP4442"
+#&gt; [121] "WP3337" "WP4459" "WP2727" "WP3571" "WP1804" "WP1812" "WP4079" "WP3805"
+#&gt; [129] "WP2773" "WP2821" "WP1822" "WP2681" "WP4101" "WP3379" "WP3822" "WP2738"
+#&gt; [137] "WP4441" "WP1831" "WP1902" "WP4103" "WP5006" "WP2741" "WP4451" "WP1841"
+#&gt; [145] "WP3312" "WP5005" "WP4058" "WP4087" "WP3827" "WP2747" "WP2690" "WP5004"
+#&gt; [153] "WP3794" "WP1935" "WP3828" "WP3363" "WP1788" "WP2719" "WP3578" "WP4133"
+#&gt; [161] "WP3813" "WP4458" "WP3436" "WP1883" "WP3380" "WP3305" "WP5003" "WP4450"
+#&gt; [169] "WP1843" "WP4440" "WP4439" "WP2717" "WP3472" "WP2733" "WP2786" "WP3818"
+#&gt; [177] "WP4438" "WP4437" "WP4102" "WP4061" "WP5002" "WP5001" "WP5000" "WP4999"
+#&gt; [185] "WP4998" "WP4091" "WP3376" "WP3317" "WP4075" "WP4449" "WP1874" "WP4436"
+#&gt; [193] "WP2709" "WP3322" "WP3316" "WP3370" "WP2697" "WP3543" "WP3364" "WP1887"
+#&gt; [201] "WP4457" "WP4059" "WP4042" "WP4456" "WP3809" "WP2774" "WP1896" "WP4997"
+#&gt; [209] "WP1907" "WP3824" "WP2679" "WP4996" "WP3810" "WP1811" "WP3313" "WP1868"
+#&gt; [217] "WP1867" "WP2768" "WP3545" "WP4995" "WP3333" "WP2702" "WP3807" "WP3382"
+#&gt; [225] "WP2751" "WP1937" "WP3381" "WP3307" "WP1936" "WP3392" "WP3395" "WP2703"
+#&gt; [233] "WP1939" "WP4448" "WP1904" "WP3547" "WP4435" "WP3315" "WP4112" "WP4095"
+#&gt; [241] "WP4064" "WP3394" "WP2787" "WP4099" "WP4994" "WP3404" "WP1913" "WP3391"
+#&gt; [249] "WP3308" "WP3565" "WP1909" "WP2715" "WP2824" "WP4413" "WP3823" "WP3558"
+#&gt; [257] "WP2677" "WP4113" "WP3551" "WP1784" "WP2669" "WP3800" "WP3568" "WP3400"
+#&gt; [265] "WP2762" "WP2688" "WP4036" "WP4035" "WP3349" "WP2673" "WP4993" "WP2755"
+#&gt; [273] "WP2757" "WP2686" "WP4070" "WP1884" "WP3684" "WP1903" "WP4434" "WP1917"
+#&gt; [281] "WP4992" "WP3838" "WP4991" "WP3801" "WP4433" "WP1789" "WP3798" "WP3816"
+#&gt; [289] "WP4432" "WP1845" "WP2799" "WP4990" "WP2791" "WP4431" "WP4989" "WP3360"
+#&gt; [297] "WP4096" "WP3352" "WP3814" "WP3548" "WP2722" "WP4108" "WP4988" "WP1892"
+#&gt; [305] "WP3359" "WP4049" "WP3330" "WP1835" "WP4987" "WP3806" "WP3390" "WP4120"
+#&gt; [313] "WP4986" "WP4135" "WP1929" "WP5021" "WP3513" "WP2784" "WP4985" "WP3550"
+#&gt; [321] "WP2770" "WP2737" "WP2650" "WP1861" "WP4984" "WP4983" "WP3351" "WP2724"
+#&gt; [329] "WP3560" "WP3791" "WP3358" "WP1908" "WP4422" "WP3567" "WP2788" "WP1895"
+#&gt; [337] "WP4114" "WP1823" "WP4051" "WP2653" "WP3355" "WP4119" "WP2735" "WP4982"
+#&gt; [345] "WP1885" "WP3577" "WP4068" "WP2694" "WP2729" "WP2778" "WP3336" "WP2792"
+#&gt; [353] "WP4981" "WP4116" "WP3401" "WP4980" "WP4979" "WP3685" "WP3365" "WP1818"
+#&gt; [361] "WP1918" "WP1840" "WP3388" "WP3310" "WP1919" "WP1842" "WP3790" "WP3331"
+#&gt; [369] "WP4978" "WP2708" "WP3335" "WP1802" "WP2759" "WP3793" "WP4047" "WP3804"
+#&gt; [377] "WP3399" "WP2753" "WP3842" "WP4134" "WP1793" "WP4034" "WP5020" "WP3396"
+#&gt; [385] "WP1815" "WP4094" "WP2691" "WP4110" "WP3345" "WP4037" "WP3377" "WP3384"
+#&gt; [393] "WP2752" "WP2731" "WP3556" "WP1928" "WP2736" "WP1859" "WP4977" "WP4976"
+#&gt; [401] "WP4109" "WP4421" "WP3570" "WP2801" "WP4132" "WP3819" "WP4447" "WP4100"
+#&gt; [409] "WP4975" "WP3397" "WP2748" "WP4111" "WP2665" "WP4430" "WP4097" "WP2769"
+#&gt; [417] "WP4090" "WP3372" "WP4454" "WP3309" "WP2684" "WP4404" "WP1866" "WP4453"
+#&gt; [425] "WP2656" "WP4974" "WP3839" "WP4973" "WP4072" "WP4446" "WP1838" "WP1862"
+#&gt; [433] "WP1839" "WP4083" "WP1938" "WP4069" "WP4420" "WP2776" "WP4121" "WP4129"
+#&gt; [441] "WP4054" "WP1934" "WP2721" "WP1826" "WP1800" "WP1890" "WP3562" "WP4429"
+#&gt; [449] "WP4088" "WP4071" "WP4105" "WP4419" "WP3320" "WP1775" "WP2728" "WP4415"
+#&gt; [457] "WP1858" "WP1857" "WP1795" "WP4418" "WP2798" "WP3575" "WP4124" "WP2761"
+#&gt; [465] "WP3795" "WP2671" "WP1871" "WP1870" "WP1872" "WP2754" "WP2765" "WP4107"
+#&gt; [473] "WP3797" "WP1850" "WP4972" "WP1865" "WP3553" "WP2683" "WP3350" "WP3348"
+#&gt; [481] "WP2743" "WP2675" "WP2744" "WP2654" "WP2652" "WP4115" "WP1809" "WP5044"
+#&gt; [489] "WP5043" "WP5042" "WP4595" "WP5041" "WP5040" "WP5039" "WP668"  "WP632" 
+#&gt; [497] "WP691"  "WP568"  "WP5038" "WP4271" "WP4292" "WP4506" "WP4156" "WP2706"
+#&gt; [505] "WP515"  "WP112"  "WP337"  "WP144"  "WP1073" "WP5032" "WP4225" "WP5037"
+#&gt; [513] "WP5036" "WP5035" "WP5034" "WP3980" "WP4317" "WP357"  "WP5033" "WP884" 
+#&gt; [521] "WP893"  "WP825"  "WP944"  "WP179"  "WP134"  "WP169"  "WP106"  "WP3933"
+#&gt; [529] "WP5031" "WP5030" "WP5029" "WP4688" "WP4799" "WP4883" "WP2472" "WP4723"
+#&gt; [537] "WP4719" "WP4173" "WP5028" "WP428"  "WP1138" "WP1129" "WP4904" "WP4861"
+#&gt; [545] "WP4877" "WP4880" "WP4936" "WP5027" "WP5026" "WP1272" "WP571"  "WP730" 
+#&gt; [553] "WP1273" "WP493"  "WP1244" "WP2074" "WP1560" "WP2075" "WP1271" "WP1270"
+#&gt; [561] "WP108"  "WP535"  "WP454"  "WP4965" "WP495"  "WP310"  "WP2082" "WP85"  
+#&gt; [569] "WP113"  "WP385"  "WP3284" "WP374"  "WP3632" "WP216"  "WP3652" "WP449" 
+#&gt; [577] "WP434"  "WP487"  "WP497"  "WP471"  "WP490"  "WP465"  "WP427"  "WP5025"
+#&gt; [585] "WP5024" "WP5023" "WP311"  "WP382"  "WP399"  "WP358"  "WP78"   "WP222" 
+#&gt; [593] "WP241"  "WP282"  "WP24"   "WP500"  "WP1048" "WP1045" "WP3644" "WP4290"
+#&gt; [601] "WP4912" "WP504"  "WP542"  "WP511"  "WP506"  "WP58"   "WP59"   "WP510" 
+#&gt; [609] "WP157"  "WP143"  "WP111"  "WP769"  "WP2209" "WP4157" "WP5019" "WP3998"
+#&gt; [617] "WP159"  "WP2533" "WP1077" "WP3907" "WP51"   "WP4874" "WP4804" "WP2491"
+#&gt; [625] "WP5017" "WP4969" "WP4961" "WP3287" "WP4846" "WP4657"</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -187,7 +252,7 @@ after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.</p><
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -37,7 +41,6 @@
 
 <meta property="og:title" content="Find Pathway URLs By Text — findPathwayUrlsByText" />
 <meta property="og:description" content="Retrieve list of pathway URLs containing the query text." />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -55,7 +58,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -69,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rWikiPathways</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.11.1</span>
       </span>
     </div>
 
@@ -77,7 +80,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -108,8 +111,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/wikipathways/rwikipathways">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/wikipathways/rwikipathways/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -135,7 +138,7 @@
     <p>Retrieve list of pathway URLs containing the query text.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>findPathwayUrlsByText</span>(<span class='no'>query</span>)</pre>
+    <pre class="usage"><span class='fu'>findPathwayUrlsByText</span><span class='op'>(</span><span class='va'>query</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -148,135 +151,139 @@
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code>list</code> of lists</p>
+    <p>A <code>list</code> of urls</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>findPathwaysByText</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>{
-<span class='fu'>findPathwayUrlsByText</span>(<span class='st'>'cancer'</span>)
-}</div><div class='output co'>#&gt;   [1] "https://www.wikipathways.org/index.php/Pathway:WP1984"
+    <pre class="examples"><div class='input'><span class='op'>{</span>
+<span class='fu'>findPathwayUrlsByText</span><span class='op'>(</span><span class='st'>'cancer'</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div><div class='output co'>#&gt;   [1] "https://www.wikipathways.org/index.php/Pathway:WP1984"
 #&gt;   [2] "https://www.wikipathways.org/index.php/Pathway:WP3260"
-#&gt;   [3] "https://www.wikipathways.org/index.php/Pathway:WP4262"
-#&gt;   [4] "https://www.wikipathways.org/index.php/Pathway:WP2868"
+#&gt;   [3] "https://www.wikipathways.org/index.php/Pathway:WP2868"
+#&gt;   [4] "https://www.wikipathways.org/index.php/Pathway:WP4262"
 #&gt;   [5] "https://www.wikipathways.org/index.php/Pathway:WP3252"
 #&gt;   [6] "https://www.wikipathways.org/index.php/Pathway:WP3301"
-#&gt;   [7] "https://www.wikipathways.org/index.php/Pathway:WP3244"
-#&gt;   [8] "https://www.wikipathways.org/index.php/Pathway:WP1971"
+#&gt;   [7] "https://www.wikipathways.org/index.php/Pathway:WP1971"
+#&gt;   [8] "https://www.wikipathways.org/index.php/Pathway:WP3244"
 #&gt;   [9] "https://www.wikipathways.org/index.php/Pathway:WP3129"
-#&gt;  [10] "https://www.wikipathways.org/index.php/Pathway:WP2512"
-#&gt;  [11] "https://www.wikipathways.org/index.php/Pathway:WP1968"
+#&gt;  [10] "https://www.wikipathways.org/index.php/Pathway:WP1968"
+#&gt;  [11] "https://www.wikipathways.org/index.php/Pathway:WP2512"
 #&gt;  [12] "https://www.wikipathways.org/index.php/Pathway:WP3206"
 #&gt;  [13] "https://www.wikipathways.org/index.php/Pathway:WP2446"
 #&gt;  [14] "https://www.wikipathways.org/index.php/Pathway:WP4155"
 #&gt;  [15] "https://www.wikipathways.org/index.php/Pathway:WP2263"
-#&gt;  [16] "https://www.wikipathways.org/index.php/Pathway:WP3981"
-#&gt;  [17] "https://www.wikipathways.org/index.php/Pathway:WP3982"
+#&gt;  [16] "https://www.wikipathways.org/index.php/Pathway:WP3982"
+#&gt;  [17] "https://www.wikipathways.org/index.php/Pathway:WP3981"
 #&gt;  [18] "https://www.wikipathways.org/index.php/Pathway:WP2363"
-#&gt;  [19] "https://www.wikipathways.org/index.php/Pathway:WP4400"
-#&gt;  [20] "https://www.wikipathways.org/index.php/Pathway:WP615" 
+#&gt;  [19] "https://www.wikipathways.org/index.php/Pathway:WP615" 
+#&gt;  [20] "https://www.wikipathways.org/index.php/Pathway:WP4400"
 #&gt;  [21] "https://www.wikipathways.org/index.php/Pathway:WP2828"
 #&gt;  [22] "https://www.wikipathways.org/index.php/Pathway:WP3120"
 #&gt;  [23] "https://www.wikipathways.org/index.php/Pathway:WP1589"
 #&gt;  [24] "https://www.wikipathways.org/index.php/Pathway:WP3139"
 #&gt;  [25] "https://www.wikipathways.org/index.php/Pathway:WP2361"
-#&gt;  [26] "https://www.wikipathways.org/index.php/Pathway:WP3166"
-#&gt;  [27] "https://www.wikipathways.org/index.php/Pathway:WP4585"
+#&gt;  [26] "https://www.wikipathways.org/index.php/Pathway:WP4585"
+#&gt;  [27] "https://www.wikipathways.org/index.php/Pathway:WP3166"
 #&gt;  [28] "https://www.wikipathways.org/index.php/Pathway:WP4290"
 #&gt;  [29] "https://www.wikipathways.org/index.php/Pathway:WP4658"
 #&gt;  [30] "https://www.wikipathways.org/index.php/Pathway:WP4284"
-#&gt;  [31] "https://www.wikipathways.org/index.php/Pathway:WP3171"
-#&gt;  [32] "https://www.wikipathways.org/index.php/Pathway:WP2291"
+#&gt;  [31] "https://www.wikipathways.org/index.php/Pathway:WP2291"
+#&gt;  [32] "https://www.wikipathways.org/index.php/Pathway:WP3171"
 #&gt;  [33] "https://www.wikipathways.org/index.php/Pathway:WP3593"
-#&gt;  [34] "https://www.wikipathways.org/index.php/Pathway:WP4239"
-#&gt;  [35] "https://www.wikipathways.org/index.php/Pathway:WP3979"
+#&gt;  [34] "https://www.wikipathways.org/index.php/Pathway:WP3979"
+#&gt;  [35] "https://www.wikipathways.org/index.php/Pathway:WP4239"
 #&gt;  [36] "https://www.wikipathways.org/index.php/Pathway:WP4255"
 #&gt;  [37] "https://www.wikipathways.org/index.php/Pathway:WP4582"
 #&gt;  [38] "https://www.wikipathways.org/index.php/Pathway:WP4216"
 #&gt;  [39] "https://www.wikipathways.org/index.php/Pathway:WP4627"
-#&gt;  [40] "https://www.wikipathways.org/index.php/Pathway:WP4485"
-#&gt;  [41] "https://www.wikipathways.org/index.php/Pathway:WP4565"
-#&gt;  [42] "https://www.wikipathways.org/index.php/Pathway:WP4258"
-#&gt;  [43] "https://www.wikipathways.org/index.php/Pathway:WP4560"
+#&gt;  [40] "https://www.wikipathways.org/index.php/Pathway:WP4565"
+#&gt;  [41] "https://www.wikipathways.org/index.php/Pathway:WP4928"
+#&gt;  [42] "https://www.wikipathways.org/index.php/Pathway:WP4485"
+#&gt;  [43] "https://www.wikipathways.org/index.php/Pathway:WP4258"
 #&gt;  [44] "https://www.wikipathways.org/index.php/Pathway:WP3126"
 #&gt;  [45] "https://www.wikipathways.org/index.php/Pathway:WP2864"
-#&gt;  [46] "https://www.wikipathways.org/index.php/Pathway:WP3879"
-#&gt;  [47] "https://www.wikipathways.org/index.php/Pathway:WP1601"
-#&gt;  [48] "https://www.wikipathways.org/index.php/Pathway:WP3275"
-#&gt;  [49] "https://www.wikipathways.org/index.php/Pathway:WP4397"
-#&gt;  [50] "https://www.wikipathways.org/index.php/Pathway:WP4794"
+#&gt;  [46] "https://www.wikipathways.org/index.php/Pathway:WP4560"
+#&gt;  [47] "https://www.wikipathways.org/index.php/Pathway:WP3879"
+#&gt;  [48] "https://www.wikipathways.org/index.php/Pathway:WP4397"
+#&gt;  [49] "https://www.wikipathways.org/index.php/Pathway:WP3275"
+#&gt;  [50] "https://www.wikipathways.org/index.php/Pathway:WP1601"
 #&gt;  [51] "https://www.wikipathways.org/index.php/Pathway:WP4337"
 #&gt;  [52] "https://www.wikipathways.org/index.php/Pathway:WP1044"
 #&gt;  [53] "https://www.wikipathways.org/index.php/Pathway:WP3298"
-#&gt;  [54] "https://www.wikipathways.org/index.php/Pathway:WP924" 
-#&gt;  [55] "https://www.wikipathways.org/index.php/Pathway:WP807" 
-#&gt;  [56] "https://www.wikipathways.org/index.php/Pathway:WP1160"
-#&gt;  [57] "https://www.wikipathways.org/index.php/Pathway:WP1366"
-#&gt;  [58] "https://www.wikipathways.org/index.php/Pathway:WP1261"
-#&gt;  [59] "https://www.wikipathways.org/index.php/Pathway:WP1299"
+#&gt;  [54] "https://www.wikipathways.org/index.php/Pathway:WP1366"
+#&gt;  [55] "https://www.wikipathways.org/index.php/Pathway:WP924" 
+#&gt;  [56] "https://www.wikipathways.org/index.php/Pathway:WP1299"
+#&gt;  [57] "https://www.wikipathways.org/index.php/Pathway:WP1261"
+#&gt;  [58] "https://www.wikipathways.org/index.php/Pathway:WP807" 
+#&gt;  [59] "https://www.wikipathways.org/index.php/Pathway:WP1160"
 #&gt;  [60] "https://www.wikipathways.org/index.php/Pathway:WP3680"
 #&gt;  [61] "https://www.wikipathways.org/index.php/Pathway:WP3672"
 #&gt;  [62] "https://www.wikipathways.org/index.php/Pathway:WP673" 
-#&gt;  [63] "https://www.wikipathways.org/index.php/Pathway:WP4827"
-#&gt;  [64] "https://www.wikipathways.org/index.php/Pathway:WP4747"
-#&gt;  [65] "https://www.wikipathways.org/index.php/Pathway:WP4336"
-#&gt;  [66] "https://www.wikipathways.org/index.php/Pathway:WP4559"
-#&gt;  [67] "https://www.wikipathways.org/index.php/Pathway:WP3969"
-#&gt;  [68] "https://www.wikipathways.org/index.php/Pathway:WP929" 
+#&gt;  [63] "https://www.wikipathways.org/index.php/Pathway:WP4747"
+#&gt;  [64] "https://www.wikipathways.org/index.php/Pathway:WP4336"
+#&gt;  [65] "https://www.wikipathways.org/index.php/Pathway:WP4559"
+#&gt;  [66] "https://www.wikipathways.org/index.php/Pathway:WP3969"
+#&gt;  [67] "https://www.wikipathways.org/index.php/Pathway:WP929" 
+#&gt;  [68] "https://www.wikipathways.org/index.php/Pathway:WP1369"
 #&gt;  [69] "https://www.wikipathways.org/index.php/Pathway:WP1163"
 #&gt;  [70] "https://www.wikipathways.org/index.php/Pathway:WP811" 
-#&gt;  [71] "https://www.wikipathways.org/index.php/Pathway:WP1369"
-#&gt;  [72] "https://www.wikipathways.org/index.php/Pathway:WP3231"
-#&gt;  [73] "https://www.wikipathways.org/index.php/Pathway:WP4826"
+#&gt;  [71] "https://www.wikipathways.org/index.php/Pathway:WP3231"
+#&gt;  [72] "https://www.wikipathways.org/index.php/Pathway:WP3264"
+#&gt;  [73] "https://www.wikipathways.org/index.php/Pathway:WP3972"
 #&gt;  [74] "https://www.wikipathways.org/index.php/Pathway:WP3967"
-#&gt;  [75] "https://www.wikipathways.org/index.php/Pathway:WP3264"
-#&gt;  [76] "https://www.wikipathways.org/index.php/Pathway:WP3972"
-#&gt;  [77] "https://www.wikipathways.org/index.php/Pathway:WP3873"
-#&gt;  [78] "https://www.wikipathways.org/index.php/Pathway:WP3239"
-#&gt;  [79] "https://www.wikipathways.org/index.php/Pathway:WP3611"
-#&gt;  [80] "https://www.wikipathways.org/index.php/Pathway:WP1742"
-#&gt;  [81] "https://www.wikipathways.org/index.php/Pathway:WP3859"
-#&gt;  [82] "https://www.wikipathways.org/index.php/Pathway:WP3872"
-#&gt;  [83] "https://www.wikipathways.org/index.php/Pathway:WP3613"
-#&gt;  [84] "https://www.wikipathways.org/index.php/Pathway:WP3614"
-#&gt;  [85] "https://www.wikipathways.org/index.php/Pathway:WP3617"
-#&gt;  [86] "https://www.wikipathways.org/index.php/Pathway:WP3612"
+#&gt;  [75] "https://www.wikipathways.org/index.php/Pathway:WP3873"
+#&gt;  [76] "https://www.wikipathways.org/index.php/Pathway:WP3239"
+#&gt;  [77] "https://www.wikipathways.org/index.php/Pathway:WP1742"
+#&gt;  [78] "https://www.wikipathways.org/index.php/Pathway:WP3872"
+#&gt;  [79] "https://www.wikipathways.org/index.php/Pathway:WP3859"
+#&gt;  [80] "https://www.wikipathways.org/index.php/Pathway:WP3614"
+#&gt;  [81] "https://www.wikipathways.org/index.php/Pathway:WP3617"
+#&gt;  [82] "https://www.wikipathways.org/index.php/Pathway:WP3612"
+#&gt;  [83] "https://www.wikipathways.org/index.php/Pathway:WP3611"
+#&gt;  [84] "https://www.wikipathways.org/index.php/Pathway:WP3613"
+#&gt;  [85] "https://www.wikipathways.org/index.php/Pathway:WP3678"
+#&gt;  [86] "https://www.wikipathways.org/index.php/Pathway:WP4206"
 #&gt;  [87] "https://www.wikipathways.org/index.php/Pathway:WP3303"
-#&gt;  [88] "https://www.wikipathways.org/index.php/Pathway:WP4206"
-#&gt;  [89] "https://www.wikipathways.org/index.php/Pathway:WP3678"
-#&gt;  [90] "https://www.wikipathways.org/index.php/Pathway:WP3858"
-#&gt;  [91] "https://www.wikipathways.org/index.php/Pathway:WP4301"
-#&gt;  [92] "https://www.wikipathways.org/index.php/Pathway:WP3161"
-#&gt;  [93] "https://www.wikipathways.org/index.php/Pathway:WP4534"
+#&gt;  [88] "https://www.wikipathways.org/index.php/Pathway:WP4205"
+#&gt;  [89] "https://www.wikipathways.org/index.php/Pathway:WP3858"
+#&gt;  [90] "https://www.wikipathways.org/index.php/Pathway:WP3161"
+#&gt;  [91] "https://www.wikipathways.org/index.php/Pathway:WP699" 
+#&gt;  [92] "https://www.wikipathways.org/index.php/Pathway:WP4534"
+#&gt;  [93] "https://www.wikipathways.org/index.php/Pathway:WP4301"
 #&gt;  [94] "https://www.wikipathways.org/index.php/Pathway:WP2870"
-#&gt;  [95] "https://www.wikipathways.org/index.php/Pathway:WP699" 
-#&gt;  [96] "https://www.wikipathways.org/index.php/Pathway:WP691" 
+#&gt;  [95] "https://www.wikipathways.org/index.php/Pathway:WP4874"
+#&gt;  [96] "https://www.wikipathways.org/index.php/Pathway:WP4204"
 #&gt;  [97] "https://www.wikipathways.org/index.php/Pathway:WP3670"
-#&gt;  [98] "https://www.wikipathways.org/index.php/Pathway:WP4204"
-#&gt;  [99] "https://www.wikipathways.org/index.php/Pathway:WP1080"
-#&gt; [100] "https://www.wikipathways.org/index.php/Pathway:WP4542"
-#&gt; [101] "https://www.wikipathways.org/index.php/Pathway:WP229" 
+#&gt;  [98] "https://www.wikipathways.org/index.php/Pathway:WP691" 
+#&gt;  [99] "https://www.wikipathways.org/index.php/Pathway:WP4542"
+#&gt; [100] "https://www.wikipathways.org/index.php/Pathway:WP229" 
+#&gt; [101] "https://www.wikipathways.org/index.php/Pathway:WP1080"
 #&gt; [102] "https://www.wikipathways.org/index.php/Pathway:WP4172"
 #&gt; [103] "https://www.wikipathways.org/index.php/Pathway:WP3200"
 #&gt; [104] "https://www.wikipathways.org/index.php/Pathway:WP2526"
-#&gt; [105] "https://www.wikipathways.org/index.php/Pathway:WP4707"
-#&gt; [106] "https://www.wikipathways.org/index.php/Pathway:WP4016"
+#&gt; [105] "https://www.wikipathways.org/index.php/Pathway:WP4016"
+#&gt; [106] "https://www.wikipathways.org/index.php/Pathway:WP4707"
 #&gt; [107] "https://www.wikipathways.org/index.php/Pathway:WP4263"
 #&gt; [108] "https://www.wikipathways.org/index.php/Pathway:WP3266"
 #&gt; [109] "https://www.wikipathways.org/index.php/Pathway:WP2261"
 #&gt; [110] "https://www.wikipathways.org/index.php/Pathway:WP3287"
-#&gt; [111] "https://www.wikipathways.org/index.php/Pathway:WP4659"
-#&gt; [112] "https://www.wikipathways.org/index.php/Pathway:WP566" 
-#&gt; [113] "https://www.wikipathways.org/index.php/Pathway:WP2355"
-#&gt; [114] "https://www.wikipathways.org/index.php/Pathway:WP3265"
-#&gt; [115] "https://www.wikipathways.org/index.php/Pathway:WP4754"</div></pre>
+#&gt; [111] "https://www.wikipathways.org/index.php/Pathway:WP5046"
+#&gt; [112] "https://www.wikipathways.org/index.php/Pathway:WP4905"
+#&gt; [113] "https://www.wikipathways.org/index.php/Pathway:WP4659"
+#&gt; [114] "https://www.wikipathways.org/index.php/Pathway:WP4847"
+#&gt; [115] "https://www.wikipathways.org/index.php/Pathway:WP566" 
+#&gt; [116] "https://www.wikipathways.org/index.php/Pathway:WP3265"
+#&gt; [117] "https://www.wikipathways.org/index.php/Pathway:WP2355"
+#&gt; [118] "https://www.wikipathways.org/index.php/Pathway:WP4857"
+#&gt; [119] "https://www.wikipathways.org/index.php/Pathway:WP4754"</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -287,7 +294,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -37,7 +41,6 @@
 
 <meta property="og:title" content="List Pathway Names — listPathwayNames" />
 <meta property="og:description" content="Retrieve list of pathway names per species." />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -55,7 +58,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -69,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rWikiPathways</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.11.1</span>
       </span>
     </div>
 
@@ -77,7 +80,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -108,8 +111,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/wikipathways/rwikipathways">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/wikipathways/rwikipathways/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -135,7 +138,7 @@
     <p>Retrieve list of pathway names per species.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>listPathwayNames</span>(<span class='kw'>organism</span> <span class='kw'>=</span> <span class='st'>""</span>)</pre>
+    <pre class="usage"><span class='fu'>listPathwayNames</span><span class='op'>(</span>organism <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -153,246 +156,252 @@ Default is all species.</p></td>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Basically returns a subset of <a href='listPathways.html'>listPathways</a> result</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>listPathways</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>{
-<span class='fu'>listPathwayNames</span>(<span class='st'>'Mus musculus'</span>)
-}</div><div class='output co'>#&gt;   [1] "Statin Pathway"                                                                                                        
-#&gt;   [2] "IL-9 Signaling Pathway"                                                                                                
-#&gt;   [3] "Cholesterol Biosynthesis"                                                                                              
-#&gt;   [4] "Selenium metabolism/Selenoproteins"                                                                                    
-#&gt;   [5] "TGF Beta Signaling Pathway"                                                                                            
-#&gt;   [6] "Hedgehog Signaling Pathway"                                                                                            
-#&gt;   [7] "Glucuronidation"                                                                                                       
-#&gt;   [8] "Non-homologous end joining"                                                                                            
-#&gt;   [9] "EBV LMP1 signaling"                                                                                                    
-#&gt;  [10] "Estrogen signaling"                                                                                                    
-#&gt;  [11] "Keap1-Nrf2"                                                                                                            
-#&gt;  [12] "Hypothetical Network for Drug Addiction"                                                                               
-#&gt;  [13] "Methylation"                                                                                                           
-#&gt;  [14] "Oxidative phosphorylation"                                                                                             
-#&gt;  [15] "EPO Receptor Signaling"                                                                                                
-#&gt;  [16] "Arachidonate Epoxygenase   Epoxide Hydrolase"                                                                          
-#&gt;  [17] "Metapathway biotransformation"                                                                                         
-#&gt;  [18] "Amino acid conjugation of benzoic acid"                                                                                
-#&gt;  [19] "Type II interferon signaling (IFNG)"                                                                                   
-#&gt;  [20] "Apoptosis"                                                                                                             
-#&gt;  [21] "NLR Proteins"                                                                                                          
-#&gt;  [22] "Mismatch repair"                                                                                                       
-#&gt;  [23] "Homologous recombination"                                                                                              
-#&gt;  [24] "Retinol metabolism"                                                                                                    
-#&gt;  [25] "ErbB signaling pathway"                                                                                                
-#&gt;  [26] "Aflatoxin B1 metabolism"                                                                                               
-#&gt;  [27] "Mitochondrial Gene Expression"                                                                                         
-#&gt;  [28] "Estrogen metabolism"                                                                                                   
-#&gt;  [29] "Polyol pathway"                                                                                                        
-#&gt;  [30] "SIDS Susceptibility Pathways"                                                                                          
-#&gt;  [31] "Fatty Acid Beta Oxidation"                                                                                             
-#&gt;  [32] "Endochondral Ossification"                                                                                             
-#&gt;  [33] "Toll-like receptor signaling pathway"                                                                                  
-#&gt;  [34] "Selenium Micronutrient Network"                                                                                        
-#&gt;  [35] "Folic Acid Network"                                                                                                    
-#&gt;  [36] "Oxidation by Cytochrome P450"                                                                                          
-#&gt;  [37] "Non-odorant GPCRs"                                                                                                     
-#&gt;  [38] "Odorant GPCRs"                                                                                                         
-#&gt;  [39] "Orphan GPCRs"                                                                                                          
-#&gt;  [40] "Oxidative Damage"                                                                                                      
-#&gt;  [41] "Dopaminergic Neurogenesis"                                                                                             
-#&gt;  [42] "DNA Replication"                                                                                                       
-#&gt;  [43] "SHH, FGF8, Stat3"                                                                                                      
-#&gt;  [44] "IL-5 Signaling Pathway"                                                                                                
-#&gt;  [45] "Regulation of Cardiac Hypertrophy by miR-208"                                                                          
-#&gt;  [46] "MicroRNAs in Cardiomyocyte Hypertrophy"                                                                                
-#&gt;  [47] "Glycolysis and Gluconeogenesis"                                                                                        
-#&gt;  [48] "Iron Homeostasis"                                                                                                      
-#&gt;  [49] "Cytoplasmic Ribosomal Proteins"                                                                                        
-#&gt;  [50] "Glutathione metabolism"                                                                                                
-#&gt;  [51] "Apoptosis Modulation by HSP70"                                                                                         
-#&gt;  [52] "Acetylcholine Synthesis"                                                                                               
-#&gt;  [53] "PluriNetWork"                                                                                                          
-#&gt;  [54] "One carbon metabolism and related pathways"                                                                            
-#&gt;  [55] "Kennedy pathway"                                                                                                       
-#&gt;  [56] "Heme Biosynthesis"                                                                                                     
-#&gt;  [57] "GPCRs, Class A Rhodopsin-like"                                                                                         
-#&gt;  [58] "Cell cycle"                                                                                                            
-#&gt;  [59] "Signaling of Hepatocyte Growth Factor Receptor"                                                                        
-#&gt;  [60] "Splicing factor NOVA regulated synaptic proteins"                                                                      
-#&gt;  [61] "Complement Activation, Classical Pathway"                                                                              
-#&gt;  [62] "Ptf1a related regulatory pathway"                                                                                      
-#&gt;  [63] "Hypertrophy Model"                                                                                                     
-#&gt;  [64] "Heart Development"                                                                                                     
-#&gt;  [65] "Nucleotide GPCRs"                                                                                                      
-#&gt;  [66] "Neural Crest Differentiation"                                                                                          
-#&gt;  [67] "Alzheimers Disease"                                                                                                    
-#&gt;  [68] "miRs in Muscle Cell Differentiation"                                                                                   
-#&gt;  [69] "Serotonin Receptor 2 and STAT3 Signaling"                                                                              
-#&gt;  [70] "SRF and miRs in Smooth Muscle Differentiation and Proliferation"                                                       
-#&gt;  [71] "Cell Differentiation - Index"                                                                                          
-#&gt;  [72] "Nicotine Activity on Dopaminergic Neurons"                                                                             
-#&gt;  [73] "SREBF and miR33 in cholesterol and lipid homeostasis"                                                                  
-#&gt;  [74] "miRNAs involved in DNA damage response"                                                                                
-#&gt;  [75] "Serotonin and anxiety-related events"                                                                                  
-#&gt;  [76] "Serotonin and anxiety"                                                                                                 
-#&gt;  [77] "BDNF Pathway"                                                                                                          
-#&gt;  [78] "Striated Muscle Contraction"                                                                                           
-#&gt;  [79] "S1P pathways and spinal cord injury"                                                                                   
-#&gt;  [80] "Purine metabolism"                                                                                                     
-#&gt;  [81] "Cytokines and Inflammatory Response"                                                                                   
-#&gt;  [82] "Macrophage markers"                                                                                                    
-#&gt;  [83] "Chemokine signaling pathway"                                                                                           
-#&gt;  [84] "XPodNet - protein-protein interactions in the podocyte expanded by STRING"                                             
-#&gt;  [85] "PodNet: protein-protein interactions in the podocyte"                                                                  
-#&gt;  [86] "PPAR signaling pathway"                                                                                                
-#&gt;  [87] "Fatty acid oxidation"                                                                                                  
-#&gt;  [88] "G Protein Signaling Pathways"                                                                                          
-#&gt;  [89] "Peptide GPCRs"                                                                                                         
-#&gt;  [90] "miRNAs and TFs in iPS Cell Generation"                                                                                 
-#&gt;  [91] "Osteoblast"                                                                                                            
-#&gt;  [92] "Alanine and aspartate metabolism"                                                                                      
-#&gt;  [93] "Spinal Cord Injury"                                                                                                    
-#&gt;  [94] "TNF-alpha NF-kB Signaling Pathway"                                                                                     
-#&gt;  [95] "MAPK Cascade"                                                                                                          
-#&gt;  [96] "Androgen Receptor Signaling Pathway"                                                                                   
-#&gt;  [97] "Dantrolene Metabolic Pathway"                                                                                          
-#&gt;  [98] "Primary Focal Segmental Glomerulosclerosis FSGS"                                                                       
-#&gt;  [99] "TGF-beta Receptor Signaling Pathway"                                                                                   
-#&gt; [100] "Limb Development"                                                                                                      
-#&gt; [101] "Limb and Fin Development"                                                                                              
-#&gt; [102] "Delta-Notch Signaling Pathway"                                                                                         
-#&gt; [103] "Ovarian Infertility Genes"                                                                                             
-#&gt; [104] "B Cell Receptor Signaling Pathway"                                                                                     
-#&gt; [105] "Focal Adhesion-PI3K-Akt-mTOR-signaling pathway"                                                                        
-#&gt; [106] "Gene regulatory network modelling somitogenesis "                                                                      
-#&gt; [107] "White fat cell differentiation"                                                                                        
-#&gt; [108] "Notch Signaling Pathway"                                                                                               
-#&gt; [109] "p53 signaling"                                                                                                         
-#&gt; [110] "Mir302-367 Promoting Cardiomyocyte Proliferation"                                                                      
-#&gt; [111] "Mecp2 and Associated Rett Syndrome"                                                                                    
-#&gt; [112] "miR-222 in Exercise-Induced Cardiac Growth"                                                                            
-#&gt; [113] "Electron Transport Chain"                                                                                              
-#&gt; [114] "IL-7 Signaling Pathway"                                                                                                
-#&gt; [115] "G13 Signaling Pathway"                                                                                                 
-#&gt; [116] "Histone modifications"                                                                                                 
-#&gt; [117] "Translation Factors"                                                                                                   
-#&gt; [118] "mRNA processing"                                                                                                       
-#&gt; [119] "Glycogen Metabolism"                                                                                                   
-#&gt; [120] "Eicosanoid Synthesis"                                                                                                  
-#&gt; [121] "GPCRs, Class C Metabotropic glutamate, pheromone"                                                                      
-#&gt; [122] "MAPK signaling pathway"                                                                                                
-#&gt; [123] "Fatty Acid Omega Oxidation"                                                                                            
-#&gt; [124] "Fatty Acid Biosynthesis"                                                                                               
-#&gt; [125] "ESC Pluripotency Pathways"                                                                                             
-#&gt; [126] "Adar1 editing defficiency immune response"                                                                             
-#&gt; [127] "p38 MAPK Signaling Pathway"                                                                                            
-#&gt; [128] "Small Ligand GPCRs"                                                                                                    
-#&gt; [129] "Glycolysis"                                                                                                            
-#&gt; [130] "TCA Cycle (streamlined)"                                                                                               
-#&gt; [131] "Fatty Acid Beta Oxidation (streamlined)"                                                                               
-#&gt; [132] "ApoE and miR-146 in inflammation and atherosclerosis"                                                                  
-#&gt; [133] "TYROBP Causal Network"                                                                                                 
-#&gt; [134] "Microglia Pathogen Phagocytosis Pathway"                                                                               
-#&gt; [135] "Lung fibrosis"                                                                                                         
-#&gt; [136] "Parkinsons Disease Pathway"                                                                                            
-#&gt; [137] "EDA Signalling in Hair Follicle Development"                                                                           
-#&gt; [138] "Novel Jun-Dmp1 Pathway"                                                                                                
-#&gt; [139] "BMP Signaling Pathway in Eyelid Development"                                                                           
-#&gt; [140] " Hfe effect on hepcidin production"                                                                                    
-#&gt; [141] "Factors and pathways affecting insulin-like growth factor (IGF1)-Akt signaling"                                        
-#&gt; [142] "IL-1 Signaling Pathway"                                                                                                
-#&gt; [143] "IL-3 Signaling Pathway"                                                                                                
-#&gt; [144] "Prostaglandin Synthesis and Regulation"                                                                                
-#&gt; [145] "Myometrial Relaxation and Contraction Pathways"                                                                        
-#&gt; [146] "Dysregulated miRNA Targeting in Insulin/PI3K-AKT Signaling"                                                            
-#&gt; [147] "Wnt Signaling in Kidney Disease"                                                                                       
-#&gt; [148] "Triacylglyceride Synthesis"                                                                                            
-#&gt; [149] "Robo4 and VEGF Signaling Pathways Crosstalk"                                                                           
-#&gt; [150] "IL-6 signaling Pathway"                                                                                                
-#&gt; [151] "ACE Inhibitor Pathway"                                                                                                 
-#&gt; [152] "mir-193a and MVP in colon cancer metastasis"                                                                           
-#&gt; [153] "miR-127 in mesendoderm differentiation"                                                                                
-#&gt; [154] "Mitochondrial LC-Fatty Acid Beta-Oxidation"                                                                            
-#&gt; [155] "Wnt Signaling Pathway"                                                                                                 
-#&gt; [156] "Kit Receptor Signaling Pathway"                                                                                        
-#&gt; [157] "GPCRs, Other"                                                                                                          
-#&gt; [158] "Oxidative Stress"                                                                                                      
-#&gt; [159] "G1 to S cell cycle control"                                                                                            
-#&gt; [160] "Distal Convoluted Tubule 1 (DCT1) Cell"                                                                                
-#&gt; [161] "Mechanism of Neuromodulatory Action of Exogenous Oxytocin (OT) and Antagonist (OTA) by GABAergic Transmission in Brain"
-#&gt; [162] "Urea cycle and metabolism of amino groups"                                                                             
-#&gt; [163] "Ethanol metabolism resulting in production of ROS by CYP2E1"                                                           
-#&gt; [164] "Nuclear receptors in lipid metabolism and toxicity"                                                                    
-#&gt; [165] "Eicosanoid Lipid Synthesis Map"                                                                                        
-#&gt; [166] "TCA Cycle"                                                                                                             
-#&gt; [167] "Sphingolipid Metabolism (general overview)"                                                                            
-#&gt; [168] "Glycerolipids and Glycerophospholipids"                                                                                
-#&gt; [169] "Cholesterol metabolism (includes both Bloch and Kandutsch-Russell pathways)"                                           
-#&gt; [170] "Eicosanoid metabolism via Cyclo Oxygenases (COX)"                                                                      
-#&gt; [171] "Eicosanoid metabolism via Lipo Oxygenases (LOX)"                                                                       
-#&gt; [172] "Eicosanoid metabolism via Cytochrome P450 Mono-Oxygenases (CYP) pathway"                                               
-#&gt; [173] "One Carbon Metabolism"                                                                                                 
-#&gt; [174] "Omega-3/Omega-6 FA synthesis"                                                                                          
-#&gt; [175] "Omega-9 FA synthesis"                                                                                                  
-#&gt; [176] "PDGFR&amp;alpha; and STMN1 cooperate to exacerbate the cytotoxic effects of vinblastine"                                   
-#&gt; [177] "Matrix Metalloproteinases"                                                                                             
-#&gt; [178] "Adipogenesis genes"                                                                                                    
-#&gt; [179] "Circulating monocytes and cardiac macrophages in diastolic dysfunction"                                                
-#&gt; [180] "Complement and Coagulation Cascades"                                                                                   
-#&gt; [181] "Elongation of (very) long chain fatty acids"                                                                           
-#&gt; [182] "IL-2 Signaling Pathway"                                                                                                
-#&gt; [183] "Osteoclast"                                                                                                            
-#&gt; [184] "GPCRs, Class B Secretin-like"                                                                                          
-#&gt; [185] "Inflammatory Response Pathway"                                                                                         
-#&gt; [186] "Blood Clotting Cascade"                                                                                                
-#&gt; [187] " Lipids measured in liver metastasis from breast cancer"                                                               
-#&gt; [188] "Sphingolipid Metabolism (integrated pathway)"                                                                          
-#&gt; [189] "Immune response in Tg26 glomeruli"                                                                                     
-#&gt; [190] "Irinotecan Pathway"                                                                                                    
-#&gt; [191] "Regulation of Pgc1a expression by a Gsk3b-Tfeb signaling axis in skeletal muscle"                                      
-#&gt; [192] "T Cell Receptor Signaling Pathway"                                                                                     
-#&gt; [193] "GDNF/RET signalling axis"                                                                                              
-#&gt; [194] "Alpha6-Beta4 Integrin Signaling Pathway"                                                                               
-#&gt; [195] "MAPK signaling pathway"                                                                                                
-#&gt; [196] "Glucocorticoid &amp;amp; Mineralcorticoid Metabolism"                                                                      
-#&gt; [197] "Nuclear Receptors"                                                                                                     
-#&gt; [198] "Id Signaling Pathway"                                                                                                  
-#&gt; [199] "Proteasome Degradation"                                                                                                
-#&gt; [200] "Biogenic Amine Synthesis"                                                                                              
-#&gt; [201] "Regulation of Actin Cytoskeleton"                                                                                      
-#&gt; [202] "Neural retinal development"                                                                                            
-#&gt; [203] "Wnt Signaling Pathway NetPath"                                                                                         
-#&gt; [204] "Synthesis and Degradation of Ketone Bodies"                                                                            
-#&gt; [205] "Exercise-induced Circadian Regulation"                                                                                 
-#&gt; [206] "Steroid Biosynthesis"                                                                                                  
-#&gt; [207] "Calcium Regulation in the Cardiac Cell"                                                                                
-#&gt; [208] "Eukaryotic Transcription Initiation"                                                                                   
-#&gt; [209] "Signal Transduction of S1P Receptor"                                                                                   
-#&gt; [210] "Monoamine GPCRs"                                                                                                       
-#&gt; [211] "FAS pathway and Stress induction of HSP regulation"                                                                    
-#&gt; [212] "EGFR1 Signaling Pathway"                                                                                               
-#&gt; [213] "Leptin Insulin Overlap"                                                                                                
-#&gt; [214] "Integrin-mediated Cell Adhesion"                                                                                       
-#&gt; [215] "miR-1 in cardiac development"                                                                                          
-#&gt; [216] "Pentose Phosphate Pathway"                                                                                             
-#&gt; [217] "Insulin Signaling"                                                                                                     
-#&gt; [218] "Amino Acid metabolism"                                                                                                 
-#&gt; [219] "Leptin and adiponectin"                                                                                                
-#&gt; [220] "Wnt Signaling Pathway and Pluripotency"                                                                                
-#&gt; [221] "Glutathione and one carbon metabolism"                                                                                 
-#&gt; [222] "Tryptophan metabolism"                                                                                                 
-#&gt; [223] "Focal Adhesion"                                                                                                        
-#&gt; [224] "Nucleotide Metabolism"                                                                                                 
-#&gt; [225] "Toll Like Receptor signaling"                                                                                          
-#&gt; [226] "IL-4 signaling Pathway"                                                                                                </div></pre>
+    <pre class="examples"><div class='input'><span class='op'>{</span>
+<span class='fu'>listPathwayNames</span><span class='op'>(</span><span class='st'>'Mus musculus'</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div><div class='output co'>#&gt;   [1] "Statin Pathway"                                                                                    
+#&gt;   [2] "IL-9 Signaling Pathway"                                                                            
+#&gt;   [3] "Cholesterol Biosynthesis"                                                                          
+#&gt;   [4] "Selenium metabolism/Selenoproteins"                                                                
+#&gt;   [5] "TGF Beta Signaling Pathway"                                                                        
+#&gt;   [6] "Hedgehog Signaling Pathway"                                                                        
+#&gt;   [7] "Glucuronidation"                                                                                   
+#&gt;   [8] "Non-homologous end joining"                                                                        
+#&gt;   [9] "EBV LMP1 signaling"                                                                                
+#&gt;  [10] "Estrogen signaling"                                                                                
+#&gt;  [11] "Keap1-Nrf2"                                                                                        
+#&gt;  [12] "Hypothetical Network for Drug Addiction"                                                           
+#&gt;  [13] "Methylation"                                                                                       
+#&gt;  [14] "Oxidative phosphorylation"                                                                         
+#&gt;  [15] "EPO Receptor Signaling"                                                                            
+#&gt;  [16] "Arachidonate Epoxygenase   Epoxide Hydrolase"                                                      
+#&gt;  [17] "Metapathway biotransformation"                                                                     
+#&gt;  [18] "Amino acid conjugation of benzoic acid"                                                            
+#&gt;  [19] "Type II interferon signaling (IFNG)"                                                               
+#&gt;  [20] "Apoptosis"                                                                                         
+#&gt;  [21] "NLR Proteins"                                                                                      
+#&gt;  [22] "Mismatch repair"                                                                                   
+#&gt;  [23] "Homologous recombination"                                                                          
+#&gt;  [24] "Retinol metabolism"                                                                                
+#&gt;  [25] "ErbB signaling pathway"                                                                            
+#&gt;  [26] "Aflatoxin B1 metabolism"                                                                           
+#&gt;  [27] "Mitochondrial Gene Expression"                                                                     
+#&gt;  [28] "Estrogen metabolism"                                                                               
+#&gt;  [29] "Polyol pathway"                                                                                    
+#&gt;  [30] "SIDS Susceptibility Pathways"                                                                      
+#&gt;  [31] "Fatty Acid Beta Oxidation"                                                                         
+#&gt;  [32] "Endochondral Ossification"                                                                         
+#&gt;  [33] "Toll-like receptor signaling pathway"                                                              
+#&gt;  [34] "Selenium Micronutrient Network"                                                                    
+#&gt;  [35] "Folic Acid Network"                                                                                
+#&gt;  [36] "Oxidation by Cytochrome P450"                                                                      
+#&gt;  [37] "Non-odorant GPCRs"                                                                                 
+#&gt;  [38] "Odorant GPCRs"                                                                                     
+#&gt;  [39] "Orphan GPCRs"                                                                                      
+#&gt;  [40] "Oxidative Damage"                                                                                  
+#&gt;  [41] "Dopaminergic Neurogenesis"                                                                         
+#&gt;  [42] "DNA Replication"                                                                                   
+#&gt;  [43] "SHH, FGF8, Stat3"                                                                                  
+#&gt;  [44] "IL-5 Signaling Pathway"                                                                            
+#&gt;  [45] "Regulation of Cardiac Hypertrophy by miR-208"                                                      
+#&gt;  [46] "MicroRNAs in Cardiomyocyte Hypertrophy"                                                            
+#&gt;  [47] "Glycolysis and Gluconeogenesis"                                                                    
+#&gt;  [48] "Iron Homeostasis"                                                                                  
+#&gt;  [49] "Cytoplasmic Ribosomal Proteins"                                                                    
+#&gt;  [50] "Glutathione metabolism"                                                                            
+#&gt;  [51] "Apoptosis Modulation by HSP70"                                                                     
+#&gt;  [52] "Acetylcholine Synthesis"                                                                           
+#&gt;  [53] "PluriNetWork: mechanisms associated with pluripotency"                                             
+#&gt;  [54] "One carbon metabolism and related pathways"                                                        
+#&gt;  [55] "Kennedy pathway"                                                                                   
+#&gt;  [56] "Heme Biosynthesis"                                                                                 
+#&gt;  [57] "GPCRs, Class A Rhodopsin-like"                                                                     
+#&gt;  [58] "Cell cycle"                                                                                        
+#&gt;  [59] "Signaling of Hepatocyte Growth Factor Receptor"                                                    
+#&gt;  [60] "Splicing factor NOVA regulated synaptic proteins"                                                  
+#&gt;  [61] "Complement Activation, Classical Pathway"                                                          
+#&gt;  [62] "Ptf1a related regulatory pathway"                                                                  
+#&gt;  [63] "Hypertrophy Model"                                                                                 
+#&gt;  [64] "Heart Development"                                                                                 
+#&gt;  [65] "Nucleotide GPCRs"                                                                                  
+#&gt;  [66] "Neural Crest Differentiation"                                                                      
+#&gt;  [67] "Alzheimers Disease"                                                                                
+#&gt;  [68] "miRs in Muscle Cell Differentiation"                                                               
+#&gt;  [69] "Serotonin Receptor 2 and STAT3 Signaling"                                                          
+#&gt;  [70] "SRF and miRs in Smooth Muscle Differentiation and Proliferation"                                   
+#&gt;  [71] "Cell Differentiation - Index"                                                                      
+#&gt;  [72] "Nicotine Activity on Dopaminergic Neurons"                                                         
+#&gt;  [73] "SREBF and miR33 in cholesterol and lipid homeostasis"                                              
+#&gt;  [74] "miRNAs involved in DNA damage response"                                                            
+#&gt;  [75] "Serotonin and anxiety-related events"                                                              
+#&gt;  [76] "Serotonin and anxiety"                                                                             
+#&gt;  [77] "BDNF Pathway"                                                                                      
+#&gt;  [78] "Striated Muscle Contraction"                                                                       
+#&gt;  [79] "S1P pathways and spinal cord injury"                                                               
+#&gt;  [80] "Purine metabolism"                                                                                 
+#&gt;  [81] "Cytokines and Inflammatory Response"                                                               
+#&gt;  [82] "Macrophage markers"                                                                                
+#&gt;  [83] "Chemokine signaling pathway"                                                                       
+#&gt;  [84] "XPodNet - protein-protein interactions in the podocyte expanded by STRING"                         
+#&gt;  [85] "PodNet: protein-protein interactions in the podocyte"                                              
+#&gt;  [86] "PPAR signaling pathway"                                                                            
+#&gt;  [87] "Fatty acid oxidation"                                                                              
+#&gt;  [88] "G Protein Signaling Pathways"                                                                      
+#&gt;  [89] "Peptide GPCRs"                                                                                     
+#&gt;  [90] "miRNAs and TFs in iPS Cell Generation"                                                             
+#&gt;  [91] "Osteoblast"                                                                                        
+#&gt;  [92] "Alanine and aspartate metabolism"                                                                  
+#&gt;  [93] "Spinal Cord Injury"                                                                                
+#&gt;  [94] "TNF-alpha NF-kB Signaling Pathway"                                                                 
+#&gt;  [95] "MAPK Cascade"                                                                                      
+#&gt;  [96] "Androgen Receptor Signaling Pathway"                                                               
+#&gt;  [97] "Dantrolene Metabolic Pathway"                                                                      
+#&gt;  [98] "Primary Focal Segmental Glomerulosclerosis FSGS"                                                   
+#&gt;  [99] "TGF-beta Receptor Signaling Pathway"                                                               
+#&gt; [100] "Limb Development"                                                                                  
+#&gt; [101] "Limb and Fin Development"                                                                          
+#&gt; [102] "Delta-Notch Signaling Pathway"                                                                     
+#&gt; [103] "Ovarian Infertility Genes"                                                                         
+#&gt; [104] "B Cell Receptor Signaling Pathway"                                                                 
+#&gt; [105] "Focal Adhesion-PI3K-Akt-mTOR-signaling pathway"                                                    
+#&gt; [106] "Gene regulatory network modelling somitogenesis "                                                  
+#&gt; [107] "White fat cell differentiation"                                                                    
+#&gt; [108] "Notch Signaling Pathway"                                                                           
+#&gt; [109] "p53 signaling"                                                                                     
+#&gt; [110] "Mir302-367 Promoting Cardiomyocyte Proliferation"                                                  
+#&gt; [111] "Mecp2 and Associated Rett Syndrome"                                                                
+#&gt; [112] "miR-222 in Exercise-Induced Cardiac Growth"                                                        
+#&gt; [113] "Electron Transport Chain"                                                                          
+#&gt; [114] "IL-7 Signaling Pathway"                                                                            
+#&gt; [115] "G13 Signaling Pathway"                                                                             
+#&gt; [116] "Histone modifications"                                                                             
+#&gt; [117] "Translation Factors"                                                                               
+#&gt; [118] "mRNA processing"                                                                                   
+#&gt; [119] "Glycogen Metabolism"                                                                               
+#&gt; [120] "Eicosanoid Synthesis"                                                                              
+#&gt; [121] "GPCRs, Class C Metabotropic glutamate, pheromone"                                                  
+#&gt; [122] "MAPK signaling pathway"                                                                            
+#&gt; [123] "Fatty Acid Omega Oxidation"                                                                        
+#&gt; [124] "Fatty Acid Biosynthesis"                                                                           
+#&gt; [125] "ESC Pluripotency Pathways"                                                                         
+#&gt; [126] "Adar1 editing defficiency immune response"                                                         
+#&gt; [127] "p38 MAPK Signaling Pathway"                                                                        
+#&gt; [128] "Small Ligand GPCRs"                                                                                
+#&gt; [129] "Glycolysis"                                                                                        
+#&gt; [130] "TCA Cycle (streamlined)"                                                                           
+#&gt; [131] "Fatty Acid Beta Oxidation (streamlined)"                                                           
+#&gt; [132] "ApoE and miR-146 in inflammation and atherosclerosis"                                              
+#&gt; [133] "TYROBP Causal Network"                                                                             
+#&gt; [134] "Microglia Pathogen Phagocytosis Pathway"                                                           
+#&gt; [135] "Lung fibrosis"                                                                                     
+#&gt; [136] "Parkinsons Disease Pathway"                                                                        
+#&gt; [137] "EDA Signalling in Hair Follicle Development"                                                       
+#&gt; [138] "Novel Jun-Dmp1 Pathway"                                                                            
+#&gt; [139] "BMP Signaling Pathway in Eyelid Development"                                                       
+#&gt; [140] " Hfe effect on hepcidin production"                                                                
+#&gt; [141] "Factors and pathways affecting insulin-like growth factor (IGF1)-Akt signaling"                    
+#&gt; [142] "IL-1 Signaling Pathway"                                                                            
+#&gt; [143] "IL-3 Signaling Pathway"                                                                            
+#&gt; [144] "Prostaglandin Synthesis and Regulation"                                                            
+#&gt; [145] "Myometrial Relaxation and Contraction Pathways"                                                    
+#&gt; [146] "Dysregulated miRNA Targeting in Insulin/PI3K-AKT Signaling"                                        
+#&gt; [147] "Wnt Signaling in Kidney Disease"                                                                   
+#&gt; [148] "Triacylglyceride Synthesis"                                                                        
+#&gt; [149] "Robo4 and VEGF Signaling Pathways Crosstalk"                                                       
+#&gt; [150] "IL-6 signaling Pathway"                                                                            
+#&gt; [151] "ACE Inhibitor Pathway"                                                                             
+#&gt; [152] "mir-193a and MVP in colon cancer metastasis"                                                       
+#&gt; [153] "miR-127 in mesendoderm differentiation"                                                            
+#&gt; [154] "Mitochondrial LC-Fatty Acid Beta-Oxidation"                                                        
+#&gt; [155] "Wnt Signaling Pathway"                                                                             
+#&gt; [156] "Kit Receptor Signaling Pathway"                                                                    
+#&gt; [157] "GPCRs, Other"                                                                                      
+#&gt; [158] "Oxidative Stress"                                                                                  
+#&gt; [159] "G1 to S cell cycle control"                                                                        
+#&gt; [160] "Distal Convoluted Tubule 1 (DCT1) Cell"                                                            
+#&gt; [161] "Mechanism of Neuromodulatory Action of Exogenous Oxytocin and Antagonist by GABAergic Transmission"
+#&gt; [162] "Urea cycle and metabolism of amino groups"                                                         
+#&gt; [163] "Ethanol metabolism resulting in production of ROS by CYP2E1"                                       
+#&gt; [164] "Nuclear receptors in lipid metabolism and toxicity"                                                
+#&gt; [165] "Eicosanoid Lipid Synthesis Map"                                                                    
+#&gt; [166] "TCA Cycle"                                                                                         
+#&gt; [167] "Sphingolipid Metabolism (general overview)"                                                        
+#&gt; [168] "Glycerolipids and Glycerophospholipids"                                                            
+#&gt; [169] "Cholesterol metabolism (includes both Bloch and Kandutsch-Russell pathways)"                       
+#&gt; [170] "Eicosanoid metabolism via Cyclo Oxygenases (COX)"                                                  
+#&gt; [171] "Eicosanoid metabolism via Lipo Oxygenases (LOX)"                                                   
+#&gt; [172] "Eicosanoid metabolism via Cytochrome P450 Mono-Oxygenases (CYP) pathway"                           
+#&gt; [173] "One Carbon Metabolism"                                                                             
+#&gt; [174] "Omega-3/Omega-6 FA synthesis"                                                                      
+#&gt; [175] "Omega-9 FA synthesis"                                                                              
+#&gt; [176] "PDGFR&amp;alpha; and STMN1 cooperate to exacerbate the cytotoxic effects of vinblastine"               
+#&gt; [177] "Matrix Metalloproteinases"                                                                         
+#&gt; [178] "Oxidative Stress and Redox Pathway"                                                                
+#&gt; [179] "Adipogenesis genes"                                                                                
+#&gt; [180] "Circulating monocytes and cardiac macrophages in diastolic dysfunction"                            
+#&gt; [181] "Complement and Coagulation Cascades"                                                               
+#&gt; [182] "Elongation of (very) long chain fatty acids"                                                       
+#&gt; [183] "IL-2 Signaling Pathway"                                                                            
+#&gt; [184] "Osteoclast"                                                                                        
+#&gt; [185] "GPCRs, Class B Secretin-like"                                                                      
+#&gt; [186] "Inflammatory Response Pathway"                                                                     
+#&gt; [187] "Blood Clotting Cascade"                                                                            
+#&gt; [188] " Lipids measured in liver metastasis from breast cancer"                                           
+#&gt; [189] "Sphingolipid Metabolism (integrated pathway)"                                                      
+#&gt; [190] "Immune response in Tg26 glomeruli"                                                                 
+#&gt; [191] "Irinotecan Pathway"                                                                                
+#&gt; [192] "Regulation of Pgc1a expression by a Gsk3b-Tfeb signaling axis in skeletal muscle"                  
+#&gt; [193] "T Cell Receptor Signaling Pathway"                                                                 
+#&gt; [194] "GDNF/RET signalling axis"                                                                          
+#&gt; [195] "Peroxiredoxin 2 induced ovarian failure"                                                           
+#&gt; [196] "Alpha6-Beta4 Integrin Signaling Pathway"                                                           
+#&gt; [197] "MAPK signaling pathway"                                                                            
+#&gt; [198] "Glucocorticoid and Mineralcorticoid Metabolism"                                                    
+#&gt; [199] "Deregulation of the Renin Angiotensin system by Sars-CoV infection"                                
+#&gt; [200] "Hypoxia-Dependent Self-Renewal of Myoblasts"                                                       
+#&gt; [201] "Hypoxia-Dependent Proliferation of Myoblasts"                                                      
+#&gt; [202] "Hypoxia-Dependent Differentiation of Myoblasts"                                                    
+#&gt; [203] "Na/K-ATPase/Src Signaling"                                                                         
+#&gt; [204] "Nuclear Receptors"                                                                                 
+#&gt; [205] "Id Signaling Pathway"                                                                              
+#&gt; [206] "Proteasome Degradation"                                                                            
+#&gt; [207] "Biogenic Amine Synthesis"                                                                          
+#&gt; [208] "Regulation of Actin Cytoskeleton"                                                                  
+#&gt; [209] "Neural retinal development"                                                                        
+#&gt; [210] "Wnt Signaling Pathway NetPath"                                                                     
+#&gt; [211] "Synthesis and Degradation of Ketone Bodies"                                                        
+#&gt; [212] "Exercise-induced Circadian Regulation"                                                             
+#&gt; [213] "Steroid Biosynthesis"                                                                              
+#&gt; [214] "Calcium Regulation in the Cardiac Cell"                                                            
+#&gt; [215] "Eukaryotic Transcription Initiation"                                                               
+#&gt; [216] "Signal Transduction of S1P Receptor"                                                               
+#&gt; [217] "Monoamine GPCRs"                                                                                   
+#&gt; [218] "FAS pathway and Stress induction of HSP regulation"                                                
+#&gt; [219] "EGFR1 Signaling Pathway"                                                                           
+#&gt; [220] "Leptin Insulin Overlap"                                                                            
+#&gt; [221] "Integrin-mediated Cell Adhesion"                                                                   
+#&gt; [222] "miR-1 in cardiac development"                                                                      
+#&gt; [223] "Pentose Phosphate Pathway"                                                                         
+#&gt; [224] "Insulin Signaling"                                                                                 
+#&gt; [225] "Amino Acid metabolism"                                                                             
+#&gt; [226] "Leptin and adiponectin"                                                                            
+#&gt; [227] "Wnt Signaling Pathway and Pluripotency"                                                            
+#&gt; [228] "Glutathione and one carbon metabolism"                                                             
+#&gt; [229] "Tryptophan metabolism"                                                                             
+#&gt; [230] "Focal Adhesion"                                                                                    
+#&gt; [231] "Nucleotide Metabolism"                                                                             
+#&gt; [232] "Toll Like Receptor signaling"                                                                      
+#&gt; [233] "IL-4 signaling Pathway"                                                                            </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -403,7 +412,7 @@ Default is all species.</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

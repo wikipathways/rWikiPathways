@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -38,7 +42,6 @@
 <meta property="og:title" content="Find Pathway Names By Xref — findPathwayNamesByXref" />
 <meta property="og:description" content="Retrieve list of pathway names containing the query Xref by identifier
  and system code." />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -56,7 +59,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -70,7 +73,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rWikiPathways</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.11.1</span>
       </span>
     </div>
 
@@ -78,7 +81,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -109,8 +112,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/wikipathways/rwikipathways">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/wikipathways/rwikipathways/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -137,7 +140,7 @@
  and system code.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>findPathwayNamesByXref</span>(<span class='no'>identifier</span>, <span class='no'>systemCode</span>)</pre>
+    <pre class="usage"><span class='fu'>findPathwayNamesByXref</span><span class='op'>(</span><span class='va'>identifier</span>, <span class='va'>systemCode</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -161,169 +164,93 @@ See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.
 
     <p>Note: there will be multiple listings of the same pathway if the Xref
 is present mutiple times.</p>
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>findPathwaysByXref</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>{
-<span class='fu'>findPathwayNamesByXref</span>(<span class='st'>'ENSG00000232810'</span>,<span class='st'>'En'</span>)
-}</div><div class='output co'>#&gt;   [1] "Mammary gland development pathway - Embryonic development (Stage 1 of 4)"                                        
-#&gt;   [2] "miRNAs involvement in the immune response in sepsis"                                                             
-#&gt;   [3] "miRNAs involvement in the immune response in sepsis"                                                             
-#&gt;   [4] "Nuclear Receptors Meta-Pathway"                                                                                  
-#&gt;   [5] "Interleukin-4 and Interleukin-13 signaling"                                                                      
-#&gt;   [6] "Interleukin-4 and Interleukin-13 signaling"                                                                      
-#&gt;   [7] "Protein alkylation leading to liver fibrosis"                                                                    
-#&gt;   [8] "Protein alkylation leading to liver fibrosis"                                                                    
-#&gt;   [9] "Interleukin-10 signaling"                                                                                        
-#&gt;  [10] "Transcription factor regulation in adipogenesis"                                                                 
-#&gt;  [11] "Aryl Hydrocarbon Receptor Pathway"                                                                               
-#&gt;  [12] "Development and heterogeneity of the ILC family"                                                                 
-#&gt;  [13] "Development and heterogeneity of the ILC family"                                                                 
-#&gt;  [14] "EBV LMP1 signaling"                                                                                              
-#&gt;  [15] "Fibrin Complement Receptor 3 Signaling Pathway"                                                                  
-#&gt;  [16] "Novel intracellular components of RIG-I-like receptor (RLR) pathway"                                             
-#&gt;  [17] "Oxidative Damage"                                                                                                
-#&gt;  [18] "Lung fibrosis"                                                                                                   
-#&gt;  [19] "Spinal Cord Injury"                                                                                              
-#&gt;  [20] "Spinal Cord Injury"                                                                                              
-#&gt;  [21] "Spinal Cord Injury"                                                                                              
-#&gt;  [22] "Spinal Cord Injury"                                                                                              
-#&gt;  [23] "T-Cell antigen Receptor (TCR) pathway during Staphylococcus aureus infection"                                    
-#&gt;  [24] "Genes involved in male infertility"                                                                              
-#&gt;  [25] "Overview of nanoparticle effects"                                                                                
-#&gt;  [26] "NO/cGMP/PKG mediated Neuroprotection"                                                                            
-#&gt;  [27] "Non-genomic actions of 1,25 dihydroxyvitamin D3"                                                                 
-#&gt;  [28] "Hepatitis B infection"                                                                                           
-#&gt;  [29] "Hepatitis B infection"                                                                                           
-#&gt;  [30] "Alzheimers Disease"                                                                                              
-#&gt;  [31] "Polycystic Kidney Disease Pathway"                                                                               
-#&gt;  [32] "Type II diabetes mellitus"                                                                                       
-#&gt;  [33] "Viral Acute Myocarditis"                                                                                         
-#&gt;  [34] "Resistin as a regulator of inflammation"                                                                         
-#&gt;  [35] "Cytokines and Inflammatory Response"                                                                             
-#&gt;  [36] "Cytokines and Inflammatory Response"                                                                             
-#&gt;  [37] "Cytokines and Inflammatory Response"                                                                             
-#&gt;  [38] "Cytokines and Inflammatory Response"                                                                             
-#&gt;  [39] "Cytokines and Inflammatory Response"                                                                             
-#&gt;  [40] "Cytokines and Inflammatory Response"                                                                             
-#&gt;  [41] "Cytokines and Inflammatory Response"                                                                             
-#&gt;  [42] "TNF signaling"                                                                                                   
-#&gt;  [43] "TNF signaling"                                                                                                   
-#&gt;  [44] "TNF signaling"                                                                                                   
-#&gt;  [45] "TNF signaling"                                                                                                   
-#&gt;  [46] "TNF signaling"                                                                                                   
-#&gt;  [47] "TNF signaling"                                                                                                   
-#&gt;  [48] "TNF signaling"                                                                                                   
-#&gt;  [49] "TNF signaling"                                                                                                   
-#&gt;  [50] "TNF signaling"                                                                                                   
-#&gt;  [51] "TNF signaling"                                                                                                   
-#&gt;  [52] "TNF signaling"                                                                                                   
-#&gt;  [53] "TNF signaling"                                                                                                   
-#&gt;  [54] "TNF signaling"                                                                                                   
-#&gt;  [55] "TNF signaling"                                                                                                   
-#&gt;  [56] "TNF signaling"                                                                                                   
-#&gt;  [57] "TNF signaling"                                                                                                   
-#&gt;  [58] "TNF signaling"                                                                                                   
-#&gt;  [59] "TNF signaling"                                                                                                   
-#&gt;  [60] "TNF signaling"                                                                                                   
-#&gt;  [61] "TNF signaling"                                                                                                   
-#&gt;  [62] "TNF signaling"                                                                                                   
-#&gt;  [63] "TNF signaling"                                                                                                   
-#&gt;  [64] "TNF signaling"                                                                                                   
-#&gt;  [65] "TNF signaling"                                                                                                   
-#&gt;  [66] "TNF signaling"                                                                                                   
-#&gt;  [67] "TNF signaling"                                                                                                   
-#&gt;  [68] "TNF signaling"                                                                                                   
-#&gt;  [69] "TNF signaling"                                                                                                   
-#&gt;  [70] "TNF signaling"                                                                                                   
-#&gt;  [71] "TNF signaling"                                                                                                   
-#&gt;  [72] "TNF signaling"                                                                                                   
-#&gt;  [73] "TNF signaling"                                                                                                   
-#&gt;  [74] "TNF signaling"                                                                                                   
-#&gt;  [75] "TNF signaling"                                                                                                   
-#&gt;  [76] "TNF signaling"                                                                                                   
-#&gt;  [77] "TNF signaling"                                                                                                   
-#&gt;  [78] "TNF signaling"                                                                                                   
-#&gt;  [79] "TNF signaling"                                                                                                   
-#&gt;  [80] "TNF signaling"                                                                                                   
-#&gt;  [81] "Transcriptional regulation of white adipocyte differentiation"                                                   
-#&gt;  [82] "Nonalcoholic fatty liver disease"                                                                                
-#&gt;  [83] "Nonalcoholic fatty liver disease"                                                                                
-#&gt;  [84] "Nonalcoholic fatty liver disease"                                                                                
-#&gt;  [85] "Interleukin-4 and Interleukin-13 signaling"                                                                      
-#&gt;  [86] "Interleukin-4 and Interleukin-13 signaling"                                                                      
-#&gt;  [87] "Protein alkylation leading to liver fibrosis"                                                                    
-#&gt;  [88] "TNFR2 non-canonical NF-kB pathway"                                                                               
-#&gt;  [89] "TNFR2 non-canonical NF-kB pathway"                                                                               
-#&gt;  [90] "TNFR2 non-canonical NF-kB pathway"                                                                               
-#&gt;  [91] "TNFR2 non-canonical NF-kB pathway"                                                                               
-#&gt;  [92] "TNFR2 non-canonical NF-kB pathway"                                                                               
-#&gt;  [93] "TNFR2 non-canonical NF-kB pathway"                                                                               
-#&gt;  [94] "TNFR2 non-canonical NF-kB pathway"                                                                               
-#&gt;  [95] "TNFR2 non-canonical NF-kB pathway"                                                                               
-#&gt;  [96] "Signal transduction through IL1R"                                                                                
-#&gt;  [97] "Photodynamic therapy-induced AP-1 survival signaling."                                                           
-#&gt;  [98] "Photodynamic therapy-induced AP-1 survival signaling."                                                           
-#&gt;  [99] "Photodynamic therapy-induced AP-1 survival signaling."                                                           
-#&gt; [100] "Cells and Molecules involved in local acute inflammatory response "                                              
-#&gt; [101] "Interleukin-10 signaling"                                                                                        
-#&gt; [102] "LTF danger signal response pathway"                                                                              
-#&gt; [103] "TNF alpha Signaling Pathway"                                                                                     
-#&gt; [104] "TNF alpha Signaling Pathway"                                                                                     
-#&gt; [105] "TNF alpha Signaling Pathway"                                                                                     
-#&gt; [106] "TNF alpha Signaling Pathway"                                                                                     
-#&gt; [107] "TNF alpha Signaling Pathway"                                                                                     
-#&gt; [108] "TNF alpha Signaling Pathway"                                                                                     
-#&gt; [109] "TLR4 Signaling and Tolerance"                                                                                    
-#&gt; [110] "TNF related weak inducer of apoptosis (TWEAK) Signaling Pathway"                                                 
-#&gt; [111] "TNF related weak inducer of apoptosis (TWEAK) Signaling Pathway"                                                 
-#&gt; [112] "TNF related weak inducer of apoptosis (TWEAK) Signaling Pathway"                                                 
-#&gt; [113] "Toll-like Receptor Signaling Pathway"                                                                            
-#&gt; [114] "Adipogenesis"                                                                                                    
-#&gt; [115] "Apoptosis"                                                                                                       
-#&gt; [116] "Fas Ligand (FasL) pathway and Stress induction of Heat Shock Proteins (HSP) regulation"                          
-#&gt; [117] "TGF-beta Receptor Signaling"                                                                                     
-#&gt; [118] "TGF-beta Receptor Signaling"                                                                                     
-#&gt; [119] "Regulation of toll-like receptor signaling pathway"                                                              
-#&gt; [120] "Photodynamic therapy-induced NF-kB survival signaling"                                                           
-#&gt; [121] "Photodynamic therapy-induced NF-kB survival signaling"                                                           
-#&gt; [122] "Allograft Rejection"                                                                                             
-#&gt; [123] "Matrix Metalloproteinases"                                                                                       
-#&gt; [124] "Nanoparticle triggered regulated necrosis"                                                                       
-#&gt; [125] "Cardiac Hypertrophic Response"                                                                                   
-#&gt; [126] "EV release from cardiac cells and their functional effects"                                                      
-#&gt; [127] "Sudden Infant Death Syndrome (SIDS) Susceptibility Pathways"                                                     
-#&gt; [128] "Selenium Micronutrient Network"                                                                                  
-#&gt; [129] "Selenium Micronutrient Network"                                                                                  
-#&gt; [130] "Vitamin B12 Metabolism"                                                                                          
-#&gt; [131] "Vitamin B12 Metabolism"                                                                                          
-#&gt; [132] "Folate Metabolism"                                                                                               
-#&gt; [133] "Folate Metabolism"                                                                                               
-#&gt; [134] "MAPK Signaling Pathway"                                                                                          
-#&gt; [135] "Monoamine Transport"                                                                                             
-#&gt; [136] "Aryl Hydrocarbon Receptor Netpath"                                                                               
-#&gt; [137] "Role of Altered Glycolysation of MUC1 in Tumour Microenvironment"                                                
-#&gt; [138] "Oligodendrocyte Specification and differentiation(including remyelination), leading to Myelin Components for CNS"
-#&gt; [139] "Oligodendrocyte Specification and differentiation(including remyelination), leading to Myelin Components for CNS"
-#&gt; [140] "Apoptosis-related network due to altered Notch3 in ovarian cancer"                                               
-#&gt; [141] "Vitamin D in inflammatory diseases"                                                                              
-#&gt; [142] "IL-18 signaling pathway"                                                                                         
-#&gt; [143] "IL-18 signaling pathway"                                                                                         
-#&gt; [144] "MicroRNAs in cardiomyocyte hypertrophy"                                                                          
-#&gt; [145] "Netrin-UNC5B signaling Pathway"                                                                                  
-#&gt; [146] "TGF-beta Receptor Signaling"                                                                                     
-#&gt; [147] "TGF-beta Receptor Signaling"                                                                                     
-#&gt; [148] "Amyotrophic lateral sclerosis (ALS)"                                                                             
-#&gt; [149] "Amyotrophic lateral sclerosis (ALS)"                                                                             </div></pre>
+    <pre class="examples"><div class='input'><span class='op'>{</span>
+<span class='fu'>findPathwayNamesByXref</span><span class='op'>(</span><span class='st'>'ENSG00000232810'</span>,<span class='st'>'En'</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div><div class='output co'>#&gt;  [1] "Development and heterogeneity of the ILC family"                                        
+#&gt;  [2] "Nuclear Receptors Meta-Pathway"                                                         
+#&gt;  [3] "Type II diabetes mellitus"                                                              
+#&gt;  [4] "Spinal Cord Injury"                                                                     
+#&gt;  [5] "Genes involved in male infertility"                                                     
+#&gt;  [6] "Alzheimers Disease"                                                                     
+#&gt;  [7] "Transcription factor regulation in adipogenesis"                                        
+#&gt;  [8] "T-Cell antigen Receptor (TCR) pathway during Staphylococcus aureus infection"           
+#&gt;  [9] "NO/cGMP/PKG mediated Neuroprotection"                                                   
+#&gt; [10] "Novel intracellular components of RIG-I-like receptor (RLR) pathway"                    
+#&gt; [11] "Lung fibrosis"                                                                          
+#&gt; [12] "Non-genomic actions of 1,25 dihydroxyvitamin D3"                                        
+#&gt; [13] "Viral Acute Myocarditis"                                                                
+#&gt; [14] "Hepatitis B infection"                                                                  
+#&gt; [15] "Oxidative Damage"                                                                       
+#&gt; [16] "Mammary gland development pathway - Embryonic development (Stage 1 of 4)"               
+#&gt; [17] "EBV LMP1 signaling"                                                                     
+#&gt; [18] "Aryl Hydrocarbon Receptor Pathway"                                                      
+#&gt; [19] "Polycystic Kidney Disease Pathway"                                                      
+#&gt; [20] "miRNAs involvement in the immune response in sepsis"                                    
+#&gt; [21] "Fibrin Complement Receptor 3 Signaling Pathway"                                         
+#&gt; [22] "Host-pathogen interaction of human corona viruses - apoptosis"                          
+#&gt; [23] "Overview of nanoparticle effects"                                                       
+#&gt; [24] "Interleukin-4 and Interleukin-13 signaling"                                             
+#&gt; [25] "Interleukin-10 signaling"                                                               
+#&gt; [26] "RAS and Bradykinin pathways in COVID-19"                                                
+#&gt; [27] "Cardiac Hypertrophic Response"                                                          
+#&gt; [28] "AXL signaling pathway"                                                                  
+#&gt; [29] "Matrix Metalloproteinases"                                                              
+#&gt; [30] "Fas Ligand (FasL) pathway and Stress induction of Heat Shock Proteins (HSP) regulation" 
+#&gt; [31] "Nanoparticle triggered regulated necrosis"                                              
+#&gt; [32] "Regulation of toll-like receptor signaling pathway"                                     
+#&gt; [33] "Resistin as a regulator of inflammation"                                                
+#&gt; [34] "MicroRNAs in cardiomyocyte hypertrophy"                                                 
+#&gt; [35] "Vitamin D in inflammatory diseases"                                                     
+#&gt; [36] "EV release from cardiac cells and their functional effects"                             
+#&gt; [37] "Cytokines and Inflammatory Response"                                                    
+#&gt; [38] "COVID-19 Adverse Outcome Pathway"                                                       
+#&gt; [39] "Adipogenesis"                                                                           
+#&gt; [40] "Netrin-UNC5B signaling Pathway"                                                         
+#&gt; [41] "Folate Metabolism"                                                                      
+#&gt; [42] "Monoamine Transport"                                                                    
+#&gt; [43] "Signal transduction through IL1R"                                                       
+#&gt; [44] "Apoptosis"                                                                              
+#&gt; [45] "Vitamin B12 Metabolism"                                                                 
+#&gt; [46] "Toll-like Receptor Signaling Pathway"                                                   
+#&gt; [47] "LTF danger signal response pathway"                                                     
+#&gt; [48] "Allograft Rejection"                                                                    
+#&gt; [49] "TLR4 Signaling and Tolerance"                                                           
+#&gt; [50] "TNF alpha Signaling Pathway"                                                            
+#&gt; [51] "Photodynamic therapy-induced NF-kB survival signaling"                                  
+#&gt; [52] "TNF related weak inducer of apoptosis (TWEAK) Signaling Pathway"                        
+#&gt; [53] "Photodynamic therapy-induced AP-1 survival signaling."                                  
+#&gt; [54] "TGF-beta Receptor Signaling"                                                            
+#&gt; [55] "TGF-beta Receptor Signalling in Skeletal Dysplasias"                                    
+#&gt; [56] "Apoptosis-related network due to altered Notch3 in ovarian cancer"                      
+#&gt; [57] "Oligodendrocyte specification and differentiation, leading to Myelin Components for CNS"
+#&gt; [58] "Endothelin Pathway"                                                                     
+#&gt; [59] "Selenium Micronutrient Network"                                                         
+#&gt; [60] "Aryl Hydrocarbon Receptor Netpath"                                                      
+#&gt; [61] "Cells and Molecules involved in local acute inflammatory response "                     
+#&gt; [62] "Nonalcoholic fatty liver disease"                                                       
+#&gt; [63] "Role of Altered Glycolysation of MUC1 in Tumour Microenvironment"                       
+#&gt; [64] "Sudden Infant Death Syndrome (SIDS) Susceptibility Pathways"                            
+#&gt; [65] "Amyotrophic lateral sclerosis (ALS)"                                                    
+#&gt; [66] "MAPK Signaling Pathway"                                                                 
+#&gt; [67] "Kynurenine Pathway and links to Cellular Senescence"                                    
+#&gt; [68] "Transcriptional regulation of white adipocyte differentiation"                          
+#&gt; [69] "TNF signaling"                                                                          
+#&gt; [70] "TNFR2 non-canonical NF-kB pathway"                                                      
+#&gt; [71] "Interleukin-4 and Interleukin-13 signaling"                                             
+#&gt; [72] "Interleukin-10 signaling"                                                               
+#&gt; [73] "IL-18 signaling pathway"                                                                
+#&gt; [74] "SARS-CoV-2 Innate Immunity Evasion and Cell-specific immune response"                   </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#details">Details</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -334,7 +261,7 @@ is present mutiple times.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

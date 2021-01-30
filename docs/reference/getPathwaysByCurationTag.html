@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -37,7 +41,6 @@
 
 <meta property="og:title" content="Get Pathways by Curation Tag — getPathwaysByCurationTag" />
 <meta property="og:description" content="Retrieve pathway information for every pathway with a given curation tag." />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -55,7 +58,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -69,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rWikiPathways</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.11.1</span>
       </span>
     </div>
 
@@ -77,7 +80,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -108,8 +111,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/wikipathways/rwikipathways">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/wikipathways/rwikipathways/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -135,7 +138,7 @@
     <p>Retrieve pathway information for every pathway with a given curation tag.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>getPathwaysByCurationTag</span>(<span class='no'>tag</span>)</pre>
+    <pre class="usage"><span class='fu'>getPathwaysByCurationTag</span><span class='op'>(</span><span class='va'>tag</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -151,9 +154,10 @@
     <p>A <code>list</code> of pathway information, including WPID, url, name, species and revision</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>{
-<span class='fu'>getPathwaysByCurationTag</span>(<span class='st'>'Curation:FeaturedPathway'</span>)
-}</div><div class='output co'>#&gt; [[1]]
+    <pre class="examples"><div class='input'><span class='op'>{</span>
+<span class='fu'>getPathwaysByCurationTag</span><span class='op'>(</span><span class='st'>'Curation:FeaturedPathway'</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div><div class='output co'>#&gt; [[1]]
 #&gt;                                                     id 
 #&gt;                                                "WP554" 
 #&gt;                                                    url 
@@ -223,7 +227,7 @@
 #&gt;                                                species 
 #&gt;                                         "Homo sapiens" 
 #&gt;                                               revision 
-#&gt;                                               "106351" 
+#&gt;                                               "114261" 
 #&gt; 
 #&gt; [[7]]
 #&gt;                                                     id 
@@ -271,7 +275,7 @@
 #&gt;                                                    species 
 #&gt;                                             "Homo sapiens" 
 #&gt;                                                   revision 
-#&gt;                                                   "107324" 
+#&gt;                                                   "113902" 
 #&gt; 
 #&gt; [[11]]
 #&gt;                                                     id 
@@ -299,18 +303,6 @@
 #&gt; 
 #&gt; [[13]]
 #&gt;                                                     id 
-#&gt;                                                "WP237" 
-#&gt;                                                    url 
-#&gt; "https://www.wikipathways.org/index.php/Pathway:WP237" 
-#&gt;                                                   name 
-#&gt;       "Glucocorticoid and Mineralcorticoid Metabolism" 
-#&gt;                                                species 
-#&gt;                                         "Homo sapiens" 
-#&gt;                                               revision 
-#&gt;                                               "106711" 
-#&gt; 
-#&gt; [[14]]
-#&gt;                                                     id 
 #&gt;                                                "WP500" 
 #&gt;                                                    url 
 #&gt; "https://www.wikipathways.org/index.php/Pathway:WP500" 
@@ -319,9 +311,9 @@
 #&gt;                                                species 
 #&gt;                                         "Homo sapiens" 
 #&gt;                                               revision 
-#&gt;                                               "106813" 
+#&gt;                                               "113973" 
 #&gt; 
-#&gt; [[15]]
+#&gt; [[14]]
 #&gt;                                                     id 
 #&gt;                                                "WP534" 
 #&gt;                                                    url 
@@ -333,7 +325,7 @@
 #&gt;                                               revision 
 #&gt;                                               "107184" 
 #&gt; 
-#&gt; [[16]]
+#&gt; [[15]]
 #&gt;                                                     id 
 #&gt;                                                "WP561" 
 #&gt;                                                    url 
@@ -345,7 +337,7 @@
 #&gt;                                               revision 
 #&gt;                                               "107186" 
 #&gt; 
-#&gt; [[17]]
+#&gt; [[16]]
 #&gt;                                                    id 
 #&gt;                                                "WP49" 
 #&gt;                                                   url 
@@ -357,7 +349,7 @@
 #&gt;                                              revision 
 #&gt;                                               "95132" 
 #&gt; 
-#&gt; [[18]]
+#&gt; [[17]]
 #&gt;                                                     id 
 #&gt;                                                "WP395" 
 #&gt;                                                    url 
@@ -367,9 +359,9 @@
 #&gt;                                                species 
 #&gt;                                         "Homo sapiens" 
 #&gt;                                               revision 
-#&gt;                                               "108325" 
+#&gt;                                               "110790" 
 #&gt; 
-#&gt; [[19]]
+#&gt; [[18]]
 #&gt;                                                     id 
 #&gt;                                                "WP127" 
 #&gt;                                                    url 
@@ -381,7 +373,7 @@
 #&gt;                                               revision 
 #&gt;                                               "108326" 
 #&gt; 
-#&gt; [[20]]
+#&gt; [[19]]
 #&gt;                                                     id 
 #&gt;                                                "WP205" 
 #&gt;                                                    url 
@@ -393,7 +385,7 @@
 #&gt;                                               revision 
 #&gt;                                               "108328" 
 #&gt; 
-#&gt; [[21]]
+#&gt; [[20]]
 #&gt;                                                    id 
 #&gt;                                                "WP22" 
 #&gt;                                                   url 
@@ -405,7 +397,7 @@
 #&gt;                                              revision 
 #&gt;                                              "108329" 
 #&gt; 
-#&gt; [[22]]
+#&gt; [[21]]
 #&gt;                                                     id 
 #&gt;                                                "WP453" 
 #&gt;                                                    url 
@@ -417,7 +409,7 @@
 #&gt;                                               revision 
 #&gt;                                               "106602" 
 #&gt; 
-#&gt; [[23]]
+#&gt; [[22]]
 #&gt;                                                     id 
 #&gt;                                                "WP185" 
 #&gt;                                                    url 
@@ -429,7 +421,7 @@
 #&gt;                                               revision 
 #&gt;                                               "106621" 
 #&gt; 
-#&gt; [[24]]
+#&gt; [[23]]
 #&gt;                                                    id 
 #&gt;                                                "WP78" 
 #&gt;                                                   url 
@@ -439,9 +431,9 @@
 #&gt;                                               species 
 #&gt;                                        "Homo sapiens" 
 #&gt;                                              revision 
-#&gt;                                              "106832" 
+#&gt;                                              "113981" 
 #&gt; 
-#&gt; [[25]]
+#&gt; [[24]]
 #&gt;                                                     id 
 #&gt;                                                "WP382" 
 #&gt;                                                    url 
@@ -451,9 +443,9 @@
 #&gt;                                                species 
 #&gt;                                         "Homo sapiens" 
 #&gt;                                               revision 
-#&gt;                                               "107148" 
+#&gt;                                               "113991" 
 #&gt; 
-#&gt; [[26]]
+#&gt; [[25]]
 #&gt;                                                     id 
 #&gt;                                                "WP268" 
 #&gt;                                                    url 
@@ -465,7 +457,7 @@
 #&gt;                                               revision 
 #&gt;                                               "107281" 
 #&gt; 
-#&gt; [[27]]
+#&gt; [[26]]
 #&gt;                                                     id 
 #&gt;                                                "WP408" 
 #&gt;                                                    url 
@@ -477,7 +469,7 @@
 #&gt;                                               revision 
 #&gt;                                               "106567" 
 #&gt; 
-#&gt; [[28]]
+#&gt; [[27]]
 #&gt;                                                    id 
 #&gt;                                                "WP98" 
 #&gt;                                                   url 
@@ -487,9 +479,9 @@
 #&gt;                                               species 
 #&gt;                                        "Homo sapiens" 
 #&gt;                                              revision 
-#&gt;                                              "106529" 
+#&gt;                                              "113596" 
 #&gt; 
-#&gt; [[29]]
+#&gt; [[28]]
 #&gt;                                                     id 
 #&gt;                                                "WP405" 
 #&gt;                                                    url 
@@ -501,7 +493,7 @@
 #&gt;                                               revision 
 #&gt;                                                "94824" 
 #&gt; 
-#&gt; [[30]]
+#&gt; [[29]]
 #&gt;                                                    id 
 #&gt;                                                "WP26" 
 #&gt;                                                   url 
@@ -513,7 +505,7 @@
 #&gt;                                              revision 
 #&gt;                                              "106482" 
 #&gt; 
-#&gt; [[31]]
+#&gt; [[30]]
 #&gt;                                                     id 
 #&gt;                                                "WP289" 
 #&gt;                                                    url 
@@ -525,7 +517,7 @@
 #&gt;                                               revision 
 #&gt;                                               "107347" 
 #&gt; 
-#&gt; [[32]]
+#&gt; [[31]]
 #&gt;                                                     id 
 #&gt;                                                "WP430" 
 #&gt;                                                    url 
@@ -537,7 +529,7 @@
 #&gt;                                               revision 
 #&gt;                                               "108375" 
 #&gt; 
-#&gt; [[33]]
+#&gt; [[32]]
 #&gt;                                                     id 
 #&gt;                                                "WP311" 
 #&gt;                                                    url 
@@ -547,9 +539,9 @@
 #&gt;                                                species 
 #&gt;                                         "Homo sapiens" 
 #&gt;                                               revision 
-#&gt;                                               "104983" 
+#&gt;                                               "113992" 
 #&gt; 
-#&gt; [[34]]
+#&gt; [[33]]
 #&gt;                                                     id 
 #&gt;                                                "WP428" 
 #&gt;                                                    url 
@@ -559,9 +551,9 @@
 #&gt;                                                species 
 #&gt;                                         "Homo sapiens" 
 #&gt;                                               revision 
-#&gt;                                               "106791" 
+#&gt;                                               "114092" 
 #&gt; 
-#&gt; [[35]]
+#&gt; [[34]]
 #&gt;                                                     id 
 #&gt;                                                "WP411" 
 #&gt;                                                    url 
@@ -573,7 +565,7 @@
 #&gt;                                               revision 
 #&gt;                                               "105857" 
 #&gt; 
-#&gt; [[36]]
+#&gt; [[35]]
 #&gt;                                                     id 
 #&gt;                                                "WP400" 
 #&gt;                                                    url 
@@ -585,7 +577,7 @@
 #&gt;                                               revision 
 #&gt;                                               "105865" 
 #&gt; 
-#&gt; [[37]]
+#&gt; [[36]]
 #&gt;                                                     id 
 #&gt;                                                "WP396" 
 #&gt;                                                    url 
@@ -595,9 +587,9 @@
 #&gt;                                                species 
 #&gt;                                         "Mus musculus" 
 #&gt;                                               revision 
-#&gt;                                               "106888" 
+#&gt;                                               "110700" 
 #&gt; 
-#&gt; [[38]]
+#&gt; [[37]]
 #&gt;                                                     id 
 #&gt;                                                "WP175" 
 #&gt;                                                    url 
@@ -609,7 +601,7 @@
 #&gt;                                               revision 
 #&gt;                                               "106859" 
 #&gt; 
-#&gt; [[39]]
+#&gt; [[38]]
 #&gt;                                                     id 
 #&gt;                                                "WP522" 
 #&gt;                                                    url 
@@ -621,7 +613,7 @@
 #&gt;                                               revision 
 #&gt;                                               "106900" 
 #&gt; 
-#&gt; [[40]]
+#&gt; [[39]]
 #&gt;                                                     id 
 #&gt;                                                "WP103" 
 #&gt;                                                    url 
@@ -633,7 +625,7 @@
 #&gt;                                               revision 
 #&gt;                                               "107713" 
 #&gt; 
-#&gt; [[41]]
+#&gt; [[40]]
 #&gt;                                                     id 
 #&gt;                                                "WP222" 
 #&gt;                                                    url 
@@ -643,9 +635,9 @@
 #&gt;                                                species 
 #&gt;                                         "Mus musculus" 
 #&gt;                                               revision 
-#&gt;                                                "90712" 
+#&gt;                                               "113977" 
 #&gt; 
-#&gt; [[42]]
+#&gt; [[41]]
 #&gt;                                                    id 
 #&gt;                                                "WP85" 
 #&gt;                                                   url 
@@ -655,9 +647,9 @@
 #&gt;                                               species 
 #&gt;                                        "Mus musculus" 
 #&gt;                                              revision 
-#&gt;                                              "104992" 
+#&gt;                                              "114017" 
 #&gt; 
-#&gt; [[43]]
+#&gt; [[42]]
 #&gt;                                                     id 
 #&gt;                                                "WP298" 
 #&gt;                                                    url 
@@ -669,7 +661,7 @@
 #&gt;                                               revision 
 #&gt;                                                "79200" 
 #&gt; 
-#&gt; [[44]]
+#&gt; [[43]]
 #&gt;                                                     id 
 #&gt;                                                "WP157" 
 #&gt;                                                    url 
@@ -679,9 +671,9 @@
 #&gt;                                                species 
 #&gt;                                         "Mus musculus" 
 #&gt;                                               revision 
-#&gt;                                               "106856" 
+#&gt;                                               "113904" 
 #&gt; 
-#&gt; [[45]]
+#&gt; [[44]]
 #&gt;                                                   id 
 #&gt;                                                "WP6" 
 #&gt;                                                  url 
@@ -693,19 +685,7 @@
 #&gt;                                             revision 
 #&gt;                                              "97547" 
 #&gt; 
-#&gt; [[46]]
-#&gt;                                                     id 
-#&gt;                                                "WP385" 
-#&gt;                                                    url 
-#&gt; "https://www.wikipathways.org/index.php/Pathway:WP385" 
-#&gt;                                                   name 
-#&gt;       "Myometrial Relaxation and Contraction Pathways" 
-#&gt;                                                species 
-#&gt;                                         "Mus musculus" 
-#&gt;                                               revision 
-#&gt;                                               "106886" 
-#&gt; 
-#&gt; [[47]]
+#&gt; [[45]]
 #&gt;                                                     id 
 #&gt;                                                "WP543" 
 #&gt;                                                    url 
@@ -717,7 +697,7 @@
 #&gt;                                               revision 
 #&gt;                                                "91902" 
 #&gt; 
-#&gt; [[48]]
+#&gt; [[46]]
 #&gt;                                                     id 
 #&gt;                                                "WP403" 
 #&gt;                                                    url 
@@ -729,7 +709,7 @@
 #&gt;                                               revision 
 #&gt;                                                "89969" 
 #&gt; 
-#&gt; [[49]]
+#&gt; [[47]]
 #&gt;                                                     id 
 #&gt;                                                "WP350" 
 #&gt;                                                    url 
@@ -741,7 +721,7 @@
 #&gt;                                               revision 
 #&gt;                                                "95744" 
 #&gt; 
-#&gt; [[50]]
+#&gt; [[48]]
 #&gt;                                                     id 
 #&gt;                                                "WP557" 
 #&gt;                                                    url 
@@ -753,7 +733,7 @@
 #&gt;                                               revision 
 #&gt;                                               "107000" 
 #&gt; 
-#&gt; [[51]]
+#&gt; [[49]]
 #&gt;                                                     id 
 #&gt;                                                "WP349" 
 #&gt;                                                    url 
@@ -765,7 +745,7 @@
 #&gt;                                               revision 
 #&gt;                                               "106980" 
 #&gt; 
-#&gt; [[52]]
+#&gt; [[50]]
 #&gt;                                                     id 
 #&gt;                                                "WP294" 
 #&gt;                                                    url 
@@ -777,7 +757,7 @@
 #&gt;                                               revision 
 #&gt;                                                "95743" 
 #&gt; 
-#&gt; [[53]]
+#&gt; [[51]]
 #&gt;                                                     id 
 #&gt;                                                "WP241" 
 #&gt;                                                    url 
@@ -787,9 +767,9 @@
 #&gt;                                                species 
 #&gt;                                         "Homo sapiens" 
 #&gt;                                               revision 
-#&gt;                                               "107128" 
+#&gt;                                               "113976" 
 #&gt; 
-#&gt; [[54]]
+#&gt; [[52]]
 #&gt;                                                     id 
 #&gt;                                                "WP399" 
 #&gt;                                                    url 
@@ -799,9 +779,9 @@
 #&gt;                                                species 
 #&gt;                                         "Homo sapiens" 
 #&gt;                                               revision 
-#&gt;                                               "105855" 
+#&gt;                                               "113990" 
 #&gt; 
-#&gt; [[55]]
+#&gt; [[53]]
 #&gt;                                                     id 
 #&gt;                                                "WP435" 
 #&gt;                                                    url 
@@ -813,7 +793,7 @@
 #&gt;                                               revision 
 #&gt;                                               "107207" 
 #&gt; 
-#&gt; [[56]]
+#&gt; [[54]]
 #&gt;                                                     id 
 #&gt;                                                "WP414" 
 #&gt;                                                    url 
@@ -825,7 +805,7 @@
 #&gt;                                               revision 
 #&gt;                                               "107024" 
 #&gt; 
-#&gt; [[57]]
+#&gt; [[55]]
 #&gt;                                                    id 
 #&gt;                                                "WP13" 
 #&gt;                                                   url 
@@ -837,7 +817,7 @@
 #&gt;                                              revision 
 #&gt;                                              "102295" 
 #&gt; 
-#&gt; [[58]]
+#&gt; [[56]]
 #&gt;                                                     id 
 #&gt;                                                "WP510" 
 #&gt;                                                    url 
@@ -847,9 +827,9 @@
 #&gt;                                                species 
 #&gt;                             "Saccharomyces cerevisiae" 
 #&gt;                                               revision 
-#&gt;                                                "78392" 
+#&gt;                                               "113908" 
 #&gt; 
-#&gt; [[59]]
+#&gt; [[57]]
 #&gt;                                                     id 
 #&gt;                                                "WP432" 
 #&gt;                                                    url 
@@ -861,7 +841,7 @@
 #&gt;                                               revision 
 #&gt;                                                "89547" 
 #&gt; 
-#&gt; [[60]]
+#&gt; [[58]]
 #&gt;                                                     id 
 #&gt;                                                "WP515" 
 #&gt;                                                    url 
@@ -871,9 +851,9 @@
 #&gt;                                                species 
 #&gt;                             "Saccharomyces cerevisiae" 
 #&gt;                                               revision 
-#&gt;                                               "107028" 
+#&gt;                                               "114360" 
 #&gt; 
-#&gt; [[61]]
+#&gt; [[59]]
 #&gt;                                                     id 
 #&gt;                                                "WP260" 
 #&gt;                                                    url 
@@ -885,7 +865,7 @@
 #&gt;                                               revision 
 #&gt;                                               "107252" 
 #&gt; 
-#&gt; [[62]]
+#&gt; [[60]]
 #&gt;                                                     id 
 #&gt;                                                "WP112" 
 #&gt;                                                    url 
@@ -895,9 +875,9 @@
 #&gt;                                                species 
 #&gt;                             "Saccharomyces cerevisiae" 
 #&gt;                                               revision 
-#&gt;                                               "107010" 
+#&gt;                                               "114358" 
 #&gt; 
-#&gt; [[63]]
+#&gt; [[61]]
 #&gt;                                                     id 
 #&gt;                                                "WP370" 
 #&gt;                                                    url 
@@ -909,19 +889,19 @@
 #&gt;                                               revision 
 #&gt;                                               "107023" 
 #&gt; 
-#&gt; [[64]]
+#&gt; [[62]]
 #&gt;                                                     id 
 #&gt;                                                "WP525" 
 #&gt;                                                    url 
 #&gt; "https://www.wikipathways.org/index.php/Pathway:WP525" 
 #&gt;                                                   name 
-#&gt;      "Mitochondrial Unfolded-Protein Response (UPRmt)" 
+#&gt;              "Mitochondrial Unfolded-Protein Response" 
 #&gt;                                                species 
 #&gt;                               "Caenorhabditis elegans" 
 #&gt;                                               revision 
-#&gt;                                               "107348" 
+#&gt;                                               "111636" 
 #&gt; 
-#&gt; [[65]]
+#&gt; [[63]]
 #&gt;                                                     id 
 #&gt;                                                "WP376" 
 #&gt;                                                    url 
@@ -933,7 +913,7 @@
 #&gt;                                               revision 
 #&gt;                                               "107611" 
 #&gt; 
-#&gt; [[66]]
+#&gt; [[64]]
 #&gt;                                                     id 
 #&gt;                                                "WP197" 
 #&gt;                                                    url 
@@ -945,7 +925,7 @@
 #&gt;                                               revision 
 #&gt;                                               "106703" 
 #&gt; 
-#&gt; [[67]]
+#&gt; [[65]]
 #&gt;                                                    id 
 #&gt;                                                "WP17" 
 #&gt;                                                   url 
@@ -957,7 +937,7 @@
 #&gt;                                              revision 
 #&gt;                                              "106023" 
 #&gt; 
-#&gt; [[68]]
+#&gt; [[66]]
 #&gt;                                                     id 
 #&gt;                                                "WP468" 
 #&gt;                                                    url 
@@ -969,7 +949,7 @@
 #&gt;                                               revision 
 #&gt;                                               "106087" 
 #&gt; 
-#&gt; [[69]]
+#&gt; [[67]]
 #&gt;                                                     id 
 #&gt;                                                "WP578" 
 #&gt;                                                    url 
@@ -981,7 +961,7 @@
 #&gt;                                               revision 
 #&gt;                                               "107211" 
 #&gt; 
-#&gt; [[70]]
+#&gt; [[68]]
 #&gt;                                                     id 
 #&gt;                                                "WP474" 
 #&gt;                                                    url 
@@ -993,7 +973,7 @@
 #&gt;                                               revision 
 #&gt;                                               "106812" 
 #&gt; 
-#&gt; [[71]]
+#&gt; [[69]]
 #&gt;                                                     id 
 #&gt;                                                "WP367" 
 #&gt;                                                    url 
@@ -1005,7 +985,7 @@
 #&gt;                                               revision 
 #&gt;                                                "68478" 
 #&gt; 
-#&gt; [[72]]
+#&gt; [[70]]
 #&gt;                                                     id 
 #&gt;                                                "WP201" 
 #&gt;                                                    url 
@@ -1015,9 +995,9 @@
 #&gt;                                                species 
 #&gt;                                         "Mus musculus" 
 #&gt;                                               revision 
-#&gt;                                                "69113" 
+#&gt;                                               "109433" 
 #&gt; 
-#&gt; [[73]]
+#&gt; [[71]]
 #&gt;                                                     id 
 #&gt;                                                "WP291" 
 #&gt;                                                    url 
@@ -1029,7 +1009,7 @@
 #&gt;                                               revision 
 #&gt;                                                "87661" 
 #&gt; 
-#&gt; [[74]]
+#&gt; [[72]]
 #&gt;                                                          id 
 #&gt;                                                       "WP3" 
 #&gt;                                                         url 
@@ -1041,7 +1021,7 @@
 #&gt;                                                    revision 
 #&gt;                                                    "106155" 
 #&gt; 
-#&gt; [[75]]
+#&gt; [[73]]
 #&gt;                                                     id 
 #&gt;                                                "WP235" 
 #&gt;                                                    url 
@@ -1053,7 +1033,7 @@
 #&gt;                                               revision 
 #&gt;                                                "87429" 
 #&gt; 
-#&gt; [[76]]
+#&gt; [[74]]
 #&gt;                                                     id 
 #&gt;                                                "WP580" 
 #&gt;                                                    url 
@@ -1065,7 +1045,7 @@
 #&gt;                                               revision 
 #&gt;                                               "106028" 
 #&gt; 
-#&gt; [[77]]
+#&gt; [[75]]
 #&gt;                                                     id 
 #&gt;                                                "WP581" 
 #&gt;                                                    url 
@@ -1077,7 +1057,7 @@
 #&gt;                                               revision 
 #&gt;                                               "106394" 
 #&gt; 
-#&gt; [[78]]
+#&gt; [[76]]
 #&gt;                                                     id 
 #&gt;                                                "WP585" 
 #&gt;                                                    url 
@@ -1089,7 +1069,7 @@
 #&gt;                                               revision 
 #&gt;                                               "107188" 
 #&gt; 
-#&gt; [[79]]
+#&gt; [[77]]
 #&gt;                                                     id 
 #&gt;                                                "WP608" 
 #&gt;                                                    url 
@@ -1101,7 +1081,7 @@
 #&gt;                                               revision 
 #&gt;                                                "69184" 
 #&gt; 
-#&gt; [[80]]
+#&gt; [[78]]
 #&gt;                                                     id 
 #&gt;                                                "WP617" 
 #&gt;                                                    url 
@@ -1113,7 +1093,7 @@
 #&gt;                                               revision 
 #&gt;                                               "107220" 
 #&gt; 
-#&gt; [[81]]
+#&gt; [[79]]
 #&gt;                                                     id 
 #&gt;                                                "WP618" 
 #&gt;                                                    url 
@@ -1125,7 +1105,7 @@
 #&gt;                                               revision 
 #&gt;                                               "102261" 
 #&gt; 
-#&gt; [[82]]
+#&gt; [[80]]
 #&gt;                                                     id 
 #&gt;                                                "WP626" 
 #&gt;                                                    url 
@@ -1137,7 +1117,7 @@
 #&gt;                                               revision 
 #&gt;                                               "107049" 
 #&gt; 
-#&gt; [[83]]
+#&gt; [[81]]
 #&gt;                                                     id 
 #&gt;                                                "WP662" 
 #&gt;                                                    url 
@@ -1147,9 +1127,9 @@
 #&gt;                                                species 
 #&gt;                                         "Mus musculus" 
 #&gt;                                               revision 
-#&gt;                                               "107212" 
+#&gt;                                               "111176" 
 #&gt; 
-#&gt; [[84]]
+#&gt; [[82]]
 #&gt;                                                     id 
 #&gt;                                                "WP673" 
 #&gt;                                                    url 
@@ -1159,9 +1139,9 @@
 #&gt;                                                species 
 #&gt;                                         "Homo sapiens" 
 #&gt;                                               revision 
-#&gt;                                               "108898" 
+#&gt;                                               "112158" 
 #&gt; 
-#&gt; [[85]]
+#&gt; [[83]]
 #&gt;                                                     id 
 #&gt;                                                "WP690" 
 #&gt;                                                    url 
@@ -1171,9 +1151,9 @@
 #&gt;                                                species 
 #&gt;                                         "Homo sapiens" 
 #&gt;                                               revision 
-#&gt;                                               "106197" 
+#&gt;                                               "111177" 
 #&gt; 
-#&gt; [[86]]
+#&gt; [[84]]
 #&gt;                                                     id 
 #&gt;                                                "WP698" 
 #&gt;                                                    url 
@@ -1185,7 +1165,7 @@
 #&gt;                                               revision 
 #&gt;                                               "106827" 
 #&gt; 
-#&gt; [[87]]
+#&gt; [[85]]
 #&gt;                                                     id 
 #&gt;                                                "WP702" 
 #&gt;                                                    url 
@@ -1197,7 +1177,7 @@
 #&gt;                                               revision 
 #&gt;                                               "106643" 
 #&gt; 
-#&gt; [[88]]
+#&gt; [[86]]
 #&gt;                                                            id 
 #&gt;                                                       "WP706" 
 #&gt;                                                           url 
@@ -1207,9 +1187,9 @@
 #&gt;                                                       species 
 #&gt;                                                "Homo sapiens" 
 #&gt;                                                      revision 
-#&gt;                                                      "106830" 
+#&gt;                                                      "113813" 
 #&gt; 
-#&gt; [[89]]
+#&gt; [[87]]
 #&gt;                                                     id 
 #&gt;                                                "WP707" 
 #&gt;                                                    url 
@@ -1219,21 +1199,9 @@
 #&gt;                                                species 
 #&gt;                                         "Homo sapiens" 
 #&gt;                                               revision 
-#&gt;                                               "107190" 
+#&gt;                                               "113795" 
 #&gt; 
-#&gt; [[90]]
-#&gt;                                                     id 
-#&gt;                                                "WP710" 
-#&gt;                                                    url 
-#&gt; "https://www.wikipathways.org/index.php/Pathway:WP710" 
-#&gt;                                                   name 
-#&gt;             "DNA Damage Response (only ATM dependent)" 
-#&gt;                                                species 
-#&gt;                                         "Homo sapiens" 
-#&gt;                                               revision 
-#&gt;                                               "106372" 
-#&gt; 
-#&gt; [[91]]
+#&gt; [[88]]
 #&gt;                                                     id 
 #&gt;                                                "WP716" 
 #&gt;                                                    url 
@@ -1243,9 +1211,9 @@
 #&gt;                                                species 
 #&gt;                                         "Homo sapiens" 
 #&gt;                                               revision 
-#&gt;                                               "106146" 
+#&gt;                                               "110181" 
 #&gt; 
-#&gt; [[92]]
+#&gt; [[89]]
 #&gt;                                                     id 
 #&gt;                                                "WP784" 
 #&gt;                                                    url 
@@ -1257,7 +1225,7 @@
 #&gt;                                               revision 
 #&gt;                                                "68818" 
 #&gt; 
-#&gt; [[93]]
+#&gt; [[90]]
 #&gt;                                                     id 
 #&gt;                                                "WP880" 
 #&gt;                                                    url 
@@ -1267,9 +1235,9 @@
 #&gt;                                                species 
 #&gt;                                      "Pan troglodytes" 
 #&gt;                                               revision 
-#&gt;                                               "106924" 
+#&gt;                                               "111166" 
 #&gt; 
-#&gt; [[94]]
+#&gt; [[91]]
 #&gt;                                                     id 
 #&gt;                                                "WP898" 
 #&gt;                                                    url 
@@ -1281,7 +1249,7 @@
 #&gt;                                               revision 
 #&gt;                                                "76175" 
 #&gt; 
-#&gt; [[95]]
+#&gt; [[92]]
 #&gt;                                                     id 
 #&gt;                                                "WP912" 
 #&gt;                                                    url 
@@ -1293,7 +1261,7 @@
 #&gt;                                               revision 
 #&gt;                                                "73738" 
 #&gt; 
-#&gt; [[96]]
+#&gt; [[93]]
 #&gt;                                                     id 
 #&gt;                                                "WP977" 
 #&gt;                                                    url 
@@ -1305,7 +1273,7 @@
 #&gt;                                               revision 
 #&gt;                                               "105970" 
 #&gt; 
-#&gt; [[97]]
+#&gt; [[94]]
 #&gt;                                                     id 
 #&gt;                                                "WP996" 
 #&gt;                                                    url 
@@ -1317,7 +1285,7 @@
 #&gt;                                               revision 
 #&gt;                                                "80789" 
 #&gt; 
-#&gt; [[98]]
+#&gt; [[95]]
 #&gt;                                                     id 
 #&gt;                                                "WP998" 
 #&gt;                                                    url 
@@ -1327,9 +1295,9 @@
 #&gt;                                                species 
 #&gt;                                           "Bos taurus" 
 #&gt;                                               revision 
-#&gt;                                               "107080" 
+#&gt;                                               "111159" 
 #&gt; 
-#&gt; [[99]]
+#&gt; [[96]]
 #&gt;                                                      id 
 #&gt;                                                "WP1026" 
 #&gt;                                                     url 
@@ -1341,7 +1309,7 @@
 #&gt;                                                revision 
 #&gt;                                                "105923" 
 #&gt; 
-#&gt; [[100]]
+#&gt; [[97]]
 #&gt;                                                      id 
 #&gt;                                                "WP1033" 
 #&gt;                                                     url 
@@ -1353,7 +1321,7 @@
 #&gt;                                                revision 
 #&gt;                                                "105956" 
 #&gt; 
-#&gt; [[101]]
+#&gt; [[98]]
 #&gt;                                                      id 
 #&gt;                                                "WP1034" 
 #&gt;                                                     url 
@@ -1365,7 +1333,7 @@
 #&gt;                                                revision 
 #&gt;                                                "105950" 
 #&gt; 
-#&gt; [[102]]
+#&gt; [[99]]
 #&gt;                                                      id 
 #&gt;                                                "WP1070" 
 #&gt;                                                     url 
@@ -1377,7 +1345,7 @@
 #&gt;                                                revision 
 #&gt;                                                "105958" 
 #&gt; 
-#&gt; [[103]]
+#&gt; [[100]]
 #&gt;                                                      id 
 #&gt;                                                "WP1112" 
 #&gt;                                                     url 
@@ -1389,7 +1357,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "68586" 
 #&gt; 
-#&gt; [[104]]
+#&gt; [[101]]
 #&gt;                                                      id 
 #&gt;                                                "WP1114" 
 #&gt;                                                     url 
@@ -1401,7 +1369,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106039" 
 #&gt; 
-#&gt; [[105]]
+#&gt; [[102]]
 #&gt;                                                      id 
 #&gt;                                                "WP1204" 
 #&gt;                                                     url 
@@ -1413,7 +1381,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "79381" 
 #&gt; 
-#&gt; [[106]]
+#&gt; [[103]]
 #&gt;                                                      id 
 #&gt;                                                "WP1218" 
 #&gt;                                                     url 
@@ -1425,7 +1393,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106097" 
 #&gt; 
-#&gt; [[107]]
+#&gt; [[104]]
 #&gt;                                                      id 
 #&gt;                                                "WP1249" 
 #&gt;                                                     url 
@@ -1437,7 +1405,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "69099" 
 #&gt; 
-#&gt; [[108]]
+#&gt; [[105]]
 #&gt;                                                      id 
 #&gt;                                                "WP1284" 
 #&gt;                                                     url 
@@ -1449,7 +1417,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "72051" 
 #&gt; 
-#&gt; [[109]]
+#&gt; [[106]]
 #&gt;                                                      id 
 #&gt;                                                "WP1292" 
 #&gt;                                                     url 
@@ -1461,7 +1429,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107232" 
 #&gt; 
-#&gt; [[110]]
+#&gt; [[107]]
 #&gt;                                                      id 
 #&gt;                                                "WP1299" 
 #&gt;                                                     url 
@@ -1473,7 +1441,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108381" 
 #&gt; 
-#&gt; [[111]]
+#&gt; [[108]]
 #&gt;                                                      id 
 #&gt;                                                "WP1337" 
 #&gt;                                                     url 
@@ -1485,7 +1453,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106072" 
 #&gt; 
-#&gt; [[112]]
+#&gt; [[109]]
 #&gt;                                                      id 
 #&gt;                                                "WP1363" 
 #&gt;                                                     url 
@@ -1497,7 +1465,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "95742" 
 #&gt; 
-#&gt; [[113]]
+#&gt; [[110]]
 #&gt;                                                      id 
 #&gt;                                                "WP1387" 
 #&gt;                                                     url 
@@ -1509,7 +1477,7 @@
 #&gt;                                                revision 
 #&gt;                                                "101766" 
 #&gt; 
-#&gt; [[114]]
+#&gt; [[111]]
 #&gt;                                                      id 
 #&gt;                                                "WP1401" 
 #&gt;                                                     url 
@@ -1521,7 +1489,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "84440" 
 #&gt; 
-#&gt; [[115]]
+#&gt; [[112]]
 #&gt;                                                      id 
 #&gt;                                                "WP1403" 
 #&gt;                                                     url 
@@ -1533,7 +1501,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106688" 
 #&gt; 
-#&gt; [[116]]
+#&gt; [[113]]
 #&gt;                                                      id 
 #&gt;                                                "WP1411" 
 #&gt;                                                     url 
@@ -1545,7 +1513,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "84464" 
 #&gt; 
-#&gt; [[117]]
+#&gt; [[114]]
 #&gt;                                                         id 
 #&gt;                                                   "WP1425" 
 #&gt;                                                        url 
@@ -1557,7 +1525,7 @@
 #&gt;                                                   revision 
 #&gt;                                                   "106344" 
 #&gt; 
-#&gt; [[118]]
+#&gt; [[115]]
 #&gt;                                                      id 
 #&gt;                                                "WP1493" 
 #&gt;                                                     url 
@@ -1569,7 +1537,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107275" 
 #&gt; 
-#&gt; [[119]]
+#&gt; [[116]]
 #&gt;                                                      id 
 #&gt;                                                "WP1518" 
 #&gt;                                                     url 
@@ -1581,7 +1549,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107247" 
 #&gt; 
-#&gt; [[120]]
+#&gt; [[117]]
 #&gt;                                                      id 
 #&gt;                                                "WP1526" 
 #&gt;                                                     url 
@@ -1593,7 +1561,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "87631" 
 #&gt; 
-#&gt; [[121]]
+#&gt; [[118]]
 #&gt;                                                      id 
 #&gt;                                                "WP1530" 
 #&gt;                                                     url 
@@ -1603,9 +1571,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "107119" 
+#&gt;                                                "113793" 
 #&gt; 
-#&gt; [[122]]
+#&gt; [[119]]
 #&gt;                                                      id 
 #&gt;                                                "WP1531" 
 #&gt;                                                     url 
@@ -1617,7 +1585,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107120" 
 #&gt; 
-#&gt; [[123]]
+#&gt; [[120]]
 #&gt;                                                      id 
 #&gt;                                                "WP1539" 
 #&gt;                                                     url 
@@ -1629,7 +1597,7 @@
 #&gt;                                                revision 
 #&gt;                                                "105882" 
 #&gt; 
-#&gt; [[124]]
+#&gt; [[121]]
 #&gt;                                                      id 
 #&gt;                                                "WP1544" 
 #&gt;                                                     url 
@@ -1641,7 +1609,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108800" 
 #&gt; 
-#&gt; [[125]]
+#&gt; [[122]]
 #&gt;                                                      id 
 #&gt;                                                "WP1560" 
 #&gt;                                                     url 
@@ -1651,9 +1619,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Mus musculus" 
 #&gt;                                                revision 
-#&gt;                                                "106855" 
+#&gt;                                                "114029" 
 #&gt; 
-#&gt; [[126]]
+#&gt; [[123]]
 #&gt;                                                      id 
 #&gt;                                                "WP1591" 
 #&gt;                                                     url 
@@ -1665,7 +1633,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106589" 
 #&gt; 
-#&gt; [[127]]
+#&gt; [[124]]
 #&gt;                                                      id 
 #&gt;                                                "WP1600" 
 #&gt;                                                     url 
@@ -1677,7 +1645,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106147" 
 #&gt; 
-#&gt; [[128]]
+#&gt; [[125]]
 #&gt;                                                      id 
 #&gt;                                                "WP1601" 
 #&gt;                                                     url 
@@ -1689,7 +1657,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108138" 
 #&gt; 
-#&gt; [[129]]
+#&gt; [[126]]
 #&gt;                                                      id 
 #&gt;                                                "WP1602" 
 #&gt;                                                     url 
@@ -1699,9 +1667,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "107566" 
+#&gt;                                                "112075" 
 #&gt; 
-#&gt; [[130]]
+#&gt; [[127]]
 #&gt;                                                      id 
 #&gt;                                                "WP1603" 
 #&gt;                                                     url 
@@ -1713,7 +1681,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106160" 
 #&gt; 
-#&gt; [[131]]
+#&gt; [[128]]
 #&gt;                                                      id 
 #&gt;                                                "WP1604" 
 #&gt;                                                     url 
@@ -1723,21 +1691,21 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "106699" 
+#&gt;                                                "110711" 
 #&gt; 
-#&gt; [[132]]
+#&gt; [[129]]
 #&gt;                                                      id 
 #&gt;                                                "WP1763" 
 #&gt;                                                     url 
 #&gt; "https://www.wikipathways.org/index.php/Pathway:WP1763" 
 #&gt;                                                    name 
-#&gt;                                          "PluriNetWork" 
+#&gt; "PluriNetWork: mechanisms associated with pluripotency" 
 #&gt;                                                 species 
 #&gt;                                          "Mus musculus" 
 #&gt;                                                revision 
-#&gt;                                                 "89515" 
+#&gt;                                                "113634" 
 #&gt; 
-#&gt; [[133]]
+#&gt; [[130]]
 #&gt;                                                      id 
 #&gt;                                                "WP1772" 
 #&gt;                                                     url 
@@ -1749,7 +1717,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107525" 
 #&gt; 
-#&gt; [[134]]
+#&gt; [[131]]
 #&gt;                                                      id 
 #&gt;                                                "WP1968" 
 #&gt;                                                     url 
@@ -1759,9 +1727,9 @@
 #&gt;                                                 species 
 #&gt;                                     "Rattus norvegicus" 
 #&gt;                                                revision 
-#&gt;                                                "108361" 
+#&gt;                                                "110692" 
 #&gt; 
-#&gt; [[135]]
+#&gt; [[132]]
 #&gt;                                                      id 
 #&gt;                                                "WP1981" 
 #&gt;                                                     url 
@@ -1773,7 +1741,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106141" 
 #&gt; 
-#&gt; [[136]]
+#&gt; [[133]]
 #&gt;                                                              id 
 #&gt;                                                        "WP1982" 
 #&gt;                                                             url 
@@ -1783,9 +1751,9 @@
 #&gt;                                                         species 
 #&gt;                                                  "Homo sapiens" 
 #&gt;                                                        revision 
-#&gt;                                                        "106704" 
+#&gt;                                                        "110111" 
 #&gt; 
-#&gt; [[137]]
+#&gt; [[134]]
 #&gt;                                                      id 
 #&gt;                                                "WP1995" 
 #&gt;                                                     url 
@@ -1797,7 +1765,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106705" 
 #&gt; 
-#&gt; [[138]]
+#&gt; [[135]]
 #&gt;                                                      id 
 #&gt;                                                "WP2011" 
 #&gt;                                                     url 
@@ -1809,7 +1777,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106491" 
 #&gt; 
-#&gt; [[139]]
+#&gt; [[136]]
 #&gt;                                                      id 
 #&gt;                                                "WP2038" 
 #&gt;                                                     url 
@@ -1821,7 +1789,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106497" 
 #&gt; 
-#&gt; [[140]]
+#&gt; [[137]]
 #&gt;                                                      id 
 #&gt;                                                "WP2059" 
 #&gt;                                                     url 
@@ -1833,7 +1801,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108233" 
 #&gt; 
-#&gt; [[141]]
+#&gt; [[138]]
 #&gt;                                                      id 
 #&gt;                                                "WP2064" 
 #&gt;                                                     url 
@@ -1845,7 +1813,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106662" 
 #&gt; 
-#&gt; [[142]]
+#&gt; [[139]]
 #&gt;                                                      id 
 #&gt;                                                "WP2067" 
 #&gt;                                                     url 
@@ -1857,7 +1825,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "88634" 
 #&gt; 
-#&gt; [[143]]
+#&gt; [[140]]
 #&gt;                                                      id 
 #&gt;                                                "WP2199" 
 #&gt;                                                     url 
@@ -1867,9 +1835,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Oryza sativa" 
 #&gt;                                                revision 
-#&gt;                                                 "78367" 
+#&gt;                                                "110982" 
 #&gt; 
-#&gt; [[144]]
+#&gt; [[141]]
 #&gt;                                                      id 
 #&gt;                                                "WP2204" 
 #&gt;                                                     url 
@@ -1881,7 +1849,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107276" 
 #&gt; 
-#&gt; [[145]]
+#&gt; [[142]]
 #&gt;                                                      id 
 #&gt;                                                "WP2205" 
 #&gt;                                                     url 
@@ -1893,7 +1861,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107277" 
 #&gt; 
-#&gt; [[146]]
+#&gt; [[143]]
 #&gt;                                                      id 
 #&gt;                                                "WP2208" 
 #&gt;                                                     url 
@@ -1905,7 +1873,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107216" 
 #&gt; 
-#&gt; [[147]]
+#&gt; [[144]]
 #&gt;                                                      id 
 #&gt;                                                "WP2211" 
 #&gt;                                                     url 
@@ -1917,7 +1885,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107218" 
 #&gt; 
-#&gt; [[148]]
+#&gt; [[145]]
 #&gt;                                                      id 
 #&gt;                                                "WP2226" 
 #&gt;                                                     url 
@@ -1929,7 +1897,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "96247" 
 #&gt; 
-#&gt; [[149]]
+#&gt; [[146]]
 #&gt;                                                      id 
 #&gt;                                                "WP2227" 
 #&gt;                                                     url 
@@ -1941,7 +1909,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "96861" 
 #&gt; 
-#&gt; [[150]]
+#&gt; [[147]]
 #&gt;                                                      id 
 #&gt;                                                "WP2229" 
 #&gt;                                                     url 
@@ -1953,7 +1921,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "98948" 
 #&gt; 
-#&gt; [[151]]
+#&gt; [[148]]
 #&gt;                                                      id 
 #&gt;                                                "WP2231" 
 #&gt;                                                     url 
@@ -1965,7 +1933,19 @@
 #&gt;                                                revision 
 #&gt;                                                 "89459" 
 #&gt; 
-#&gt; [[152]]
+#&gt; [[149]]
+#&gt;                                                      id 
+#&gt;                                                "WP2253" 
+#&gt;                                                     url 
+#&gt; "https://www.wikipathways.org/index.php/Pathway:WP2253" 
+#&gt;                                                    name 
+#&gt;                                 "Pilocytic astrocytoma" 
+#&gt;                                                 species 
+#&gt;                                          "Homo sapiens" 
+#&gt;                                                revision 
+#&gt;                                                "112071" 
+#&gt; 
+#&gt; [[150]]
 #&gt;                                                      id 
 #&gt;                                                "WP2261" 
 #&gt;                                                     url 
@@ -1977,7 +1957,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108196" 
 #&gt; 
-#&gt; [[153]]
+#&gt; [[151]]
 #&gt;                                                      id 
 #&gt;                                                "WP2267" 
 #&gt;                                                     url 
@@ -1989,7 +1969,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106709" 
 #&gt; 
-#&gt; [[154]]
+#&gt; [[152]]
 #&gt;                                                      id 
 #&gt;                                                "WP2279" 
 #&gt;                                                     url 
@@ -2001,7 +1981,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "81183" 
 #&gt; 
-#&gt; [[155]]
+#&gt; [[153]]
 #&gt;                                                      id 
 #&gt;                                                "WP2313" 
 #&gt;                                                     url 
@@ -2013,7 +1993,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107082" 
 #&gt; 
-#&gt; [[156]]
+#&gt; [[154]]
 #&gt;                                                      id 
 #&gt;                                                "WP2332" 
 #&gt;                                                     url 
@@ -2025,7 +2005,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106623" 
 #&gt; 
-#&gt; [[157]]
+#&gt; [[155]]
 #&gt;                                                      id 
 #&gt;                                                "WP2338" 
 #&gt;                                                     url 
@@ -2037,7 +2017,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106710" 
 #&gt; 
-#&gt; [[158]]
+#&gt; [[156]]
 #&gt;                                                      id 
 #&gt;                                                "WP2371" 
 #&gt;                                                     url 
@@ -2049,7 +2029,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108090" 
 #&gt; 
-#&gt; [[159]]
+#&gt; [[157]]
 #&gt;                                                      id 
 #&gt;                                                "WP2374" 
 #&gt;                                                     url 
@@ -2061,7 +2041,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106575" 
 #&gt; 
-#&gt; [[160]]
+#&gt; [[158]]
 #&gt;                                                      id 
 #&gt;                                                "WP2406" 
 #&gt;                                                     url 
@@ -2073,7 +2053,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106350" 
 #&gt; 
-#&gt; [[161]]
+#&gt; [[159]]
 #&gt;                                                      id 
 #&gt;                                                "WP2431" 
 #&gt;                                                     url 
@@ -2085,7 +2065,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106712" 
 #&gt; 
-#&gt; [[162]]
+#&gt; [[160]]
 #&gt;                                                      id 
 #&gt;                                                "WP2432" 
 #&gt;                                                     url 
@@ -2097,7 +2077,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106874" 
 #&gt; 
-#&gt; [[163]]
+#&gt; [[161]]
 #&gt;                                                      id 
 #&gt;                                                "WP2447" 
 #&gt;                                                     url 
@@ -2107,9 +2087,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "109207" 
+#&gt;                                                "113794" 
 #&gt; 
-#&gt; [[164]]
+#&gt; [[162]]
 #&gt;                                                      id 
 #&gt;                                                "WP2472" 
 #&gt;                                                     url 
@@ -2119,9 +2099,9 @@
 #&gt;                                                 species 
 #&gt;                                      "Escherichia coli" 
 #&gt;                                                revision 
-#&gt;                                                 "88019" 
+#&gt;                                                "114097" 
 #&gt; 
-#&gt; [[165]]
+#&gt; [[163]]
 #&gt;                                                      id 
 #&gt;                                                "WP2484" 
 #&gt;                                                     url 
@@ -2133,7 +2113,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106098" 
 #&gt; 
-#&gt; [[166]]
+#&gt; [[164]]
 #&gt;                                                      id 
 #&gt;                                                "WP2485" 
 #&gt;                                                     url 
@@ -2145,7 +2125,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108352" 
 #&gt; 
-#&gt; [[167]]
+#&gt; [[165]]
 #&gt;                                                      id 
 #&gt;                                                "WP2488" 
 #&gt;                                                     url 
@@ -2157,7 +2137,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106101" 
 #&gt; 
-#&gt; [[168]]
+#&gt; [[166]]
 #&gt;                                                      id 
 #&gt;                                                "WP2516" 
 #&gt;                                                     url 
@@ -2169,7 +2149,7 @@
 #&gt;                                                revision 
 #&gt;                                                "102220" 
 #&gt; 
-#&gt; [[169]]
+#&gt; [[167]]
 #&gt;                                                      id 
 #&gt;                                                "WP2533" 
 #&gt;                                                     url 
@@ -2179,9 +2159,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "107760" 
+#&gt;                                                "113857" 
 #&gt; 
-#&gt; [[170]]
+#&gt; [[168]]
 #&gt;                                                      id 
 #&gt;                                                "WP2566" 
 #&gt;                                                     url 
@@ -2193,7 +2173,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "97588" 
 #&gt; 
-#&gt; [[171]]
+#&gt; [[169]]
 #&gt;                                                      id 
 #&gt;                                                "WP2578" 
 #&gt;                                                     url 
@@ -2205,7 +2185,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "84474" 
 #&gt; 
-#&gt; [[172]]
+#&gt; [[170]]
 #&gt;                                                      id 
 #&gt;                                                "WP2583" 
 #&gt;                                                     url 
@@ -2217,7 +2197,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106720" 
 #&gt; 
-#&gt; [[173]]
+#&gt; [[171]]
 #&gt;                                                      id 
 #&gt;                                                "WP2621" 
 #&gt;                                                     url 
@@ -2229,7 +2209,7 @@
 #&gt;                                                revision 
 #&gt;                                                "105900" 
 #&gt; 
-#&gt; [[174]]
+#&gt; [[172]]
 #&gt;                                                      id 
 #&gt;                                                "WP2622" 
 #&gt;                                                     url 
@@ -2241,7 +2221,7 @@
 #&gt;                                                revision 
 #&gt;                                                "105901" 
 #&gt; 
-#&gt; [[175]]
+#&gt; [[173]]
 #&gt;                                                      id 
 #&gt;                                                "WP2623" 
 #&gt;                                                     url 
@@ -2253,7 +2233,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "94564" 
 #&gt; 
-#&gt; [[176]]
+#&gt; [[174]]
 #&gt;                                                      id 
 #&gt;                                                "WP2624" 
 #&gt;                                                     url 
@@ -2263,9 +2243,9 @@
 #&gt;                                                 species 
 #&gt;                                  "Arabidopsis thaliana" 
 #&gt;                                                revision 
-#&gt;                                                "105902" 
+#&gt;                                                "111813" 
 #&gt; 
-#&gt; [[177]]
+#&gt; [[175]]
 #&gt;                                                      id 
 #&gt;                                                "WP2634" 
 #&gt;                                                     url 
@@ -2277,7 +2257,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "92739" 
 #&gt; 
-#&gt; [[178]]
+#&gt; [[176]]
 #&gt;                                                      id 
 #&gt;                                                "WP2636" 
 #&gt;                                                     url 
@@ -2289,19 +2269,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106363" 
 #&gt; 
-#&gt; [[179]]
-#&gt;                                                       id 
-#&gt;                                                 "WP2643" 
-#&gt;                                                      url 
-#&gt;  "https://www.wikipathways.org/index.php/Pathway:WP2643" 
-#&gt;                                                     name 
-#&gt; "Nanoparticle-mediated activation of receptor signaling" 
-#&gt;                                                  species 
-#&gt;                                           "Homo sapiens" 
-#&gt;                                                 revision 
-#&gt;                                                 "106660" 
-#&gt; 
-#&gt; [[180]]
+#&gt; [[177]]
 #&gt;                                                      id 
 #&gt;                                                "WP2805" 
 #&gt;                                                     url 
@@ -2313,7 +2281,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106523" 
 #&gt; 
-#&gt; [[181]]
+#&gt; [[178]]
 #&gt;                                                      id 
 #&gt;                                                "WP2828" 
 #&gt;                                                     url 
@@ -2325,7 +2293,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108113" 
 #&gt; 
-#&gt; [[182]]
+#&gt; [[179]]
 #&gt;                                                      id 
 #&gt;                                                "WP2848" 
 #&gt;                                                     url 
@@ -2337,7 +2305,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107975" 
 #&gt; 
-#&gt; [[183]]
+#&gt; [[180]]
 #&gt;                                                      id 
 #&gt;                                                "WP2849" 
 #&gt;                                                     url 
@@ -2349,7 +2317,7 @@
 #&gt;                                                revision 
 #&gt;                                                "103039" 
 #&gt; 
-#&gt; [[184]]
+#&gt; [[181]]
 #&gt;                                                      id 
 #&gt;                                                "WP2851" 
 #&gt;                                                     url 
@@ -2361,7 +2329,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "93086" 
 #&gt; 
-#&gt; [[185]]
+#&gt; [[182]]
 #&gt;                                                      id 
 #&gt;                                                "WP2853" 
 #&gt;                                                     url 
@@ -2373,7 +2341,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106401" 
 #&gt; 
-#&gt; [[186]]
+#&gt; [[183]]
 #&gt;                                                      id 
 #&gt;                                                "WP2854" 
 #&gt;                                                     url 
@@ -2385,7 +2353,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106431" 
 #&gt; 
-#&gt; [[187]]
+#&gt; [[184]]
 #&gt;                                                      id 
 #&gt;                                                "WP2857" 
 #&gt;                                                     url 
@@ -2395,9 +2363,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "106642" 
+#&gt;                                                "110685" 
 #&gt; 
-#&gt; [[188]]
+#&gt; [[185]]
 #&gt;                                                      id 
 #&gt;                                                "WP2858" 
 #&gt;                                                     url 
@@ -2407,9 +2375,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "106397" 
+#&gt;                                                "110690" 
 #&gt; 
-#&gt; [[189]]
+#&gt; [[186]]
 #&gt;                                                      id 
 #&gt;                                                "WP2859" 
 #&gt;                                                     url 
@@ -2421,7 +2389,7 @@
 #&gt;                                                revision 
 #&gt;                                                "102770" 
 #&gt; 
-#&gt; [[190]]
+#&gt; [[187]]
 #&gt;                                                      id 
 #&gt;                                                "WP2860" 
 #&gt;                                                     url 
@@ -2433,7 +2401,7 @@
 #&gt;                                                revision 
 #&gt;                                                "102771" 
 #&gt; 
-#&gt; [[191]]
+#&gt; [[188]]
 #&gt;                                                                  id 
 #&gt;                                                            "WP2868" 
 #&gt;                                                                 url 
@@ -2443,9 +2411,9 @@
 #&gt;                                                             species 
 #&gt;                                                      "Homo sapiens" 
 #&gt;                                                            revision 
-#&gt;                                                            "108102" 
+#&gt;                                                            "112051" 
 #&gt; 
-#&gt; [[192]]
+#&gt; [[189]]
 #&gt;                                                            id 
 #&gt;                                                      "WP2870" 
 #&gt;                                                           url 
@@ -2457,7 +2425,7 @@
 #&gt;                                                      revision 
 #&gt;                                                      "106411" 
 #&gt; 
-#&gt; [[193]]
+#&gt; [[190]]
 #&gt;                                                      id 
 #&gt;                                                "WP2884" 
 #&gt;                                                     url 
@@ -2469,7 +2437,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106658" 
 #&gt; 
-#&gt; [[194]]
+#&gt; [[191]]
 #&gt;                                                      id 
 #&gt;                                                "WP2886" 
 #&gt;                                                     url 
@@ -2481,7 +2449,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106102" 
 #&gt; 
-#&gt; [[195]]
+#&gt; [[192]]
 #&gt;                                                      id 
 #&gt;                                                "WP2888" 
 #&gt;                                                     url 
@@ -2493,7 +2461,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "87430" 
 #&gt; 
-#&gt; [[196]]
+#&gt; [[193]]
 #&gt;                                                      id 
 #&gt;                                                "WP1355" 
 #&gt;                                                     url 
@@ -2505,7 +2473,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107097" 
 #&gt; 
-#&gt; [[197]]
+#&gt; [[194]]
 #&gt;                                                      id 
 #&gt;                                                "WP2940" 
 #&gt;                                                     url 
@@ -2517,7 +2485,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107219" 
 #&gt; 
-#&gt; [[198]]
+#&gt; [[195]]
 #&gt;                                                      id 
 #&gt;                                                "WP2941" 
 #&gt;                                                     url 
@@ -2529,7 +2497,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107044" 
 #&gt; 
-#&gt; [[199]]
+#&gt; [[196]]
 #&gt;                                                      id 
 #&gt;                                                "WP2944" 
 #&gt;                                                     url 
@@ -2539,9 +2507,9 @@
 #&gt;                                                 species 
 #&gt;                                  "Arabidopsis thaliana" 
 #&gt;                                                revision 
-#&gt;                                                "107045" 
+#&gt;                                                "110757" 
 #&gt; 
-#&gt; [[200]]
+#&gt; [[197]]
 #&gt;                                                      id 
 #&gt;                                                "WP2945" 
 #&gt;                                                     url 
@@ -2553,7 +2521,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107046" 
 #&gt; 
-#&gt; [[201]]
+#&gt; [[198]]
 #&gt;                                                      id 
 #&gt;                                                "WP3154" 
 #&gt;                                                     url 
@@ -2565,7 +2533,7 @@
 #&gt;                                                revision 
 #&gt;                                                "105945" 
 #&gt; 
-#&gt; [[202]]
+#&gt; [[199]]
 #&gt;                                                      id 
 #&gt;                                                "WP3286" 
 #&gt;                                                     url 
@@ -2577,7 +2545,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106367" 
 #&gt; 
-#&gt; [[203]]
+#&gt; [[200]]
 #&gt;                                                      id 
 #&gt;                                                "WP3287" 
 #&gt;                                                     url 
@@ -2587,9 +2555,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "107141" 
+#&gt;                                                "113822" 
 #&gt; 
-#&gt; [[204]]
+#&gt; [[201]]
 #&gt;                                                           id 
 #&gt;                                                     "WP3297" 
 #&gt;                                                          url 
@@ -2601,7 +2569,7 @@
 #&gt;                                                     revision 
 #&gt;                                                     "106734" 
 #&gt; 
-#&gt; [[205]]
+#&gt; [[202]]
 #&gt;                                                      id 
 #&gt;                                                "WP3298" 
 #&gt;                                                     url 
@@ -2613,7 +2581,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107142" 
 #&gt; 
-#&gt; [[206]]
+#&gt; [[203]]
 #&gt;                                                      id 
 #&gt;                                                "WP3300" 
 #&gt;                                                     url 
@@ -2625,7 +2593,7 @@
 #&gt;                                                revision 
 #&gt;                                                "102277" 
 #&gt; 
-#&gt; [[207]]
+#&gt; [[204]]
 #&gt;                                                      id 
 #&gt;                                                "WP3407" 
 #&gt;                                                     url 
@@ -2637,7 +2605,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "97679" 
 #&gt; 
-#&gt; [[208]]
+#&gt; [[205]]
 #&gt;                                                      id 
 #&gt;                                                "WP3408" 
 #&gt;                                                     url 
@@ -2649,7 +2617,7 @@
 #&gt;                                                revision 
 #&gt;                                                "105111" 
 #&gt; 
-#&gt; [[209]]
+#&gt; [[206]]
 #&gt;                                                          id 
 #&gt;                                                    "WP3413" 
 #&gt;                                                         url 
@@ -2661,7 +2629,7 @@
 #&gt;                                                    revision 
 #&gt;                                                    "106657" 
 #&gt; 
-#&gt; [[210]]
+#&gt; [[207]]
 #&gt;                                                      id 
 #&gt;                                                "WP3527" 
 #&gt;                                                     url 
@@ -2673,7 +2641,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106534" 
 #&gt; 
-#&gt; [[211]]
+#&gt; [[208]]
 #&gt;                                                      id 
 #&gt;                                                "WP3529" 
 #&gt;                                                     url 
@@ -2685,7 +2653,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106738" 
 #&gt; 
-#&gt; [[212]]
+#&gt; [[209]]
 #&gt;                                                      id 
 #&gt;                                                "WP3584" 
 #&gt;                                                     url 
@@ -2695,9 +2663,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "108350" 
+#&gt;                                                "110253" 
 #&gt; 
-#&gt; [[213]]
+#&gt; [[210]]
 #&gt;                                                      id 
 #&gt;                                                "WP3599" 
 #&gt;                                                     url 
@@ -2709,7 +2677,19 @@
 #&gt;                                                revision 
 #&gt;                                                "105845" 
 #&gt; 
-#&gt; [[214]]
+#&gt; [[211]]
+#&gt;                                                      id 
+#&gt;                                                "WP3624" 
+#&gt;                                                     url 
+#&gt; "https://www.wikipathways.org/index.php/Pathway:WP3624" 
+#&gt;                                                    name 
+#&gt;                                         "Lung fibrosis" 
+#&gt;                                                 species 
+#&gt;                                          "Homo sapiens" 
+#&gt;                                                revision 
+#&gt;                                                "110182" 
+#&gt; 
+#&gt; [[212]]
 #&gt;                                                      id 
 #&gt;                                                "WP3626" 
 #&gt;                                                     url 
@@ -2721,7 +2701,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106884" 
 #&gt; 
-#&gt; [[215]]
+#&gt; [[213]]
 #&gt;                                                      id 
 #&gt;                                                "WP3628" 
 #&gt;                                                     url 
@@ -2733,7 +2713,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107356" 
 #&gt; 
-#&gt; [[216]]
+#&gt; [[214]]
 #&gt;                                                      id 
 #&gt;                                                "WP3630" 
 #&gt;                                                     url 
@@ -2745,7 +2725,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106745" 
 #&gt; 
-#&gt; [[217]]
+#&gt; [[215]]
 #&gt;                                                      id 
 #&gt;                                                "WP3640" 
 #&gt;                                                     url 
@@ -2757,7 +2737,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106747" 
 #&gt; 
-#&gt; [[218]]
+#&gt; [[216]]
 #&gt;                                                      id 
 #&gt;                                                "WP3644" 
 #&gt;                                                     url 
@@ -2767,9 +2747,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "106748" 
+#&gt;                                                "115123" 
 #&gt; 
-#&gt; [[219]]
+#&gt; [[217]]
 #&gt;                                                      id 
 #&gt;                                                "WP3645" 
 #&gt;                                                     url 
@@ -2781,7 +2761,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106653" 
 #&gt; 
-#&gt; [[220]]
+#&gt; [[218]]
 #&gt;                                                      id 
 #&gt;                                                "WP3646" 
 #&gt;                                                     url 
@@ -2791,9 +2771,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "107467" 
+#&gt;                                                "111190" 
 #&gt; 
-#&gt; [[221]]
+#&gt; [[219]]
 #&gt;                                                       id 
 #&gt;                                                 "WP3653" 
 #&gt;                                                      url 
@@ -2805,7 +2785,7 @@
 #&gt;                                                 revision 
 #&gt;                                                  "90069" 
 #&gt; 
-#&gt; [[222]]
+#&gt; [[220]]
 #&gt;                                                          id 
 #&gt;                                                    "WP3660" 
 #&gt;                                                         url 
@@ -2817,7 +2797,7 @@
 #&gt;                                                    revision 
 #&gt;                                                     "90080" 
 #&gt; 
-#&gt; [[223]]
+#&gt; [[221]]
 #&gt;                                                         id 
 #&gt;                                                   "WP3661" 
 #&gt;                                                        url 
@@ -2829,7 +2809,7 @@
 #&gt;                                                   revision 
 #&gt;                                                   "105908" 
 #&gt; 
-#&gt; [[224]]
+#&gt; [[222]]
 #&gt;                                                      id 
 #&gt;                                                "WP3676" 
 #&gt;                                                     url 
@@ -2841,7 +2821,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106307" 
 #&gt; 
-#&gt; [[225]]
+#&gt; [[223]]
 #&gt;                                                              id 
 #&gt;                                                        "WP3830" 
 #&gt;                                                             url 
@@ -2853,7 +2833,7 @@
 #&gt;                                                        revision 
 #&gt;                                                         "92694" 
 #&gt; 
-#&gt; [[226]]
+#&gt; [[224]]
 #&gt;                                                                    id 
 #&gt;                                                              "WP3865" 
 #&gt;                                                                   url 
@@ -2865,7 +2845,7 @@
 #&gt;                                                              revision 
 #&gt;                                                              "106524" 
 #&gt; 
-#&gt; [[227]]
+#&gt; [[225]]
 #&gt;                                                      id 
 #&gt;                                                "WP3871" 
 #&gt;                                                     url 
@@ -2877,7 +2857,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106754" 
 #&gt; 
-#&gt; [[228]]
+#&gt; [[226]]
 #&gt;                                                      id 
 #&gt;                                                "WP3882" 
 #&gt;                                                     url 
@@ -2889,7 +2869,19 @@
 #&gt;                                                revision 
 #&gt;                                                "106985" 
 #&gt; 
-#&gt; [[229]]
+#&gt; [[227]]
+#&gt;                                                      id 
+#&gt;                                                "WP3890" 
+#&gt;                                                     url 
+#&gt; "https://www.wikipathways.org/index.php/Pathway:WP3890" 
+#&gt;                                                    name 
+#&gt;          "Nanomaterial-induced Inflammasome Activation" 
+#&gt;                                                 species 
+#&gt;                                          "Homo sapiens" 
+#&gt;                                                revision 
+#&gt;                                                "110231" 
+#&gt; 
+#&gt; [[228]]
 #&gt;                                                                id 
 #&gt;                                                          "WP3892" 
 #&gt;                                                               url 
@@ -2901,7 +2893,7 @@
 #&gt;                                                          revision 
 #&gt;                                                          "106387" 
 #&gt; 
-#&gt; [[230]]
+#&gt; [[229]]
 #&gt;                                                      id 
 #&gt;                                                "WP3893" 
 #&gt;                                                     url 
@@ -2913,7 +2905,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106386" 
 #&gt; 
-#&gt; [[231]]
+#&gt; [[230]]
 #&gt;                                                      id 
 #&gt;                                                "WP3894" 
 #&gt;                                                     url 
@@ -2925,7 +2917,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108294" 
 #&gt; 
-#&gt; [[232]]
+#&gt; [[231]]
 #&gt;                                                      id 
 #&gt;                                                "WP3901" 
 #&gt;                                                     url 
@@ -2937,7 +2929,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106988" 
 #&gt; 
-#&gt; [[233]]
+#&gt; [[232]]
 #&gt;                                                      id 
 #&gt;                                                "WP3915" 
 #&gt;                                                     url 
@@ -2947,9 +2939,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "106761" 
+#&gt;                                                "112155" 
 #&gt; 
-#&gt; [[234]]
+#&gt; [[233]]
 #&gt;                                                      id 
 #&gt;                                                "WP3916" 
 #&gt;                                                     url 
@@ -2961,7 +2953,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108295" 
 #&gt; 
-#&gt; [[235]]
+#&gt; [[234]]
 #&gt;                                                      id 
 #&gt;                                                "WP3933" 
 #&gt;                                                     url 
@@ -2971,9 +2963,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "107150" 
+#&gt;                                                "114252" 
 #&gt; 
-#&gt; [[236]]
+#&gt; [[235]]
 #&gt;                                                      id 
 #&gt;                                                "WP3935" 
 #&gt;                                                     url 
@@ -2985,7 +2977,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107152" 
 #&gt; 
-#&gt; [[237]]
+#&gt; [[236]]
 #&gt;                                                      id 
 #&gt;                                                "WP3937" 
 #&gt;                                                     url 
@@ -2997,7 +2989,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106647" 
 #&gt; 
-#&gt; [[238]]
+#&gt; [[237]]
 #&gt;                                                      id 
 #&gt;                                                "WP3958" 
 #&gt;                                                     url 
@@ -3009,7 +3001,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107154" 
 #&gt; 
-#&gt; [[239]]
+#&gt; [[238]]
 #&gt;                                                      id 
 #&gt;                                                "WP3962" 
 #&gt;                                                     url 
@@ -3021,7 +3013,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "92322" 
 #&gt; 
-#&gt; [[240]]
+#&gt; [[239]]
 #&gt;                                                      id 
 #&gt;                                                "WP3965" 
 #&gt;                                                     url 
@@ -3033,7 +3025,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106630" 
 #&gt; 
-#&gt; [[241]]
+#&gt; [[240]]
 #&gt;                                                      id 
 #&gt;                                                "WP3972" 
 #&gt;                                                     url 
@@ -3045,7 +3037,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108157" 
 #&gt; 
-#&gt; [[242]]
+#&gt; [[241]]
 #&gt;                                                      id 
 #&gt;                                                "WP3992" 
 #&gt;                                                     url 
@@ -3057,7 +3049,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "96460" 
 #&gt; 
-#&gt; [[243]]
+#&gt; [[242]]
 #&gt;                                                      id 
 #&gt;                                                "WP3995" 
 #&gt;                                                     url 
@@ -3069,7 +3061,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108089" 
 #&gt; 
-#&gt; [[244]]
+#&gt; [[243]]
 #&gt;                                                      id 
 #&gt;                                                "WP3998" 
 #&gt;                                                     url 
@@ -3079,9 +3071,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "106536" 
+#&gt;                                                "113877" 
 #&gt; 
-#&gt; [[245]]
+#&gt; [[244]]
 #&gt;                                                      id 
 #&gt;                                                "WP4018" 
 #&gt;                                                     url 
@@ -3091,9 +3083,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "106515" 
+#&gt;                                                "111011" 
 #&gt; 
-#&gt; [[246]]
+#&gt; [[245]]
 #&gt;                                                      id 
 #&gt;                                                "WP4021" 
 #&gt;                                                     url 
@@ -3105,7 +3097,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "93043" 
 #&gt; 
-#&gt; [[247]]
+#&gt; [[246]]
 #&gt;                                                      id 
 #&gt;                                                "WP4030" 
 #&gt;                                                     url 
@@ -3117,7 +3109,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "93221" 
 #&gt; 
-#&gt; [[248]]
+#&gt; [[247]]
 #&gt;                                                      id 
 #&gt;                                                "WP4136" 
 #&gt;                                                     url 
@@ -3129,7 +3121,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106418" 
 #&gt; 
-#&gt; [[249]]
+#&gt; [[248]]
 #&gt;                                                      id 
 #&gt;                                                "WP4142" 
 #&gt;                                                     url 
@@ -3139,9 +3131,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "108860" 
+#&gt;                                                "110014" 
 #&gt; 
-#&gt; [[250]]
+#&gt; [[249]]
 #&gt;                                                      id 
 #&gt;                                                "WP4150" 
 #&gt;                                                     url 
@@ -3153,7 +3145,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106778" 
 #&gt; 
-#&gt; [[251]]
+#&gt; [[250]]
 #&gt;                                                      id 
 #&gt;                                                "WP4155" 
 #&gt;                                                     url 
@@ -3163,9 +3155,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "108106" 
+#&gt;                                                "112038" 
 #&gt; 
-#&gt; [[252]]
+#&gt; [[251]]
 #&gt;                                                      id 
 #&gt;                                                "WP4174" 
 #&gt;                                                     url 
@@ -3177,7 +3169,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106782" 
 #&gt; 
-#&gt; [[253]]
+#&gt; [[252]]
 #&gt;                                                      id 
 #&gt;                                                "WP4191" 
 #&gt;                                                     url 
@@ -3189,7 +3181,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106347" 
 #&gt; 
-#&gt; [[254]]
+#&gt; [[253]]
 #&gt;                                                      id 
 #&gt;                                                "WP4195" 
 #&gt;                                                     url 
@@ -3201,7 +3193,7 @@
 #&gt;                                                revision 
 #&gt;                                                "101838" 
 #&gt; 
-#&gt; [[255]]
+#&gt; [[254]]
 #&gt;                                                      id 
 #&gt;                                                "WP4204" 
 #&gt;                                                     url 
@@ -3213,7 +3205,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108297" 
 #&gt; 
-#&gt; [[256]]
+#&gt; [[255]]
 #&gt;                                                      id 
 #&gt;                                                "WP4210" 
 #&gt;                                                     url 
@@ -3225,7 +3217,7 @@
 #&gt;                                                revision 
 #&gt;                                                 "95880" 
 #&gt; 
-#&gt; [[257]]
+#&gt; [[256]]
 #&gt;                                                                 id 
 #&gt;                                                           "WP4216" 
 #&gt;                                                                url 
@@ -3237,7 +3229,7 @@
 #&gt;                                                           revision 
 #&gt;                                                           "108124" 
 #&gt; 
-#&gt; [[258]]
+#&gt; [[257]]
 #&gt;                                                      id 
 #&gt;                                                "WP4220" 
 #&gt;                                                     url 
@@ -3249,7 +3241,7 @@
 #&gt;                                                revision 
 #&gt;                                                "106196" 
 #&gt; 
-#&gt; [[259]]
+#&gt; [[258]]
 #&gt;                                                      id 
 #&gt;                                                "WP4223" 
 #&gt;                                                     url 
@@ -3260,6 +3252,18 @@
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
 #&gt;                                                "107655" 
+#&gt; 
+#&gt; [[259]]
+#&gt;                                                      id 
+#&gt;                                                "WP4225" 
+#&gt;                                                     url 
+#&gt; "https://www.wikipathways.org/index.php/Pathway:WP4225" 
+#&gt;                                                    name 
+#&gt;            "Pyrimidine metabolism and related diseases" 
+#&gt;                                                 species 
+#&gt;                                          "Homo sapiens" 
+#&gt;                                                revision 
+#&gt;                                                "114338" 
 #&gt; 
 #&gt; [[260]]
 #&gt;                                                                      id 
@@ -3283,7 +3287,7 @@
 #&gt;                                                     species 
 #&gt;                                              "Homo sapiens" 
 #&gt;                                                    revision 
-#&gt;                                                    "108129" 
+#&gt;                                                    "111457" 
 #&gt; 
 #&gt; [[262]]
 #&gt;                                                      id 
@@ -3307,19 +3311,19 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "108376" 
+#&gt;                                                "113958" 
 #&gt; 
 #&gt; [[264]]
-#&gt;                                                                                                                 id 
-#&gt;                                                                                                           "WP4304" 
-#&gt;                                                                                                                url 
-#&gt;                                                            "https://www.wikipathways.org/index.php/Pathway:WP4304" 
-#&gt;                                                                                                               name 
-#&gt; "Oligodendrocyte Specification and differentiation(including remyelination), leading to Myelin Components for CNS" 
-#&gt;                                                                                                            species 
-#&gt;                                                                                                     "Homo sapiens" 
-#&gt;                                                                                                           revision 
-#&gt;                                                                                                           "107559" 
+#&gt;                                                                                        id 
+#&gt;                                                                                  "WP4304" 
+#&gt;                                                                                       url 
+#&gt;                                   "https://www.wikipathways.org/index.php/Pathway:WP4304" 
+#&gt;                                                                                      name 
+#&gt; "Oligodendrocyte specification and differentiation, leading to Myelin Components for CNS" 
+#&gt;                                                                                   species 
+#&gt;                                                                            "Homo sapiens" 
+#&gt;                                                                                  revision 
+#&gt;                                                                                  "112156" 
 #&gt; 
 #&gt; [[265]]
 #&gt;                                                      id 
@@ -3394,6 +3398,18 @@
 #&gt;                                                             "102079" 
 #&gt; 
 #&gt; [[271]]
+#&gt;                                                      id 
+#&gt;                                                "WP4466" 
+#&gt;                                                     url 
+#&gt; "https://www.wikipathways.org/index.php/Pathway:WP4466" 
+#&gt;                                                    name 
+#&gt;                    "Oxidative Stress and Redox Pathway" 
+#&gt;                                                 species 
+#&gt;                                          "Mus musculus" 
+#&gt;                                                revision 
+#&gt;                                                "113759" 
+#&gt; 
+#&gt; [[272]]
 #&gt;                                                                       id 
 #&gt;                                                                 "WP4474" 
 #&gt;                                                                      url 
@@ -3405,7 +3421,7 @@
 #&gt;                                                                 revision 
 #&gt;                                                                 "102094" 
 #&gt; 
-#&gt; [[272]]
+#&gt; [[273]]
 #&gt;                                                      id 
 #&gt;                                                "WP4482" 
 #&gt;                                                     url 
@@ -3415,9 +3431,21 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "108315" 
+#&gt;                                                "112969" 
 #&gt; 
-#&gt; [[273]]
+#&gt; [[274]]
+#&gt;                                                      id 
+#&gt;                                                "WP4506" 
+#&gt;                                                     url 
+#&gt; "https://www.wikipathways.org/index.php/Pathway:WP4506" 
+#&gt;                                                    name 
+#&gt;                                   "Tyrosine Metabolism" 
+#&gt;                                                 species 
+#&gt;                                          "Homo sapiens" 
+#&gt;                                                revision 
+#&gt;                                                "114404" 
+#&gt; 
+#&gt; [[275]]
 #&gt;                                                                                             id 
 #&gt;                                                                                       "WP4518" 
 #&gt;                                                                                            url 
@@ -3429,7 +3457,7 @@
 #&gt;                                                                                       revision 
 #&gt;                                                                                       "108661" 
 #&gt; 
-#&gt; [[274]]
+#&gt; [[276]]
 #&gt;                                                      id 
 #&gt;                                                "WP4519" 
 #&gt;                                                     url 
@@ -3441,7 +3469,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108083" 
 #&gt; 
-#&gt; [[275]]
+#&gt; [[277]]
 #&gt;                                                      id 
 #&gt;                                                "WP4521" 
 #&gt;                                                     url 
@@ -3453,7 +3481,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108084" 
 #&gt; 
-#&gt; [[276]]
+#&gt; [[278]]
 #&gt;                                                         id 
 #&gt;                                                   "WP4522" 
 #&gt;                                                        url 
@@ -3465,19 +3493,19 @@
 #&gt;                                                   revision 
 #&gt;                                                   "108085" 
 #&gt; 
-#&gt; [[277]]
-#&gt;                                                         id 
-#&gt;                                                   "WP4523" 
-#&gt;                                                        url 
-#&gt;    "https://www.wikipathways.org/index.php/Pathway:WP4523" 
-#&gt;                                                       name 
-#&gt; "Classical pathway of steroidogenesis, including diseases" 
-#&gt;                                                    species 
-#&gt;                                             "Homo sapiens" 
-#&gt;                                                   revision 
-#&gt;                                                   "108086" 
+#&gt; [[279]]
+#&gt;                                                                                          id 
+#&gt;                                                                                    "WP4523" 
+#&gt;                                                                                         url 
+#&gt;                                     "https://www.wikipathways.org/index.php/Pathway:WP4523" 
+#&gt;                                                                                        name 
+#&gt; "Classical pathway of steroidogenesis with Glucocorticoid and Mineralocorticoid Metabolism" 
+#&gt;                                                                                     species 
+#&gt;                                                                              "Homo sapiens" 
+#&gt;                                                                                    revision 
+#&gt;                                                                                    "113593" 
 #&gt; 
-#&gt; [[278]]
+#&gt; [[280]]
 #&gt;                                                      id 
 #&gt;                                                "WP4524" 
 #&gt;                                                     url 
@@ -3489,7 +3517,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108087" 
 #&gt; 
-#&gt; [[279]]
+#&gt; [[281]]
 #&gt;                                                      id 
 #&gt;                                                "WP4540" 
 #&gt;                                                     url 
@@ -3501,7 +3529,7 @@
 #&gt;                                                revision 
 #&gt;                                                "103347" 
 #&gt; 
-#&gt; [[280]]
+#&gt; [[282]]
 #&gt;                                                      id 
 #&gt;                                                "WP4541" 
 #&gt;                                                     url 
@@ -3513,7 +3541,7 @@
 #&gt;                                                revision 
 #&gt;                                                "103434" 
 #&gt; 
-#&gt; [[281]]
+#&gt; [[283]]
 #&gt;                                                      id 
 #&gt;                                                "WP4545" 
 #&gt;                                                     url 
@@ -3523,9 +3551,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "105674" 
+#&gt;                                                "111450" 
 #&gt; 
-#&gt; [[282]]
+#&gt; [[284]]
 #&gt;                                                      id 
 #&gt;                                                "WP4549" 
 #&gt;                                                     url 
@@ -3537,7 +3565,7 @@
 #&gt;                                                revision 
 #&gt;                                                "108088" 
 #&gt; 
-#&gt; [[283]]
+#&gt; [[285]]
 #&gt;                                                      id 
 #&gt;                                                "WP4558" 
 #&gt;                                                     url 
@@ -3549,7 +3577,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107928" 
 #&gt; 
-#&gt; [[284]]
+#&gt; [[286]]
 #&gt;                                                                       id 
 #&gt;                                                                 "WP4577" 
 #&gt;                                                                      url 
@@ -3561,7 +3589,19 @@
 #&gt;                                                                 revision 
 #&gt;                                                                 "109208" 
 #&gt; 
-#&gt; [[285]]
+#&gt; [[287]]
+#&gt;                                                      id 
+#&gt;                                                "WP4595" 
+#&gt;                                                     url 
+#&gt; "https://www.wikipathways.org/index.php/Pathway:WP4595" 
+#&gt;                                                    name 
+#&gt;                    "Urea cycle and associated pathways" 
+#&gt;                                                 species 
+#&gt;                                          "Homo sapiens" 
+#&gt;                                                revision 
+#&gt;                                                "114567" 
+#&gt; 
+#&gt; [[288]]
 #&gt;                                                      id 
 #&gt;                                                "WP4656" 
 #&gt;                                                     url 
@@ -3573,19 +3613,19 @@
 #&gt;                                                revision 
 #&gt;                                                "105130" 
 #&gt; 
-#&gt; [[286]]
+#&gt; [[289]]
 #&gt;                                                      id 
 #&gt;                                                "WP4657" 
 #&gt;                                                     url 
 #&gt; "https://www.wikipathways.org/index.php/Pathway:WP4657" 
 #&gt;                                                    name 
-#&gt;                             "22q11.2 Deletion Syndrome" 
+#&gt;                "22q11.2 copy number variation syndrome" 
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "107179" 
+#&gt;                                                "113893" 
 #&gt; 
-#&gt; [[287]]
+#&gt; [[290]]
 #&gt;                                                      id 
 #&gt;                                                "WP4719" 
 #&gt;                                                     url 
@@ -3595,9 +3635,9 @@
 #&gt;                                                 species 
 #&gt;                                          "Homo sapiens" 
 #&gt;                                                revision 
-#&gt;                                                "107596" 
+#&gt;                                                "114095" 
 #&gt; 
-#&gt; [[288]]
+#&gt; [[291]]
 #&gt;                                                                        id 
 #&gt;                                                                  "WP4720" 
 #&gt;                                                                       url 
@@ -3609,7 +3649,7 @@
 #&gt;                                                                  revision 
 #&gt;                                                                  "107606" 
 #&gt; 
-#&gt; [[289]]
+#&gt; [[292]]
 #&gt;                                                      id 
 #&gt;                                                "WP4721" 
 #&gt;                                                     url 
@@ -3621,7 +3661,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107598" 
 #&gt; 
-#&gt; [[290]]
+#&gt; [[293]]
 #&gt;                                                      id 
 #&gt;                                                "WP4722" 
 #&gt;                                                     url 
@@ -3633,7 +3673,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107599" 
 #&gt; 
-#&gt; [[291]]
+#&gt; [[294]]
 #&gt;                                                      id 
 #&gt;                                                "WP4724" 
 #&gt;                                                     url 
@@ -3645,7 +3685,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107608" 
 #&gt; 
-#&gt; [[292]]
+#&gt; [[295]]
 #&gt;                                                      id 
 #&gt;                                                "WP4725" 
 #&gt;                                                     url 
@@ -3657,7 +3697,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107602" 
 #&gt; 
-#&gt; [[293]]
+#&gt; [[296]]
 #&gt;                                                      id 
 #&gt;                                                "WP4726" 
 #&gt;                                                     url 
@@ -3669,7 +3709,7 @@
 #&gt;                                                revision 
 #&gt;                                                "107643" 
 #&gt; 
-#&gt; [[294]]
+#&gt; [[297]]
 #&gt;                                                                           id 
 #&gt;                                                                     "WP4767" 
 #&gt;                                                                          url 
@@ -3679,17 +3719,145 @@
 #&gt;                                                                      species 
 #&gt;                                                               "Homo sapiens" 
 #&gt;                                                                     revision 
-#&gt;                                                                     "109131" 
+#&gt;                                                                     "112165" 
+#&gt; 
+#&gt; [[298]]
+#&gt;                                                      id 
+#&gt;                                                "WP4803" 
+#&gt;                                                     url 
+#&gt; "https://www.wikipathways.org/index.php/Pathway:WP4803" 
+#&gt;                                                    name 
+#&gt;                                          "Ciliopathies" 
+#&gt;                                                 species 
+#&gt;                                          "Homo sapiens" 
+#&gt;                                                revision 
+#&gt;                                                "110008" 
+#&gt; 
+#&gt; [[299]]
+#&gt;                                                      id 
+#&gt;                                                "WP4860" 
+#&gt;                                                     url 
+#&gt; "https://www.wikipathways.org/index.php/Pathway:WP4860" 
+#&gt;                                                    name 
+#&gt;                "Hijack of Ubiquitination by SARS-CoV-2" 
+#&gt;                                                 species 
+#&gt;                                          "Homo sapiens" 
+#&gt;                                                revision 
+#&gt;                                                "111111" 
+#&gt; 
+#&gt; [[300]]
+#&gt;                                                                      id 
+#&gt;                                                                "WP4868" 
+#&gt;                                                                     url 
+#&gt;                 "https://www.wikipathways.org/index.php/Pathway:WP4868" 
+#&gt;                                                                    name 
+#&gt; "Type I Interferon Induction and Signaling During SARS-CoV-2 Infection" 
+#&gt;                                                                 species 
+#&gt;                                                          "Homo sapiens" 
+#&gt;                                                                revision 
+#&gt;                                                                "111110" 
+#&gt; 
+#&gt; [[301]]
+#&gt;                                                      id 
+#&gt;                                                "WP4876" 
+#&gt;                                                     url 
+#&gt; "https://www.wikipathways.org/index.php/Pathway:WP4876" 
+#&gt;                                                    name 
+#&gt;        "Activation of NLRP3 Inflammasome by SARS-CoV-2" 
+#&gt;                                                 species 
+#&gt;                                          "Homo sapiens" 
+#&gt;                                                revision 
+#&gt;                                                "110321" 
+#&gt; 
+#&gt; [[302]]
+#&gt;                                                                              id 
+#&gt;                                                                        "WP4883" 
+#&gt;                                                                             url 
+#&gt;                         "https://www.wikipathways.org/index.php/Pathway:WP4883" 
+#&gt;                                                                            name 
+#&gt; "SARS-CoV-2 and Angiotensin-converting enzyme 2 receptor: molecular mechanisms" 
+#&gt;                                                                         species 
+#&gt;                                                                  "Homo sapiens" 
+#&gt;                                                                        revision 
+#&gt;                                                                        "114101" 
+#&gt; 
+#&gt; [[303]]
+#&gt;                                                          id 
+#&gt;                                                    "WP4884" 
+#&gt;                                                         url 
+#&gt;     "https://www.wikipathways.org/index.php/Pathway:WP4884" 
+#&gt;                                                        name 
+#&gt; "Pathogenesis of SARS-CoV-2 Mediated by nsp9-nsp10 Complex" 
+#&gt;                                                     species 
+#&gt;                                              "Homo sapiens" 
+#&gt;                                                    revision 
+#&gt;                                                    "111618" 
+#&gt; 
+#&gt; [[304]]
+#&gt;                                                      id 
+#&gt;                                                "WP4927" 
+#&gt;                                                     url 
+#&gt; "https://www.wikipathways.org/index.php/Pathway:WP4927" 
+#&gt;                                                    name 
+#&gt;              "COVID-19, thrombosis and anticoagulation" 
+#&gt;                                                 species 
+#&gt;                                          "Homo sapiens" 
+#&gt;                                                revision 
+#&gt;                                                "111155" 
+#&gt; 
+#&gt; [[305]]
+#&gt;                                                      id 
+#&gt;                                                "WP4966" 
+#&gt;                                                     url 
+#&gt; "https://www.wikipathways.org/index.php/Pathway:WP4966" 
+#&gt;                                                    name 
+#&gt;                            "Fluoroacetic acid toxicity" 
+#&gt;                                                 species 
+#&gt;                                          "Homo sapiens" 
+#&gt;                                                revision 
+#&gt;                                                "112070" 
+#&gt; 
+#&gt; [[306]]
+#&gt;                                                      id 
+#&gt;                                                "WP4971" 
+#&gt;                                                     url 
+#&gt; "https://www.wikipathways.org/index.php/Pathway:WP4971" 
+#&gt;                                                    name 
+#&gt;                          "Phosphoinositides metabolism" 
+#&gt;                                                 species 
+#&gt;                                          "Homo sapiens" 
+#&gt;                                                revision 
+#&gt;                                                "112223" 
+#&gt; 
+#&gt; [[307]]
+#&gt;                                                      id 
+#&gt;                                                "WP5030" 
+#&gt;                                                     url 
+#&gt; "https://www.wikipathways.org/index.php/Pathway:WP5030" 
+#&gt;                                                    name 
+#&gt;                           "Ethylmalonic Encephalopathy" 
+#&gt;                                                 species 
+#&gt;                                          "Homo sapiens" 
+#&gt;                                                revision 
+#&gt;                                                "115141" 
+#&gt; 
+#&gt; [[308]]
+#&gt;                                                      id 
+#&gt;                                                "WP5037" 
+#&gt;                                                     url 
+#&gt; "https://www.wikipathways.org/index.php/Pathway:WP5037" 
+#&gt;                                                    name 
+#&gt;                          "Riboflavin and CoQ disorders" 
+#&gt;                                                 species 
+#&gt;                                          "Homo sapiens" 
+#&gt;                                                revision 
+#&gt;                                                "115140" 
 #&gt; </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -3700,7 +3868,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

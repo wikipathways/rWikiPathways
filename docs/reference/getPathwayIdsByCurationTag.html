@@ -10,23 +10,27 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -37,7 +41,6 @@
 
 <meta property="og:title" content="Get Pathway WPIDs by Curation Tag — getPathwayIdsByCurationTag" />
 <meta property="og:description" content="Retrieve pathway WPIDs for every pathway with a given curation tag." />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -55,7 +58,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -69,7 +72,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rWikiPathways</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.7.1</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.11.1</span>
       </span>
     </div>
 
@@ -77,7 +80,7 @@
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -108,8 +111,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/wikipathways/rwikipathways">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/wikipathways/rwikipathways/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -135,7 +138,7 @@
     <p>Retrieve pathway WPIDs for every pathway with a given curation tag.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>getPathwayIdsByCurationTag</span>(<span class='no'>tag</span>)</pre>
+    <pre class="usage"><span class='fu'>getPathwayIdsByCurationTag</span><span class='op'>(</span><span class='va'>tag</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -151,54 +154,53 @@
     <p>A <code>list</code> of pathway WPIDs</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>{
-<span class='fu'>getPathwayIdsByCurationTag</span>(<span class='st'>'Curation:FeaturedPathway'</span>)
-}</div><div class='output co'>#&gt;   [1] "WP554"  "WP528"  "WP254"  "WP550"  "WP272"  "WP179"  "WP410"  "WP545" 
-#&gt;   [9] "WP466"  "WP111"  "WP306"  "WP524"  "WP237"  "WP500"  "WP534"  "WP561" 
-#&gt;  [17] "WP49"   "WP395"  "WP127"  "WP205"  "WP22"   "WP453"  "WP185"  "WP78"  
-#&gt;  [25] "WP382"  "WP268"  "WP408"  "WP98"   "WP405"  "WP26"   "WP289"  "WP430" 
-#&gt;  [33] "WP311"  "WP428"  "WP411"  "WP400"  "WP396"  "WP175"  "WP522"  "WP103" 
-#&gt;  [41] "WP222"  "WP85"   "WP298"  "WP157"  "WP6"    "WP385"  "WP543"  "WP403" 
-#&gt;  [49] "WP350"  "WP557"  "WP349"  "WP294"  "WP241"  "WP399"  "WP435"  "WP414" 
-#&gt;  [57] "WP13"   "WP510"  "WP432"  "WP515"  "WP260"  "WP112"  "WP370"  "WP525" 
-#&gt;  [65] "WP376"  "WP197"  "WP17"   "WP468"  "WP578"  "WP474"  "WP367"  "WP201" 
-#&gt;  [73] "WP291"  "WP3"    "WP235"  "WP580"  "WP581"  "WP585"  "WP608"  "WP617" 
-#&gt;  [81] "WP618"  "WP626"  "WP662"  "WP673"  "WP690"  "WP698"  "WP702"  "WP706" 
-#&gt;  [89] "WP707"  "WP710"  "WP716"  "WP784"  "WP880"  "WP898"  "WP912"  "WP977" 
-#&gt;  [97] "WP996"  "WP998"  "WP1026" "WP1033" "WP1034" "WP1070" "WP1112" "WP1114"
-#&gt; [105] "WP1204" "WP1218" "WP1249" "WP1284" "WP1292" "WP1299" "WP1337" "WP1363"
-#&gt; [113] "WP1387" "WP1401" "WP1403" "WP1411" "WP1425" "WP1493" "WP1518" "WP1526"
-#&gt; [121] "WP1530" "WP1531" "WP1539" "WP1544" "WP1560" "WP1591" "WP1600" "WP1601"
-#&gt; [129] "WP1602" "WP1603" "WP1604" "WP1763" "WP1772" "WP1968" "WP1981" "WP1982"
-#&gt; [137] "WP1995" "WP2011" "WP2038" "WP2059" "WP2064" "WP2067" "WP2199" "WP2204"
-#&gt; [145] "WP2205" "WP2208" "WP2211" "WP2226" "WP2227" "WP2229" "WP2231" "WP2261"
-#&gt; [153] "WP2267" "WP2279" "WP2313" "WP2332" "WP2338" "WP2371" "WP2374" "WP2406"
-#&gt; [161] "WP2431" "WP2432" "WP2447" "WP2472" "WP2484" "WP2485" "WP2488" "WP2516"
-#&gt; [169] "WP2533" "WP2566" "WP2578" "WP2583" "WP2621" "WP2622" "WP2623" "WP2624"
-#&gt; [177] "WP2634" "WP2636" "WP2643" "WP2805" "WP2828" "WP2848" "WP2849" "WP2851"
-#&gt; [185] "WP2853" "WP2854" "WP2857" "WP2858" "WP2859" "WP2860" "WP2868" "WP2870"
-#&gt; [193] "WP2884" "WP2886" "WP2888" "WP1355" "WP2940" "WP2941" "WP2944" "WP2945"
-#&gt; [201] "WP3154" "WP3286" "WP3287" "WP3297" "WP3298" "WP3300" "WP3407" "WP3408"
-#&gt; [209] "WP3413" "WP3527" "WP3529" "WP3584" "WP3599" "WP3626" "WP3628" "WP3630"
-#&gt; [217] "WP3640" "WP3644" "WP3645" "WP3646" "WP3653" "WP3660" "WP3661" "WP3676"
-#&gt; [225] "WP3830" "WP3865" "WP3871" "WP3882" "WP3892" "WP3893" "WP3894" "WP3901"
-#&gt; [233] "WP3915" "WP3916" "WP3933" "WP3935" "WP3937" "WP3958" "WP3962" "WP3965"
-#&gt; [241] "WP3972" "WP3992" "WP3995" "WP3998" "WP4018" "WP4021" "WP4030" "WP4136"
-#&gt; [249] "WP4142" "WP4150" "WP4155" "WP4174" "WP4191" "WP4195" "WP4204" "WP4210"
-#&gt; [257] "WP4216" "WP4220" "WP4223" "WP4232" "WP4239" "WP4288" "WP4290" "WP4304"
-#&gt; [265] "WP4344" "WP4352" "WP4357" "WP4364" "WP4396" "WP4462" "WP4474" "WP4482"
-#&gt; [273] "WP4518" "WP4519" "WP4521" "WP4522" "WP4523" "WP4524" "WP4540" "WP4541"
-#&gt; [281] "WP4545" "WP4549" "WP4558" "WP4577" "WP4656" "WP4657" "WP4719" "WP4720"
-#&gt; [289] "WP4721" "WP4722" "WP4724" "WP4725" "WP4726" "WP4767"</div></pre>
+    <pre class="examples"><div class='input'><span class='op'>{</span>
+<span class='fu'>getPathwayIdsByCurationTag</span><span class='op'>(</span><span class='st'>'Curation:FeaturedPathway'</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div><div class='output co'>#&gt;   [1] "WP554"  "WP528"  "WP254"  "WP550"  "WP272"  "WP179"  "WP410"  "WP545" 
+#&gt;   [9] "WP466"  "WP111"  "WP306"  "WP524"  "WP500"  "WP534"  "WP561"  "WP49"  
+#&gt;  [17] "WP395"  "WP127"  "WP205"  "WP22"   "WP453"  "WP185"  "WP78"   "WP382" 
+#&gt;  [25] "WP268"  "WP408"  "WP98"   "WP405"  "WP26"   "WP289"  "WP430"  "WP311" 
+#&gt;  [33] "WP428"  "WP411"  "WP400"  "WP396"  "WP175"  "WP522"  "WP103"  "WP222" 
+#&gt;  [41] "WP85"   "WP298"  "WP157"  "WP6"    "WP543"  "WP403"  "WP350"  "WP557" 
+#&gt;  [49] "WP349"  "WP294"  "WP241"  "WP399"  "WP435"  "WP414"  "WP13"   "WP510" 
+#&gt;  [57] "WP432"  "WP515"  "WP260"  "WP112"  "WP370"  "WP525"  "WP376"  "WP197" 
+#&gt;  [65] "WP17"   "WP468"  "WP578"  "WP474"  "WP367"  "WP201"  "WP291"  "WP3"   
+#&gt;  [73] "WP235"  "WP580"  "WP581"  "WP585"  "WP608"  "WP617"  "WP618"  "WP626" 
+#&gt;  [81] "WP662"  "WP673"  "WP690"  "WP698"  "WP702"  "WP706"  "WP707"  "WP716" 
+#&gt;  [89] "WP784"  "WP880"  "WP898"  "WP912"  "WP977"  "WP996"  "WP998"  "WP1026"
+#&gt;  [97] "WP1033" "WP1034" "WP1070" "WP1112" "WP1114" "WP1204" "WP1218" "WP1249"
+#&gt; [105] "WP1284" "WP1292" "WP1299" "WP1337" "WP1363" "WP1387" "WP1401" "WP1403"
+#&gt; [113] "WP1411" "WP1425" "WP1493" "WP1518" "WP1526" "WP1530" "WP1531" "WP1539"
+#&gt; [121] "WP1544" "WP1560" "WP1591" "WP1600" "WP1601" "WP1602" "WP1603" "WP1604"
+#&gt; [129] "WP1763" "WP1772" "WP1968" "WP1981" "WP1982" "WP1995" "WP2011" "WP2038"
+#&gt; [137] "WP2059" "WP2064" "WP2067" "WP2199" "WP2204" "WP2205" "WP2208" "WP2211"
+#&gt; [145] "WP2226" "WP2227" "WP2229" "WP2231" "WP2253" "WP2261" "WP2267" "WP2279"
+#&gt; [153] "WP2313" "WP2332" "WP2338" "WP2371" "WP2374" "WP2406" "WP2431" "WP2432"
+#&gt; [161] "WP2447" "WP2472" "WP2484" "WP2485" "WP2488" "WP2516" "WP2533" "WP2566"
+#&gt; [169] "WP2578" "WP2583" "WP2621" "WP2622" "WP2623" "WP2624" "WP2634" "WP2636"
+#&gt; [177] "WP2805" "WP2828" "WP2848" "WP2849" "WP2851" "WP2853" "WP2854" "WP2857"
+#&gt; [185] "WP2858" "WP2859" "WP2860" "WP2868" "WP2870" "WP2884" "WP2886" "WP2888"
+#&gt; [193] "WP1355" "WP2940" "WP2941" "WP2944" "WP2945" "WP3154" "WP3286" "WP3287"
+#&gt; [201] "WP3297" "WP3298" "WP3300" "WP3407" "WP3408" "WP3413" "WP3527" "WP3529"
+#&gt; [209] "WP3584" "WP3599" "WP3624" "WP3626" "WP3628" "WP3630" "WP3640" "WP3644"
+#&gt; [217] "WP3645" "WP3646" "WP3653" "WP3660" "WP3661" "WP3676" "WP3830" "WP3865"
+#&gt; [225] "WP3871" "WP3882" "WP3890" "WP3892" "WP3893" "WP3894" "WP3901" "WP3915"
+#&gt; [233] "WP3916" "WP3933" "WP3935" "WP3937" "WP3958" "WP3962" "WP3965" "WP3972"
+#&gt; [241] "WP3992" "WP3995" "WP3998" "WP4018" "WP4021" "WP4030" "WP4136" "WP4142"
+#&gt; [249] "WP4150" "WP4155" "WP4174" "WP4191" "WP4195" "WP4204" "WP4210" "WP4216"
+#&gt; [257] "WP4220" "WP4223" "WP4225" "WP4232" "WP4239" "WP4288" "WP4290" "WP4304"
+#&gt; [265] "WP4344" "WP4352" "WP4357" "WP4364" "WP4396" "WP4462" "WP4466" "WP4474"
+#&gt; [273] "WP4482" "WP4506" "WP4518" "WP4519" "WP4521" "WP4522" "WP4523" "WP4524"
+#&gt; [281] "WP4540" "WP4541" "WP4545" "WP4549" "WP4558" "WP4577" "WP4595" "WP4656"
+#&gt; [289] "WP4657" "WP4719" "WP4720" "WP4721" "WP4722" "WP4724" "WP4725" "WP4726"
+#&gt; [297] "WP4767" "WP4803" "WP4860" "WP4868" "WP4876" "WP4883" "WP4884" "WP4927"
+#&gt; [305] "WP4966" "WP4971" "WP5030" "WP5037"</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#value">Value</a></li>
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -209,7 +211,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
