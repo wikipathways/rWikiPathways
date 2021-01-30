@@ -55,6 +55,8 @@ downloadPathwayArchive <- function(date='current',organism=NULL, format=c('gpml'
         download.file(url, paste(destpath,filename,sep='/'), 'auto')
         return(filename)
     } else { #...just open browser
-        browseURL(paste('http://data.wikipathways.org',date, format ,sep="/"))
-    }    
+        url <- paste('http://data.wikipathways.org', date, format, sep="/")
+        if (interactive())
+            browseURL(url)
+    }
 }
