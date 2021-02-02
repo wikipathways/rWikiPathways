@@ -3,19 +3,20 @@
 #'
 #' @description Writes a GMT (Gene Matrix Transposed) file from a data frame.
 #' @param df Data frame with columns ordered as Identifiers, optional 
-#' Name columns and Genes. Identifiers must be first and Genes must be last.
+#' Description column and Genes. Identifiers must be first and Genes must be last.
 #' @param outfile Path to output GMT file 
 #' @return None
 #' @details The input data frame must include at least two columns: Identifiers
 #' (first column) and Genes (last column). The Identifiers will be duplicated to
-#' fill the Name column in the output GMT file. If one or more Name columns are 
-#' provided in the data frame, #' then they will be concatenated with % 
-#' separators.
+#' fill the Description column in the output GMT file if none is provided. If 
+#' more than three columns are provided, then the first n columns will be 
+#' concatenated with % separators to form the ID, where n+2 equals the total
+#' number of columns.
 #' @references Adapted from the GMT writer in MAGeCKFlute,
 #'  \url{https://github.com/WubingZhang/MAGeCKFlute/blob/master/R/readGMT.R}
 #' @examples \donttest{
 #' my.df <- data.frame(id=c("WP1000","WP1000","WP1000","WP1001","WP1001"),
-#'          name=c("cancer","cancer","cancer","diabetes","diabetes"),
+#'          description=c("cancer","cancer","cancer","diabetes","diabetes"),
 #'          gene=c("574413","2167","4690","5781","11184"))
 #' writeGMT(my.df, "myGmtFile.gmt")
 #' }
@@ -29,14 +30,14 @@ writeGMT <- function(df, outfile){
     if(df.len < 2){
         stop("The input data frame must include at least two columns.")
     } else if(df.len == 2){
-        df$name <- df[,1]
+        df$desc <- df[,1]
         df <- df[,c(1,3,2)]
     } else if(df.len > 3){
-        name.cols <- names(df[,seq(2,df.len-1)])
-        message(paste0("Concatenating the following columns to use as Name: ",paste(name.cols, collapse = ", ")))
-        df[,df.len+1] <- apply(df[,name.cols],1,paste,collapse="%")
-        df <- df[,!(names(df) %in% name.cols)]
-        df <- df[,c(1,3,2)]
+        id.cols <- names(df[,seq(1,df.len-2)])
+        message(paste0("Concatenating the following columns to use as Identifiers: ",paste(id.cols, collapse = ", ")))
+        df[,df.len+1] <- apply(df[,id.cols],1,paste,collapse="%")
+        df <- df[,!(names(df) %in% id.cols)]
+        df <- df[,c(3,1,2)]
     }
     
     # Generate file
@@ -47,5 +48,3 @@ writeGMT <- function(df, outfile){
     write.table(gmt, outfile, sep = "\t", row.names = FALSE,
                 col.names = FALSE, quote = FALSE)
 }
-
-
