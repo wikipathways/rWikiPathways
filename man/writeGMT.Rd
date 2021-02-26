@@ -8,7 +8,7 @@ writeGMT(df, outfile)
 }
 \arguments{
 \item{df}{Data frame with columns ordered as Identifiers, optional 
-Name columns and Genes. Identifiers must be first and Genes must be last.}
+Description column and Genes. Identifiers must be first and Genes must be last.}
 
 \item{outfile}{Path to output GMT file}
 }
@@ -21,14 +21,15 @@ Writes a GMT (Gene Matrix Transposed) file from a data frame.
 \details{
 The input data frame must include at least two columns: Identifiers
 (first column) and Genes (last column). The Identifiers will be duplicated to
-fill the Name column in the output GMT file. If one or more Name columns are 
-provided in the data frame, #' then they will be concatenated with % 
-separators.
+fill the Description column in the output GMT file if none is provided. If 
+more than three columns are provided, then the first n columns will be 
+concatenated with % separators to form the ID, where n+2 equals the total
+number of columns.
 }
 \examples{
 \donttest{
 my.df <- data.frame(id=c("WP1000","WP1000","WP1000","WP1001","WP1001"),
-         name=c("cancer","cancer","cancer","diabetes","diabetes"),
+         description=c("cancer","cancer","cancer","diabetes","diabetes"),
          gene=c("574413","2167","4690","5781","11184"))
 writeGMT(my.df, "myGmtFile.gmt")
 }
