@@ -23,6 +23,7 @@
 #' @export
 #' @importFrom utils browseURL download.file
 #' @importFrom XML readHTMLTable
+#' @importFrom RCurl getURL
 downloadPathwayArchive <- function(date='current',organism=NULL, format=c('gpml', 'gmt', 'svg'), destpath='./'){
     #get validated format
     format <- match.arg(format)
@@ -41,7 +42,9 @@ downloadPathwayArchive <- function(date='current',organism=NULL, format=c('gpml'
     #download specific file, or...
     if (!is.null(organism)){
         if (date == 'current'){ #determine filename
-            curr.files <- readHTMLTable(paste0('http://data.wikipathways.org/current/',format))[[1]]$Filename
+            data.url <- getURL(paste0('http://data.wikipathways.org/current/',format), 
+                               followlocation=TRUE, .opts=list(useragent="Mozila 5.0"))
+            curr.files <- readHTMLTable(data.url)[[1]]$Filename
             filename <- grep(sub("\\s","_",organism), curr.files, value=TRUE)
             if (length(filename) == 0)
                 stop ('Could not find a file matching your specifications. Try browsing http://data.wikipathways.org.')
