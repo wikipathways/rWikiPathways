@@ -87,7 +87,7 @@ It's "En"! That's simple enough. But some are less obvious...
 ```
 
 It's "L" because the resource used to be named "Locus Link". Sigh... Don't try to guess these codes. Use this function from BridgeDb (above) to get the correct code. By the way, all the systems supported by BridgeDb are here:
-https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/resources/org/bridgedb/bio/datasources.tsv
+https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/src/main/resources/org/bridgedb/bio/datasources.tsv
 
 # How to use BridgeDbR with rWikiPathways
 Here are some specific combo functions that are useful. They let you skip worrying about system codes altogether!
