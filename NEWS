@@ -1,3 +1,8 @@
+Changes in version 1.11.4
++ Updated URLs to BridgeDb datasources.tsv
+Changes in version 1.11.3
++ New features
+    - new readGMT and readGMTnames methods
 Changes in version 1.10.0
 + Defuncted getColoredPathway
 + Doc fix: examples fixed and sample gmt included
