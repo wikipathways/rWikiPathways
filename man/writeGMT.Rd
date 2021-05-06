@@ -31,7 +31,7 @@ number of columns.
 my.df <- data.frame(id=c("WP1000","WP1000","WP1000","WP1001","WP1001"),
          description=c("cancer","cancer","cancer","diabetes","diabetes"),
          gene=c("574413","2167","4690","5781","11184"))
-writeGMT(my.df, "myGmtFile.gmt")
+writeGMT(my.df, "my_gmt_file.gmt")
 }
 }
 \references{

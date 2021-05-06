@@ -23,7 +23,7 @@ another data frame with terms and names, then see readGMTnames.
 }
 \examples{
 \donttest{
-readGMT("my_gmt_file.gmt")
+readGMT(system.file("extdata","my_gmt_file.gmt", package="rWikiPathways"))
 }
 }
 \seealso{
