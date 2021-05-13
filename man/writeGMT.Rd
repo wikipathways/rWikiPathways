@@ -8,7 +8,8 @@ writeGMT(df, outfile)
 }
 \arguments{
 \item{df}{Data frame with columns ordered as Identifiers, optional 
-Description column and Genes. Identifiers must be first and Genes must be last.}
+Description column and Genes. Identifiers must be first and Genes must be 
+last.}
 
 \item{outfile}{Path to output GMT file}
 }

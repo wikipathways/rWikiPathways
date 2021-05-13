@@ -30,9 +30,12 @@ wikipathwaysAPI <- function(base.url=.baseUrl){
 #' @title WikiPathways GET
 #'
 #' @description Constructs the query, makes GET call and processes the result
-#' @param operation A \code{character} string to be converted to the query namespace
-#' @param parameters A named \code{list} of values to be converted to query parameters 
-#' @param format (\code{character}) The format of the return, e.g., json (default), xml, html, jpg, pdf, dump
+#' @param operation A \code{character} string to be converted to the query 
+#' namespace
+#' @param parameters A named \code{list} of values to be converted to query 
+#' parameters 
+#' @param format (\code{character}) The format of the return, e.g., json 
+#' (default), xml, html, jpg, pdf, dump
 #' @param base.url (optional) Ignore unless you need to specify a custom domain.
 #' @return query result content
 #' @examples {

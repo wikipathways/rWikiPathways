@@ -50,7 +50,8 @@ findPathwaysByLiterature <- function(query) {
 #' @title Find Pathway WPIDs By Literature 
 #'
 #' @description Retrieve list of pathway WPIDs containing the query citation.
-#' @param query The \code{character} string to search for, e.g., a PMID, title keyword or author name.
+#' @param query The \code{character} string to search for, e.g., a PMID, title 
+#' keyword or author name.
 #' @return A \code{list} of WPIDs
 #' @examples {
 #' findPathwayIdsByLiterature('19649250')
@@ -70,7 +71,8 @@ findPathwayIdsByLiterature <- function(query) {
 #' @description Retrieve list of pathway names containing the query citation.
 #' @details Note: there will be multiple listings of the same pathway name if 
 #' copies exist for multiple species.
-#' @param query The \code{character} string to search for, e.g., a PMID, title keyword or author name.
+#' @param query The \code{character} string to search for, e.g., a PMID, title 
+#' keyword or author name.
 #' @return A \code{list} of lists
 #' @examples {
 #' findPathwayNamesByLiterature('19649250')
@@ -88,7 +90,8 @@ findPathwayNamesByLiterature <- function(query) {
 #' @title Find Pathway URLs By Literature 
 #'
 #' @description Retrieve list of pathway URLs containing the query citation.
-#' @param query The \code{character} string to search for, e.g., a PMID, title keyword or author name.
+#' @param query The \code{character} string to search for, e.g., a PMID, title 
+#' keyword or author name.
 #' @return A \code{list} of lists
 #' @examples {
 #' findPathwayUrlsByLiterature('19649250')

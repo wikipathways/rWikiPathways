@@ -3,7 +3,8 @@
 #'
 #' @description Writes a GMT (Gene Matrix Transposed) file from a data frame.
 #' @param df Data frame with columns ordered as Identifiers, optional 
-#' Description column and Genes. Identifiers must be first and Genes must be last.
+#' Description column and Genes. Identifiers must be first and Genes must be 
+#' last.
 #' @param outfile Path to output GMT file 
 #' @return None
 #' @details The input data frame must include at least two columns: Identifiers

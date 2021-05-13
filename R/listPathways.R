@@ -1,10 +1,10 @@
 # ------------------------------------------------------------------------------
 #' @title List Pathways
 #'
-#' @description Retrieve list of pathways per species, including WPID, name, species,
-#' URL and latest revision number.
-#' @param organism (\code{character}, optional) A particular species. See \link{listOrganisms}. 
-#' Default is all species.
+#' @description Retrieve list of pathways per species, including WPID, name, 
+#' species, URL and latest revision number.
+#' @param organism (\code{character}, optional) A particular species. 
+#' See \link{listOrganisms}. Default is all species.
 #' @return A \code{dataframe} of pathway information
 #' @examples {
 #' listPathways('Mus musculus')
@@ -29,7 +29,8 @@ listPathways <- function(organism="") {
 #'
 #' @description Retrieve list of pathway WPIDs per species. 
 #' @details Basically returns a subset of \link{listPathways} result
-#' @param organism (\code{character}, optional) A particular species. See \link{listOrganisms}. 
+#' @param organism (\code{character}, optional) A particular species. 
+#' See \link{listOrganisms}. 
 #' Default is all species.
 #' @return A \code{list} of WPIDs
 #' @examples {
@@ -47,7 +48,8 @@ listPathwayIds <- function(organism="") {
 #'
 #' @description Retrieve list of pathway names per species. 
 #' @details Basically returns a subset of \link{listPathways} result
-#' @param organism (\code{character}, optional) A particular species. See \link{listOrganisms}. 
+#' @param organism (\code{character}, optional) A particular species. 
+#' See \link{listOrganisms}. 
 #' Default is all species.
 #' @return A \code{list} of names
 #' @examples {
@@ -65,7 +67,8 @@ listPathwayNames <- function(organism="") {
 #'
 #' @description Retrieve list of pathway URLs per species. 
 #' @details Basically returns a subset of \link{listPathways} result
-#' @param organism (\code{character}, optional) A particular species. See \link{listOrganisms}. 
+#' @param organism (\code{character}, optional) A particular species. 
+#' See \link{listOrganisms}. 
 #' Default is all species.
 #' @return A \code{list} of URLs
 #' @examples {

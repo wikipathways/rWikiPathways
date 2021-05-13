@@ -10,7 +10,8 @@ findPathwaysByText(query)
 \item{query}{A \code{character} string to search for, e.g., "cancer"}
 }
 \value{
-A \code{dataframe} of pathway attributes in addition to query result score
+A \code{dataframe} of pathway attributes in addition to query result 
+score
 }
 \description{
 Retrieve pathways containing the query text.

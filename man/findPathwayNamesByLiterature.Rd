@@ -7,7 +7,8 @@
 findPathwayNamesByLiterature(query)
 }
 \arguments{
-\item{query}{The \code{character} string to search for, e.g., a PMID, title keyword or author name.}
+\item{query}{The \code{character} string to search for, e.g., a PMID, title 
+keyword or author name.}
 }
 \value{
 A \code{list} of lists

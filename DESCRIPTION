@@ -1,8 +1,8 @@
 Package: rWikiPathways
 Type: Package
 Title: rWikiPathways - R client library for the WikiPathways API
-Version: 1.11.4
-Date: 2021-04-24
+Version: 1.11.5
+Date: 2021-05-13
 Authors@R: c(person("Egon", "Willighagen", role = c("aut","cre"),
                      email = "egon.willighagen@gmail.com",
                      comment = c(ORCID = "0000-0001-7542-0286")),
@@ -12,7 +12,7 @@ Authors@R: c(person("Egon", "Willighagen", role = c("aut","cre"),
            )
 Imports: httr, utils, XML, rjson, data.table, tidyr, RCurl
 Suggests: testthat, BiocStyle, knitr, rmarkdown
-Description: Use this package to interface with the WikiPathways API.
+Description: Use this package to interface with the WikiPathways API. It provides programmatic access to WikiPathways content in multiple data and image formats, including official monthly release files and convenient GMT read/write functions.
 License: MIT + file LICENSE
 URL: https://github.com/wikipathways/rwikipathways
 BugReports: https://github.com/wikipathways/rwikipathways/issues

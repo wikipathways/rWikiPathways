@@ -7,15 +7,15 @@
 listPathways(organism = "")
 }
 \arguments{
-\item{organism}{(\code{character}, optional) A particular species. See \link{listOrganisms}. 
-Default is all species.}
+\item{organism}{(\code{character}, optional) A particular species. 
+See \link{listOrganisms}. Default is all species.}
 }
 \value{
 A \code{dataframe} of pathway information
 }
 \description{
-Retrieve list of pathways per species, including WPID, name, species,
-URL and latest revision number.
+Retrieve list of pathways per species, including WPID, name, 
+species, URL and latest revision number.
 }
 \examples{
 {

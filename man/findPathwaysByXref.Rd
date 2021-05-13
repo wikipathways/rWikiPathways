@@ -7,24 +7,27 @@
 findPathwaysByXref(identifier, systemCode)
 }
 \arguments{
-\item{identifier}{(\code{character}) The official ID specified by a data source or system}
+\item{identifier}{(\code{character}) The official ID specified by a data 
+source or system}
 
-\item{systemCode}{(\code{character}) The BridgeDb code associated with the data source or system, 
-e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc.
-See column two of https://github.com/bridgedb/BridgeDb/blob/master/org.bridgedb.bio/src/main/resources/org/bridgedb/bio/datasources.tsv.}
+\item{systemCode}{(\code{character}) The BridgeDb code associated with the 
+data source or system, 
+e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc. See column two of 
+https://github.com/bridgedb/datasources/blob/main/datasources.tsv.}
 }
 \value{
-A \code{dataframe} of pathway attributes in addition to query result score
+A \code{dataframe} of pathway attributes in addition to query 
+result score
 }
 \description{
 Retrieve pathways containing the query Xref by identifier
  and system code.
 }
 \details{
-Note: there will be multiple listings of the same pathway if the Xref
-is present mutiple times.
+Note: there will be multiple listings of the same pathway if the 
+Xref is present mutiple times.
 
-The score is from a lucene index search engine, ranging from 0 to 
+The score is from a lucene index search engine, ranging from 0 to
 1 with higher scores for better matches.
 }
 \examples{

@@ -3,7 +3,8 @@
 #'
 #' @description Retrieve pathways containing the query text.
 #' @param query A \code{character} string to search for, e.g., "cancer"
-#' @return A \code{dataframe} of pathway attributes in addition to query result score
+#' @return A \code{dataframe} of pathway attributes in addition to query result 
+#' score
 #' @details The score is from a lucene index search engine, ranging from 0 to 
 #' 1 with higher scores for better matches. 
 #' @examples {

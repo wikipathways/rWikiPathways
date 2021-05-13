@@ -1,3 +1,8 @@
+Changes in version 1.12.0
++ Removed getColoredPathway
++ New function: writeGMT
++ Updated URLs to BridgeDb datasources.tsv (again)
++ Bug fix: downloadPathwaysArchive works with redirected urls
 Changes in version 1.11.4
 + Updated URLs to BridgeDb datasources.tsv
 Changes in version 1.11.3

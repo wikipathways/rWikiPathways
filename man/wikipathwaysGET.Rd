@@ -12,11 +12,14 @@ wikipathwaysGET(
 )
 }
 \arguments{
-\item{operation}{A \code{character} string to be converted to the query namespace}
+\item{operation}{A \code{character} string to be converted to the query 
+namespace}
 
-\item{parameters}{A named \code{list} of values to be converted to query parameters}
+\item{parameters}{A named \code{list} of values to be converted to query 
+parameters}
 
-\item{format}{(\code{character}) The format of the return, e.g., json (default), xml, html, jpg, pdf, dump}
+\item{format}{(\code{character}) The format of the return, e.g., json 
+(default), xml, html, jpg, pdf, dump}
 
 \item{base.url}{(optional) Ignore unless you need to specify a custom domain.}
 }

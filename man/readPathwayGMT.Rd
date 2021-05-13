@@ -25,7 +25,8 @@ The input file can be retrieved by using
 }
 \examples{
 \donttest{
-readPathwayGMT(system.file("extdata","wikipathways-20201010-gmt-Homo_sapiens.gmt", package="rWikiPathways"))
+readPathwayGMT(system.file("extdata",
+  "wikipathways-20201010-gmt-Homo_sapiens.gmt", package="rWikiPathways"))
 }
 }
 \references{
