@@ -42,23 +42,23 @@ downloadPathwayArchive <- function(date='current',organism=NULL, format=c('gpml'
     #download specific file, or...
     if (!is.null(organism)){
         if (date == 'current'){ #determine filename
-            data.url <- getURL(paste0('http://data.wikipathways.org/current/',format), 
+            data.url <- getURL(paste0('https://data.wikipathways.org/current/',format), 
                                followlocation=TRUE, .opts=list(useragent="Mozila 5.0"))
             curr.files <- readHTMLTable(data.url)[[1]]$Filename
             filename <- grep(sub("\\s","_",organism), curr.files, value=TRUE)
             if (length(filename) == 0)
-                stop ('Could not find a file matching your specifications. Try browsing http://data.wikipathways.org.')
+                stop ('Could not find a file matching your specifications. Try browsing https://data.wikipathways.org.')
         } else { #construct filename
             ext <- ".zip"
             if (format == 'gmt')
                 ext <- ".gmt"
             filename <- paste0(paste('wikipathways',date,format,sub("\\s","_",organism),sep="-"), ext)
         }
-        url <- paste('http://data.wikipathways.org',date, format, filename, sep="/")
+        url <- paste('https://data.wikipathways.org',date, format, filename, sep="/")
         download.file(url, paste(destpath,filename,sep='/'), 'auto')
         return(filename)
     } else { #...just open browser
-        url <- paste('http://data.wikipathways.org', date, format, sep="/")
+        url <- paste('https://data.wikipathways.org', date, format, sep="/")
         if (interactive())
             browseURL(url)
     }
