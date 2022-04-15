@@ -86,8 +86,8 @@ Following each bioconductor release, a `RELEASE_#_#` branch is created. The new 
 
 ```
 git fetch upstream
-git checkout -b RELEASE_3_13 upstream/RELEASE_3_13
-git push origin RELEASE_3_13
+git checkout -b RELEASE_3_15 upstream/RELEASE_3_15
+git push origin RELEASE_3_15
 git checkout master
 git pull upstream master
 git push origin master
@@ -96,15 +96,15 @@ git push origin master
 Only bug fixes and documentation updates can be pushed to the official bioconductor release branch. After committing and pushing fixes to `master`, then:
 
 ```
-git checkout RELEASE_3_13
+git checkout RELEASE_3_15
 git cherry-pick master #for lastest commit
 # or git cherry-pick 1abc234 #for specific commit
 # or git cherry-pick 1abc234^..5def678 #for an inclusive range
 # bump release version in DESCRIPTION
 git commit -am 'version bump'
-git push origin RELEASE_3_13
+git push origin RELEASE_3_15
 # double check changes, and then...
-git push upstream RELEASE_3_13
+git push upstream RELEASE_3_15
 git checkout master
 # bump dev version in DESCRIPTION
 git commit -am 'version bump'
