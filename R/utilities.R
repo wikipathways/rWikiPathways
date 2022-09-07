@@ -65,7 +65,7 @@ wikipathwaysGET <- function(operation, parameters=NULL, format=c('json','xml','h
         stop()
     } else {
         if(length(res$content)>0){
-            return(fromJSON(rawToChar(res$content)))
+            return(rjson::fromJSON(rawToChar(res$content)))
         } else{
             invisible(res)
         }
