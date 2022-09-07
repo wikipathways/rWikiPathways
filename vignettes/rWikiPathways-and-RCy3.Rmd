@@ -51,7 +51,6 @@ library(RCy3)
 
 # Use install.packages() for the following, if necessary:
 library(magrittr)
-library(dplyr)
 ```
 
 The whole point of RCy3 is to connect with Cytoscape. You will need to install and launch Cytoscape:
