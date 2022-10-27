@@ -3,8 +3,6 @@
 
 [![BioC Dev Build Status](http://bioconductor.org/shields/build/devel/bioc/rWikiPathways.svg)](http://bioconductor.org/checkResults/devel/bioc-LATEST/rWikiPathways/) - Bioconductor Dev Build
 
-[![Travis-CI Build Status](https://travis-ci.org/wikipathways/rWikiPathways.svg?branch=master)](https://travis-ci.org/wikipathways/rWikiPathways) - GitHub Dev Build by Travis
-
 R Client library for the WikiPathways API (https://webservice.wikipathways.org/) (license: MIT).
 
 WikiPathays is described in the following papers:
