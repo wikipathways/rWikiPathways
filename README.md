@@ -8,6 +8,7 @@ R Client library for the WikiPathways API (https://webservice.wikipathways.org/)
 WikiPathays is described in the following papers:
 * 2016 NAR paper by [Kutmon et al.](https://doi.org/10.1093/nar/gkv1024)
 * 2018 NAR paper by [Slenter et al.](https://doi.or/10.1093/nar/gkx1064)
+* 2021 NAR paper by [Martens et al.](https://doi.org/10.1093/nar/gkaa1024)
 
 If you like this package, or want to make it easier to work with Xrefs, then
 you may also like these R packages:
