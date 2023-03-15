@@ -1,3 +1,8 @@
+Changes in version 1.17.1
++ doc fix: dplyr redundant, throws error
++ doc fix: specify rjson and lib packages in Rmd
++ README: removed Travis-CI badge (discontinued)
++ README: added latest WikiPathways paper
 Changes in version 1.16.0
 + HTTPS updates
 + Update vignette to include new clusterProfiler functions
