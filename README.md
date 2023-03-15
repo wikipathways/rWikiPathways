@@ -72,31 +72,31 @@ pkgdown::build_site()
 ```
 
 ### Bioconductor
-While this is the primary development repository for the rWikiPathways project, we also make regular pushes to official bioconductor repository ([devel](http://bioconductor.org/packages/devel/bioc/html/rWikiPathways.html) & [release](http://bioconductor.org/packages/release/bioc/html/rWikiPathways.html)) from which the official releases are generated. This is the correct repo for all coding and bug reporting interests. The tagged releases here correspond to the bioconductor releases via a manual syncing process. The `master` branch here corresponds to the latest code in development and not yet released. 
+While this is the primary development repository for the rWikiPathways project, we also make regular pushes to official bioconductor repository ([devel](http://bioconductor.org/packages/devel/bioc/html/rWikiPathways.html) & [release](http://bioconductor.org/packages/release/bioc/html/rWikiPathways.html)) from which the official releases are generated. This is the correct repo for all coding and bug reporting interests. The tagged releases here correspond to the bioconductor releases via a manual syncing process. The `devel` branch here corresponds to the latest code in development and not yet released. 
 
 ```
 git commit -m "informative commit message"
-git push origin master
-git push upstream master
+git push origin devel
+git push upstream devel
 ```
 http://bioconductor.org/developers/how-to/git/push-to-github-bioc/
 
-Following each bioconductor release, a `RELEASE_#_#` branch is created. The new branch is fetched and master is updated:
+Following each bioconductor release, a `RELEASE_#_#` branch is created. The new branch is fetched and devel is updated:
 
 ```
 git fetch upstream
 git checkout -b RELEASE_3_15 upstream/RELEASE_3_15
 git push origin RELEASE_3_15
-git checkout master
-git pull upstream master
-git push origin master
+git checkout devel
+git pull upstream devel
+git push origin devel
 ```
 
-Only bug fixes and documentation updates can be pushed to the official bioconductor release branch. After committing and pushing fixes to `master`, then:
+Only bug fixes and documentation updates can be pushed to the official bioconductor release branch. After committing and pushing fixes to `devel`, then:
 
 ```
 git checkout RELEASE_3_15
-git cherry-pick master #for lastest commit
+git cherry-pick devel #for lastest commit
 # or git cherry-pick 1abc234 #for specific commit
 # or git cherry-pick 1abc234^..5def678 #for an inclusive range
 # bump release version in DESCRIPTION
@@ -104,14 +104,14 @@ git commit -am 'version bump'
 git push origin RELEASE_3_15
 # double check changes, and then...
 git push upstream RELEASE_3_15
-git checkout master
+git checkout devel
 # bump dev version in DESCRIPTION
 git commit -am 'version bump'
-git push origin master
-git push upstream master
+git push origin devel
+git push upstream devel
 ```
 
-And then finally, bump version and commit DESCRIPTION to `master` and push to origin and upstream.
+And then finally, bump version and commit DESCRIPTION to `devel` and push to origin and upstream.
 
 https://bioconductor.org/developers/how-to/git/bug-fix-in-release-and-devel/
 
