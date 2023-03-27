@@ -1,3 +1,5 @@
+Changes in version 1.18.1
++ Fixed a test to match the webservice
 Changes in version 1.16.0
 + HTTPS updates
 + Update vignette to include new clusterProfiler functions
