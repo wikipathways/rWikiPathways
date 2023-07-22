@@ -3,7 +3,7 @@ Changes in version 1.22.0
 + getRecentChanges now returns data.frame of pathways per last-edit date 
 + findPathwaysByText has new param, "field" to optionally specify which fields to search
 + getPathwayHistory now opens pathway commit history in browser
-+ getPathwayInfo now returns all pathways is param is left NULL
++ getPathwayInfo now returns all pathways if param is left NULL
 + New functions: 
     - listCommunities
     - getPathwaysByCommunity
