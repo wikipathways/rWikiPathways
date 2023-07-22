@@ -6,8 +6,9 @@
 #' @examples {
 #' listOrganisms()
 #' }
+#' 
 #' @export
 listOrganisms <- function() {
-    res <- wikipathwaysGET('listOrganisms')
+    res <- rjson::fromJSON(file="https://www.wikipathways.org/json/listOrganisms.json")
     res$organisms
 }

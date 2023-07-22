@@ -7,12 +7,13 @@
 getPathway(pathway, revision = 0)
 }
 \arguments{
-\item{pathway}{WikiPathways identifier (WPID) for the pathway to download, e.g. WP4}
+\item{pathway}{WikiPathways identifier (WPID) for the pathway to retrieve, 
+e.g. WP554}
 
-\item{revision}{(\code{integer}, optional) Number to indicate a specific revision to download}
+\item{revision}{<ignored> Only the latest version is available.}
 }
 \value{
-GPML
+GPML as string
 }
 \description{
 Retrieve a specific pathway in the GPML format

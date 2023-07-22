@@ -4,13 +4,14 @@
 \alias{getOntologyTerms}
 \title{Get Ontology Terms by Pathway}
 \usage{
-getOntologyTerms(pathway)
+getOntologyTerms(pathway = NULL)
 }
 \arguments{
-\item{pathway}{WikiPathways identifier (WPID) for the pathway to download, e.g. WP4}
+\item{pathway}{WikiPathways identifier (WPID) for the pathway, e.g. WP554. If
+NULL, then ontology term information for all pathways is returned.}
 }
 \value{
-A \code{list} of tag name, display name, revision, text, timestampe and user
+A \code{data.frame} pathway id and term information
 }
 \description{
 Retrieve information about ontology terms for a specific pathway.

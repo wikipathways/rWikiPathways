@@ -4,23 +4,21 @@
 \alias{getPathwayHistory}
 \title{Get Pathway History}
 \usage{
-getPathwayHistory(pathway, timestamp)
+getPathwayHistory(pathway = NULL, timestamp = NULL)
 }
 \arguments{
-\item{pathway}{WikiPathways identifier (WPID) for the pathway to download, e.g. WP4}
+\item{pathway}{WikiPathways identifier (WPID) for the pathway, e.g. WP554}
 
-\item{timestamp}{(\code{integer}) Limit by time, only history items after the given time, 
-e.g., 20180201 for revisions since Feb 1st, 2018. Any length of timestamp is 
-accepted, upto 14 digits, e.g., 2018, 201802, 20180201063011, etc.}
+\item{timestamp}{<ignored>}
 }
 \value{
-A \code{list} of revisions, including user and comment
+Opens the GitHub history for a pathway
 }
 \description{
-Retrieve the revision history of a pathway.
+View the revision history of a pathway.
 }
 \examples{
 {
-getPathwayHistory('WP554',20180201)
+getPathwayHistory('WP554')
 }
 }

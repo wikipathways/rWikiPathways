@@ -2,15 +2,23 @@
 #' @title Get Ontology Terms by Pathway
 #'
 #' @description Retrieve information about ontology terms for a specific pathway.
-#' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
-#' @return A \code{list} of tag name, display name, revision, text, timestampe and user
+#' @param pathway WikiPathways identifier (WPID) for the pathway, e.g. WP554. If
+#' NULL, then ontology term information for all pathways is returned.
+#' @return A \code{data.frame} pathway id and term information
 #' @examples {
 #' getOntologyTerms('WP554')
 #' }
 #' @export
-getOntologyTerms <- function(pathway) {
-    res <- wikipathwaysGET('getOntologyTermsByPathway',list(pwId=pathway))
-    return(unname(res$terms))
+getOntologyTerms <- function(pathway=NULL) {
+    res <- rjson::fromJSON(file="https://www.wikipathways.org/json/getOntologyTermsByPathway.json")
+    res.df <- res$pathways %>%
+        purrr::map_df(~as_tibble(.)) %>%
+        unnest_wider(terms, names_sep = "_")
+    
+    if(!is.null(pathway))
+        res.df <- dplyr::filter(res.df, id == pathway)
+    
+    return(as.data.frame(res.df))
 }
 
 # ------------------------------------------------------------------------------
@@ -23,8 +31,8 @@ getOntologyTerms <- function(pathway) {
 #' getOntologyTermNames('WP554')
 #' }
 #' @export
-getOntologyTermNames <- function(pathway) {
-    unlist(lapply(getOntologyTerms(pathway), function(x) {unname(x['name'])}))
+getOntologyTermNames <- function(pathway=NULL) {
+    return(unique(getOntologyTerms(pathway)$terms_name))
 }
 
 # ------------------------------------------------------------------------------
@@ -37,8 +45,8 @@ getOntologyTermNames <- function(pathway) {
 #' getOntologyTermIds('WP554')
 #' }
 #' @export
-getOntologyTermIds <- function(pathway) {
-    unlist(lapply(getOntologyTerms(pathway), function(x) {unname(x['id'])}))
+getOntologyTermIds <- function(pathway=NULL) {
+    return(unique(getOntologyTerms(pathway)$terms_id))
 }
 
 
@@ -47,14 +55,21 @@ getOntologyTermIds <- function(pathway) {
 #'
 #' @description Retrieve pathway information for every pathway with a given ontology term.
 #' @param term (\code{character}) Official name of ontology term, e.g., "PW:0000045"
-#' @return A \code{list} of pathway information, including WPID, url, name, species and revision
+#' @return A \code{data.frame} of pathway information
 #' @examples {
 #' getPathwaysByOntologyTerm('PW:0000045')
 #' }
 #' @export
-getPathwaysByOntologyTerm <- function(term) {
-    res <- wikipathwaysGET('getPathwaysByOntologyTerm',list(term=term))
-    return(unname(res$pathways))
+getPathwaysByOntologyTerm <- function(term=NULL) {    
+    res <- rjson::fromJSON(file="https://www.wikipathways.org/json/getPathwaysByOntologyTerm.json")
+    res.df <- res$terms %>%
+    purrr::map_df(~as_tibble(.)) %>%
+    unnest_wider(pathways, names_sep = "_")
+
+if(!is.null(term))
+    res.df <- dplyr::filter(res.df, id == term)
+
+return(as.data.frame(res.df))
 }
 
 # ------------------------------------------------------------------------------
@@ -67,8 +82,8 @@ getPathwaysByOntologyTerm <- function(term) {
 #' getPathwayIdsByOntologyTerm('PW:0000045')
 #' }
 #' @export
-getPathwayIdsByOntologyTerm <- function(term) {
-    unlist(lapply(getPathwaysByOntologyTerm(term), function(x) {unname(x['id'])}))
+getPathwayIdsByOntologyTerm <- function(term=NULL) {
+    return(unique(getPathwaysByOntologyTerm(term)$pathways_id))
 }
 
 # ------------------------------------------------------------------------------
@@ -76,14 +91,21 @@ getPathwayIdsByOntologyTerm <- function(term) {
 #'
 #' @description Retrieve pathway information for every pathway with a child term of given ontology term.
 #' @param term (\code{character}) Official name of ontology term, e.g., "PW:0000045"
-#' @return A \code{list} of pathway information, including WPID, url, name, species and revision
+#' @return A \code{data.frame} of pathway information
 #' @examples {
 #' getPathwaysByParentOntologyTerm('PW:0000045')
 #' }
 #' @export
-getPathwaysByParentOntologyTerm <- function(term) {
-    res <- wikipathwaysGET('getPathwaysByParentOntologyTerm',list(term=term))
-    return(unname(res$pathways))
+getPathwaysByParentOntologyTerm <- function(term=NULL) {
+    res <- rjson::fromJSON(file="https://www.wikipathways.org/json/getPathwaysByOntologyTerm.json")
+    res.df <- res$terms %>%
+        purrr::map_df(~as_tibble(.)) %>%
+        unnest_wider(pathways, names_sep = "_")
+    
+    if(!is.null(term))
+        res.df <- dplyr::filter(res.df, parent == term)
+    
+    return(as.data.frame(res.df))
 }
 
 # ------------------------------------------------------------------------------
@@ -96,7 +118,7 @@ getPathwaysByParentOntologyTerm <- function(term) {
 #' getPathwayIdsByParentOntologyTerm('PW:0000045')
 #' }
 #' @export
-getPathwayIdsByParentOntologyTerm <- function(term) {
-    unlist(lapply(getPathwaysByParentOntologyTerm(term), function(x) {unname(x['id'])}))
+getPathwayIdsByParentOntologyTerm <- function(term=NULL) {
+    return(unique(getPathwaysByParentOntologyTerm(term)$pathways_id))
 }
 

@@ -4,7 +4,7 @@
 \alias{findPathwayUrlsByXref}
 \title{Find Pathway URLs By Xref}
 \usage{
-findPathwayUrlsByXref(identifier, systemCode)
+findPathwayUrlsByXref(identifier = NULL, systemCode = NULL)
 }
 \arguments{
 \item{identifier}{(\code{character}) The official ID specified by a data 
@@ -28,7 +28,7 @@ Xref is present mutiple times.
 }
 \examples{
 {
-findPathwayUrlsByXref('ENSG00000232810','En')
+findPathwayUrlsByXref('ENSG00000100031','En')
 }
 }
 \seealso{

@@ -2,7 +2,7 @@
 % Please edit documentation in R/utilities.R
 \name{wikipathwaysAPI}
 \alias{wikipathwaysAPI}
-\title{Open Swagger docs for WikiPathways API}
+\title{DEPRECATED: Open Swagger docs for WikiPathways API}
 \usage{
 wikipathwaysAPI(base.url = .baseUrl)
 }
@@ -13,7 +13,8 @@ wikipathwaysAPI(base.url = .baseUrl)
 New tab in default browser
 }
 \description{
-Opens swagger docs in default browser for available API calls.
+This function is provided for compatibility with older 
+web services only and will be defunct at the next release.
 }
 \examples{
 {

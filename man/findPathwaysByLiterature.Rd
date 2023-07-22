@@ -4,31 +4,24 @@
 \alias{findPathwaysByLiterature}
 \title{Find Pathways By Literature}
 \usage{
-findPathwaysByLiterature(query)
+findPathwaysByLiterature(query = NULL)
 }
 \arguments{
 \item{query}{The \code{character} string to search for, e.g., a PMID, title 
-keyword or author name.}
+keyword, journal abbreviation, year, or author name.}
 }
 \value{
-A \code{dataframe} of pathway attributes in addition to query result 
-score and literature details
+A \code{dataframe} of pathway attributes including the matching
+citations
 }
 \description{
 Retrieve pathways containing the query citation.
 }
-\details{
-The score is from a lucene index search engine, ranging from 0 to 
-1 with higher scores for better matches. The two literature columns are
-lists of pubmed ids and titles for the citations matching the query per
-pathway. The graphId column lists the id for any objects in the
-GPML pathway model that have been spcifically annotated with the matching 
-citations.
-}
 \examples{
 {
-findPathwaysByLiterature('19649250')
-findPathwaysByLiterature('smith')
-findPathwaysByLiterature('cancer')
+findPathwaysByLiterature('15134803')
+findPathwaysByLiterature('Schwartz GL')
+findPathwaysByLiterature('Eur J Pharmacol')
+findPathwaysByLiterature('antihypertensive drug responses')
 }
 }

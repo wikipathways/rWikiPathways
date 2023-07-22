@@ -1,17 +1,17 @@
 # ------------------------------------------------------------------------------
 #' @title Get Pathway History
 #'
-#' @description Retrieve the revision history of a pathway.
-#' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
-#' @param timestamp (\code{integer}) Limit by time, only history items after the given time, 
-#' e.g., 20180201 for revisions since Feb 1st, 2018. Any length of timestamp is 
-#' accepted, upto 14 digits, e.g., 2018, 201802, 20180201063011, etc.
-#' @return A \code{list} of revisions, including user and comment
+#' @description View the revision history of a pathway.
+#' @param pathway WikiPathways identifier (WPID) for the pathway, e.g. WP554
+#' @param timestamp <ignored>
+#' @return Opens the GitHub history for a pathway
 #' @examples {
-#' getPathwayHistory('WP554',20180201)
+#' getPathwayHistory('WP554')
 #' }
 #' @export
-getPathwayHistory <- function(pathway,timestamp) {
-    res <- wikipathwaysGET('getPathwayHistory',list(pwId=pathway,timestamp=timestamp))
-    return(unname(res$history[[1]]))
+getPathwayHistory <- function(pathway=NULL,timestamp=NULL) {
+    if(is.null(pathway))
+        stop("Must provide a pathway identifier, e.g., WP554")
+    
+    browseURL(paste0("https://github.com/wikipathways/wikipathways-database/commits/main/pathways/",pathway))
 }

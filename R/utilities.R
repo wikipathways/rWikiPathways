@@ -11,9 +11,10 @@
 
 
 # ------------------------------------------------------------------------------
-#' @title Open Swagger docs for WikiPathways API
+#' @title DEPRECATED: Open Swagger docs for WikiPathways API
 #'
-#' @description Opens swagger docs in default browser for available API calls.
+#' @description This function is provided for compatibility with older 
+#' web services only and will be defunct at the next release.
 #' @param base.url (optional) Ignore unless you need to specify a custom domain.
 #' @return New tab in default browser
 #' @examples {
@@ -22,14 +23,17 @@
 #' @importFrom utils browseURL
 #' @export
 wikipathwaysAPI <- function(base.url=.baseUrl){
+    .Deprecated("https://wikipathways.org")
+    
     if (interactive())
         browseURL(paste(base.url,'/ui',sep=""))
 }
 
 # ------------------------------------------------------------------------------
-#' @title WikiPathways GET
+#' @title DEPRECATED: WikiPathways GET
 #'
-#' @description Constructs the query, makes GET call and processes the result
+#' @description This function is provided for compatibility with older 
+#' web services only and will be defunct at the next release.
 #' @param operation A \code{character} string to be converted to the query 
 #' namespace
 #' @param parameters A named \code{list} of values to be converted to query 
@@ -46,6 +50,8 @@ wikipathwaysAPI <- function(base.url=.baseUrl){
 #' @importFrom utils URLencode
 #' @export
 wikipathwaysGET <- function(operation, parameters=NULL, format=c('json','xml','html','jpg','pdf','dump'), base.url=.baseUrl){
+    .Deprecated()
+    
     q.url <- paste(base.url, operation, sep="/")
     
     format <- match.arg(format)

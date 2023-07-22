@@ -4,7 +4,7 @@
 \alias{findPathwayNamesByLiterature}
 \title{Find Pathway Names By Literature}
 \usage{
-findPathwayNamesByLiterature(query)
+findPathwayNamesByLiterature(query = NULL)
 }
 \arguments{
 \item{query}{The \code{character} string to search for, e.g., a PMID, title 

@@ -4,7 +4,7 @@
 \alias{getPathwayIdsByParentOntologyTerm}
 \title{Get Pathway WPIDs by Parent Ontology Term}
 \usage{
-getPathwayIdsByParentOntologyTerm(term)
+getPathwayIdsByParentOntologyTerm(term = NULL)
 }
 \arguments{
 \item{term}{(\code{character}) Official name of ontology term, e.g., "PW:0000045"}

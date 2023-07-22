@@ -7,8 +7,8 @@
 getRecentChangesIds(timestamp)
 }
 \arguments{
-\item{timestamp}{(14 digits, YYYYMMDDhhmmss) Limit by time, only history items 
-after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.}
+\item{timestamp}{(8 digits, YYYYMMDD) Limit by time, only pathways changed 
+after the given date, e.g., 20180201 for changes since Feb 1st, 2018.}
 }
 \value{
 A \code{list} of WPIDs
@@ -18,6 +18,6 @@ Retrieve WPIDs of recently changed pathways at WikiPathways.
 }
 \examples{
 {
-getRecentChangesIds('20180201000000')
+getRecentChangesIds('20180201')
 }
 }
