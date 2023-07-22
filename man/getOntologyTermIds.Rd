@@ -4,7 +4,7 @@
 \alias{getOntologyTermIds}
 \title{Get Ontology Term IDs by Pathway}
 \usage{
-getOntologyTermIds(pathway)
+getOntologyTermIds(pathway = NULL)
 }
 \arguments{
 \item{pathway}{WikiPathways identifier (WPID) for the pathway to download, e.g. WP4}

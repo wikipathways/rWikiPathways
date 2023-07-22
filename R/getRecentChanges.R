@@ -1,46 +1,57 @@
 # ------------------------------------------------------------------------------
 #' @title Get Recent Changes
 #'
-#' @description Retrieve recent changes to pathways at WikiPathways.
-#' @param timestamp (14 digits, YYYYMMDDhhmmss) Limit by time, only history items 
-#' after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.
-#' @return A \code{list} of changes, including pathway WPID, name, url, species and revision
+#' @description Retrieve recently changed pathways at WikiPathways.
+#' @param timestamp (8 digits, YYYYMMDD) Limit by time, only pathways changed 
+#' after the given date, e.g., 20180201 for changes since Feb 1st, 2018.
+#' @return A \code{data.frame} of recently changed pathways, including id, name,
+#' url, species and revision
 #' @examples {
-#' getRecentChanges('20180201000000')
+#' getRecentChanges('20180201')
 #' }
 #' @export
-getRecentChanges <- function(timestamp) {
-    res <- wikipathwaysGET('getRecentChanges',list(timestamp=timestamp))
-    return(unname(res$pathways))
+getRecentChanges <- function(timestamp=NULL) {
+    if(is.null(timestamp))
+        timestamp <- 20070301
+    timestamp <- substr(timestamp, start = 1, stop = 8)
+    
+    res <- rjson::fromJSON(file="https://www.wikipathways.org/json/getPathwayInfo.json")
+    res.df <- res$pathwayInfo %>%
+        purrr::map_dfr(~as.data.frame(t(unlist(.x)))) %>%
+        dplyr::mutate(revision_ymd = lubridate::ymd(revision)) %>%
+        dplyr::filter(revision_ymd > ymd(timestamp)) %>%
+        dplyr::select(-c(revision_ymd,authors,description,citedIn))
+    
+    return(res.df)
 }
 
 # ------------------------------------------------------------------------------
 #' @title Get WPIDs of Recent Changes 
 #'
 #' @description Retrieve WPIDs of recently changed pathways at WikiPathways.
-#' @param timestamp (14 digits, YYYYMMDDhhmmss) Limit by time, only history items 
-#' after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.
+#' @param timestamp (8 digits, YYYYMMDD) Limit by time, only pathways changed 
+#' after the given date, e.g., 20180201 for changes since Feb 1st, 2018.
 #' @return A \code{list} of WPIDs
 #' @examples {
-#' getRecentChangesIds('20180201000000')
+#' getRecentChangesIds('20180201')
 #' }
 #' @export 
 getRecentChangesIds <- function(timestamp) {
-    unlist(lapply(getRecentChanges(timestamp), function(x) {unname(x['id'])}))
+    getRecentChanges(timestamp)[['id']]
 }
 
 # ------------------------------------------------------------------------------
 #' @title Get Pathway Names of Recent Changes 
 #'
 #' @description Retrieve names of recently changed pathways at WikiPathways.
-#' @param timestamp (14 digits, YYYYMMDDhhmmss) Limit by time, only history items 
-#' after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.
+#' @param timestamp (8 digits, YYYYMMDD) Limit by time, only pathways changed 
+#' after the given date, e.g., 20180201 for changes since Feb 1st, 2018.
 #' @return A \code{list} of pathway names. Note: pathway deletions will be listed as blank names.
 #' @examples {
-#' getRecentChangesNames('20180201000000')
+#' getRecentChangesNames('20180201')
 #' }
 #' @export 
 getRecentChangesNames <- function(timestamp) {
-    unlist(lapply(getRecentChanges(timestamp), function(x) {unname(x['name'])}))
+    getRecentChanges(timestamp)[['name']]
 }
 

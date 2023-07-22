@@ -4,7 +4,7 @@
 \alias{findPathwaysByXref}
 \title{Find Pathways By Xref}
 \usage{
-findPathwaysByXref(identifier, systemCode)
+findPathwaysByXref(identifier = NULL, systemCode = NULL)
 }
 \arguments{
 \item{identifier}{(\code{character}) The official ID specified by a data 
@@ -12,26 +12,20 @@ source or system}
 
 \item{systemCode}{(\code{character}) The BridgeDb code associated with the 
 data source or system, 
-e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc. See column two of 
+e.g., En (Ensembl), L (NCBI gene), H (HGNC), U (UniProt), Wd (Wikidata), 
+Ce (ChEBI), Ik (InChI). See column two of 
 https://github.com/bridgedb/datasources/blob/main/datasources.tsv.}
 }
 \value{
-A \code{dataframe} of pathway attributes in addition to query 
-result score
+A \code{dataframe} of pathway attributes including the matching
+identifiers
 }
 \description{
 Retrieve pathways containing the query Xref by identifier
  and system code.
 }
-\details{
-Note: there will be multiple listings of the same pathway if the 
-Xref is present mutiple times.
-
-The score is from a lucene index search engine, ranging from 0 to
-1 with higher scores for better matches.
-}
 \examples{
 {
-findPathwaysByXref('ENSG00000232810','En')
+findPathwaysByXref('ENSG00000100031','En')
 }
 }

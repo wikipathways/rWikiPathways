@@ -4,13 +4,13 @@
 \alias{getPathwaysByOntologyTerm}
 \title{Get Pathways by Ontology Term}
 \usage{
-getPathwaysByOntologyTerm(term)
+getPathwaysByOntologyTerm(term = NULL)
 }
 \arguments{
 \item{term}{(\code{character}) Official name of ontology term, e.g., "PW:0000045"}
 }
 \value{
-A \code{list} of pathway information, including WPID, url, name, species and revision
+A \code{data.frame} of pathway information
 }
 \description{
 Retrieve pathway information for every pathway with a given ontology term.

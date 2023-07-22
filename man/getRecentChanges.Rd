@@ -4,20 +4,21 @@
 \alias{getRecentChanges}
 \title{Get Recent Changes}
 \usage{
-getRecentChanges(timestamp)
+getRecentChanges(timestamp = NULL)
 }
 \arguments{
-\item{timestamp}{(14 digits, YYYYMMDDhhmmss) Limit by time, only history items 
-after the given time, e.g., 20180201000000 for changes since Feb 1st, 2018.}
+\item{timestamp}{(8 digits, YYYYMMDD) Limit by time, only pathways changed 
+after the given date, e.g., 20180201 for changes since Feb 1st, 2018.}
 }
 \value{
-A \code{list} of changes, including pathway WPID, name, url, species and revision
+A \code{data.frame} of recently changed pathways, including id, name,
+url, species and revision
 }
 \description{
-Retrieve recent changes to pathways at WikiPathways.
+Retrieve recently changed pathways at WikiPathways.
 }
 \examples{
 {
-getRecentChanges('20180201000000')
+getRecentChanges('20180201')
 }
 }

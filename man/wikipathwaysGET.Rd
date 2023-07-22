@@ -2,7 +2,7 @@
 % Please edit documentation in R/utilities.R
 \name{wikipathwaysGET}
 \alias{wikipathwaysGET}
-\title{WikiPathways GET}
+\title{DEPRECATED: WikiPathways GET}
 \usage{
 wikipathwaysGET(
   operation,
@@ -27,7 +27,8 @@ parameters}
 query result content
 }
 \description{
-Constructs the query, makes GET call and processes the result
+This function is provided for compatibility with older 
+web services only and will be defunct at the next release.
 }
 \examples{
 {

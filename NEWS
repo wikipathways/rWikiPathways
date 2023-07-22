@@ -1,3 +1,21 @@
+Changes in version 1.22.0
++ Reimplementation of every function, replacing web service with static JSON
++ getRecentChanges now returns data.frame of pathways per last-edit date 
++ findPathwaysByText has new param, "field" to optionally specify which fields to search
++ getPathwayHistory now opens pathway commit history in browser
++ getPathwayInfo now returns all pathways is param is left NULL
++ New functions: 
+    - listCommunities
+    - getPathwaysByCommunity
+    - getPathwayXXXsByCommunity
+    - getCounts
+    - getCurationStatus
++ Deprecated functions:
+    - getCurationTags
+    - getCurationTagNames
+    - getXXXByCurationTag
+    - wikipathwaysAPI
+    - wikipathwaysGET
 Changes in version 1.17.1
 + doc fix: dplyr redundant, throws error
 + doc fix: specify rjson and lib packages in Rmd

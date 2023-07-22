@@ -4,13 +4,15 @@
 \alias{getPathwayInfo}
 \title{Get Pathway Info}
 \usage{
-getPathwayInfo(pathway)
+getPathwayInfo(pathway = NULL)
 }
 \arguments{
-\item{pathway}{WikiPathways identifier (WPID) for the pathway to download, e.g. WP4}
+\item{pathway}{WikiPathways identifier (WPID) for the pathway to download, 
+e.g. WP554. If NULL, then all pathways are returned.}
 }
 \value{
-A \code{dataframe} of pathway WPID, URL, name, species and latest revision
+A \code{dataframe} of pathway WPID, URL, name, species, revision,
+authors, description, and citedIn
 }
 \description{
 Retrieve information for a specific pathway

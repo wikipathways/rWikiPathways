@@ -12,16 +12,16 @@
 #' @export
 #' @importFrom data.table rbindlist
 listPathways <- function(organism="") {
-    res <- wikipathwaysGET('listPathways', list(organism=organism))
-    if(length(res$pathways) == 0){
-        message("No results")
-        return(data.frame())
+    res <- rjson::fromJSON(file="https://www.wikipathways.org/json/listPathways.json")
+    res.df <- res$organisms %>% 
+        purrr::map_dfr(~ .x$pathways) 
+    if(organism != ""){
+        res.df <- dplyr::filter(res.df, species == organism)
     }
-    #make into list of list (like other web service responses)
-    res.pathways <- lapply(res$pathways, as.list)
-    res.df <- suppressWarnings(data.table::rbindlist(res.pathways, fill = TRUE))
-    res.df$revision <- vapply(res.df$revision, as.integer, integer(1)) 
-    return(res.df)
+    if(nrow(res.df) == 0){
+        message("No results")
+    }
+    return(as.data.frame(res.df))
 }
 
 # ------------------------------------------------------------------------------

@@ -4,7 +4,7 @@
 \alias{getXrefList}
 \title{Get Xref List}
 \usage{
-getXrefList(pathway, systemCode)
+getXrefList(pathway = NULL, systemCode = NULL, compact = FALSE)
 }
 \arguments{
 \item{pathway}{WikiPathways identifier (WPID) for the pathway to download, 
@@ -12,8 +12,13 @@ e.g. WP4}
 
 \item{systemCode}{(\code{character}) The BridgeDb code associated with the 
 data source or system, 
-e.g., En (Ensembl), L (Entrez), Ch (HMDB), etc. See column two of 
+e.g., En (Ensembl), L (NCBI gene), H (HGNC), U (UniProt), Wd (Wikidata), 
+Ce (ChEBI), Ik (InChI). See column two of 
 https://github.com/bridgedb/datasources/blob/main/datasources.tsv.}
+
+\item{compact}{(\code{Boolean}) Whether to return compact identifiers, like
+ncbigene:1215. If FALSE (default), then just the identifier is returned, like
+ 1215}
 }
 \value{
 A \code{list} of Xrefs identifiers
