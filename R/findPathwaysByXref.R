@@ -33,7 +33,7 @@ findPathwaysByXref <- function(identifier=NULL, systemCode=NULL) {
         "U"="uniprot",
         "Wd"= "wikidata", 
         "Ce"= "chebi", 
-        "Ik"= "inchi"
+        "Ik"= "inchikey"
     )
 
     if(systemCode %in% names(code.list)){
