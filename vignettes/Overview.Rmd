@@ -123,11 +123,10 @@ Alternatively, if we want them listed as Ensembl IDs instead, then...
     getXrefList('WP554', 'En')
 ```
 
-And, if we want the metabolites, drugs and other small molecules associated with the pathways, then we'd simply provide the system code of a chemical database, e.g., Ch (HMBD), Ce (ChEBI) or Cs (Chemspider):
+And, if we want the metabolites, drugs and other small molecules associated with the pathways, then we'd simply provide the system code of a chemical database, e.g., Ce (ChEBI) or Ik (InCHIKey):
 ```{r}
-    getXrefList('WP554', 'Ch')
     getXrefList('WP554', 'Ce')
-    getXrefList('WP554', 'Cs')
+    getXrefList('WP554', 'Ik')
 ```
 
 It's that easy!

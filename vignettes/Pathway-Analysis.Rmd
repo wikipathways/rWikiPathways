@@ -290,10 +290,10 @@ Turning again to the **rWikiPathways** package, let's explore the content and so
 findPathwayNamesByText("lung cancer")
 ```
 
-Whoa, that's a lot... and there's a bunch of repeats!?  This general search includes all matches to "lung" and/or "cancer", sorted by best matches to both terms. And it also includes matches from all speceis, e.g., mouse and rat, in addition to human.  Let's be more specific...
+Let's make sure they are human pathways as well...
 
 ```{r}
-lc.pathways <- findPathwaysByText('"lung cancer"')  #quotes inside query to require both terms
+lc.pathways <- findPathwaysByText("lung cancer")  #quotes inside query to require both terms
 human.lc.pathways <- lc.pathways %>% 
   dplyr::filter(species == "Homo sapiens") # just the human lung cancer pathways
 human.lc.pathways$name # display the pathway titles
@@ -358,9 +358,9 @@ setNodeColorMapping("log2FC", colors=paletteColorBrewerRdBu,  style.name = "Wiki
 
 You can similarly map P-values to border color, etc. There are dozens and dozens of visual properties on nodes and edges available for data visualization!
 
-The power of scripting is in doing something multiple times though... So, let's now apply this same data and visual style to all the pathways we are interested in. In just two lines of code...
+The power of scripting is in doing something multiple times though... So, let's now apply this same data and visual style to the first 5 pathways we are interested in. In just two lines of code...
 ```{r}
-lapply(ewp.up.wpids, function (x) {
+lapply(ewp.up.wpids[1:5], function (x) {
     commandsRun(paste0('wikipathways import-as-pathway id=',x))
     loadTableData(lung.expr, data.key.column = "GeneID", table.key.column = "Ensembl")
     toggleGraphicsDetails()
