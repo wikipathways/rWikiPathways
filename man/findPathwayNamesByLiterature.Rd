@@ -16,10 +16,6 @@ A \code{list} of lists
 \description{
 Retrieve list of pathway names containing the query citation.
 }
-\details{
-Note: there will be multiple listings of the same pathway name if 
-copies exist for multiple species.
-}
 \examples{
 {
 findPathwayNamesByLiterature('19649250')

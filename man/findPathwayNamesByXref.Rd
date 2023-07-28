@@ -22,10 +22,6 @@ A \code{list} of lists
 Retrieve list of pathway names containing the query Xref by 
 identifier and system code.
 }
-\details{
-Note: there will be multiple listings of the same pathway if the 
-Xref is present mutiple times.
-}
 \examples{
 {
 findPathwayNamesByXref('ENSG00000100031','En')

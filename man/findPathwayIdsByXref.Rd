@@ -22,10 +22,6 @@ A \code{list} of WPIDs
 Retrieve list of pathway WPIDs containing the query Xref by 
 identifier and system code.
 }
-\details{
-Note: there will be multiple listings of the same pathway if the 
-Xref is present mutiple times.
-}
 \examples{
 {
 findPathwayIdsByXref('ENSG00000100031','En')

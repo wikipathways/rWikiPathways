@@ -24,7 +24,7 @@ findPathwaysByLiterature <- function(query=NULL) {
 
     res.df <- res.df %>%
         rowwise() %>%
-        filter(any(grepl(tolower(query),tolower(c_across(refs:citations)))))
+        dplyr::filter(any(grepl(tolower(query),tolower(c_across(refs:citations)))))
 
     if(nrow(res.df) == 0)
         message("No results")
@@ -55,8 +55,6 @@ findPathwayIdsByLiterature <- function(query=NULL) {
 #' @title Find Pathway Names By Literature 
 #'
 #' @description Retrieve list of pathway names containing the query citation.
-#' @details Note: there will be multiple listings of the same pathway name if 
-#' copies exist for multiple species.
 #' @param query The \code{character} string to search for, e.g., a PMID, title 
 #' keyword or author name.
 #' @return A \code{list} of lists

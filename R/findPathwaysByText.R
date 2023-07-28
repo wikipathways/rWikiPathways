@@ -30,7 +30,7 @@ findPathwaysByText <- function(query=NULL, field=NULL) {
     if(is.null(field)){
         res.df <- res.df %>%
             rowwise() %>%
-            filter(any(grepl(tolower(query),tolower(c_across(id:citedIn)))))
+            dplyr::filter(any(grepl(tolower(query),tolower(c_across(id:citedIn)))))
     } else {
         res.df <- res.df %>%
             dplyr::filter(grepl(tolower(query),tolower(res.df[[field]])))
@@ -65,8 +65,6 @@ findPathwayIdsByText <- function(query=NULL, field=NULL) {
 #' @title Find Pathway Names By Text 
 #'
 #' @description Retrieve list of pathway names containing the query text.
-#' @details Note: there will be multiple listings of the same pathway name if 
-#' copies exist for multiple species.
 #' @param query A \code{character} string to search for, e.g., "cancer"
 #' @param field Optional \code{character} string to restrict search to a single
 #' field, e.g., title, description, wpid, species, revision, authors,

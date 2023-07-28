@@ -54,8 +54,6 @@ findPathwaysByXref <- function(identifier=NULL, systemCode=NULL) {
 #'
 #' @description Retrieve list of pathway WPIDs containing the query Xref by 
 #' identifier and system code.
-#' @details Note: there will be multiple listings of the same pathway if the 
-#' Xref is present mutiple times.
 #' @param identifier (\code{character}) The official ID specified by a data 
 #' source or system
 #' @param systemCode (\code{character}) The BridgeDb code associated with the 
@@ -78,8 +76,6 @@ findPathwayIdsByXref <- function(identifier=NULL, systemCode=NULL) {
 #'
 #' @description Retrieve list of pathway names containing the query Xref by 
 #' identifier and system code.
-#' @details Note: there will be multiple listings of the same pathway if the 
-#' Xref is present mutiple times.
 #' @param identifier (\code{character}) The official ID specified by a data 
 #' source or system
 #' @param systemCode (\code{character}) The BridgeDb code associated with the 
@@ -102,8 +98,6 @@ findPathwayNamesByXref <- function(identifier=NULL, systemCode=NULL) {
 #'
 #' @description Retrieve list of pathway URLs containing the query Xref by 
 #' identifier and system code.
-#' @details Note: there will be multiple listings of the same pathway if the 
-#' Xref is present mutiple times.
 #' @param identifier (\code{character}) The official ID specified by a data 
 #' source or system
 #' @param systemCode (\code{character}) The BridgeDb code associated with the 
