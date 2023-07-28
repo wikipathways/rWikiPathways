@@ -9,6 +9,7 @@ Changes in version 1.22.0
     - getPathwaysByCommunity
     - getPathwayXXXsByCommunity
     - getCounts
+    - findPathwaysByOrcid
     - getCurationStatus
 + Deprecated functions:
     - getCurationTags

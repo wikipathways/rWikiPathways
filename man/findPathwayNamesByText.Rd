@@ -19,10 +19,6 @@ A \code{list} of pathway names
 \description{
 Retrieve list of pathway names containing the query text.
 }
-\details{
-Note: there will be multiple listings of the same pathway name if 
-copies exist for multiple species.
-}
 \examples{
 {
 findPathwayNamesByText('cancer')
