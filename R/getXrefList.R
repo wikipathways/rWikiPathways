@@ -37,14 +37,14 @@ getXrefList <- function(pathway=NULL, systemCode=NULL, compact=FALSE) {
     if(!systemCode %in% names(code.list))
         stop("Must provide a supported systemCode, e.g., L (see docs)")
     
-    res <- read_tsv(paste0("https://www.wikipathways.org/wikipathways-assets/pathways/",
+    res <- readr::read_tsv(paste0("https://www.wikipathways.org/wikipathways-assets/pathways/",
                            pathway,"/",
                            pathway,"-datanodes.tsv"),
                     show_col_types = FALSE)
     
     res.list <- res %>%
         dplyr::select(code.list[[systemCode]]) %>%
-        drop_na() %>%
+        tidyr::drop_na() %>%
         tidyr::separate_rows(code.list[[systemCode]], sep=";") %>%
         as.list() %>%
         unname() %>%
@@ -52,7 +52,7 @@ getXrefList <- function(pathway=NULL, systemCode=NULL, compact=FALSE) {
         unique()
     
     if(!compact)
-        res.list <- str_replace(res.list, ".*:", "")
+        res.list <- stringr::str_replace(res.list, ".*:", "")
     
     return(res.list)
 }
