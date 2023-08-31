@@ -36,7 +36,7 @@ getPathwaysByCommunity <- function(community_tag=NULL) {
     res <- rjson::fromJSON(file="https://www.wikipathways.org/json/listCommunities.json")
     res.df <- res$communities %>%
         purrr::map_df(~as_tibble(.)) %>%
-        unnest_wider(pathways, names_sep = "_") 
+        tidyr::unnest_wider(pathways, names_sep = "_") 
     
     if(!community_tag %in% res.df$`community-tag`)
         stop("Must provide a valid community_tag, e.g., AOP")
