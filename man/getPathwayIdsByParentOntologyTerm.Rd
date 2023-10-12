@@ -7,7 +7,7 @@
 getPathwayIdsByParentOntologyTerm(term = NULL)
 }
 \arguments{
-\item{term}{(\code{character}) Official name of ontology term, e.g., "PW:0000045"}
+\item{term}{(\code{character}) Official name of ontology term, e.g., "signaling pathway"}
 }
 \value{
 A \code{list} of pathway WPIDs
@@ -17,6 +17,6 @@ Retrieve pathway WPIDs for every pathway with a child term of given ontology ter
 }
 \examples{
 {
-getPathwayIdsByParentOntologyTerm('PW:0000045')
+getPathwayIdsByParentOntologyTerm('signaling pathway')
 }
 }

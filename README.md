@@ -18,7 +18,7 @@ you may also like these R packages:
 * [RCy3](https://github.com/cytoscape/RCy3)
 
 ## Getting Started
-* [Documentation site](https://wikipathways.github.io/rWikiPathways/index.html)
+* [Documentation site](https://r.wikipathways.org)
 * [Overview vignette](articles/Overview.html)
 
 ## How to install

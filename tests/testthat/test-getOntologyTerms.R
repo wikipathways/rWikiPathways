@@ -7,11 +7,11 @@ test_that("get by WPID", {
 })
 
 test_that("find by ontology term", {
-    pathways = getPathwaysByOntologyTerm('PW:0000045')
+    pathways = getPathwaysByOntologyTerm('PW:0000002')
     expect_gt(length(pathways), 0)
 })
 
 test_that("find by parent ontology term", {
-    pathways = getPathwaysByParentOntologyTerm('PW:0000045')
+    pathways = getPathwaysByParentOntologyTerm('signaling pathway')
     expect_gt(length(pathways), 0)
 })

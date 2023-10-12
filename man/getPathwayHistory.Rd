@@ -18,7 +18,7 @@ Opens the GitHub history for a pathway
 View the revision history of a pathway.
 }
 \examples{
-{
-getPathwayHistory('WP554')
+\donttest{
+#getPathwayHistory('WP554')
 }
 }

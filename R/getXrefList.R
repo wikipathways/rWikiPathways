@@ -4,10 +4,10 @@
 #' @description Retrieve the Xref identifiers for a specific pathway in a 
 #' particular system code
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, 
-#' e.g. WP4
+#' e.g. WP554
 #' @param systemCode (\code{character}) The BridgeDb code associated with the 
 #' data source or system, 
-#' e.g., En (Ensembl), L (NCBI gene), H (HGNC), U (UniProt), Wd (Wikidata), 
+#' e.g., En (Ensembl), L (NCBI gene), H (HGNC), S (UniProt), Wd (Wikidata), 
 #' Ce (ChEBI), Ik (InChI). See column two of 
 #' https://github.com/bridgedb/datasources/blob/main/datasources.tsv.
 #' @param compact (\code{Boolean}) Whether to return compact identifiers, like
@@ -28,7 +28,7 @@ getXrefList <- function(pathway=NULL, systemCode=NULL, compact=FALSE) {
         "En"="Ensembl",
         "L"="NCBI gene",
         "H"= "HGNC",
-        "U"="UniProt",
+        "S"="UniProt",
         "Wd"= "Wikidata", 
         "Ce"= "ChEBI", 
         "Ik"= "InChI"

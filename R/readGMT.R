@@ -9,8 +9,8 @@
 #' @details The returned data frame includes only terms and genes. If you want
 #' another data frame with terms and names, then see readGMTnames. 
 #' @examples \donttest{
-#' readGMT(system.file("extdata","my_gmt_file.gmt", package="rWikiPathways"))
-#' readGMT("path_to_your_gmt_file.gmt")
+#' #readGMT(system.file("extdata","my_gmt_file.gmt", package="rWikiPathways"))
+#' #readGMT("path_to_your_gmt_file.gmt")
 #' }
 #' @seealso readGMTnames
 #' @export
@@ -40,8 +40,8 @@ readGMT <- function(file) {
 #' @details The returned data frame includes only terms and names. If you want
 #' another data frame with terms and genes, then see readGMT. 
 #' @examples \donttest{
-#' readGMTnames(system.file("extdata","my_gmt_file.gmt", package="rWikiPathways"))
-#' readGMTnames("path_to_your_gmt_file.gmt")
+#' #readGMTnames(system.file("extdata","my_gmt_file.gmt", package="rWikiPathways"))
+#' #readGMTnames("path_to_your_gmt_file.gmt")
 #' }
 #' @seealso readGMT
 #' @export

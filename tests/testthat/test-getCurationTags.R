@@ -2,16 +2,16 @@ library(rWikiPathways)
 context("Annotation")
 
 test_that("get by WPID", {
-    tags = getCurationTags('WP554')
+    tags = getCurationStatus('WP554')
     expect_gt(length(tags),0)
 })
 
-test_that("get by tag name", {
-    tags = getEveryCurationTag('Curation:FeaturedPathway')
+test_that("get community info", {
+    tags = listCommunities()
     expect_gt(length(tags), 0)
 })
 
 test_that("find by tag name", {
-    pathways = getPathwaysByCurationTag('Curation:FeaturedPathway')
+    pathways = getPathwaysByCommunity('COVID19')
     expect_gt(length(pathways), 0)
 })

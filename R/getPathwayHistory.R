@@ -5,8 +5,8 @@
 #' @param pathway WikiPathways identifier (WPID) for the pathway, e.g. WP554
 #' @param timestamp <ignored>
 #' @return Opens the GitHub history for a pathway
-#' @examples {
-#' getPathwayHistory('WP554')
+#' @examples \donttest{
+#' #getPathwayHistory('WP554')
 #' }
 #' @export
 getPathwayHistory <- function(pathway=NULL,timestamp=NULL) {

@@ -13,11 +13,11 @@
 #' Default is current workding directory.
 #' @return Filename of downloaded file or an opened tab in default browser
 #' @examples \donttest{
-#' downloadPathwayArchive()  ## open in browser
-#' downloadPathwayArchive(format="gmt")  ## open in browser
-#' downloadPathwayArchive(date="20230710", format="svg")  ## open in browser
-#' downloadPathwayArchive(date="20230710", organism="Mus musculus", format="svg")  ## download file
-#' downloadPathwayArchive(organism="Mus musculus")  ## download file
+#' #downloadPathwayArchive()  ## open in browser
+#' #downloadPathwayArchive(format="gmt")  ## open in browser
+#' #downloadPathwayArchive(date="20230710", format="svg")  ## open in browser
+#' #downloadPathwayArchive(date="20230710", organism="Mus musculus", format="svg")  ## download file
+#' #downloadPathwayArchive(organism="Mus musculus")  ## download file
 #' }
 #' @seealso readPathwayGMT
 #' @export

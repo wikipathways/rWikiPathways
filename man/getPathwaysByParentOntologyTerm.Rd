@@ -7,7 +7,7 @@
 getPathwaysByParentOntologyTerm(term = NULL)
 }
 \arguments{
-\item{term}{(\code{character}) Official name of ontology term, e.g., "PW:0000045"}
+\item{term}{(\code{character}) Official name of ontology term, e.g., "signaling pathway"}
 }
 \value{
 A \code{data.frame} of pathway information
@@ -17,6 +17,6 @@ Retrieve pathway information for every pathway with a child term of given ontolo
 }
 \examples{
 {
-getPathwaysByParentOntologyTerm('PW:0000045')
+getPathwaysByParentOntologyTerm('signaling pathway')
 }
 }

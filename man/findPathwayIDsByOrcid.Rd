@@ -17,7 +17,7 @@ Retrieve list of pathway WPIDs containing the query ORCID
 }
 \examples{
 {
-findPathwayIDsByOrcid('0000-0001-7542-0286')
+findPathwayIDsByOrcid(' 0000-0001-9773-4008')
 }
 }
 \seealso{

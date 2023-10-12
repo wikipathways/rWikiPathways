@@ -18,6 +18,6 @@ Retrieve pathways containing the query ORCID
 }
 \examples{
 {
-findPathwaysByOrcid('0000-0001-7542-0286')
+findPathwaysByOrcid(' 0000-0001-9773-4008')
 }
 }

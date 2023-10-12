@@ -8,11 +8,11 @@ getXrefList(pathway = NULL, systemCode = NULL, compact = FALSE)
 }
 \arguments{
 \item{pathway}{WikiPathways identifier (WPID) for the pathway to download, 
-e.g. WP4}
+e.g. WP554}
 
 \item{systemCode}{(\code{character}) The BridgeDb code associated with the 
 data source or system, 
-e.g., En (Ensembl), L (NCBI gene), H (HGNC), U (UniProt), Wd (Wikidata), 
+e.g., En (Ensembl), L (NCBI gene), H (HGNC), S (UniProt), Wd (Wikidata), 
 Ce (ChEBI), Ik (InChI). See column two of 
 https://github.com/bridgedb/datasources/blob/main/datasources.tsv.}
 

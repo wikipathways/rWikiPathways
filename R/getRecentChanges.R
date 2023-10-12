@@ -19,7 +19,7 @@ getRecentChanges <- function(timestamp=NULL) {
     res.df <- res$pathwayInfo %>%
         purrr::map_dfr(~as.data.frame(t(unlist(.x)))) %>%
         dplyr::mutate(revision_ymd = lubridate::ymd(revision)) %>%
-        dplyr::filter(revision_ymd > ymd(timestamp)) %>%
+        dplyr::filter(revision_ymd > lubridate::ymd(timestamp)) %>%
         dplyr::select(-c(revision_ymd,authors,description,citedIn))
     
     return(res.df)
