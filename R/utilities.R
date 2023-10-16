@@ -18,7 +18,7 @@
 #' @param base.url (optional) Ignore unless you need to specify a custom domain.
 #' @return New tab in default browser
 #' @examples {
-#' wikipathwaysAPI()
+#' #deprecated: wikipathwaysAPI()
 #' }
 #' @importFrom utils browseURL
 #' @export
@@ -43,7 +43,7 @@ wikipathwaysAPI <- function(base.url=.baseUrl){
 #' @param base.url (optional) Ignore unless you need to specify a custom domain.
 #' @return query result content
 #' @examples {
-#' wikipathwaysGET('listOrganisms')
+#' #deprecated: wikipathwaysGET('listOrganisms')
 #' }
 #' @importFrom rjson fromJSON
 #' @importFrom httr GET

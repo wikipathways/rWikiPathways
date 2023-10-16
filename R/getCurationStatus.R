@@ -26,7 +26,7 @@ getCurationStatus <- function(pathway) {
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
 #' @return A \code{list} of tag name, display name, revision, text, timestampe and user
 #' @examples {
-#' getCurationTags('WP554')
+#' #deprecated: getCurationTags('WP554')
 #' }
 #' @export
 getCurationTags <- function(pathway) {
@@ -44,7 +44,7 @@ getCurationTags <- function(pathway) {
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
 #' @return A \code{list} of tag names
 #' @examples {
-#' getCurationTagNames('WP554')
+#' #deprecated: getCurationTagNames('WP554')
 #' }
 #' @export
 getCurationTagNames <- function(pathway) {
@@ -61,7 +61,7 @@ getCurationTagNames <- function(pathway) {
 #' @param tag (\code{character}) Official name of curation tag, e.g., "Curation:FeaturedPathway"
 #' @return A \code{list} of tag name, display name, revision, text, timestampe and user
 #' @examples {
-#' getEveryCurationTag('Curation:FeaturedPathway')
+#' #deprecated: getEveryCurationTag('Curation:FeaturedPathway')
 #' }
 #' @export
 getEveryCurationTag <- function(tag) {
@@ -79,7 +79,7 @@ getEveryCurationTag <- function(tag) {
 #' @param tag (\code{character}) Official name of curation tag, e.g., "Curation:FeaturedPathway"
 #' @return A \code{list} of pathway information, including WPID, url, name, species and revision
 #' @examples {
-#' getPathwaysByCurationTag('Curation:FeaturedPathway')
+#' #deprecated: getPathwaysByCurationTag('Curation:FeaturedPathway')
 #' }
 #' @export
 getPathwaysByCurationTag <- function(tag) {
@@ -97,7 +97,7 @@ getPathwaysByCurationTag <- function(tag) {
 #' @param tag (\code{character}) Official name of curation tag, e.g., "Curation:FeaturedPathway"
 #' @return A \code{list} of pathway WPIDs
 #' @examples {
-#' getPathwayIdsByCurationTag('Curation:FeaturedPathway')
+#' #deprecated: getPathwayIdsByCurationTag('Curation:FeaturedPathway')
 #' }
 #' @export
 getPathwayIdsByCurationTag <- function(tag) {
