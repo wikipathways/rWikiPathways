@@ -25,9 +25,6 @@ getCurationStatus <- function(pathway) {
 #' web services only and will be defunct at the next release.
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
 #' @return A \code{list} of tag name, display name, revision, text, timestampe and user
-#' @examples {
-#' #deprecated: getCurationTags('WP554')
-#' }
 #' @export
 getCurationTags <- function(pathway) {
     .Deprecated("getCurationStatus")
@@ -43,9 +40,6 @@ getCurationTags <- function(pathway) {
 #' web services only and will be defunct at the next release.
 #' @param pathway WikiPathways identifier (WPID) for the pathway to download, e.g. WP4
 #' @return A \code{list} of tag names
-#' @examples {
-#' #deprecated: getCurationTagNames('WP554')
-#' }
 #' @export
 getCurationTagNames <- function(pathway) {
     .Deprecated("getCurationStatus")
@@ -60,9 +54,6 @@ getCurationTagNames <- function(pathway) {
 #' web services only and will be defunct at the next release.
 #' @param tag (\code{character}) Official name of curation tag, e.g., "Curation:FeaturedPathway"
 #' @return A \code{list} of tag name, display name, revision, text, timestampe and user
-#' @examples {
-#' #deprecated: getEveryCurationTag('Curation:FeaturedPathway')
-#' }
 #' @export
 getEveryCurationTag <- function(tag) {
     .Deprecated("listCommunities")
@@ -78,9 +69,6 @@ getEveryCurationTag <- function(tag) {
 #' web services only and will be defunct at the next release.
 #' @param tag (\code{character}) Official name of curation tag, e.g., "Curation:FeaturedPathway"
 #' @return A \code{list} of pathway information, including WPID, url, name, species and revision
-#' @examples {
-#' #deprecated: getPathwaysByCurationTag('Curation:FeaturedPathway')
-#' }
 #' @export
 getPathwaysByCurationTag <- function(tag) {
     .Deprecated("getPathwaysByCommunity")
@@ -96,9 +84,6 @@ getPathwaysByCurationTag <- function(tag) {
 #' web services only and will be defunct at the next release.
 #' @param tag (\code{character}) Official name of curation tag, e.g., "Curation:FeaturedPathway"
 #' @return A \code{list} of pathway WPIDs
-#' @examples {
-#' #deprecated: getPathwayIdsByCurationTag('Curation:FeaturedPathway')
-#' }
 #' @export
 getPathwayIdsByCurationTag <- function(tag) {
     .Deprecated("getPathwayIdsByCommunity")

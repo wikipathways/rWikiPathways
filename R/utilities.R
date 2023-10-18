@@ -17,9 +17,6 @@
 #' web services only and will be defunct at the next release.
 #' @param base.url (optional) Ignore unless you need to specify a custom domain.
 #' @return New tab in default browser
-#' @examples {
-#' #deprecated: wikipathwaysAPI()
-#' }
 #' @importFrom utils browseURL
 #' @export
 wikipathwaysAPI <- function(base.url=.baseUrl){
@@ -42,9 +39,6 @@ wikipathwaysAPI <- function(base.url=.baseUrl){
 #' (default), xml, html, jpg, pdf, dump
 #' @param base.url (optional) Ignore unless you need to specify a custom domain.
 #' @return query result content
-#' @examples {
-#' #deprecated: wikipathwaysGET('listOrganisms')
-#' }
 #' @importFrom rjson fromJSON
 #' @importFrom httr GET
 #' @importFrom utils URLencode
