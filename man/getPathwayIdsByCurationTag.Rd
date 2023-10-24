@@ -16,8 +16,3 @@ A \code{list} of pathway WPIDs
 This function is provided for compatibility with older 
 web services only and will be defunct at the next release.
 }
-\examples{
-{
-getPathwayIdsByCurationTag('Curation:FeaturedPathway')
-}
-}

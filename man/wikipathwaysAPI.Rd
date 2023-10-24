@@ -16,8 +16,3 @@ New tab in default browser
 This function is provided for compatibility with older 
 web services only and will be defunct at the next release.
 }
-\examples{
-{
-wikipathwaysAPI()
-}
-}

@@ -16,8 +16,3 @@ A \code{list} of tag name, display name, revision, text, timestampe and user
 This function is provided for compatibility with older 
 web services only and will be defunct at the next release.
 }
-\examples{
-{
-getCurationTags('WP554')
-}
-}

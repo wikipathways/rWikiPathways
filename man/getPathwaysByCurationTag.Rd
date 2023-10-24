@@ -16,8 +16,3 @@ A \code{list} of pathway information, including WPID, url, name, species and rev
 This function is provided for compatibility with older 
 web services only and will be defunct at the next release.
 }
-\examples{
-{
-getPathwaysByCurationTag('Curation:FeaturedPathway')
-}
-}

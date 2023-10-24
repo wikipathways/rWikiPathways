@@ -16,8 +16,3 @@ A \code{list} of tag names
 This function is provided for compatibility with older 
 web services only and will be defunct at the next release.
 }
-\examples{
-{
-getCurationTagNames('WP554')
-}
-}
