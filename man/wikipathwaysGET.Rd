@@ -30,8 +30,3 @@ query result content
 This function is provided for compatibility with older 
 web services only and will be defunct at the next release.
 }
-\examples{
-{
-wikipathwaysGET('listOrganisms')
-}
-}
