@@ -197,10 +197,10 @@ write.table(egobp.results.df,egobp.results.filename,col.name=TRUE,sep="\t",row.n
 ```
 
 ```{r eval=FALSE}
-em_command = paste('enrichmentmap build analysisType="generic" ', 
+em_command = paste('enrichmentmap build analysisType=',"generic", 
                    'pvalue=',"0.05", 'qvalue=',"0.05",
                    'similaritycutoff=',"0.25",
-                   'coeffecients=',"JACCARD",
+                   'coefficients=',"JACCARD",
                    'enrichmentsDataset1=',egobp.results.filename ,
                    sep=" ")
 
