@@ -15,8 +15,8 @@ Suggests: testthat, BiocStyle, knitr, rmarkdown
 Encoding: UTF-8
 Description: Use this package to interface with the WikiPathways API. It provides programmatic access to WikiPathways content in multiple data and image formats, including official monthly release files and convenient GMT read/write functions.
 License: MIT + file LICENSE
-URL: https://github.com/wikipathways/rwikipathways
-BugReports: https://github.com/wikipathways/rwikipathways/issues
+URL: https://github.com/wikipathways/rWikiPathways
+BugReports: https://github.com/wikipathways/rWikiPathways/issues
 LazyLoad: yes
 biocViews: Visualization, GraphAndNetwork, ThirdPartyClient, Network, Metabolomics
 NeedsCompilation: no
