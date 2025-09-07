@@ -1,4 +1,8 @@
-
+Changes in version 1.29.1
++ README: cite latest WikiPathways paper
++ README: updated a few links (including a relative link)
++ README: removed a link to an unmaintained file
++ removed .travis.yml
 Changes in version 1.28.0
 + None
 Changes in version 1.25.1
