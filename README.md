@@ -14,13 +14,13 @@ WikiPathays is described in the following papers:
 If you like this package, or want to make it easier to work with Xrefs, then
 you may also like these R packages:
 
-* [BridgeDbR](https://github.com/BiGCAT-UM/bridgedb-r)
+* [BridgeDbR](https://doi.org/10.18129/B9.bioc.BridgeDbR)
 * [PathVisioRPC](http://projects.bigcat.unimaas.nl/pathvisiorpc/)
-* [RCy3](https://github.com/cytoscape/RCy3)
+* [RCy3](https://doi.org/10.18129/B9.bioc.RCy3)
 
 ## Getting Started
 * [Documentation site](https://r.wikipathways.org)
-* [Overview vignette](articles/Overview.html)
+* [Overview vignette](https://bioconductor.org/packages/release/bioc/vignettes/rWikiPathways/inst/doc/Overview.html)
 
 ## How to install
 **_Official bioconductor releases_ (recommended)**
