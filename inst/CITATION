@@ -1,11 +1,11 @@
 bibentry(
    bibtype = "Article",
-   Author="Slenter, D. N.  and Kutmon, M.  and Hanspers, K.  and Riutta, A.  and Windsor, J.  and Nunes, N.  and Melius, J.  and Cirillo, E.  and Coort, S. L.  and Digles, D.  and Ehrhart, F.  and Giesbertz, P.  and Kalafati, M.  and Martens, M.  and Miller, R.  and Nishida, K.  and Rieswijk, L.  and Waagmeester, A.  and Eijssen, L. M. T.  and Evelo, C. T.  and Pico, A. R.  and Willighagen, E. L. ",
-   Title="{{W}iki{P}athways: a multifaceted pathway database bridging metabolomics to other omics research}",
+   Author="Agrawal, A. and Balcı, H. and Hanspers, K. and Coort, S. L. and Martens, M. and Slenter, D. N. and Ehrhart, F. and Digles, D. and Waagmeester, A. and Wassink, I. and Abbassi-Daloii, T. and Lopes, E. N. and Iyer, A. and Acosta, J. M. and Willighagen, L. G. and Nishida, K. and Riutta, A. and Basaric, H. and Evelo, C. T. and Willighagen, E. L. and Kutmon, M. and Pico, A. R.",
+   Title="{{W}iki{P}athways2024: next generation pathway database}",
    Journal="Nucleic Acids Res.",
-   Year="2018",
-   Volume="46",
+   Year="2024",
+   Volume="52",
    Number="D1",
-   Pages="D661-D667",
+   Pages="D679-D689",
    Month="Jan"
 )
