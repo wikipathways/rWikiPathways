@@ -15,7 +15,6 @@ If you like this package, or want to make it easier to work with Xrefs, then
 you may also like these R packages:
 
 * [BridgeDbR](https://doi.org/10.18129/B9.bioc.BridgeDbR)
-* [PathVisioRPC](http://projects.bigcat.unimaas.nl/pathvisiorpc/)
 * [RCy3](https://doi.org/10.18129/B9.bioc.RCy3)
 
 ## Getting Started
