@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Colorize Pathway Script • rWikiPathways</title>
+
+    <link href="../pkgdown.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" crossorigin="anonymous" />
+  </head>
+
+  <body>
+    <div class="container template-reference-topic">
+      <header>
+        <div class="page-header">
+          <h1>Colorize Pathway Script</h1>
+          <small>Source: <a href="https://github.com/wikipathways/rwikipathways/blob/master/R/colorize_pathway.R">R/colorize_pathway.R</a></small>
+        </div>
+      </header>
+
+      <main>
+        <div class="ref-description">
+          <p>Draft documentation page for pathway image colorization from differential expression results.</p>
+        </div>
+
+        <h2 id="usage">Usage</h2>
+        <pre><code>Rscript R/colorize_pathway.R --tsv input.tsv --species "Homo sapiens"</code></pre>
+
+        <h2 id="arguments">Arguments</h2>
+
+        <div class="ref-description">
+          <p>This script allows to use command line flags and environment variables.</p>
+        </div>
+
+        <table class="ref-arguments table">
+          <thead>
+            <tr><th>Argument</th><th>Environment variable</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>--tsv</code></td><td><code>WP_TSV_FILE</code></td><td>Path to input TSV with columns <code>gene</code> and <code>log2FoldChange</code>.</td></tr>
+            <tr><td><code>--species</code></td><td><code>WP_SPECIES</code></td><td>Species name recognized by WikiPathways.</td></tr>
+            <tr><td><code>--min-genes</code></td><td><code>WP_MIN_GENES</code></td><td>Minimum matching genes required per pathway. (default: 3)</td></tr>
+            <tr><td><code>--output-dir</code></td><td><code>WP_OUTPUT_DIR</code></td><td>Output directory for images and tables. (default: ./pathway_images)</td></tr>
+            <tr><td><code>--limit</code></td><td><code>WP_LIMIT</code></td><td>Maximum number of pathways to process; use <code>0</code> for all pathways. (default: 5)</td></tr>
+          </tbody>
+        </table>
+
+        <h2 id="input">Input</h2>
+        <p>A TSV file with columns  <code>gene</code>, <code>baseMean</code>, <code>log2FoldChange</code>, <code>lfcSE</code>, <code>pvalue</code>, and <code>padj</code> as defined by differential gene expression analysis performed with <a href="https://doi.org/doi:10.18129/B9.bioc.DESeq2">DESeq2</a>.</p>
+
+        <h2 id="output">Output</h2>
+        <p>Generated pathway images and summary tables in the output directory.</p>
+
+        <p><strong>Note:</strong> This script will produce an unpredictable number of output files, depending on the number of pathways that meet the criteria. The output directory will contain a summary file and a plot for each processed pathway. The colour intensity will depend on the log2 fold changes: in blue for upregulated genes and red for downregulated genes.</p>
+
+        
+      </main>
+    </div>
+  </body>
+</html>
